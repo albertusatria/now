@@ -1,0 +1,10 @@
+*.DS_Store
+php_errors.log
+app/etc/local.xml
+app/etc/config.xml
+errors/local.xml
+robots.txt
+/var
+RELEASE_NOTES.txt
+/.sass-cache/
+.sass-cache/
