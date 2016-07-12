@@ -1,0 +1,17 @@
+/*----------------------------------------------------------------------------*/
+/* Customer Account: Edit Account Info
+/*----------------------------------------------------------------------------*/
+
+body.customer-account-edit {
+
+    .col-main {
+
+        li.customer-user-attributes {
+            list-style: none;
+        }
+
+        .buttons-set {
+            @include base-required-fields();
+        }
+    }
+}

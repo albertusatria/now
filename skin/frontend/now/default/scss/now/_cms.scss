@@ -1,0 +1,72 @@
+/*----------------------------------------------------------------------------*/
+/* CMS Common Styles
+/*----------------------------------------------------------------------------*/
+
+.cms-page-view .main {
+
+    h1 {
+        margin: 1em 0;
+        padding: 0;
+        @include font-family('Avenir Black');
+        @include responsive-font-size(32);
+        font-weight: normal;
+        text-align: center;
+        text-transform: none;
+        color: #404041;
+        border: none;
+    }
+
+    h2 {
+        margin: 2em 0 1em 0;
+        padding: 0 0 1em 0;
+        @include font-family('Avenir Medium');
+        @include responsive-font-size(20);
+        text-transform: none;
+        color: #404042;
+        border-bottom: 2px solid #eb464f;
+    }
+
+    h3 {
+        margin: 2em 0 0 0;
+        padding: 0;
+        @include font-family('Avenir Medium');
+        @include responsive-font-size(20);
+        text-transform: none;
+        color: #404042;
+    }
+
+    ul,
+    ol {
+        margin: 0 0 0 2em;
+        @include responsive-font-size(17);
+    }
+
+    p {
+        margin: 0 0 1em 0;
+        padding: 0;
+        @include responsive-font-size(17);
+        line-height: 24px;
+        color: #404041;
+    }
+
+    a {
+        color: #ee3d42;
+        text-decoration: underline;
+    }
+
+    img {
+        @include responsive-img;
+    }
+
+    .breadcrumbs {
+        display: none;
+    }
+}
+
+/*----------------------------------------------------------------------------*/
+/* Reset page padding.
+/*----------------------------------------------------------------------------*/
+
+.cms-page-view .wrapper .page .main-container {
+    @include global-page-margin-side-reset;
+}

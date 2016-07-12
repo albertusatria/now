@@ -1,0 +1,316 @@
+/*----------------------------------------------------------------------------*/
+/* Subscribe / Social
+/*----------------------------------------------------------------------------*/
+
+.footer {
+
+    .newsletter-container {
+        min-height: 70px;
+        background-color: #2caae2;
+
+        @include breakpoint(max, $desktopWidth) {
+            padding: 0 20px;
+        }
+
+        @include breakpoint(mobile) {
+            padding: 0 10px;
+        }
+
+        @include breakpoint(sm) {
+            text-align: center;
+            padding-bottom: 20px;
+        }
+
+        .newsletter-promo-container {
+            margin: 21px 0 0 0;
+            display: inline-block;
+            vertical-align: middle;
+
+            h3 {
+                margin: 0;
+                padding: 0;
+                @include responsive-font-size(18);
+                white-space: nowrap;
+                color: #ffffff;
+
+                @include breakpoint(mobile) {
+                    white-space: normal;
+                }
+
+                &:before {
+                    content: '\f003'; // fa-envelope-o
+                    font-family: FontAwesome;
+                    margin-right: 0.5em;
+                    display: inline-block;
+                }
+            }
+        }
+
+        .block-subscribe {
+            display: inline-block;
+            vertical-align: middle;
+            width: 100%;
+            float: none;
+            margin: 13px 0 0 0;
+
+            @include breakpoint(sm) {
+                margin-top: 0;
+            }
+
+            .block-title {
+                display: none;
+            }
+
+            .block-content {
+                margin: 0;
+
+                .input-box {
+                    width: 70%;
+
+                    @include breakpoint(mobile) {
+                        width: 60%;
+                    }
+
+                    #newsletter {
+                        height: 34px !important;
+                        border: none;
+                    }
+                }
+
+                .actions {
+                    width: 30%;
+                    padding-left: 5px;
+
+                    @include breakpoint(mobile) {
+                        width: 40%;
+                    }
+
+                    button {
+                        @include button-b2(100%, 34px);
+                    }
+                }
+            }
+
+            .newsletter-message {
+                @include responsive-font-size(11);
+
+                &.success-message {
+                    color: #ffffff;
+                }
+            }
+        }
+    }
+
+    .social-container {
+        min-height: 70px;
+        background-color: #404041;
+
+        ul {
+            margin: 0;
+            padding: 16px 0 0 0;
+            text-align: center;
+
+            li {
+                display: inline-block;
+                margin: 0 0 0 22px;
+                padding: 0;
+
+                &:nth-child(1) {
+                    margin-left: 0;
+
+                    a {
+                        @include use-sprite('social-pinterest');
+
+                        &:hover {
+                            @include use-sprite('social-pinterest-active');
+                        }
+                    }
+                }
+
+                &:nth-child(2) a {
+                    @include use-sprite('social-facebook');
+
+                    &:hover {
+                        @include use-sprite('social-facebook-active');
+                    }
+                }
+
+                &:nth-child(3) a {
+                    @include use-sprite('social-twitter');
+
+                    &:hover {
+                        @include use-sprite('social-twitter-active');
+                    }
+                }
+
+                &:nth-child(4) a {
+                    @include use-sprite('social-linkedin');
+
+                    &:hover {
+                        @include use-sprite('social-linkedin-active');
+                    }
+                }
+
+                &:nth-child(5) a {
+                    @include use-sprite('social-youtube');
+
+                    &:hover {
+                        @include use-sprite('social-youtube-active');
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*----------------------------------------------------------------------------*/
+/* Footer Menu
+/*----------------------------------------------------------------------------*/
+
+.footer-container {
+    padding: 0;
+    max-width: $pageMaxWidth*1px;
+
+    .footer {
+        border: none;
+
+        .menu-container {
+            padding-bottom: 80px;
+            @include global-page-margin-side;
+
+            @include breakpoint(tablet) {
+                padding-bottom: 70px;
+            }
+
+            @include breakpoint(mobile) {
+                padding-bottom: 50px;
+            }
+
+            h5 {
+                clear: left;
+                margin: 55px 0 30px 0;
+                padding: 0;
+                @include font-family('Avenir Black');
+                @include responsive-font-size(18);
+                text-transform: uppercase;
+                color: #404041;
+
+                @include breakpoint(mobile) {
+                    margin-top: 35px;
+                }
+            }
+
+            ul {
+                margin: 0;
+                padding: 0;
+
+                li {
+                    margin: 0;
+                    padding: 0;
+                    @include font-family('Avenir Light');
+                    @include responsive-font-size(14);
+                    line-height: 2em;
+                    color: #404041;
+
+                    &.contact-address {
+                        margin-left: 1.6em;
+
+                        i {
+                            margin-left: -1em;
+                        }
+                    }
+
+                    &.contact-email {
+                        white-space: nowrap;
+                    }
+
+                    &:before {
+                        content: '>';
+                        padding-right: 1em;
+                    }
+
+                    &.contact-address:before,
+                    &.contact-phone:before,
+                    &.contact-email:before {
+                        content: '';
+                        padding-right: 0;
+                    }
+
+                    // font awesome icons
+                    i {
+                        vertical-align: middle;
+                        @include responsive-font-size(20);
+                        color: #e85e5e;
+                    }
+
+                    a {
+                        @include global-no-underline;
+                    }
+                }
+            }
+
+            .payment {
+                margin: 42px 0 25px 0;
+
+                &:after {
+                    content: '';
+                    @include use-sprite('footer-payment-methods');
+                }
+            }
+        }
+    }
+}
+
+/*----------------------------------------------------------------------------*/
+/* Blog Feed
+/*----------------------------------------------------------------------------*/
+
+.footer-container .blogs {
+
+    .blog {
+        clear: left;
+        margin: 0 0 1em 0;
+
+        img {
+            float: left;
+            margin: 0 1em 3em 0;
+        }
+
+        a {
+            @include responsive-font-size(14);
+            color: #404041;
+        }
+
+        .date {
+            @include responsive-font-size(14);
+            color: #404041;
+        }
+    }
+}
+
+/*----------------------------------------------------------------------------*/
+/* Copyright Container
+/*----------------------------------------------------------------------------*/
+
+.copyright-container {
+    padding: 0 0 20px 0;
+    text-align: center;
+    background-color: #404041;
+
+    .copyright {
+        border: none;
+        margin: 0;
+        padding: 27px 0 25px 0;
+        @include font-family('Avenir Light');
+        @include responsive-font-size(14);
+        color: #ffffff;
+    }
+
+    .trust-container {
+        margin: 0 auto;
+
+        img {
+            display: inline;
+        }
+    }
+}

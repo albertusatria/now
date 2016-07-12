@@ -1,0 +1,412 @@
+/*----------------------------------------------------------------------------*/
+/* Product
+/*----------------------------------------------------------------------------*/
+
+.product-view {
+
+    .product-name {
+        margin: 0 0 0.5em 0;
+        padding: 0;
+        @include font-family('Avenir Black');
+        @include responsive-font-size(24);
+        font-weight: normal;
+        text-transform: none;
+        color: #404041;
+
+        @include breakpoint(mobile) {
+            display: none;
+        }
+    }
+
+    .product-shop {
+        float: right;
+        width: 50%;
+        @include box-sizing(border-box);
+
+        @include breakpoint(mobile) {
+            clear: both;
+            float: none;
+            width: auto;
+            padding-top: 30px;
+            @include global-page-margin-side;
+        }
+
+        .product-sku {
+            @include font-family('Avenir Light');
+            @include responsive-font-size(16);
+            color: #404041;
+
+            span {
+                @include font-family('Avenir Black');
+            }
+        }
+
+        .availability {
+            display: none;
+        }
+    }
+
+    /*----------------------------------------------------------------------------*/
+    /* Add To Cart Wrapper
+    /*----------------------------------------------------------------------------*/
+
+    .add-to-cart-wrapper {
+        clear: right;
+        float: right;
+        width: 50%;
+
+        @include breakpoint(mobile) {
+            clear: both;
+            float: none;
+            width: auto;
+            @include global-page-margin-side;
+        }
+    }
+
+    /*----------------------------------------------------------------------------*/
+    /* Summary
+    /*----------------------------------------------------------------------------*/
+
+    .summary-container {
+        clear: right;
+        float: right;
+        width: 50%;
+
+        @include breakpoint(mobile) {
+            clear: both;
+            float: none;
+            width: auto;
+            padding-top: 30px;
+            @include global-page-margin-side;
+        }
+
+        .short-description {
+            margin: 2.5em 0 0 0;
+            padding: 2.5em 0 0 0;
+            @include font-family('Avenir Light');
+            @include responsive-font-size(14);
+            color: #404041;
+            border-top: 1px solid #cccccc;
+        }
+
+        nav.content {
+            margin: 2em 0 0 0;
+
+            @include breakpoint(tabletLandscape) {
+                display: none;
+            }
+
+            ul {
+                margin: 0;
+                padding: 0;
+
+                li {
+                    display: inline-block;
+                    margin: 0 0 0 1em;
+                    padding: 0 0 0 1em;
+                    @include font-family('Avenir Black');
+                    @include responsive-font-size(14);
+                    text-decoration: underline;
+                    color: #404041;
+                    border-left: 1px solid #404041;
+                    cursor: pointer;
+
+                    &:first-child {
+                        margin-left: 0;
+                        padding-left: 0;
+                        border-left: none;
+                    }
+                }
+            }
+        }
+    }
+
+    /*----------------------------------------------------------------------------*/
+    /* Product Image
+    /*----------------------------------------------------------------------------*/
+
+    .product-img-box {
+        width: 50%;
+        float: left;
+        padding-right: 20px;
+        @include box-sizing(border-box);
+
+        @include breakpoint(mobile) {
+            float: none;
+            width: auto;
+            padding-right: 0;
+            @include global-page-margin-side;
+        }
+
+        .product-name {
+            display: none;
+
+            @include breakpoint(mobile) {
+                display: block;
+            }
+        }
+
+        .product-image img {
+            @include responsive-img;
+        }
+
+        .product-image-gallery {
+            position: relative;
+
+            .gallery-image {
+                display: none;
+
+                &.visible {
+                    display: block;
+
+                    &.hidden {
+                        visibility:hidden;
+                    }
+                }
+            }
+
+            @include loadingOverlay();
+        }
+
+        .more-views {
+            margin-top: 5px;
+            @include carousel;
+
+            h2 {
+                display: none;
+            }
+
+            ul.product-image-thumbs {
+                margin: 0;
+                padding: 0;
+
+                li {
+                    float: left;
+                    @include box-sizing(border-box);
+
+                    a {
+                        display: block;
+                        @include responsive-img-container();
+
+                        img {
+                            @include responsive-img();
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    /*----------------------------------------------------------------------------*/
+    /* Collateral
+    /*----------------------------------------------------------------------------*/
+
+    .product-collateral {
+        clear: both;
+    }
+
+    .box-collateral {
+        clear: both;
+        @include tabs;
+    }
+}
+
+/*----------------------------------------------------------------------------*/
+/* Add To Cart
+/*----------------------------------------------------------------------------*/
+
+.product-view {
+
+    .add-to-cart {
+        margin-top: 2em;
+
+        .qty-wrapper {
+            display: inline-block;
+        }
+
+        .add-to-cart-buttons {
+            display: inline-block;
+
+            button {
+                @include button-b1(140px);
+            }
+        }
+    }
+
+    .or {
+        display: none;
+    }
+
+    .add-to-links {
+        display: none;
+    }
+
+    .sharing-links {
+        display: none;
+    }
+}
+
+/*----------------------------------------------------------------------------*/
+/* Product: Configurable
+/*----------------------------------------------------------------------------*/
+
+.product-view.configurable {
+
+    .product-options {
+
+        dl {
+            margin: 1em 0 0 0;
+
+            .last {
+                margin-bottom: 1em;
+            }
+
+            dt {
+
+                label {
+                    @include font-family('Avenir Light');
+                    @include responsive-font-size(14);
+                    color: #404041;
+
+                    // Hide asterisk.
+                    &:after, em {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+
+    // Hide 'required fields' text.
+    p.required {
+        display: none;
+    }
+
+    // Hide bottom price.
+    .product-options-bottom .price-box {
+        display: none;
+    }
+}
+
+/*----------------------------------------------------------------------------*/
+/* Product: Grouped
+/*----------------------------------------------------------------------------*/
+
+.product-view.grouped {
+
+    .product-shop > .product-sku {
+        display: none;
+    }
+
+    .grouped-items-table-wrapper {
+        background-color: #ffffff;
+
+        .data-table {
+            border: 1px solid #cdcdcd;
+
+            td {
+                padding: 18px 22px;
+
+                &:first-child {
+                    padding-right: 0;
+                }
+
+                &:nth-child(2) {
+                    padding-left: 1em;
+                }
+            }
+        }
+
+        .product-type {
+            @include font-family('Avenir Black');
+        }
+
+        .product-sku {
+            display: inline-block;
+            padding-top: .75em;
+        }
+
+        .product-upc {
+            display: inline-block;
+            padding-top: .75em;
+        }
+
+        .separator {
+            padding: 0 5px;
+        }
+
+        .price-container {
+            display: inline-block;
+        }
+
+        .qty-wrapper {
+
+            @include breakpoint(mobile) {
+                text-align: center;
+            }
+
+            label {
+
+                @include breakpoint(mobile) {
+                    display: block;
+                }
+            }
+        }
+    }
+}
+
+/*----------------------------------------------------------------------------*/
+/* Product: Downloadable
+/*----------------------------------------------------------------------------*/
+
+.product-view.downloadable {
+
+    // Hide links.
+    .product-options {
+        display: none;
+    }
+
+    // Hide bottom price.
+    .product-options-bottom .price-box {
+        display: none;
+    }
+}
+
+/*----------------------------------------------------------------------------*/
+/* Product: Upsell (Also Bought)
+/*----------------------------------------------------------------------------*/
+
+.product-view .box-up-sell {
+    margin: 62px 0 0 0;
+    @include carousel(30%);
+
+    @include breakpoint(mobile) {
+        margin-top: 0;
+    }
+}
+
+/*----------------------------------------------------------------------------*/
+/* Product: Related w/ Checkbox
+/*----------------------------------------------------------------------------*/
+
+.product-view .block-related {
+    margin: 62px 0 0 0;
+    @include carousel(30%);
+
+    @include breakpoint(mobile) {
+        margin-top: 0;
+    }
+
+    .note,
+    .link-wishlist {
+        display: none;
+    }
+}
+
+/*----------------------------------------------------------------------------*/
+/* Recently Viewed Products
+/*----------------------------------------------------------------------------*/
+
+.product-view .block-viewed {
+    @include carousel(30%);
+}

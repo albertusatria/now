@@ -1,0 +1,104 @@
+﻿/*----------------------------------------------------------------------------*/
+/* Quick View Dialog
+/*----------------------------------------------------------------------------*/
+
+#quickview-dialog-wrapper {
+
+    $dialogWidth: 815;
+
+    // Center dialog left/right. JQuery UI position will position in center of view port.
+    margin: auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+
+    z-index: 200;
+    max-width: ($dialogWidth*1px);
+    //width: ($dialogWidth*1px);
+    min-height: 600px; // Make approx same as actual height.
+    text-align: left;
+    background-color: #ffffff;
+    //@include box-shadow(rgba(0,0,0,.21) 0 0 5px, rgba(0,0,0,.21) 1px 2px 1px);
+    border: 2px solid #cdcdcd;
+
+    @include breakpoint(mobile) {
+        display: none;
+    }
+
+    .close.top {
+        width: 22px; // Double for easier click/tap.
+        height: 20px; // Double for easier click/tap.
+        float: right;
+        cursor: pointer;
+
+        &:after {
+            content: '';
+            float: right;
+            margin: 15px 15px 0 0;
+            @include use-sprite('dialog-close');
+        }
+    }
+
+    > .ajax {
+        width: 16px;
+        height: 16px;
+        background: url(../images/ajax-loader.gif) no-repeat left center;
+        @include helper-absolute-center();
+    }
+
+    > .error {
+        width: 50%;
+        height: 2em;
+        text-align: center;
+        @include helper-absolute-center();
+    }
+}
+
+/*----------------------------------------------------------------------------*/
+/* Quick View
+/*----------------------------------------------------------------------------*/
+
+.quickview-container {
+
+    .close {
+        position: absolute;
+        top: 0;
+        right: 0;
+        overflow: hidden;
+        padding: 20px;
+        font-size: 1px;
+        line-height: 1px;
+        cursor: pointer;
+
+        &:after {
+            content: '';
+            @include use-sprite('dialog-close');
+        }
+    }
+
+    > .inner-tube {
+        @include clearfix;
+        padding: 40px 48px;
+
+        // Override product page styling here.
+        .product-view {
+
+            // Truncate text to 3x lines.
+            .short-description {
+                overflow: hidden;
+                height: 7em;
+            }
+
+            .read-full {
+                @include font-family('Avenir Black');
+                @include responsive-font-size(14);
+                text-decoration: underline;
+                color: #404041;
+
+                &:hover {
+                    color: #ee3d42;
+                }
+            }
+        }
+    }
+}

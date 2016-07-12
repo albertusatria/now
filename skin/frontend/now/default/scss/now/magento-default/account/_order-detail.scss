@@ -1,0 +1,123 @@
+/*----------------------------------------------------------------------------*/
+/* Customer Account: Order Detail
+/*----------------------------------------------------------------------------*/
+
+body.sales-order-view,
+.sales-order-invoice,
+.sales-order-creditmemo,
+.sales-order-shipment {
+
+    .col-main {
+
+        @include breakpoint(tablet) {
+            float: none;
+        }
+
+        .page-title {
+            padding-bottom: 0;
+            text-align: left;
+            border-bottom-style: none;
+
+            a {
+                position: static;
+                padding-top: 1em;
+            }
+        }
+
+        .box-title {
+            width: auto;
+            float: none;
+
+            h2 {
+                width: auto;
+                margin: 0 0 1em 0;
+                padding: 0;
+                @include responsive-font-size(14);
+                color: #999999;
+                background-color: transparent;
+            }
+        }
+
+        .form-list {
+            border-top-style: none;
+        }
+
+        .order-info {
+            border-bottom-style: none;
+
+            dt {
+                display: none;
+            }
+
+            #order-info-tabs {
+                display: block;
+                border-bottom: 1px solid #cccccc;
+
+                li {
+                    display: inline-block;
+                    margin: 0 0 0 2px;
+                    padding: 18px 5%;
+                    background-color: $baseBackgroundColor2;
+
+                    &.current {
+                        background-color: transparent;
+                        border: 1px solid #cccccc;
+                        border-bottom-style: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*----------------------------------------------------------------------------*/
+/* Customer Account: Order Detail - Order Shipment
+/*----------------------------------------------------------------------------*/
+
+body.sales-order-shipment {
+
+    .col-main {
+
+        .tracking-table {
+
+            tbody {
+
+                tr.first {
+                    display: none;
+                }
+
+                th {
+                    background-color: transparent;
+                }
+
+                td {
+                    padding-top: 0;
+                    padding-bottom: 0;
+                    vertical-align: middle !important;
+                    border-bottom-style: none;
+                }
+            }
+        }
+
+        h3 {
+            display: none; // Items shipped.
+        }
+    }
+}
+
+/*----------------------------------------------------------------------------*/
+/* Customer Account: Shipping Tracking Popup
+/*----------------------------------------------------------------------------*/
+
+body.shipping-tracking-popup {
+
+    .col-main {
+
+        .buttons-set {
+
+            button {
+                @include button-b1();
+            }
+        }
+    }
+}

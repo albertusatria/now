@@ -1,0 +1,273 @@
+/*----------------------------------------------------------------------------*/
+/* Customer Account: All
+/*----------------------------------------------------------------------------*/
+
+.customer-account {
+
+    .banner-container {
+        display: none;
+
+        @include breakpoint(tablet) {
+            display: table;
+        }
+    }
+
+    .col-main {
+        @include magento-default-page2();
+        width: 63%;
+        margin: 0;
+        padding: 67px 0 0 0;
+
+        @include breakpoint(tablet) {
+            width: auto;
+            padding-top: 1.5em;
+        }
+
+        @include breakpoint(mobile) {
+
+            .col2-set {
+
+                .col-1,
+                .col-2 {
+                    float: none;
+                    width: auto;
+                    margin-top: 1em;
+                    padding-left: 0;
+                }
+
+                li.item {
+                    float: none;
+                }
+            }
+        }
+
+        h2 {
+            padding: 17px 15px;
+            @include base-h-font;
+            @include responsive-font-size($baseHeadingFontSizeH2);
+            color: $baseHeadingColorH2;
+            background-color: $baseBackgroundColor2;
+        }
+
+        h3 {
+            margin: 0;
+            padding: 0;
+            @include responsive-font-size(14);
+            text-transform: uppercase;
+            color: #999999;
+        }
+
+        .title-buttons {
+
+            h1 {
+
+                @include breakpoint(mobile) {
+                    margin-bottom: 0.5em;
+                }
+            }
+
+            button {
+                margin-top: -1em;
+                @include button-b1();
+
+                @include breakpoint(mobile) {
+                    position: static !important;
+                    margin-top: 0;
+                }
+            }
+
+            a {
+                @include responsive-font-size(14);
+                @include global-underline();
+                text-transform: uppercase;
+                color: #666666;
+            }
+        }
+
+        .data-table {
+
+            @include breakpoint(mobile) {
+                @include linearize-table;
+            }
+
+            thead {
+
+                th {
+                    padding-top: 20px;
+                    padding-bottom: 20px;
+                    @include responsive-font-size(14);
+                    font-weight: bold;
+                    text-transform: uppercase;
+                    color: #999999;
+                    background-color: transparent;
+
+                    @include breakpoint(mobile) {
+                        padding-top: 5px;
+                        padding-bottom: 10px;
+                    }
+                }
+            }
+
+            tbody {
+
+                td {
+                    padding-top: 30px;
+                    padding-bottom: 30px;
+                    @include responsive-font-size(14);
+                    color: #666666;
+
+                    @include breakpoint(mobile) {
+                        text-align: left !important;
+                    }
+
+                    em {
+                        font-style: normal;
+                    }
+
+                    &.last {
+
+                        @include breakpoint(mobile) {
+                            padding-top: 1em;
+                            padding-bottom: 1em;
+                            @include responsive-font-size(14);
+                            text-align: left;
+                            color: #666666;
+                        }
+
+                        a {
+                            @include global-underline();
+                        }
+                    }
+
+                    @include breakpoint(mobile) {
+                        padding-top: 5px;
+                        padding-bottom: 5px;
+                    }
+                }
+            }
+        }
+
+        .form-list {
+            margin: 0;
+            padding: 0;
+            border-top-style: none;
+
+            .control {
+
+                .checkbox {
+                    margin-left: 0;
+                }
+
+                label {
+                    margin-left: 0;
+                    padding-left: 2em;
+                    background-color: transparent;
+                }
+            }
+        }
+
+        p.required {
+            display: none;
+        }
+
+        .buttons-set {
+            border-top-style: none;
+            text-align: left;
+
+            .back-link {
+                display: none;
+            }
+
+            button {
+                float: none;
+                margin-left: 0;
+                @include button-b1();
+            }
+        }
+    }
+
+    .col-left-first {
+        width: 21%;
+        margin: 0;
+        padding: 72px 0 0 0;
+
+        @include breakpoint(tablet) {
+            float: none;
+            width: auto;
+            //margin: 1em $pageTabletMarginSide 0 0;
+            padding: 0;
+        }
+
+        @include breakpoint(mobile) {
+            //margin-right: $pageMobileMarginSide;
+        }
+
+        .block-account {
+            border-style: none;
+
+            .block-title {
+                margin-bottom: 1em;
+                @include responsive-font-size(14);
+                font-style: bold;
+                color: #154020;
+
+                @include breakpoint(tablet) {
+                    display: none;
+                }
+            }
+
+            .block-content {
+
+                @include breakpoint(tablet) {
+                    padding-right: 0;
+                    padding-left: 0;
+                }
+
+                &.no-display {
+                    display: block !important;
+                    border-style: none;
+                }
+
+                ul {
+                    margin: 0;
+                    padding: 0;
+
+                    li {
+                        margin: 0;
+                        padding: 0;
+
+                        @include breakpoint(tablet) {
+                            display: inline-block;
+                            margin-right: 1.25em;
+                        }
+
+                        @include breakpoint(mobile) {
+                            display: block;
+                            margin-right: 0;
+                        }
+
+                        a {
+                            @include responsive-font-size(14);
+                            @include responsive-line-height(30);
+                            font-weight: normal;
+                            font-style: normal;
+                            color: #999999;
+                        }
+
+                        &.current {
+
+                            @include breakpoint(mobile) {
+                                display: block;
+                            }
+
+                            a strong {
+                                font-weight: normal;
+                                color: #154020 !important;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

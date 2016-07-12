@@ -1,0 +1,425 @@
+/*----------------------------------------------------------------------------*/
+/* Shopping Cart
+/*----------------------------------------------------------------------------*/
+
+body.checkout-cart-index {
+
+    .col-main {
+        @include magento-default-page();
+    }
+
+    .col-main {
+
+        /*----------------------------------------------------------------------------*/
+        /* Empty Cart
+        /*----------------------------------------------------------------------------*/
+
+        .cart-empty {
+
+            a {
+                @include global-underline;
+            }
+        }
+
+        .cart {
+
+            /*----------------------------------------------------------------------------*/
+            /* Title
+            /*----------------------------------------------------------------------------*/
+
+            .page-title {
+                @include clearfix;
+
+                h1 {
+                    float: left;
+                    margin: 16px 0 0 0;
+                }
+
+                .checkout-types.top {
+                    margin-bottom: 12px;
+                }
+            }
+
+            .cart-table {
+                float: none;
+                width: 100%;
+                border-top: 1px solid #cccccc;
+
+                /*----------------------------------------------------------------------------*/
+                /* Cart Items Head
+                /*----------------------------------------------------------------------------*/
+
+                thead {
+
+                    @include breakpoint(mobile) {
+                        display: none;
+                    }
+
+                    tr.first {
+
+                        th {
+                            @include base-h-font;
+                            @include responsive-font-size(14);
+                            text-align: left;
+                            color: #ffffff;
+                            background-color: $baseBackgroundColor;
+
+                            &:first-child {
+                                padding-left: 17px;
+                            }
+                        }
+                    }
+                }
+
+                /*----------------------------------------------------------------------------*/
+                /* Cart Items Body
+                /*----------------------------------------------------------------------------*/
+
+                tbody {
+
+                    tr {
+                        background-color: #ffffff;
+
+                        /*----------------------------------------------------------------------------*/
+                        /* Columns Widths
+                        /*----------------------------------------------------------------------------*/
+
+                        td:first-child {
+                            width: 5%;
+
+                            @include breakpoint(mobile) {
+                                width: 35%;
+                            }
+                        }
+
+                        td:nth-child(2) {
+                            width: 50%;
+                        }
+
+                        td:nth-child(3) {
+                            width: 10%;
+                        }
+
+                        td:nth-child(4) {
+                            width: 15%;
+                        }
+
+                        td:nth-child(5) {
+                            width: 5%;
+                        }
+
+                        // Cart remove column.
+                        td:nth-child(6) {
+                            width: 15%;
+
+                            @include breakpoint(mobile) {
+                                width: 1%;
+                            }
+                        }
+
+                        /*----------------------------------------------------------------------------*/
+                        /* Column Content
+                        /*----------------------------------------------------------------------------*/
+
+                        td {
+                            padding-top: 10px;
+                            padding-bottom: 10px;
+                            vertical-align: middle;
+
+                            @include breakpoint(mobile) {
+                                vertical-align: top;
+
+                                &.product-cart-info,
+                                &[data-rwd-label] {
+                                    float: right;
+                                    width: 100%;
+                                    padding-bottom: 0;
+                                    border-bottom: none;
+                                }
+                            }
+                        }
+
+                        td.product-cart-image {
+
+                            a.product-image {
+
+                                img {
+                                    width: auto !important;
+                                    @include responsive-img();
+                                }
+                            }
+
+                            // Mobile edit link.
+                            .cart-links {
+                                display: none;
+                            }
+                        }
+                    }
+
+                    .product-cart-info {
+
+                        // Mobile remove button.
+                        > .btn-remove2 {
+                            display: none;
+                        }
+                    }
+
+                    .product-name {
+                        margin: 0;
+
+                        a {
+                            @include responsive-font-size(14);
+                            color: #666666;
+                        }
+                    }
+
+                    .product-cart-sku {
+                        @include responsive-font-size(12);
+                        font-style: normal;
+                        color: #999999;
+
+                        @include breakpoint(mobile) {
+                            display: none;
+                        }
+                    }
+
+                    .product-cart-price {
+                        padding-top: 0;
+                        padding-bottom: 0;
+
+                        @include breakpoint(mobile) {
+                            display: none;
+                        }
+
+                        .cart-price {
+                            @include responsive-font-size(14);
+                            color: #666666;
+                        }
+                    }
+
+                    .product-cart-actions {
+
+                        .qty {
+                            width: 3.5em;
+                            height: 52px;
+                            border: 1px solid #cccccc;
+                        }
+
+                        // Quantity update button.
+                        .btn-update {
+                            display: none;
+                            @include button-b3(auto, 44px);
+                        }
+
+                        // Desktop edit link.
+                        .cart-links {
+                            display: none;
+                        }
+                    }
+
+                    .product-cart-total {
+                        @include responsive-font-size(14);
+                        color: #666666;
+
+                        @include breakpoint(mobile) {
+                            padding-bottom: 10px !important;
+                        }
+                    }
+
+                    .btn-remove2 {
+                        @include use-sprite('cart-delete');
+
+                        &:hover {
+                            @include use-sprite('cart-delete-hover');
+                        }
+                    }
+                }
+
+                /*----------------------------------------------------------------------------*/
+                /* Cart Items Foot / Buttons
+                /*----------------------------------------------------------------------------*/
+
+                tfoot {
+
+                    tr {
+                        background-color: transparent;
+
+                        .btn-update {
+                            @include button-b3(220px);
+                        }
+
+                        // Mobile update button? Causes gap on mobile.
+                        button:first-child {
+                            display: none;
+                        }
+
+                        // Hide empty cart and continue shopping buttons.
+                        .btn-empty,
+                        .btn-continue,
+                        .or {
+                            display: none;
+                        }
+                    }
+                }
+            }
+
+            /*----------------------------------------------------------------------------*/
+            /* Checkout Types/Buttons
+            /*----------------------------------------------------------------------------*/
+
+            .checkout-types {
+                float: right;
+                @include box-sizing(border-box);
+
+                li {
+                    margin: 0;
+
+                    .btn-continue {
+                        @include button-b2(260px);
+                        margin: 0 0 10px 0;
+                        vertical-align: top;
+
+                        @include breakpoint(mobile) {
+                            display: block;
+                            margin-right: auto;
+                            margin-left: auto;
+                        }
+                    }
+
+                    .btn-proceed-checkout {
+                        @include button-b1(220px);
+                        margin: 0;
+                        vertical-align: top;
+                    }
+                }
+            }
+
+            .checkout-buttons-set {
+                clear: both;
+            }
+
+            /*----------------------------------------------------------------------------*/
+            /* Discount Coupon Form
+            /*----------------------------------------------------------------------------*/
+
+            .cart-forms {
+                float: left;
+                width: 49%;
+
+                @include breakpoint(mobile) {
+                    float: none;
+                    width: auto;
+                }
+
+                #discount-coupon-form {
+
+                    .discount {
+                        padding: 21px 17px;
+                        border: 5px solid $baseBorderColor;
+
+                        h2 {
+                            margin: 0;
+                            padding: 0;
+                            @include base-h-font;
+                            @include responsive-font-size(18);
+                            text-transform: uppercase;
+                            background-color: transparent;
+                        }
+
+                        label {
+                            @include responsive-font-size(14);
+                            color: #646464;
+                        }
+
+                        .input-text {
+                            margin: 0.5em 0;
+                        }
+
+                        button {
+                            @include button-b3(160px);
+                        }
+                    }
+                }
+            }
+
+            /*----------------------------------------------------------------------------*/
+            /* Totals
+            /*----------------------------------------------------------------------------*/
+
+            .cart-totals-wrapper {
+                @include clearfix;
+                float: right;
+                width: 49%;
+                background-color: #ffffff;
+
+                @include breakpoint(mobile) {
+                    float: none;
+                    width: auto;
+                    margin-top: 1em;
+                }
+
+                @include breakpoint(mobile) {
+                    float: none;
+                    width: auto;
+                }
+
+                .cart-totals {
+                    @include clearfix;
+                    padding: 37px 20px;
+                    text-align: right;
+
+                    @include breakpoint(mobile) {
+                        padding-bottom: 15px;
+                    }
+
+                    #shopping-cart-totals-table {
+                        width: 100%;
+
+                        td {
+                            padding-right: 0;
+
+                            &:first-child {
+                                padding-right: 40px;
+                            }
+                        }
+
+                        tfoot {
+                            @include base-h-font;
+                            @include responsive-font-size(20);
+                            color: #313131;
+
+                            td {
+                                padding: 1em 0;
+                            }
+
+                            strong {
+                                font-weight: normal;
+                            }
+                        }
+                    }
+                }
+            }
+
+            /*----------------------------------------------------------------------------*/
+            /* Cross Sell
+            /*----------------------------------------------------------------------------*/
+
+            .crosssell {
+                clear: left;
+                padding: 62px 0;
+                @include carousel(30%);
+
+                // Hack fix for large space after carousel.
+                .product-info {
+                    //min-height: 0 !important;
+                    //padding: 0 !important;
+                }
+
+                .actions {
+                    height: 0; // Prevent Magento js from setting height/padding for hidden actions block;
+                    display: none;
+                }
+            }
+        }
+    }
+}

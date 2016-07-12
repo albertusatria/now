@@ -1,0 +1,362 @@
+/*----------------------------------------------------------------------------*/
+/* Category Page
+/*----------------------------------------------------------------------------*/
+
+.catalog-category-view,
+.catalogsearch-result-index {
+
+    .main {
+        @include global-page-margin-side;
+    }
+
+    h1 {
+        margin: 0;
+        padding: 0;
+        @include font-family('Avenir Black');
+        @include responsive-font-size(24);
+        font-weight: normal;
+        color: #404041;
+    }
+
+    .category-image {
+        margin: 1em 0 0 0;
+
+        img {
+            @include responsive-img;
+        }
+    }
+
+    .category-description {
+
+        h3 {
+            margin: 1em 0 0 0;
+            padding: 0;
+            @include font-family('Avenir Light');
+            @include responsive-font-size(14);
+            text-transform: none;
+            line-height: 20px;
+            color: #404041;
+        }
+    }
+
+    .products-grid {
+        list-style: none;
+
+        .price-box {
+            margin-bottom: 23px;
+        }
+
+        .actions {
+            height: 0; // Prevent Magento js from setting height/padding for hidden actions block;
+            display: none;
+        }
+    }
+}
+
+/*----------------------------------------------------------------------------*/
+/* Infinite Scroll
+/*----------------------------------------------------------------------------*/
+
+.ajax-loader {
+    margin: 1em 0 0 0;
+
+    &:after {
+        content: 'Scroll For More Products';
+        display: block;
+        margin: 1em 0 0 0;
+        @include font-family('Avenir Black');
+        @include responsive-font-size(13);
+        text-align: center;
+        text-transform: uppercase;
+        color: #404041;
+    }
+
+    img {
+        margin: 0 auto;
+    }
+}
+
+/*----------------------------------------------------------------------------*/
+/* Grid Price Box
+/*----------------------------------------------------------------------------*/
+
+// Base price style.
+price {
+    @include font-family('Avenir Black');
+    font-weight: normal;
+    color: #262a2d;
+}
+
+.price-box {
+    margin: 0;
+    padding: 0;
+    @include font-family('Avenir Light');
+    @include responsive-font-size(18);
+
+    p {
+        margin: 0;
+    }
+
+    /*
+    .price {
+        @extend price;
+    }
+    */
+
+    .regular-price .price {
+        @extend price;
+    }
+
+    .old-price {
+
+        .price-label {
+            display: none;
+        }
+
+        .price {
+            color: #a6a9ab;
+        }
+    }
+
+    .special-price {
+        display: inline-block;
+        padding: 0;
+
+        .price-label {
+            display: none;
+        }
+
+        .price {
+            @extend price;
+        }
+    }
+
+    // Configurable.
+    .minimal-price-link {
+        display: none;
+
+        .price-label {
+        }
+
+        .price {
+        }
+    }
+
+    // Bundle.
+    .minimal-price {
+
+        .price-label {
+            @include responsive-font-size(14);
+        }
+
+        .price {
+            @extend price;
+        }
+    }
+}
+
+/*----------------------------------------------------------------------------*/
+/* Products Grid
+/*----------------------------------------------------------------------------*/
+
+.products-grid,
+.mini-products-list { // upsell w/ checkbox
+
+    $itemPaddingRight: 25;
+
+    @include clearfix;
+    margin: 0 0 0 (-$itemPaddingRight*1px) !important; // Prevent CMS ul style override.
+
+    .item {
+        width: 25%;
+        float: left;
+        margin: 0;
+        padding: 0 0 0 ($itemPaddingRight*1px);
+        list-style: none;
+        @include box-sizing(border-box);
+
+        @include breakpoint(tablet) {
+            width: 33.3333%;
+        }
+
+        @include breakpoint(mobile) {
+            width: 50%;
+        }
+
+        @include breakpoint(phone) {
+            width: 100%;
+        }
+
+        .product-image {
+            display: block;
+            border: none;
+            @include responsive-img-container();
+
+            img {
+                @include responsive-img();
+            }
+        }
+
+        .product-info {
+            min-height: 125px; // Prevent grid stacking issues e.g. one item in row.
+        }
+
+        .quickview {
+            display: block;
+            margin: 18px 0 10px 0;
+            @include font-family('Avenir Medium');
+            @include responsive-font-size(14);
+            text-align: right;
+            text-decoration: none;
+            text-transform: uppercase;
+            color: #404041;
+            cursor: pointer;
+
+            @include breakpoint(mobile) {
+                display: none;
+            }
+
+            &:before {
+                content: '';
+                margin-right: 6px;
+                @include use-sprite('quickview');
+                display: inline-block;
+            }
+
+            &:hover {
+                text-decoration: none;
+                color: #ee3d42;
+
+                &:before {
+                    @include use-sprite('quickview-hover');
+                    display: inline-block;
+                }
+            }
+        }
+
+        .product-name {
+            min-height: 3em; // Allow product names to be 3 lines.
+            margin: 0;
+            padding: 9px 0 0 0;
+            @include font-family('Avenir Black');
+            @include responsive-font-size(14);
+            font-weight: normal;
+            color: #404041;
+            border: none;
+            border-top: 1px solid #b9bbbd;
+
+            @include breakpoint(mobile) {
+                min-height: 0;
+            }
+
+            a {
+                font-family: inherit;
+                font-size: inherit;
+                color: inherit;
+                text-decoration: inherit;
+            }
+
+            .product-sku {
+                @include font-family('Avenir Light');
+                @include responsive-font-size(18);
+                font-weight: normal;
+                color: #a6a9ab;
+            }
+        }
+    }
+}
+
+/*----------------------------------------------------------------------------*/
+/* Toolbar
+/*----------------------------------------------------------------------------*/
+
+.toolbar {
+    margin: 20px 0;
+    padding: 0 0 12px 0;
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid #d8d8d8;
+
+    .count-container .amount {
+        @include responsive-font-size(14);
+    }
+
+    .sorter {
+        float: none;
+
+        .sort-by {
+            float: right;
+
+            label {
+                @include font-family('Avenir Light');
+                @include responsive-font-size(14);
+                text-transform: none;
+                color: #424242;
+            }
+
+            select {
+                height: auto;
+                padding: 3px;
+                vertical-align: middle;
+            }
+
+            a {
+                vertical-align: middle;
+
+                &.sort-by-switcher--asc {
+                    @include use-sprite('category-asc');
+                    display: inline-block;
+                }
+
+                &.sort-by-switcher--desc {
+                    @include use-sprite('category-desc');
+                    display: inline-block;
+                }
+            }
+        }
+
+        .view-mode {
+            display: none;
+            float: none;
+            max-width: 120px;
+            margin: 0 auto;
+
+            .grid {
+                @include use-sprite('category-grid-inactive');
+                top: 6px;
+                background-size: auto;
+            }
+            strong.grid {
+                @include use-sprite('category-grid');
+                top: 6px;
+                background-size: auto;
+            }
+
+            .list {
+                @include use-sprite('category-list-inactive');
+                top: 5px;
+                background-size: auto;
+            }
+            strong.list {
+                @include use-sprite('category-list');
+                top: 5px;
+                background-size: auto;
+            }
+
+            .grid, .list {
+                margin: 0;
+                padding: 0;
+                position: relative;
+            }
+
+            label, .grid, strong.grid, .list, strong.list {
+                float: none;
+                display: inline-block;
+            }
+        }
+    }
+}
+
+.toolbar-bottom {
+    display: none;
+}

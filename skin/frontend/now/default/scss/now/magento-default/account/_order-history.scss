@@ -1,0 +1,55 @@
+/*----------------------------------------------------------------------------*/
+/* Customer Account: Order History
+/*----------------------------------------------------------------------------*/
+
+body.sales-order-history {
+
+    .col-main {
+
+        .page-title {
+            padding-bottom: 0;
+            border-bottom-style: none;
+        }
+
+        .pager {
+            float: none;
+            padding: 17px 15px;
+            color: #ffffff;
+            background-color: $baseBackgroundColor2;
+
+            .count-container {
+                float: left;
+
+                label {
+                    font-weight: normal;
+                }
+            }
+
+            .pages {
+                float: right;
+
+                a {
+                    color: #ffffff;
+
+                    &.next {
+                        border-color: #cccccc;
+                    }
+                }
+            }
+
+            @include breakpoint(tablet) {
+
+                .count-container,
+                .amount,
+                .limiter,
+                .pages {
+                    float: none;
+                }
+            }
+
+            select {
+                height: 30px;
+            }
+        }
+    }
+}

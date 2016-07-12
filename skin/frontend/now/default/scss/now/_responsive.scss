@@ -1,0 +1,132 @@
+/*----------------------------------------------------------------------------*/
+/* Responsive
+/*----------------------------------------------------------------------------*/
+
+/*----------------------------------------------------------------------------*/
+/* Global
+/*----------------------------------------------------------------------------*/
+
+html {
+    font-size: 100%; // Most devices default to 16px.
+}
+
+/*----------------------------------------------------------------------------*/
+/* Override Magento default breakpoints defined here: ../_var.scss
+/*----------------------------------------------------------------------------*/
+
+$bp-xsmall: 319px; //iPhone <=5 Portrait
+$bp-small: 639px; //Mobile
+$bp-medium: 767px; //iPad Portrait
+$bp-large: 1300px; //Desktop
+$bp-xlarge: 1920px; //Foundation
+
+/*----------------------------------------------------------------------------*/
+/* Breakpoint mixin and width variables (no units).
+/*----------------------------------------------------------------------------*/
+
+$desktopWidth: strip-units($bp-large + 1);
+$tabletWidth: strip-units($bp-medium + 1);
+$tabletWidthLandscape: strip-units(1024);
+$mobileWidth: strip-units($bp-small + 1);
+$phoneWidth: strip-units($bp-xsmall + 1);
+
+/*
+$screen-lg: <1300px
+$screen-md: 1024px
+$screen-sm: 768px
+$screen-ms: 640px
+$screen-xs: <640px
+*/
+
+$lgWidth: strip-units($bp-large - 1);
+$mdWidth: $tabletWidthLandscape - 1;
+$smWidth: strip-units($bp-medium);
+$xsWidth: strip-units($bp-small);
+
+@mixin breakpoint($type, $width: $desktopWidth) {
+
+    $media: 'handheld, screen';
+
+    @if $mq-support == true {
+
+        @if $type == 'desktop' {
+            @media #{$media} and (min-width: #{$desktopWidth}px) {
+                @content;
+            }
+        } @else if $type == 'tablet' {
+            @media #{$media} and (max-width: #{$tabletWidth}px) {
+                @content;
+            }
+        } @else if $type == 'tabletLandscape' {
+            @media #{$media} and (max-width: #{$tabletWidthLandscape}px) {
+                @content;
+            }
+        } @else if $type == 'mobile' {
+            @media #{$media} and (max-width: #{$mobileWidth}px) {
+                @content;
+            }
+        } @else if $type == 'phone' {
+            @media #{$media} and (max-width: #{$phoneWidth}px) {
+                @content;
+            }
+        } @else if $type == 'min' or $type == 'max' {
+            @media #{$media} and (#{$type}-width: #{$width}px) {
+                @content;
+            }
+        } @else if $type == 'lg' {
+            @media #{$media} and (max-width: #{$lgWidth}px) {
+                @content;
+            }
+        } @else if $type == 'md' {
+            @media #{$media} and (max-width: #{$mdWidth}px) {
+                @content;
+            }
+        } @else if $type == 'sm' {
+            @media #{$media} and (max-width: #{$smWidth}px) {
+                @content;
+            }
+        } @else if $type == 'xs' {
+            @media #{$media} and (max-width: #{$xsWidth}px) {
+                @content;
+            }
+        }
+    }
+}
+
+/*----------------------------------------------------------------------------*/
+/* Images
+/*----------------------------------------------------------------------------*/
+
+@mixin responsive-img {
+    max-width: 100%;
+    height: auto !important; // Force correct aspect ratio.
+}
+
+@mixin responsive-img-container {
+    width: 100%;
+
+    img {
+        width: 100%;
+        height: auto !important; // Force correct aspect ratio.
+    }
+}
+
+/*----------------------------------------------------------------------------*/
+/* Font size and related styles. Use mixin to set all font sizes/styles.
+/*----------------------------------------------------------------------------*/
+
+// Use rems with fallback to px for IE8.
+@mixin responsive-font-size($pixelFontSize) {
+    $remValue: ($pixelFontSize / 16);
+    $pxValue: $pixelFontSize;
+    font-size: #{$pxValue}px;
+    font-size: #{$remValue}rem;
+}
+
+// Use rems with fallback to px for IE8.
+@mixin responsive-line-height($pixelFontSize) {
+    $remValue: ($pixelFontSize / 16);
+    $pxValue: $pixelFontSize;
+    line-height: #{$pxValue}px;
+    line-height: #{$remValue}rem;
+}

@@ -1,0 +1,33 @@
+/*----------------------------------------------------------------------------*/
+/* Webforms Extension
+/*----------------------------------------------------------------------------*/
+
+body.webforms-index-index {
+
+    .col-main {
+        @include magento-default-page2();
+
+        //Fix select with .input-text class. Magento styles input-text class as input so drop down arrow is hidden.
+        select.input-text {
+            @include appearance(menulist);
+        }
+
+        .input-box textarea {
+            height: 15em;
+        }
+
+        .buttons-set {
+            text-align: left;
+            @include base-required-fields();
+
+            button {
+                float: none;
+                @include button-b1(180px);
+            }
+
+            p.required {
+                display: none;
+            }
+        }
+    }
+}

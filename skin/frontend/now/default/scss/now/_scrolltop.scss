@@ -1,0 +1,24 @@
+/*----------------------------------------------------------------------------*/
+/* ScrollTop Widget
+	corresponding file skin/frontend/now/default/js/jquery.now.scrolltop.js
+/*----------------------------------------------------------------------------*/
+
+#scrolltop-container {
+    opacity: 0;
+    position: fixed;
+    z-index: 1000;
+    right: 5px;
+    bottom: 5px;
+    cursor: pointer;
+
+    @include breakpoint(max, $desktopWidth + (2 * 90)) {
+        display: none;
+    }
+
+    > .inner-tube {
+
+        .image {
+            @include use-sprite('scrolltop');
+        }
+    }
+}

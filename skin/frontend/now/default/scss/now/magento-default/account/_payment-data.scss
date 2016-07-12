@@ -1,0 +1,22 @@
+/*----------------------------------------------------------------------------*/
+/* Payment Data i.e. CIM
+/*----------------------------------------------------------------------------*/
+
+body.customer-paymentinfo-index{
+
+    .manage-payment-method {
+
+        h4 {
+            margin: 2em 0 0 0;
+            padding: 0 0 0.5em 0;
+            border-bottom: 1px solid $baseBackgroundColor;
+        }
+
+        #billing-new-address-form {
+
+            li {
+                margin-bottom: 10px;
+            }
+        }
+    }
+}

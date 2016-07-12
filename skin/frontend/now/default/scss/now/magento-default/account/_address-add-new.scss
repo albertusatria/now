@@ -1,0 +1,13 @@
+/*----------------------------------------------------------------------------*/
+/* Customer Account: Add New Address
+/*----------------------------------------------------------------------------*/
+
+body.customer-address-form {
+
+    .col-main {
+
+        .buttons-set {
+            @include base-required-fields();
+        }
+    }
+}

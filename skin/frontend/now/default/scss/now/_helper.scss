@@ -1,0 +1,43 @@
+/*----------------------------------------------------------------------------*/
+/* Helper Functions
+/*----------------------------------------------------------------------------*/
+
+@function strip-units($number) {
+    @return $number / ($number * 0 + 1);
+}
+
+/*----------------------------------------------------------------------------*/
+/* Helper Mixins
+/*----------------------------------------------------------------------------*/
+
+// Position absolute center vertical/horizontal.
+// http://coding.smashingmagazine.com/2013/08/09/absolute-horizontal-vertical-centering-css/
+// Change top/left/bottom/right to auto to center to side of container.
+@mixin helper-absolute-center() {
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+// Calculate letter spacing from psd letter spacing character value.
+@mixin letter-spacing-psd($value) {
+    letter-spacing: ($value/1000)*1em;
+}
+
+// Apply to image container to force image centered and crop left/right as per device width.
+// http://stackoverflow.com/questions/18247356/how-to-center-crop-an-image-img-in-fluid-width-container
+@mixin helper-container-image-center-crop() {
+    width: 100%;
+    text-align: center;
+    overflow: hidden;
+
+    img {
+        display: inline;
+        position: relative; /* allows repositioning */
+        left: 100%; /* move the whole width of the image to the right */
+        margin-left: -200%; /* magic! */
+    }
+}

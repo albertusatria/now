@@ -1,0 +1,91 @@
+/*----------------------------------------------------------------------------*/
+/* Magento Base Config: Customize For Project
+/*----------------------------------------------------------------------------*/
+
+/*----------------------------------------------------------------------------*/
+/* Variables
+/*----------------------------------------------------------------------------*/
+
+// Padding top of page (for all pages).
+$basePagePaddingTop: 20px;
+
+// Primary background color to use across headings, titles, etc.
+$baseBackgroundColor: #3b3b3b;
+// Secondary background color to use across headings, titles, etc.
+$baseBackgroundColor2: #7a7a7a;
+// Main border color to use across forms, containers, title underlines, etc.
+$baseBorderColor: #cdcdcd;
+// Heading font styles.
+$baseHeadingColorH1: #555555;
+$baseHeadingColorH2: #ffffff;
+$baseHeadingColorH3: #154020;
+$baseHeadingFontSizeH1: 24;
+$baseHeadingFontSizeH2: 16;
+$baseHeadingFontSizeH3: 16;
+
+
+/*----------------------------------------------------------------------------*/
+/* Page Styles Mixin. Try to keep all major page styles here. Customize for each project as needed.
+/*----------------------------------------------------------------------------*/
+
+@mixin magento-default-page {
+    padding-top: $basePagePaddingTop;
+
+    @include breakpoint(mobile) {
+        //padding-top: $basePagePaddingTopTablet;
+    }
+
+    .page-title {
+        @include base-page-title();
+    }
+}
+
+// Includes h1 underline/spacing.
+@mixin magento-default-page2 {
+    @include magento-default-page();
+    padding-top: $basePagePaddingTop * 2;
+
+    .page-title {
+        margin-bottom: 2em;
+        padding-bottom: 1em;
+        border-bottom: 1px solid #cccccc;
+    }
+}
+
+/*----------------------------------------------------------------------------*/
+/* Base Mixins.
+/*----------------------------------------------------------------------------*/
+
+@mixin base-page-title {
+    margin: 0 0 20px 0;
+    padding: 0;
+
+    h1 {
+        margin: 0;
+        padding: 0;
+        @include base-h-font;
+        @include responsive-font-size($baseHeadingFontSizeH1);
+        text-align: left;
+        color: $baseHeadingColorH1;
+        border-style: none;
+    }
+}
+
+// Font styles used across all h tags.
+@mixin base-h-font {
+    @include font-family('Avenir Black');
+    font-weight: normal;
+    //text-transform: none;
+}
+
+@mixin base-required-fields {
+    &:after {
+        @include responsive-font-size(12);
+        text-transform: uppercase;
+        color: #7f1212;
+        content: '*Required Fields';
+        float: none !important;
+        margin-bottom: 0 !important;
+        padding-top: 5px;
+    }
+}

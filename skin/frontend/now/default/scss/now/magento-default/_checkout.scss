@@ -1,0 +1,692 @@
+/*----------------------------------------------------------------------------*/
+/* Checkout
+/*----------------------------------------------------------------------------*/
+
+body.checkout-onepage-index {
+
+    .col-main {
+        float: left;
+        width: 75%;
+        @include magento-default-page();
+
+        @include breakpoint(max, $tabletWidthLandscape - 1) {
+            float: none;
+            width: auto;
+        }
+
+        @include breakpoint(mobile) {
+            width: auto;
+            //margin-right: $pageTabletMarginSide;
+        }
+
+        .opc {
+
+            .section {
+
+                .step-title {
+                    margin-bottom: 18px;
+                    padding: 0 15px;
+                    color: $baseHeadingColorH2;
+                    background-color: #ffffff;
+                    border-top-style: none;
+                    border-bottom-style: none;
+
+                    h2 {
+                        margin: 7px 0;
+                        padding: 0;
+                        @include base-h-font;
+                        @include responsive-font-size($baseHeadingFontSizeH2);
+                        text-transform: uppercase;
+                        white-space: nowrap;
+                        color: #999999;
+                    }
+
+                    a {
+                        padding: 7px 0;
+                        @include responsive-font-size(12);
+                        color: #999999;
+                    }
+
+                    .number {
+                        display: none !important;
+                    }
+                }
+
+                .step {
+                    padding: 0 20px !important;
+                }
+
+                &.active {
+                    background-color: #ffffff;
+
+                    .step-title {
+                        background-color: $baseBackgroundColor;
+
+                        h2 {
+                            color: $baseHeadingColorH2;
+                        }
+                    }
+                }
+
+                p.required {
+                    display: none;
+                }
+
+                .back-link {
+                    display: none;
+                }
+
+                /*----------------------------------------------------------------------------*/
+                /* Step: Login
+                /*----------------------------------------------------------------------------*/
+
+                #checkout-step-login {
+
+                    h3 {
+                        margin: 0 0 .5em 0;
+                        padding: 0 0 .5em 0;
+                        @include base-h-font;
+                        @include responsive-font-size($baseHeadingFontSizeH3);
+                        border-bottom: 1px solid $baseBorderColor;
+                        text-transform: uppercase;
+                        color: $baseHeadingColorH3;
+                    }
+
+                    .description {
+                        margin: 0 0 1.5em 0;
+                        @include responsive-font-size(14);
+                        font-style: normal;
+                        color: #666666;
+                    }
+
+                    .col-1 {
+                        margin-top: 20px;
+                        padding-top: 0;
+                        border-right: 1px solid #cccccc;
+
+                        > p {
+                            margin: 0;
+                        }
+
+                        .button {
+                            @include button-blink1(180px);
+                        }
+
+                        .form-list {
+
+                            .control {
+                                margin-top: 0;
+                                margin-bottom: 0;
+
+                                label {
+                                    background-color: transparent;
+                                }
+                            }
+                        }
+                    }
+
+                    .col-2 {
+
+                        .form-list {
+
+                            a.f-left {
+                                @include responsive-font-size(11);
+                                font-weight: normal;
+                                @include global-underline();
+                                text-transform: uppercase;
+                                color: #999999;
+                            }
+                        }
+
+                        button {
+                            @include button-b1(180px);
+                        }
+                    }
+                }
+
+                // ABP Customizations.
+                .col2-set {
+
+                    .col-2 {
+
+                        @include breakpoint(mobile) {
+                            float: none;
+                            width: auto;
+                            padding-left: 0;
+                            border-left-style: none !important;
+                        }
+                    }
+
+                    .col-1 {
+
+                        .description {
+                            display: block !important;
+                        }
+
+                        ul.form-list {
+
+                            .input-box {
+                                padding-right: 0;
+                            }
+                        }
+
+                        @include breakpoint(mobile) {
+                            float: none;
+                            width: auto;
+                        }
+                    }
+                }
+
+                /*----------------------------------------------------------------------------*/
+                /* Step: Billing/Shipping
+                /*----------------------------------------------------------------------------*/
+
+                #checkout-step-billing,
+                #checkout-step-shipping {
+                    padding-right: 0;
+                    padding-left: 0;
+
+                    #billing-address-select,
+                    #shipping-address-select {
+                        width: auto;
+                        max-width: none;
+                    }
+
+                    // Hide fields: fax, company.
+                    input#billing\:fax,
+                    label[for=billing\:fax],
+                    input#billing\:company,
+                    label[for=billing\:company],
+                    input#shipping\:fax,
+                    label[for=shipping\:fax],
+                    input#shipping\:company,
+                    label[for=shipping\:company] {
+                        display: none;
+                    }
+
+                    .control {
+                        margin-top: 0;
+                        margin-bottom: 0;
+
+                        label {
+                            background-color: transparent;
+                        }
+                    }
+
+                    .buttons-set {
+                        margin-bottom: 30px;
+                        @include base-required-fields();
+                        border-top-style: none;
+
+                        button {
+                            @include button-b1(180px);
+                        }
+                    }
+                }
+
+                /*----------------------------------------------------------------------------*/
+                /* Step: Shipping Methods
+                /*----------------------------------------------------------------------------*/
+
+                #checkout-step-shipping_method {
+                    padding: 0;
+
+                    .sp-methods {
+
+                        dt {
+                            @include responsive-font-size(14);
+                            color: #666666;
+                        }
+
+                        label {
+                            padding-left: 40px;
+                            background-color: transparent;
+                        }
+                    }
+
+                    .add-gift-message {
+                        display: none;
+                    }
+
+                    .buttons-set {
+                        margin-bottom: 30px;
+                        border-top-style: none;
+
+                        button {
+                            @include button-b1(180px);
+                        }
+                    }
+                }
+
+                /*----------------------------------------------------------------------------*/
+                /* Step: Payment Methods
+                /*----------------------------------------------------------------------------*/
+
+                #checkout-step-payment {
+                    padding: 0;
+
+                    dt {
+
+                        label {
+                            background-color: transparent;
+                        }
+                    }
+
+                    .cvv-what-is-this {
+                        line-height: 52px;
+                    }
+
+                    .checkout-onepage-payment-additional-giftcardaccount {
+                        display: none;
+                    }
+
+                    .buttons-set {
+                        margin-bottom: 30px;
+                        @include base-required-fields();
+                        border-top-style: none;
+
+                        button {
+                            @include button-b1(180px);
+                        }
+                    }
+                }
+
+                /*----------------------------------------------------------------------------*/
+                /* Step: Order Review
+                /*----------------------------------------------------------------------------*/
+
+                #checkout-step-review {
+                    padding: 0;
+                    padding-left: 0;
+                    padding-right: 0;
+
+                    #checkout-review-table {
+
+                        // IMPORTANT: Linearize (or collapse) table for mobile.
+                        @include breakpoint(mobile) {
+                            @include linearize-table;
+                        }
+
+                        thead {
+
+                            th {
+                                @include responsive-font-size(14);
+                                color: #999999;
+                                border-bottom-color: #cccccc;
+                                background-color: transparent;
+                            }
+                        }
+
+                        tbody {
+
+                            h3 {
+                                @include breakpoint(mobile) {
+                                    @include responsive-font-size(14);
+                                    text-transform: none;
+                                    color: #666666;
+                                }
+                            }
+
+                            // Product image customization.
+                            .product-name img {
+                                display: inline !important;
+                                vertical-align: middle;
+                            }
+
+                            td[data-rwd-label] {
+
+                                @include breakpoint(mobile) {
+                                    @include responsive-font-size(14);
+                                    color: #999999;
+                                }
+                            }
+                        }
+
+                        tfoot {
+
+                            tr {
+                                background-color: transparent;
+
+                                td {
+                                    @include responsive-font-size(14);
+                                    color: #666666;
+                                    padding-top: 4px;
+                                    padding-bottom: 4px;
+
+                                    &:first-child {
+                                        text-transform: uppercase;
+                                    }
+
+                                    &:first-child {
+
+                                        @include breakpoint(mobile) {
+                                        }
+                                    }
+
+                                    &:nth-child(even) {
+
+                                        @include breakpoint(mobile) {
+                                            text-align: right;
+                                        }
+                                    }
+                                }
+                            }
+
+                            tr.first {
+
+                                td {
+                                    padding-top: 15px;
+                                }
+                            }
+
+                            tr.last {
+                                border-top: 1px solid #cccccc;
+                                border-bottom: 1px solid #cccccc;
+
+                                td {
+                                    padding-top: 15px;
+                                    padding-bottom: 15px;
+                                    @include responsive-font-size(24);
+                                    color: #154020;
+
+                                    strong {
+                                        font-weight: bold;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    #checkout-review-submit {
+
+                        .please-wait {
+                            clear: right;
+                            float: right;
+                        }
+
+                        .f-left {
+                            float: none;
+                            width: 180px;
+                            text-align: center;
+                            text-decoration: none;
+
+                            @include breakpoint(mobile) {
+                                float: none;
+                                width: auto;
+                            }
+
+                            a {
+                                @include button-blink2(180px);
+                                display: block;
+                                @include global-underline();
+
+                                @include breakpoint(mobile) {
+                                    margin-right: auto;
+                                    margin-left: auto;
+                                }
+                            }
+                        }
+
+                        .buttons-set {
+                            margin-top: 30px;
+                            padding-top: 0;
+                            float: right;
+                            margin-bottom: 30px;
+                            border-top-style: none;
+
+                            @include breakpoint(mobile) {
+                                float: none;
+                                // Button would not center except using this style. Reason unknown.
+                                display: table;
+                                width: 260px;
+                                margin-right: auto;
+                                margin-left: auto;
+                            }
+
+                            button {
+                                float: right;
+                                @include button-b1(260px);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .col-right {
+        display: block;
+        width: 25%;
+
+        @include breakpoint(max, $tabletWidthLandscape - 1) {
+            display: none;
+        }
+
+        // Magento hides checkout progress on the signin step by default. Uncomment to show (but why, there is no progress to show).
+        .opc-block-progress-step-login {
+            opacity: 1;
+        }
+
+        .opc-block-progress {
+            margin-top: 68px;
+            padding-left: 0;
+            background-color: #ffffff;
+            border-left-style: none;
+
+            // Top heading. Your checkout progress.
+            > .block-title {
+                height: 40px;
+                line-height: 40px;
+                margin: 3em 0 1em 0;
+                padding: 0 10px;
+                @include base-h-font;
+                @include responsive-font-size($baseHeadingFontSizeH2);
+                font-weight: normal;
+                color: #ffffff;
+                background-color: #7a7a7a;
+
+                strong {
+                    font-weight: bold;
+                }
+            }
+
+            .block-content {
+                padding-bottom: 5px;
+
+                dl {
+
+                    dt {
+                        padding: 4px 10px;
+                        @include responsive-font-size(14);
+                        color: #999999;
+
+                        &.complete {
+                            font-weight: bold;
+
+                            .changelink {
+
+                                a {
+                                    text-transform: none;
+                                }
+                            }
+                        }
+                    }
+
+                    dd {
+                        padding: 0 10px;
+                        font-style: normal;
+                        color: #999999;
+
+                        .payment-info {
+
+                            dt {
+                                padding: 0;
+                                font-style: normal;
+                            }
+                        }
+                    }
+
+                    /*----------------------------------------------------------------------------*/
+                    /* Sidebar: Billing Address
+                    /*----------------------------------------------------------------------------*/
+
+                    #billing-progress-opcheckout {
+
+                        address {
+                            @include responsive-font-size(12);
+                            font-style: normal;
+                            color: #999999;
+                        }
+                    }
+
+                    /*----------------------------------------------------------------------------*/
+                    /* Sidebar: Shipping Address
+                    /*----------------------------------------------------------------------------*/
+
+                    #shipping-progress-opcheckout {
+
+                        address {
+                            @include responsive-font-size(12);
+                            font-style: normal;
+                            color: #999999;
+                        }
+                    }
+
+                    /*----------------------------------------------------------------------------*/
+                    /* Sidebar: Shipping Methods
+                    /*----------------------------------------------------------------------------*/
+
+                    #shipping_method-progress-opcheckout {
+                    }
+
+                    /*----------------------------------------------------------------------------*/
+                    /* Sidebar: Payment Methods
+                    /*----------------------------------------------------------------------------*/
+
+                    #payment-progress-opcheckout {
+                    }
+
+                    /*----------------------------------------------------------------------------*/
+                    /* Sidebar: Order Summary
+                    /*----------------------------------------------------------------------------*/
+
+                    .block-title {
+                        margin: 0;
+                        padding: 25px 0 15px 20px;
+                        @include responsive-font-size(14);
+                        font-weight: bold;
+
+                        strong {
+                            font-weight: strong;
+                        }
+                    }
+
+                    #review-progress-opcheckout {
+                        margin: 0 0 20px 0;
+                        @include responsive-font-size(14);
+                        background-color: #ffffff;
+
+                        #checkout-review-table-wrapper {
+                            padding: 0 20px 0 20px;
+
+                            .data-table {
+                                padding: 0;
+
+                                tfoot {
+                                    background-color: #ffffff;
+
+                                    tr {
+                                        background-color: inherit;
+
+                                        td {
+                                            padding-top: 4px;
+                                            padding-bottom: 4px;
+                                            @include responsive-font-size(12);
+                                            text-transform: uppercase;
+                                            font-style: normal;
+                                            color: #999999;
+                                            background-color: #ffffff;
+                                        }
+
+                                        &:first-child {
+
+                                            td {
+                                                padding-top: 1em;
+                                                border-top: 1px solid #cccccc;
+                                            }
+                                        }
+
+                                        &:last-child {
+
+                                            td {
+                                                margin-top: 1.5em;
+                                                padding-top: 1.5em;
+                                                @include responsive-font-size(12);
+                                                font-weight: bold;
+                                                text-transform: uppercase;
+                                                color: #000000;
+                                                border-top: 1px solid #cccccc;
+                                            }
+                                        }
+                                    }
+                                }
+
+                                tbody {
+
+                                    td {
+                                        padding-top: 4px;
+                                        padding-bottom: 4px;
+                                        border-bottom-style: none;
+                                        @include responsive-font-size(12);
+                                        font-style: normal;
+                                        color: #999999;
+
+                                        h3 {
+                                            @include responsive-font-size(14);
+                                            text-transform: none;
+                                            color: inherit;
+                                        }
+
+                                        .price {
+                                            color: inherit;
+                                            font-style: inherit;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        #checkout-review-submit {
+
+                            .buttons-set {
+                                margin-top: 10px;
+
+                                .btn-checkout {
+                                    float: right;
+                                    margin-top: 20px;
+                                }
+
+                                .f-left {
+                                    margin-top: 0;
+
+                                    a {
+                                        @include global-underline();
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .buttons-set {
+                        margin-top: 0;
+                        padding: 10px 30px 20px 0;
+                        @include responsive-font-size(12);
+                        font-style: normal;
+                        text-transform: uppercase;
+                        color: #999999;
+                    }
+                }
+            }
+        }
+    }
+}

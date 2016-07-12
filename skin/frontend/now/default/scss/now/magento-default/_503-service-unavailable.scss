@@ -1,0 +1,21 @@
+/*----------------------------------------------------------------------------*/
+/* 503 Service Unavailable
+/*----------------------------------------------------------------------------*/
+
+body.cms-service-unavailable {
+
+    .col-main {
+        @include magento-default-page2();
+
+        .std {
+
+            h3 {
+                @include base-h-font;
+            }
+
+            ul {
+                margin: 0 0 0 2em;
+            }
+        }
+    }
+}

@@ -1,0 +1,49 @@
+/*----------------------------------------------------------------------------*/
+/* Magento Base Enterprise
+/*----------------------------------------------------------------------------*/
+
+/*
+// To linearize (or collapse) table for mobile.
+@include breakpoint(mobile) {
+    @include linearize-table;
+}
+*/
+
+/*----------------------------------------------------------------------------*/
+/* Config (change per project)
+/*----------------------------------------------------------------------------*/
+
+@import 'now/magento-default/config';
+
+/*----------------------------------------------------------------------------*/
+/* Base Styles: Improve as needed but do not customize per project. See below.
+/*----------------------------------------------------------------------------*/
+
+@import 'now/magento-default/cart';
+@import 'now/magento-default/checkout';
+@import 'now/magento-default/checkout-success';
+@import 'now/magento-default/login';
+@import 'now/magento-default/logout';
+@import 'now/magento-default/register';
+@import 'now/magento-default/forgot-password';
+@import 'now/magento-default/reset-password';
+@import 'now/magento-default/404-page-not-found';
+@import 'now/magento-default/503-service-unavailable';
+@import 'now/magento-default/paypal-express-review-order';
+@import 'now/magento-default/page-print';
+@import 'now/magento-default/ie-warning';
+@import 'now/magento-default/account/account.scss';
+@import 'now/magento-default/account/account-dashboard.scss';
+@import 'now/magento-default/account/address-manage.scss';
+@import 'now/magento-default/account/address-add-new.scss';
+@import 'now/magento-default/account/edit-account-info.scss';
+@import 'now/magento-default/account/order-history.scss';
+@import 'now/magento-default/account/order-detail.scss';
+@import 'now/magento-default/account/newsletter-subscriptions.scss';
+@import 'now/magento-default/account/payment-data.scss';
+
+/*----------------------------------------------------------------------------*/
+/* Custom Styles: Add project customizations (if any).
+/*----------------------------------------------------------------------------*/
+
+@import 'now/magento-default/customizations';

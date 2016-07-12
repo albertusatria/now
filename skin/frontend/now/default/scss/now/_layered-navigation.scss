@@ -1,0 +1,95 @@
+/*----------------------------------------------------------------------------*/
+/* Layered Navigation
+/*----------------------------------------------------------------------------*/
+
+.block-layered-nav {
+    padding: 20px;
+    background-color: #ffffff;
+
+    > .block-title {
+        display: none;
+    }
+
+    .currently {
+        margin: 0;
+        padding: 0;
+        @include font-family('Avenir Light');
+        @include responsive-font-size(14);
+        color: #404041;
+
+        .block-subtitle {
+            @include font-family('Avenir Black');
+            font-weight: normal;
+            text-transform: uppercase;
+        }
+
+        ol {
+
+            li {
+
+                .btn-remove {
+                    border: none;
+                    cursor: pointer;
+
+                    &:hover {
+                        background-color: inherit;
+                    }
+
+                    &:after {
+                        content: '';
+                        margin-top: 8px;
+                        @include use-sprite('layered-navigation-remove');
+                    }
+                }
+            }
+        }
+    }
+
+    .actions {
+        text-align: right;
+
+        a {
+            float: none;
+            @include font-family('Avenir Light');
+            @include responsive-font-size(12);
+            text-decoration: underline;
+        }
+    }
+
+    .block-subtitle--filter {
+        display: none;
+    }
+
+    #narrow-by-list {
+
+        dt {
+            margin: 1em 0 0.5em 0;
+            padding: 0;
+            @include font-family('Avenir Black');
+            @include responsive-font-size(14);
+            text-transform: uppercase;
+            color: #ee3d42;
+
+            &:first-child {
+                margin-top: 0;
+            }
+
+            &:before {
+                content: 'By ';
+            }
+        }
+
+        dd {
+
+            li {
+                padding: 0.1em 0;
+
+                a {
+                    @include font-family('Avenir Light');
+                    @include responsive-font-size(14);
+                    color: #424242;
+                }
+            }
+        }
+    }
+}

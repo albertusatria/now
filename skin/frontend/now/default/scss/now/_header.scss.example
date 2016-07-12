@@ -1,0 +1,358 @@
+/*----------------------------------------------------------------------------*/
+/* Header
+/*----------------------------------------------------------------------------*/
+
+$headerNavTopHeight: 30;
+
+/*----------------------------------------------------------------------------*/
+/* Header Container
+/*----------------------------------------------------------------------------*/
+
+header {
+
+    .inner-tube {
+        clear: left;
+        max-width: ($pageMaxWidth*1px);
+        margin: 0 auto;
+    }
+}
+
+/*----------------------------------------------------------------------------*/
+/* Top
+/*----------------------------------------------------------------------------*/
+
+header {
+
+    nav.top {
+        height: ($headerNavTopHeight*1px);
+        @include font-family('Avenir Light');
+        @include responsive-font-size(14);
+        color: #ffffff;
+        background-color: #7a7a7a;
+        @include global-page-margin-side();
+
+        > .inner-tube {
+            padding-top: 3px;
+
+            i {
+                padding-right: 5px;
+                vertical-align: middle;
+                @include responsive-font-size(17);
+            }
+
+            a {
+                i, span {
+                    color: inherit; // Force anchor content color.
+                }
+            }
+
+            .contact-container {
+                float: left;
+
+                .phone {
+                    display: inline-block;
+                    margin-right: 6px;
+
+                    span {
+                        padding-left: 5px;
+                        font-weight: normal;
+
+                        @include breakpoint(mobile) {
+                            display: none;
+                        }
+                    }
+                }
+
+                .email {
+                    display: inline-block;
+
+                    &.short {
+                        display: none;
+                    }
+
+                    @include breakpoint(tabletLandscape) {
+
+                        &.long {
+                            display: none;
+                        }
+
+                        &.short {
+                            display: inline-block;
+                        }
+                    }
+
+                    @include breakpoint(tablet) {
+
+                        &.long, &.short {
+                            display: none;
+                        }
+                    }
+                }
+            }
+
+            .account-container {
+                float: right;
+                text-align: right;
+
+                .account {
+                    display: inline-block;
+                    margin-right: 16px;
+
+                    a span {
+
+                        @include breakpoint(mobile) {
+                            display: none;
+                        }
+                    }
+
+                    &.signin a, &.signout a {
+
+                        span {
+                            display: inline-block;
+
+                            @include breakpoint(mobile) {
+                                display: none;
+                            }
+                        }
+                    }
+
+                    &.signout {
+
+                        @include breakpoint(mobile) {
+                            display: none;
+                        }
+                    }
+
+                    &.my a {
+
+                        span {
+                            display: inline-block;
+
+                            @include breakpoint(mobile) {
+                                display: none;
+                            }
+                        }
+                    }
+
+                    &.signin, &.my {
+
+                        @include breakpoint(mobile) {
+                            padding: 0 16px;
+                            border-right: 1px solid #ffffff;
+                            border-left: 1px solid #ffffff;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+/*----------------------------------------------------------------------------*/
+/* Header
+/*----------------------------------------------------------------------------*/
+
+header {
+
+    .header {
+        @include clearfix;
+        padding: 19px 0 16px 0;
+        background-color: #ededee;
+
+        .logo {
+            width: auto;
+            padding: 0;
+            min-width: 0;
+            max-width: none;
+            @include global-page-margin-side-left;
+
+            @include breakpoint(tabletLandscape) {
+                margin-bottom: 12px;
+            }
+
+            @include breakpoint(mobile) {
+                float: none;
+            }
+
+            img {
+
+                @include breakpoint(mobile) {
+                    margin: 0 auto;
+                }
+            }
+        }
+
+        h1 {
+            margin: 0 0 15px 0;
+            padding: 0;
+            @include font-family('Avenir Black Oblique');
+            @include responsive-font-size(18);
+            text-transform: none;
+            color: #414042;
+            @include global-page-margin-side-right;
+
+            &.tablet {
+                display: none;
+                padding-top: 33px;
+                text-align: right;
+            }
+
+            @include breakpoint(tabletLandscape) {
+
+                &.desktop {
+                    display: none;
+                }
+
+                &.tablet {
+                    display: block;
+                }
+            }
+
+            @include breakpoint(mobile) {
+
+                &.tablet {
+                    display: none;
+                }
+            }
+        }
+
+        .menu-search-container {
+            float: right;
+            width: (620/1100*100%);
+            text-align: right;
+
+            @include breakpoint(tabletLandscape) {
+                clear: both;
+                width: auto;
+                float: none;
+            }
+
+            .shop-by-container {
+                height: 47px;
+                line-height: 47px;
+                display: none;
+                float: left;
+                background-color: #ffffff;
+
+                @include breakpoint(tabletLandscape) {
+                    display: block;
+                }
+
+                #megamenumobile-button {
+                    @include use-sprite('megamenu-mobile');
+                    float: left;
+                    margin: 15px 0 0 13px;
+                    cursor: pointer;
+
+                    @include breakpoint(mobile) {
+                        margin-right: 13px;
+                    }
+                }
+
+                .shop-by {
+                    display: none;
+                    padding: 0 43px 0 54px;
+                    @include font-family('Avenir Black');
+                    @include responsive-font-size(18);
+                    text-transform: uppercase;
+                    color: #404041;
+
+                    @include breakpoint(tabletLandscape) {
+                        display: block;
+                    }
+
+                    @include breakpoint(mobile) {
+                        display: none;
+                    }
+                }
+            }
+
+            .search-container {
+                padding: 0;
+                background-color: #ee3d42;
+                text-align: left;
+
+                label {
+                    display: block;
+                    float: left;
+                    width: 88px;
+                    margin: 0;
+                    padding: 0;
+                    @include font-family('Avenir Black');
+                    @include responsive-font-size(14);
+                    font-weight: normal;
+                    line-height: 47px;
+                    text-align: center;
+                    text-transform: uppercase;
+                    color: #ffffff;
+                    background-color: #ee3d42;
+
+                    @include breakpoint(mobile) {
+                        display: none;
+                    }
+                }
+
+                #search_mini_form {
+
+                    .input-box {
+                        text-align: left;
+                        background-color: #ffffff;
+                        overflow: hidden;
+
+                        #search {
+                            display: block;
+                            width: 100%;
+                            height: 47px;
+                            margin: 0;
+                            padding: 0 40px 0 8px;
+                            @include font-family('Avenir Roman');
+                            @include responsive-font-size(14);
+                            border: 6px solid #ee3d42;
+                            border-radius: 0;
+                        }
+
+                        .search-button {
+                            position: absolute;
+                            top: 4px;
+                            right: 2px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*----------------------------------------------------------------------------*/
+/* Menu
+/*----------------------------------------------------------------------------*/
+
+header {
+
+    nav.menu.large {
+        display: block;
+        background-color: #ffffff;
+
+        @include breakpoint(tabletLandscape) {
+            display: none;
+        }
+    }
+
+    nav.menu.small {
+        display: none;
+        position: relative;
+        float: left;
+        width: 37.5%;
+        height: 47px;
+        text-align: left;
+        background-color: #ffffff;
+
+        @include breakpoint(tabletLandscape) {
+            display: block;
+        }
+
+        @include breakpoint(mobile) {
+            width: 50px;
+        }
+    }
+}
+

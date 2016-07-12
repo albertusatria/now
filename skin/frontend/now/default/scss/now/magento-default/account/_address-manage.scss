@@ -1,0 +1,24 @@
+/*----------------------------------------------------------------------------*/
+/* Customer Account: Manage Addresses
+/*----------------------------------------------------------------------------*/
+
+body.customer-address-index {
+
+    .col-main {
+
+        h2 {
+            margin-bottom: 1em;
+        }
+
+        h3  {
+            margin-bottom: 1em;
+        }
+
+        p a {
+            @include responsive-font-size(11);
+            text-transform: uppercase;
+            @include global-underline();
+            color: #666666;
+        }
+    }
+}

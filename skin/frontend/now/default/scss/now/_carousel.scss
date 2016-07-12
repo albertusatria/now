@@ -1,0 +1,91 @@
+/*----------------------------------------------------------------------------*/
+/* Product Carousel
+/*----------------------------------------------------------------------------*/
+
+/*
+    Apply to ul container (NOT ul element).
+    Mixin simply wraps items, so ensure items are present well on the page before applying mixin.
+    Note: tries to fill available space by setting li width to 100%.
+    Use mixin parameters to vertically align left/right controls (based on carousel content). Defaults to vertical center.
+    - $navigationTop: Percentage from top. e.g. 50% aligns center.
+    - $navigationImageHeight: Navigation next/prev image height. Allows for perfect vertical centering.
+*/
+
+// Pad carousel left/right to allow for navigation arrows next/prev.
+$carouselPadding: 26;
+
+@mixin carousel($navigationTop: 50%, $navigationImageHeight: 24px) {
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: $carouselPadding*1px;
+    padding-left: $carouselPadding*1px;
+
+    .block-title h2,
+    .box-title h2 {
+        margin: 0 0 20px 0;
+        padding: 0 0 7px 0;
+        @include font-family('Avenir Black');
+        @include responsive-font-size(18);
+        color: #404041;
+        text-transform: uppercase;
+        border-bottom: 2px solid #d8d8d8;
+
+        @include breakpoint(tablet) {
+            margin: 45px 0 40px 0;
+        }
+    }
+
+    ol,
+    ul {
+        width: auto;
+        margin: 0 auto !important;
+        padding: 0;
+        @include box-sizing(border-box);
+
+        li,
+        .item {
+            //width: 100%; // Fill available carousel space.
+            margin: 0;
+            padding: 0 15px;
+            text-align: left;
+            @include box-sizing(border-box);
+
+            .checkbox {
+                display: none;
+            }
+        }
+
+        .owl-controls {
+
+            navigation {
+                position: absolute;
+                z-index: 102;
+                top: $navigationTop;
+                margin-top: -1*$navigationImageHeight/2;
+                width: 14px;
+                height: 24px;
+                cursor: pointer;
+            }
+
+            .owl-next {
+                @extend navigation;
+                right: -$carouselPadding/2*1px;
+                @include use-sprite('carousel-next');
+
+                &:hover {
+                    @include use-sprite('carousel-next-hover');
+                }
+            }
+
+            .owl-prev {
+                @extend navigation;
+                left: -$carouselPadding/2*1px;
+                @include use-sprite('carousel-prev');
+
+                &:hover {
+                    @include use-sprite('carousel-prev-hover');
+                }
+            }
+        }
+    }
+}

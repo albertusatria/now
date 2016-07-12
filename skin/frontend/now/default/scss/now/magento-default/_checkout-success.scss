@@ -1,0 +1,91 @@
+/*----------------------------------------------------------------------------*/
+/* Checkout Success / Order Confirmation
+/*----------------------------------------------------------------------------*/
+
+body.checkout-onepage-success {
+
+    .col-main {
+        min-height: 460px;
+        @include magento-default-page();
+        text-align: left;
+
+        @include breakpoint(tabletLandscape) {
+            min-height: 0;
+        }
+
+        @include breakpoint(mobile) {
+            width: auto;
+        }
+
+        .col-1 {
+            float: left;
+            width: 62%;
+            margin-right: 7%;
+
+            @include breakpoint(tabletLandscape) {
+                float: none;
+                width: 80%;
+            }
+
+            @include breakpoint(mobile) {
+                width: auto;
+            }
+        }
+
+        .col-2 {
+            float: right;
+            width: 30%;
+            margin-right: 1%;
+
+            @include breakpoint(tabletLandscape) {
+                float: none;
+                width: 380px;
+            }
+
+            @include breakpoint(mobile) {
+                width: auto;
+            }
+        }
+
+        h2 {
+            padding: 0;
+            margin: 0 0 1em 0;
+            @include responsive-font-size($baseHeadingFontSizeH2);
+            font-weight: bold;
+            text-transform: uppercase;
+            //color: $baseHeadingColorH2;
+            color: #555555;
+        }
+
+        p {
+            @include responsive-font-size(14);
+            color: #666666;
+
+            a {
+                @include global-underline;
+            }
+        }
+
+        .buttons-set {
+            border-top-style: none;
+            text-align: left;
+
+            @include breakpoint(mobile) {
+                text-align: center;
+            }
+
+            button {
+                @include button-b1(260px);
+
+                @include breakpoint(tablet) {
+                    margin-left: 0;
+                    margin-bottom: 10px;
+                }
+            }
+
+            > a {
+                @include button-blink1(260px);
+            }
+        }
+    }
+}

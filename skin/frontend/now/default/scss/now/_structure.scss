@@ -1,0 +1,112 @@
+/*----------------------------------------------------------------------------*/
+/* All Pages
+/*----------------------------------------------------------------------------*/
+
+body {
+    @include clearfix;
+    overflow-x: hidden; // For megamenu mobile.
+}
+
+.main-container {
+    //max-width: $pageMaxWidth*1px;
+    max-width: none;
+}
+
+/*----------------------------------------------------------------------------*/
+/* Theme Structure Page
+/*----------------------------------------------------------------------------*/
+
+.wrapper {
+
+    .page {
+
+        .main-container {
+            @include global-page-margin-side;
+
+            .main {
+            }
+        }
+    }
+}
+
+/*----------------------------------------------------------------------------*/
+/* Theme Structure 1column
+/*----------------------------------------------------------------------------*/
+
+.col1-layout {
+
+    .col-main {
+    }
+}
+
+/*----------------------------------------------------------------------------*/
+/* Theme Structure 2columns-left
+/*----------------------------------------------------------------------------*/
+
+.col2-left-layout {
+
+    .col-left {
+    }
+
+    .col-main {
+    }
+}
+
+/*----------------------------------------------------------------------------*/
+/* Theme Structure 2columns-right
+/*----------------------------------------------------------------------------*/
+
+.col2-right-layout {
+
+    .col-main {
+    }
+
+    .col-right {
+    }
+}
+
+/*----------------------------------------------------------------------------*/
+/* Theme Structure 3columns
+/*----------------------------------------------------------------------------*/
+
+/*----------------------------------------------------------------------------*/
+/* Breadcrumbs
+/*----------------------------------------------------------------------------*/
+
+.breadcrumbs {
+    display: block;
+    margin: 18px 0;
+
+    @include breakpoint(tabletLandscape) {
+        //margin: 20px $pageTabletMarginSide 0;
+    }
+
+    @include breakpoint(mobile) {
+        //display: none;
+    }
+
+    li {
+        margin: 0;
+        padding: 0;
+
+        a {
+            @include font-family('Avenir Light');
+            @include responsive-font-size(14);
+            font-weight: normal;
+            text-transform: none;
+            color: #262a2d;
+
+            &:hover {
+                color: inherit;
+            }
+        }
+
+        strong {
+            @include font-family('Avenir Light');
+            @include responsive-font-size(14);
+            font-weight: normal;
+            text-transform: none;
+            color: #ee3d42;
+        }
+    }
+}

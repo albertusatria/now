@@ -1,0 +1,81 @@
+/*----------------------------------------------------------------------------*/
+/* Register
+/*----------------------------------------------------------------------------*/
+
+body.customer-account-create {
+
+    .col-main {
+        @include magento-default-page2();
+
+        .account-create {
+            margin: 0;
+
+            .fieldset {
+                margin: 0;
+            }
+
+            .form-instructions {
+                margin: 0 0 1em 0;
+                padding: 0;
+                @include responsive-font-size(14);
+                font-style: normal;
+                color: #666666;
+            }
+
+            ul.benefits {
+                margin: 0 0 2em 0;
+                padding: 0;
+                list-style: disc;
+
+                li {
+                    margin: 0 0 0 2em;
+                    padding: .15em 0;
+                }
+            }
+
+            .form-list {
+
+                .control:not(.remember-me-box) {
+                    margin-top: 1.5em;
+                    margin-bottom: 1.5em;
+
+                    label {
+                        padding-left: 25px;
+                        background-color: transparent;
+                    }
+
+                    #is_subscribed {
+                        margin-left: 0;
+                    }
+                }
+            }
+
+            .buttons-set {
+                max-width: none;
+                margin: 0;
+                padding: 0;
+                text-align: left;
+                border-top-style: none;
+                @include base-required-fields;
+
+                @include breakpoint(mobile) {
+                    text-align: center;
+                }
+
+                .back-link {
+                    display: none;
+                }
+
+                button {
+                    float: none;
+                    margin-left: 0;
+                    @include button-b1(180px);
+                }
+            }
+
+            p.required {
+                display: none;
+            }
+        }
+    }
+}

@@ -1,0 +1,242 @@
+/*----------------------------------------------------------------------------*/
+/* Global Variables
+/*----------------------------------------------------------------------------*/
+
+$pageMaxWidth: 1300;
+$pagePadding: 20;
+$pagePaddingMobile: 10;
+
+/*----------------------------------------------------------------------------*/
+/* Global Theme Mixins
+/*----------------------------------------------------------------------------*/
+
+@mixin global-page-margin-side() {
+
+    @include breakpoint(max, $desktopWidth) {
+        padding-right: $pagePadding*1px;
+        padding-left: $pagePadding*1px;
+    }
+
+    @include breakpoint(tabletLandscape) {
+        padding-right: $pagePadding*1px;
+        padding-left: $pagePadding*1px;
+    }
+
+    @include breakpoint(mobile) {
+        padding-right: $pagePaddingMobile*1px;
+        padding-left: $pagePaddingMobile*1px;
+    }
+}
+
+@mixin global-page-margin-side-reset() {
+
+    @include breakpoint(max, $desktopWidth) {
+        padding-right: 0;
+        padding-left: 0;
+    }
+
+    @include breakpoint(tabletLandscape) {
+        padding-right: 0;
+        padding-left: 0;
+    }
+
+    @include breakpoint(mobile) {
+        padding-right: 0;
+        padding-left: 0;
+    }
+}
+
+@mixin global-page-margin-side-right() {
+
+    @include breakpoint(max, $desktopWidth) {
+        padding-right: $pagePadding*1px;
+    }
+
+    @include breakpoint(tabletLandscape) {
+        padding-right: $pagePadding*1px;
+    }
+
+    @include breakpoint(mobile) {
+        padding-right: $pagePaddingMobile*1px;
+    }
+}
+@mixin global-page-margin-side-left() {
+
+    @include breakpoint(max, $desktopWidth) {
+        padding-left: $pagePadding*1px;
+    }
+
+    @include breakpoint(tabletLandscape) {
+        padding-left: $pagePadding*1px;
+    }
+
+    @include breakpoint(mobile) {
+        padding-left: $pagePaddingMobile*1px;
+    }
+}
+
+
+/*----------------------------------------------------------------------------*/
+/* Global Mixins
+/*----------------------------------------------------------------------------*/
+
+@mixin font-family($font-family) {
+
+    @if $font-family == 'Avenir Light' {
+        font-family: 'Avenir LT W04_35 Light';
+    } @else if $font-family == 'Avenir Roman' {
+        font-family: 'Avenir LT W01_55 Roman';
+    } @else if $font-family == 'Avenir Medium' {
+        font-family: 'Avenir LT W04_65 Medium';
+    } @else if $font-family == 'Avenir Black' {
+        font-family: 'Avenir LT W04_95 Black';
+    } @else if $font-family == 'Avenir Black Oblique' {
+        font-family: 'Avenir LT W04_95 Black Oblique';
+    }
+    //font-family: '#{$font-family}', sans-serif;
+}
+
+// Specifically for anchor tags. Default to underline and remove on hover.
+@mixin global-underline {
+    text-decoration: underline;
+
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+// Specifically for anchor tags. Default to no underline and underline on hover.
+@mixin global-no-underline {
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+        color: #ee3d42;
+    }
+}
+
+/*----------------------------------------------------------------------------*/
+/* Messages
+/*----------------------------------------------------------------------------*/
+
+.messages {
+    margin-bottom: $gap;
+    @include responsive-font-size(14);
+    color: #666666;
+}
+
+.messages li li {
+    position: relative;
+    margin-bottom: 5px;
+    padding: 7px 10px 7px 20px;
+    background-color: transparent;
+}
+
+.messages li li:before {
+    top: 50%;
+    left: 0;
+    margin-top: -12px;
+}
+
+.messages li span {
+    padding-left: 28px;
+}
+
+.messages .error-msg li {
+    border: 1px solid $c-danger;
+}
+
+.messages .error-msg li:before {
+    @include triangle(right, 6px, $c-danger);
+}
+
+.messages .notice-msg li {
+    border: 1px solid $c-warn;
+}
+
+.messages .notice-msg li:before {
+    @include triangle(right, 6px, $c-warn);
+}
+
+.messages .success-msg li {
+    border: 1px solid $c-success;
+}
+
+.messages .success-msg li:before {
+    //@include triangle(right, 6px, $c-success);
+    @include use-sprite('message-success');
+    left: 16px;
+    border-style: none;
+}
+
+.messages .notice-msg li:before {
+    //@include triangle(right, 6px, $c-warn);
+    @include use-sprite('message-notice');
+    left: 16px;
+    border-style: none;
+}
+
+.messages .error-msg li:before {
+    //@include triangle(right, 6px, $c-danger);
+    @include use-sprite('message-error');
+    left: 16px;
+    border-style: none;
+}
+
+/*----------------------------------------------------------------------------*/
+/* Forms, Input, Validation.
+/*----------------------------------------------------------------------------*/
+
+$globalInputHeight: 44;
+
+input:focus {
+    outline: none;
+    border-color: auto;
+}
+
+.main,
+.quickview-container {
+
+    .input-text {
+        height: $globalInputHeight*1px;
+        background-image: none;
+        border: 1px solid #cccccc;
+
+        @include breakpoint(mobile) {
+            width: 100%;
+            @include box-sizing(border-box);
+        }
+    }
+
+    select {
+        height: $globalInputHeight*1px;
+        line-height: $globalInputHeight*1px;
+        background-image: none;
+        border: 1px solid #cccccc;
+    }
+
+    textarea {
+        background-image: none;
+        border: 1px solid #cccccc;
+    }
+
+    .form-list label {
+        @include responsive-font-size(14);
+        text-transform: uppercase;
+        color: #666666;
+
+        &:first-child {
+            width: auto; // Prevent wrapping of label text.
+        }
+
+        em {
+            color: #7f1212;
+        }
+    }
+
+    p.required {
+        @include responsive-font-size(12);
+        text-transform: uppercase;
+        color: #7f1212;
+    }
+}
