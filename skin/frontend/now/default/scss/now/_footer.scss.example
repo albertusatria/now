@@ -119,43 +119,43 @@
                     margin-left: 0;
 
                     a {
-                        @include use-sprite('social-pinterest');
+                        //@include use-sprite('social-pinterest');
 
                         &:hover {
-                            @include use-sprite('social-pinterest-active');
+                            //@include use-sprite('social-pinterest-active');
                         }
                     }
                 }
 
                 &:nth-child(2) a {
-                    @include use-sprite('social-facebook');
+                    //@include use-sprite('social-facebook');
 
                     &:hover {
-                        @include use-sprite('social-facebook-active');
+                        //@include use-sprite('social-facebook-active');
                     }
                 }
 
                 &:nth-child(3) a {
-                    @include use-sprite('social-twitter');
+                    //@include use-sprite('social-twitter');
 
                     &:hover {
-                        @include use-sprite('social-twitter-active');
+                        //@include use-sprite('social-twitter-active');
                     }
                 }
 
                 &:nth-child(4) a {
-                    @include use-sprite('social-linkedin');
+                    //@include use-sprite('social-linkedin');
 
                     &:hover {
-                        @include use-sprite('social-linkedin-active');
+                        //@include use-sprite('social-linkedin-active');
                     }
                 }
 
                 &:nth-child(5) a {
-                    @include use-sprite('social-youtube');
+                    //@include use-sprite('social-youtube');
 
                     &:hover {
-                        @include use-sprite('social-youtube-active');
+                        //@include use-sprite('social-youtube-active');
                     }
                 }
             }
@@ -190,7 +190,7 @@
                 clear: left;
                 margin: 55px 0 30px 0;
                 padding: 0;
-                @include font-family('Avenir Black');
+                @include font-family('Roboto Bold');
                 @include responsive-font-size(18);
                 text-transform: uppercase;
                 color: #404041;
@@ -207,7 +207,7 @@
                 li {
                     margin: 0;
                     padding: 0;
-                    @include font-family('Avenir Light');
+                    @include font-family('Roboto Light');
                     @include responsive-font-size(14);
                     line-height: 2em;
                     color: #404041;
@@ -254,7 +254,7 @@
 
                 &:after {
                     content: '';
-                    @include use-sprite('footer-payment-methods');
+                    //@include use-sprite('footer-payment-methods');
                 }
             }
         }
@@ -301,7 +301,7 @@
         border: none;
         margin: 0;
         padding: 27px 0 25px 0;
-        @include font-family('Avenir Light');
+        @include font-family('Roboto Light');
         @include responsive-font-size(14);
         color: #ffffff;
     }

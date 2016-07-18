@@ -2,7 +2,7 @@
 /* Global Variables
 /*----------------------------------------------------------------------------*/
 
-$pageMaxWidth: 1300;
+$pageMaxWidth: 1024;
 $pagePadding: 20;
 $pagePaddingMobile: 10;
 
@@ -12,17 +12,12 @@ $pagePaddingMobile: 10;
 
 @mixin global-page-margin-side() {
 
-    @include breakpoint(max, $desktopWidth) {
+    @include breakpoint(min, $desktopWidth) {
         padding-right: $pagePadding*1px;
         padding-left: $pagePadding*1px;
     }
 
-    @include breakpoint(tabletLandscape) {
-        padding-right: $pagePadding*1px;
-        padding-left: $pagePadding*1px;
-    }
-
-    @include breakpoint(mobile) {
+    @include breakpoint(max, $desktopWidth - 1) {
         padding-right: $pagePaddingMobile*1px;
         padding-left: $pagePaddingMobile*1px;
     }
@@ -81,17 +76,20 @@ $pagePaddingMobile: 10;
 /*----------------------------------------------------------------------------*/
 
 @mixin font-family($font-family) {
-
-    @if $font-family == 'Avenir Light' {
-        font-family: 'Avenir LT W04_35 Light';
-    } @else if $font-family == 'Avenir Roman' {
-        font-family: 'Avenir LT W01_55 Roman';
-    } @else if $font-family == 'Avenir Medium' {
-        font-family: 'Avenir LT W04_65 Medium';
-    } @else if $font-family == 'Avenir Black' {
-        font-family: 'Avenir LT W04_95 Black';
-    } @else if $font-family == 'Avenir Black Oblique' {
-        font-family: 'Avenir LT W04_95 Black Oblique';
+    font-family: 'Roboto';
+    @if $font-family == 'Roboto Light' {
+        font-weight: 300;
+    } @else if $font-family == 'Roboto Regular' {
+        font-weight: 400;
+    } @else if $font-family == 'Roboto Medium' {
+        font-weight: 500;
+    } @else if $font-family == 'Roboto Bold' {
+        font-weight: 700;
+    } @else if $font-family == 'Roboto Bold Italic' {
+        font-weight: 700;
+        font-style: italic;
+    } @else if $font-family == 'Roboto Ultra' {
+        font-weight: 900;
     }
     //font-family: '#{$font-family}', sans-serif;
 }
@@ -164,21 +162,21 @@ $pagePaddingMobile: 10;
 
 .messages .success-msg li:before {
     //@include triangle(right, 6px, $c-success);
-    @include use-sprite('message-success');
+    //@include use-sprite('message-success');
     left: 16px;
     border-style: none;
 }
 
 .messages .notice-msg li:before {
     //@include triangle(right, 6px, $c-warn);
-    @include use-sprite('message-notice');
+    //@include use-sprite('message-notice');
     left: 16px;
     border-style: none;
 }
 
 .messages .error-msg li:before {
     //@include triangle(right, 6px, $c-danger);
-    @include use-sprite('message-error');
+    //@include use-sprite('message-error');
     left: 16px;
     border-style: none;
 }

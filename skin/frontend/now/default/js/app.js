@@ -32,11 +32,11 @@
 // If these are changed, they must also be updated in _var.scss
 
 var bp = {
-    xsmall: 479,
-    small: 599,
-    medium: 770,
-    large: 979,
-    xlarge: 1199
+    xsmall: 319,
+    small: 640,
+    medium: 767,
+    large: 1300,
+    xlarge: 1920
 }
 
 // ==============================================

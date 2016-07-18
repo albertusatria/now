@@ -115,7 +115,7 @@
         .block-subtitle {
             margin: 0 0 10px 0;
             padding: 0 0 8px 0;
-            @include font-family('Avenir Black');
+            @include font-family('Roboto Bold');
             @include responsive-font-size(16);
             font-weight: normal;
             text-align: left;
@@ -154,7 +154,7 @@
                         text-align: left;
 
                         a {
-                            @include font-family('Avenir Black');
+                            @include font-family('Roboto Bold');
                             @include responsive-font-size(14);
                             font-weight: normal;
                             color: #404041;
@@ -169,7 +169,7 @@
                         .qty {
                             display: block;
                             float: left;
-                            @include font-family('Avenir Black');
+                            @include font-family('Roboto Bold');
                             @include responsive-font-size(14);
                             font-weight: normal;
                             color: #404041;
@@ -178,7 +178,7 @@
                         .price {
                             display: block;
                             float: right;
-                            @include font-family('Avenir Black');
+                            @include font-family('Roboto Bold');
                             @include responsive-font-size(14);
                             font-weight: normal;
                             color: #404041;
@@ -205,11 +205,11 @@
             text-align: right;
 
             .subtotal {
-                @include font-family('Avenir Black');
+                @include font-family('Roboto Bold');
                 text-transform: uppercase;
 
                 .price {
-                    @include font-family('Avenir Black');
+                    @include font-family('Roboto Bold');
                 }
             }
         }
@@ -235,7 +235,7 @@
                     border-top: none;
 
                     .cart-button {
-                        @include button-blink3(140px, 34px);
+                        @include button-blink2(140px, 34px);
                     }
 
                     .checkout-button {

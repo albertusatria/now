@@ -7,7 +7,7 @@
     h1 {
         margin: 1em 0;
         padding: 0;
-        @include font-family('Avenir Black');
+        @include font-family('Roboto Bold');
         @include responsive-font-size(32);
         font-weight: normal;
         text-align: center;
@@ -19,7 +19,7 @@
     h2 {
         margin: 2em 0 1em 0;
         padding: 0 0 1em 0;
-        @include font-family('Avenir Medium');
+        @include font-family('Roboto Bold');
         @include responsive-font-size(20);
         text-transform: none;
         color: #404042;
@@ -29,7 +29,7 @@
     h3 {
         margin: 2em 0 0 0;
         padding: 0;
-        @include font-family('Avenir Medium');
+        @include font-family('Roboto Medium');
         @include responsive-font-size(20);
         text-transform: none;
         color: #404042;

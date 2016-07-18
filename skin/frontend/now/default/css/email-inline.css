@@ -1,7 +1,7 @@
 /*
- * Author: NOW
+ * Author: Default Mage + NOW (Albertus SY)
  * Description:
- *  - Change font variables to custom font ($f-stack-sans, $f-stack-serif, $f-stack-special).
+ *  - style variables, duplicated from "rwd" theme
  */
 /*
 // ----------------------------------------------
@@ -170,11 +170,11 @@ td.store-info {
 
 td.store-info h4 {
   margin-bottom: 5px;
-  font-size: 11px;
+  font-size: 10px;
 }
 
 td.store-info p {
-  font-size: 11px;
+  font-size: 10px;
   line-height: 17px;
   margin: 1em 0;
 }
@@ -200,7 +200,7 @@ td.order-details h3 {
 }
 
 td.order-details p {
-  font-size: 11px;
+  font-size: 10px;
   margin: 1em 0 15px;
 }
 
@@ -215,7 +215,7 @@ td.order-details p {
   font-weight: 700;
   text-transform: uppercase;
   text-align: left;
-  font-size: 11px;
+  font-size: 10px;
 }
 
 .cell-name.align-center {
@@ -689,7 +689,7 @@ p.sku {
  * ============================================ */
 .price-box {
   margin: 7px 0;
-  font-family: "Avenir LT W04_35 Light";
+  font-family: "Roboto", Arial;
 }
 
 .price-box p {
@@ -702,18 +702,18 @@ p.sku {
 
 .price-box .price {
   color: #3399CC;
-  font-size: 16px;
+  font-size: 20px;
 }
 
 .price-box .price,
 .price {
-  font-family: "Avenir LT W04_35 Light";
+  font-family: "Roboto", Arial;
 }
 
 .price-box .price-label {
   color: #A0A0A0;
   white-space: nowrap;
-  font-family: "Avenir LT W04_35 Light";
+  font-family: "Roboto", Arial;
 }
 
 .price-box .minimal-price-link {

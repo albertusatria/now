@@ -1,7 +1,7 @@
 /*
- * Author: NOW
+ * Author: Default Mage + NOW (Albertus SY)
  * Description:
- *  - Change font variables to custom font ($f-stack-sans, $f-stack-serif, $f-stack-special).
+ *  - style variables, duplicated from "rwd" theme
  */
 
 //
@@ -48,15 +48,13 @@ $default-transition-delay: 0;
 // Primary Break Points
 // =============================================
 
-// These should be used with the bp (max-width, xx) mixin
-// where a min-width is used, remember to +1 to break correctly.
 // If these are changed, they must also be updated in app.js
 
-$bp-xsmall: 479px;
-$bp-small: 599px;
-$bp-medium: 770px;
-$bp-large: 979px;
-$bp-xlarge: 1199px;
+$bp-xsmall: 319px;
+$bp-small: 640px;
+$bp-medium: 767px;
+$bp-large: 1300px;
+$bp-xlarge: 1920px;
 
 // =============================================
 // Base Values
@@ -66,8 +64,7 @@ $bp-xlarge: 1199px;
 
 $gap: 10px;
 
-$trim: 30px;
-// This will get applied on viewports smaller than 480px
+$trim: 20px;
 $trim-small: 15px;
 
 // Padding that will get applied to content areas
@@ -80,8 +77,7 @@ $box-spacing: 10px;
 $element-spacing: 7px;
 
 // Dimensions
-
-$max-content-width: 1200px;
+$max-content-width: 984px;
 $max-container-width: $trim + $max-content-width + $trim;
 $max-std-formatted-width: 50em;
 
@@ -224,23 +220,23 @@ $c-email-highlighted-border: #FFF74C;
 
 // Font Stacks
 
-$f-stack-sans: 'Avenir LT W04_35 Light';
-$f-stack-serif: 'Avenir LT W04_35 Light';
-$f-stack-special: 'Avenir LT W04_35 Light';
+$f-stack-sans: 'Roboto', Arial;
+$f-stack-serif: 'Roboto', Arial;
+$f-stack-special: 'Roboto', Arial;
 
 $f-stack-default: $f-stack-sans;
 
 // Font Sizes
 
-$f-size-xxl: 18px;
-$f-size-xl: 16px;
-$f-size-l: 15px;
+$f-size-xxl: 30px;
+$f-size-xl: 20px;
+$f-size-l: 16px;
 
 $f-size: 14px;
 
 $f-size-s: 13px;
 $f-size-xs: 12px;
-$f-size-xxs: 11px;
+$f-size-xxs: 10px;
 
 // Base Measures
 
