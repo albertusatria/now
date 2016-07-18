@@ -1142,7 +1142,7 @@ a.button:hover {
 .main-container,
 .footer-container {
   position: relative;
-  max-width: 1024px;
+  max-width: 1300px;
   margin: 0 auto;
   padding: 15px;
 }
@@ -1270,7 +1270,7 @@ a.button:hover {
  * Top Container
  */
 .top-container {
-  max-width: 1024px;
+  max-width: 1300px;
   margin: 0 auto;
   padding: 0 20px;
 }
@@ -1286,7 +1286,7 @@ a.button:hover {
 .global-site-notice .notice-inner {
   padding-left: 120px;
   width: 100%;
-  max-width: 984px;
+  max-width: 1260px;
   margin-left: auto;
   margin-right: auto;
   line-height: 10px;
@@ -2708,7 +2708,7 @@ body {
  * Header
  * ============================================ */
 .page-header {
-  max-width: 1024px;
+  max-width: 1300px;
   margin: 0 auto;
   padding: 0 20px;
 }
@@ -2731,7 +2731,7 @@ body {
   text-transform: uppercase;
 }
 .header-language-background .header-language-container {
-  max-width: 984px;
+  max-width: 1260px;
   margin-left: auto;
   margin-right: auto;
 }

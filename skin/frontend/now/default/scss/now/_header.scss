@@ -7,8 +7,8 @@
 /*----------------------------------------------------------------------------*/
 
 .page header {
+	@include global-page-margin-side();
     border-bottom: 2px solid $c-black;
-    padding: 0;
 
 	.toplink-3column-wrapper {
 		position: relative;
@@ -121,6 +121,7 @@
         text-transform: uppercase;
 		
 		&:hover {
+			color: $c-text-gray;
 			text-decoration: none;
 		}
 		
@@ -189,15 +190,17 @@
 /* Link Account
 /*----------------------------------------------------------------------------*/
 .link-account {
+	
+	&:hover {
+		color: $c-text-gray;
+		text-decoration: none;
+	}
+	
 	.label {
 		@include font-family('Roboto Bold');
         @include responsive-font-size(strip-units($f-size-xs));
         color: $c-black;
         text-transform: uppercase;
-		
-		&:hover {
-			text-decoration: none;
-		}
 		
 		@include breakpoint(tablet) {
 			color: transparent;

@@ -23,8 +23,8 @@ $bp-xlarge: 1920px; //Lager Screen
 /*----------------------------------------------------------------------------*/
 /* Breakpoint mixin and width variables (no units).
 /*----------------------------------------------------------------------------*/
-
-$desktopWidth: strip-units(1024);
+$desktopWidth: strip-units($bp-large + 1);
+$tabletWidthLandscape: strip-units(1024);
 $tabletWidth: strip-units($bp-medium + 1);
 $mobileWidth: strip-units($bp-small + 1);
 $phoneWidth: strip-units($bp-xsmall + 1);
@@ -38,6 +38,10 @@ $phoneWidth: strip-units($bp-xsmall + 1);
 
         @if $type == 'desktop' {
             @media #{$media} and (min-width: #{$desktopWidth}px) {
+                @content;
+            }
+        } @else if $type == 'tabletWidthLandscape' {
+            @media #{$media} and (max-width: #{$tabletWidthLandscape}px) {
                 @content;
             }
         } @else if $type == 'tablet' {

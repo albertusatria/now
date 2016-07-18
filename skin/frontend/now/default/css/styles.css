@@ -1303,7 +1303,7 @@ a.button:hover {
 .main-container,
 .footer-container {
   position: relative;
-  max-width: 1024px;
+  max-width: 1300px;
   margin: 0 auto;
   padding: 15px;
 }
@@ -1506,7 +1506,7 @@ a.button:hover {
  */
 @media only screen and (min-width: 768px) {
   .top-container {
-    max-width: 1024px;
+    max-width: 1300px;
     margin: 0 auto;
     padding: 0 20px;
   }
@@ -1522,7 +1522,7 @@ a.button:hover {
 .global-site-notice .notice-inner {
   padding-left: 120px;
   width: 100%;
-  max-width: 984px;
+  max-width: 1260px;
   margin-left: auto;
   margin-right: auto;
   line-height: 10px;
@@ -3172,7 +3172,7 @@ body {
  * ============================================ */
 @media only screen and (min-width: 768px) {
   .page-header {
-    max-width: 1024px;
+    max-width: 1300px;
     margin: 0 auto;
     padding: 0 20px;
   }
@@ -3195,7 +3195,7 @@ body {
   text-transform: uppercase;
 }
 .header-language-background .header-language-container {
-  max-width: 984px;
+  max-width: 1260px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -11580,8 +11580,7 @@ body .header-container,
 body .main-container,
 body .footer-container {
   margin: 0 auto;
-  max-width: 1024px;
-  padding: 0;
+  max-width: 1300px;
 }
 
 @media handheld, screen and (max-width: 768px) {
@@ -11655,7 +11654,18 @@ body .footer-container {
 /*----------------------------------------------------------------------------*/
 .page header {
   border-bottom: 2px solid #000000;
-  padding: 0;
+}
+@media handheld, screen and (min-width: 1301px) {
+  .page header {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+}
+@media handheld, screen and (max-width: 1300px) {
+  .page header {
+    padding-right: 10px;
+    padding-left: 10px;
+  }
 }
 .page header .toplink-3column-wrapper {
   position: relative;
@@ -11755,6 +11765,7 @@ body .footer-container {
   text-transform: uppercase;
 }
 .link-search > a:hover {
+  color: #6E6E6E;
   text-decoration: none;
 }
 @media handheld, screen and (max-width: 768px) {
@@ -11845,6 +11856,10 @@ body .footer-container {
 /*----------------------------------------------------------------------------*/
 /* Link Account
 /*----------------------------------------------------------------------------*/
+.link-account:hover {
+  color: #6E6E6E;
+  text-decoration: none;
+}
 .link-account .label {
   font-family: 'Roboto';
   font-weight: 700;
@@ -11852,9 +11867,6 @@ body .footer-container {
   font-size: 0.75rem;
   color: #000000;
   text-transform: uppercase;
-}
-.link-account .label:hover {
-  text-decoration: none;
 }
 @media handheld, screen and (max-width: 768px) {
   .link-account .label {
@@ -11923,6 +11935,156 @@ body .footer-container {
 /*----------------------------------------------------------------------------*/
 /* Footer
 /*----------------------------------------------------------------------------*/
+.footer-container {
+  background-color: #f9f9f9;
+  padding-bottom: 0;
+  padding-top: 30px;
+}
+@media handheld, screen and (min-width: 1301px) {
+  .footer-container {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+}
+@media handheld, screen and (max-width: 1300px) {
+  .footer-container {
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+}
+
+.footer {
+  border-top: none;
+  /*----------------------------------------------------------------------------*/
+  /* General Style
+  /*----------------------------------------------------------------------------*/
+  /*----------------------------------------------------------------------------*/
+  /* Block Subscription
+  /*----------------------------------------------------------------------------*/
+  /*----------------------------------------------------------------------------*/
+  /* Block Links
+  /*----------------------------------------------------------------------------*/
+  /*----------------------------------------------------------------------------*/
+  /* Copyright
+  /*----------------------------------------------------------------------------*/
+}
+.footer .block-title {
+  padding: 0;
+  margin-bottom: 8px;
+}
+.footer .block-title strong > span {
+  font-family: 'Roboto';
+  font-weight: 700;
+  font-size: 13px;
+  font-size: 0.8125rem;
+  color: #000000;
+  text-transform: uppercase;
+}
+.footer .block-subscribe {
+  clear: inherit;
+  float: right;
+  margin-bottom: 0;
+}
+.footer .block-subscribe .block-content {
+  margin: 0;
+  padding: 0;
+}
+.footer .block-subscribe .form-subscribe-header {
+  display: block;
+  margin-bottom: 8px;
+}
+.footer .block-subscribe .form-subscribe-header label {
+  font-family: 'Roboto';
+  font-weight: 400;
+  font-size: 12px;
+  font-size: 0.75rem;
+  text-transform: none;
+}
+.footer .block-subscribe .input-text {
+  border: 1px solid #000000;
+  height: 35px;
+}
+.footer .block-subscribe .block-content .actions button {
+  width: 90px;
+  height: 35px;
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1;
+  text-decoration: none;
+  color: #ffffff;
+  background-color: #000000;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  cursor: pointer;
+  transition: background-color .25s ease-in-out;
+  -moz-transition: background-color .25s ease-in-out;
+  -webkit-transition: background-color .25s ease-in-out;
+  font-family: 'Roboto';
+  font-weight: 500;
+  text-transform: uppercase;
+  font-family: 'Roboto';
+  font-weight: 400;
+  font-size: 14px;
+  font-size: 0.875rem;
+  text-transform: lowercase;
+}
+.footer .block-subscribe .block-content .actions button:hover {
+  color: #ffffff;
+  background-color: #505050;
+}
+.footer .block-subscribe .block-content .actions button span {
+  width: auto;
+  height: auto !important;
+  padding: 0 !important;
+  font-family: inherit;
+  font-size: inherit;
+  text-transform: inherit;
+  text-decoration: inherit;
+  color: inherit;
+  background-image: none;
+}
+.footer .block-subscribe .block-content .actions button span span {
+  width: auto;
+  height: auto !important;
+  padding: 0 !important;
+  font-family: inherit;
+  font-size: inherit;
+  text-transform: inherit;
+  text-decoration: inherit;
+  background-image: none;
+  color: inherit;
+}
+.footer .block-subscribe .block-content .actions button span span:hover {
+  color: #ffffff;
+  text-decoration: none;
+}
+.footer .links {
+  width: 20%;
+}
+.footer .links li {
+  padding: 0;
+  line-height: 20px;
+  line-height: 1.25rem;
+}
+.footer .links li a {
+  font-size: 12px;
+  font-size: 0.75rem;
+  text-transform: capitalize;
+}
+.footer .links li a:hover {
+  color: #6E6E6E;
+  text-decoration: none;
+}
+.footer .copyright {
+  font-family: 'Roboto';
+  font-weight: 400;
+  font-size: 10px;
+  font-size: 0.625rem;
+  border-top: none;
+  color: #000000;
+}
+
 /*----------------------------------------------------------------------------*/
 /* Minicart
 /* Based on skin/frontend/rwd/default/scss/module/_checkout-cart-minicart.scss
@@ -12307,191 +12469,32 @@ body .footer-container {
 /*----------------------------------------------------------------------------*/
 body.cms-home {
   /*----------------------------------------------------------------------------*/
-  /* Banner Promo
+  /* Banner Slider
   /*----------------------------------------------------------------------------*/
   /*----------------------------------------------------------------------------*/
   /* Trending
   /*----------------------------------------------------------------------------*/
   /*----------------------------------------------------------------------------*/
-  /* BeautyIQ
-  /*----------------------------------------------------------------------------*/
-  /*----------------------------------------------------------------------------*/
-  /* Featured Video
-  /*----------------------------------------------------------------------------*/
-  /*----------------------------------------------------------------------------*/
-  /* Brands
-  /*----------------------------------------------------------------------------*/
-  /*----------------------------------------------------------------------------*/
-  /* About Us
-  /*----------------------------------------------------------------------------*/
-  /*----------------------------------------------------------------------------*/
-  /* Popular Searches
-  /*----------------------------------------------------------------------------*/
-  /*----------------------------------------------------------------------------*/
-  /* Social Links
-  /*----------------------------------------------------------------------------*/
-  /*----------------------------------------------------------------------------*/
-  /* Promo Banner Bottom
-  /*----------------------------------------------------------------------------*/
-  /*----------------------------------------------------------------------------*/
   /* End Home
   /*----------------------------------------------------------------------------*/
 }
-body.cms-home .banner-promo-container {
-  position: relative;
-  z-index: 101;
-  height: 100px;
-  margin-top: -100px;
-  padding: 20px 25px 0;
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=75);
-  opacity: 0.75;
-  text-align: center;
-  background-color: #ffffff;
-}
-@media handheld, screen and (max-width: 767px) {
-  body.cms-home .banner-promo-container {
-    display: none;
-  }
-}
-body.cms-home .banner-promo-container h2 {
-  margin: 0;
-  padding: 0;
-  font-size: 24px;
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #222222;
-}
-body.cms-home .banner-promo-container h3 {
-  margin: 0;
-  padding: 0;
-  font-size: 22px;
-  font-size: 1.375rem;
-  font-weight: normal;
-  text-transform: none;
-  color: #222222;
-}
-body.cms-home .trending-products-container .category-products {
-  margin-right: auto;
-  margin-left: auto;
-  padding-right: 26px;
-  padding-left: 26px;
-}
-body.cms-home .trending-products-container .category-products .block-title h2,
-body.cms-home .trending-products-container .category-products .box-title h2 {
-  margin: 0 0 20px 0;
-  padding: 0 0 7px 0;
-  font-family: 'Roboto';
-  font-size: 18px;
-  font-size: 1.125rem;
-  color: #000000;
-  text-transform: uppercase;
-}
-@media handheld, screen and (max-width: 768px) {
-  body.cms-home .trending-products-container .category-products .block-title h2,
-  body.cms-home .trending-products-container .category-products .box-title h2 {
-    margin: 45px 0 40px 0;
-  }
-}
-body.cms-home .trending-products-container .category-products ol,
-body.cms-home .trending-products-container .category-products ul {
-  width: auto;
-  margin: 0 auto !important;
-  padding: 0;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-}
-body.cms-home .trending-products-container .category-products ol li,
-body.cms-home .trending-products-container .category-products ol .item,
-body.cms-home .trending-products-container .category-products ul li,
-body.cms-home .trending-products-container .category-products ul .item {
-  margin: 0;
-  padding: 0 15px;
-  text-align: left;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-}
-body.cms-home .trending-products-container .category-products ol li .checkbox,
-body.cms-home .trending-products-container .category-products ol .item .checkbox,
-body.cms-home .trending-products-container .category-products ul li .checkbox,
-body.cms-home .trending-products-container .category-products ul .item .checkbox {
-  display: none;
-}
-body.cms-home .trending-products-container .category-products ol .owl-controls navigation, body.cms-home .trending-products-container .category-products body.checkout-cart-index .col-main .cart .crosssell ol .owl-controls .owl-next, body.checkout-cart-index .col-main .cart .crosssell body.cms-home .trending-products-container .category-products ol .owl-controls .owl-next,
-body.cms-home .trending-products-container .category-products ol body.checkout-cart-index .col-main .cart .crosssell ul .owl-controls .owl-next, body.cms-home .trending-products-container .category-products body.checkout-cart-index .col-main .cart .crosssell ol .owl-controls .owl-prev, body.checkout-cart-index .col-main .cart .crosssell body.cms-home .trending-products-container .category-products ol .owl-controls .owl-prev,
-body.cms-home .trending-products-container .category-products ol body.checkout-cart-index .col-main .cart .crosssell ul .owl-controls .owl-prev, body.cms-home .trending-products-container .category-products ol .owl-controls .owl-next, body.cms-home .trending-products-container .category-products ol .owl-controls .owl-prev, body.cms-home .trending-products-container #addtocart-container .category-products ol .owl-controls .owl-next, #addtocart-container body.cms-home .trending-products-container .category-products ol .owl-controls .owl-next,
-body.cms-home .trending-products-container .category-products #addtocart-container .block-related ol .owl-controls .owl-next,
-body.cms-home .trending-products-container .category-products ol #addtocart-container .block-related ul .owl-controls .owl-next,
-body.cms-home .trending-products-container .category-products #addtocart-container .box-up-sell ol .owl-controls .owl-next,
-body.cms-home .trending-products-container .category-products ol #addtocart-container .box-up-sell ul .owl-controls .owl-next, body.cms-home .trending-products-container #addtocart-container .category-products ol .owl-controls .owl-prev, #addtocart-container body.cms-home .trending-products-container .category-products ol .owl-controls .owl-prev,
-body.cms-home .trending-products-container .category-products #addtocart-container .block-related ol .owl-controls .owl-prev,
-body.cms-home .trending-products-container .category-products ol #addtocart-container .block-related ul .owl-controls .owl-prev,
-body.cms-home .trending-products-container .category-products #addtocart-container .box-up-sell ol .owl-controls .owl-prev,
-body.cms-home .trending-products-container .category-products ol #addtocart-container .box-up-sell ul .owl-controls .owl-prev,
-body.cms-home .trending-products-container .category-products ul .owl-controls navigation,
-body.cms-home .trending-products-container .category-products ul body.checkout-cart-index .col-main .cart .crosssell ol .owl-controls .owl-next,
-body.cms-home .trending-products-container .category-products body.checkout-cart-index .col-main .cart .crosssell ul .owl-controls .owl-next,
-body.checkout-cart-index .col-main .cart .crosssell body.cms-home .trending-products-container .category-products ul .owl-controls .owl-next,
-body.cms-home .trending-products-container .category-products ul body.checkout-cart-index .col-main .cart .crosssell ol .owl-controls .owl-prev,
-body.cms-home .trending-products-container .category-products body.checkout-cart-index .col-main .cart .crosssell ul .owl-controls .owl-prev,
-body.checkout-cart-index .col-main .cart .crosssell body.cms-home .trending-products-container .category-products ul .owl-controls .owl-prev,
-body.cms-home .trending-products-container .category-products ul .owl-controls .owl-next,
-body.cms-home .trending-products-container .category-products ul .owl-controls .owl-prev,
-body.cms-home .trending-products-container #addtocart-container .category-products ul .owl-controls .owl-next,
-#addtocart-container body.cms-home .trending-products-container .category-products ul .owl-controls .owl-next,
-body.cms-home .trending-products-container .category-products ul #addtocart-container .block-related ol .owl-controls .owl-next,
-body.cms-home .trending-products-container .category-products #addtocart-container .block-related ul .owl-controls .owl-next,
-body.cms-home .trending-products-container .category-products ul #addtocart-container .box-up-sell ol .owl-controls .owl-next,
-body.cms-home .trending-products-container .category-products #addtocart-container .box-up-sell ul .owl-controls .owl-next,
-body.cms-home .trending-products-container #addtocart-container .category-products ul .owl-controls .owl-prev,
-#addtocart-container body.cms-home .trending-products-container .category-products ul .owl-controls .owl-prev,
-body.cms-home .trending-products-container .category-products ul #addtocart-container .block-related ol .owl-controls .owl-prev,
-body.cms-home .trending-products-container .category-products #addtocart-container .block-related ul .owl-controls .owl-prev,
-body.cms-home .trending-products-container .category-products ul #addtocart-container .box-up-sell ol .owl-controls .owl-prev,
-body.cms-home .trending-products-container .category-products #addtocart-container .box-up-sell ul .owl-controls .owl-prev {
-  position: absolute;
-  z-index: 102;
-  top: 50%;
-  margin-top: -12px;
-  width: 14px;
-  height: 24px;
-  cursor: pointer;
-}
-body.cms-home .trending-products-container .category-products ol .owl-controls .owl-next,
-body.cms-home .trending-products-container .category-products ul .owl-controls .owl-next {
-  right: -13px;
-}
-body.cms-home .trending-products-container .category-products ol .owl-controls .owl-prev,
-body.cms-home .trending-products-container .category-products ul .owl-controls .owl-prev {
-  left: -13px;
-}
-body.cms-home .promo-banner-bottom li {
+body.cms-home .homepage-bannerslider .item img {
+  display: block;
+  height: auto;
   width: 100%;
-  text-align: center;
-  overflow: hidden;
-}
-body.cms-home .promo-banner-bottom li img {
-  display: inline;
-  position: relative;
-  /* allows repositioning */
-  left: 100%;
-  /* move the whole width of the image to the right */
-  margin-left: -200%;
-  /* magic! */
 }
 
 /*----------------------------------------------------------------------------*/
 /* Category Page
 /*----------------------------------------------------------------------------*/
-@media handheld, screen and (min-width: 1024px) {
+@media handheld, screen and (min-width: 1301px) {
   .catalog-category-view .main,
   .catalogsearch-result-index .main {
     padding-right: 20px;
     padding-left: 20px;
   }
 }
-@media handheld, screen and (max-width: 1023px) {
+@media handheld, screen and (max-width: 1300px) {
   .catalog-category-view .main,
   .catalogsearch-result-index .main {
     padding-right: 10px;
@@ -12869,13 +12872,13 @@ price, .price-box .regular-price .price, .price-box .special-price .price, .pric
     padding-top: 30px;
   }
 }
-@media handheld, screen and (max-width: 640px) and (min-width: 1024px) {
+@media handheld, screen and (max-width: 640px) and (min-width: 1301px) {
   .product-view .product-shop {
     padding-right: 20px;
     padding-left: 20px;
   }
 }
-@media handheld, screen and (max-width: 640px) and (max-width: 1023px) {
+@media handheld, screen and (max-width: 640px) and (max-width: 1300px) {
   .product-view .product-shop {
     padding-right: 10px;
     padding-left: 10px;
@@ -12907,13 +12910,13 @@ price, .price-box .regular-price .price, .price-box .special-price .price, .pric
     width: auto;
   }
 }
-@media handheld, screen and (max-width: 640px) and (min-width: 1024px) {
+@media handheld, screen and (max-width: 640px) and (min-width: 1301px) {
   .product-view .add-to-cart-wrapper {
     padding-right: 20px;
     padding-left: 20px;
   }
 }
-@media handheld, screen and (max-width: 640px) and (max-width: 1023px) {
+@media handheld, screen and (max-width: 640px) and (max-width: 1300px) {
   .product-view .add-to-cart-wrapper {
     padding-right: 10px;
     padding-left: 10px;
@@ -12933,13 +12936,13 @@ price, .price-box .regular-price .price, .price-box .special-price .price, .pric
     padding-top: 30px;
   }
 }
-@media handheld, screen and (max-width: 640px) and (min-width: 1024px) {
+@media handheld, screen and (max-width: 640px) and (min-width: 1301px) {
   .product-view .summary-container {
     padding-right: 20px;
     padding-left: 20px;
   }
 }
-@media handheld, screen and (max-width: 640px) and (max-width: 1023px) {
+@media handheld, screen and (max-width: 640px) and (max-width: 1300px) {
   .product-view .summary-container {
     padding-right: 10px;
     padding-left: 10px;
@@ -12995,13 +12998,13 @@ price, .price-box .regular-price .price, .price-box .special-price .price, .pric
     padding-right: 0;
   }
 }
-@media handheld, screen and (max-width: 640px) and (min-width: 1024px) {
+@media handheld, screen and (max-width: 640px) and (min-width: 1301px) {
   .product-view .product-img-box {
     padding-right: 20px;
     padding-left: 20px;
   }
 }
-@media handheld, screen and (max-width: 640px) and (max-width: 1023px) {
+@media handheld, screen and (max-width: 640px) and (max-width: 1300px) {
   .product-view .product-img-box {
     padding-right: 10px;
     padding-left: 10px;
@@ -13109,7 +13112,7 @@ price, .price-box .regular-price .price, .price-box .special-price .price, .pric
 }
 .product-view .product-img-box .more-views ol .owl-controls navigation, .product-view .product-img-box .more-views body.checkout-cart-index .col-main .cart .crosssell ol .owl-controls .owl-next, body.checkout-cart-index .col-main .cart .crosssell .product-view .product-img-box .more-views ol .owl-controls .owl-next,
 .product-view .product-img-box .more-views ol body.checkout-cart-index .col-main .cart .crosssell ul .owl-controls .owl-next, .product-view .product-img-box .more-views body.checkout-cart-index .col-main .cart .crosssell ol .owl-controls .owl-prev, body.checkout-cart-index .col-main .cart .crosssell .product-view .product-img-box .more-views ol .owl-controls .owl-prev,
-.product-view .product-img-box .more-views ol body.checkout-cart-index .col-main .cart .crosssell ul .owl-controls .owl-prev, .product-view .product-img-box .more-views body.cms-home .trending-products-container .category-products ol .owl-controls .owl-next, body.cms-home .trending-products-container .category-products .product-view .product-img-box .more-views ol .owl-controls .owl-next, .product-view .product-img-box .more-views body.cms-home .trending-products-container .category-products ol .owl-controls .owl-prev, body.cms-home .trending-products-container .category-products .product-view .product-img-box .more-views ol .owl-controls .owl-prev, .product-view .product-img-box .more-views ol .owl-controls .owl-next, .product-view .product-img-box .more-views ol .owl-controls .owl-prev, .product-view .product-img-box .more-views #addtocart-container .category-products ol .owl-controls .owl-next, #addtocart-container .category-products .product-view .product-img-box .more-views ol .owl-controls .owl-next,
+.product-view .product-img-box .more-views ol body.checkout-cart-index .col-main .cart .crosssell ul .owl-controls .owl-prev, .product-view .product-img-box .more-views ol .owl-controls .owl-next, .product-view .product-img-box .more-views ol .owl-controls .owl-prev, .product-view .product-img-box .more-views #addtocart-container .category-products ol .owl-controls .owl-next, #addtocart-container .category-products .product-view .product-img-box .more-views ol .owl-controls .owl-next,
 .product-view .product-img-box .more-views ol #addtocart-container .category-products ul .owl-controls .owl-next,
 .product-view .product-img-box .more-views #addtocart-container .block-related ol .owl-controls .owl-next,
 #addtocart-container .block-related .product-view .product-img-box .more-views ol .owl-controls .owl-next,
@@ -13131,10 +13134,6 @@ body.checkout-cart-index .col-main .cart .crosssell .product-view .product-img-b
 .product-view .product-img-box .more-views ul body.checkout-cart-index .col-main .cart .crosssell ol .owl-controls .owl-prev,
 .product-view .product-img-box .more-views body.checkout-cart-index .col-main .cart .crosssell ul .owl-controls .owl-prev,
 body.checkout-cart-index .col-main .cart .crosssell .product-view .product-img-box .more-views ul .owl-controls .owl-prev,
-.product-view .product-img-box .more-views body.cms-home .trending-products-container .category-products ul .owl-controls .owl-next,
-body.cms-home .trending-products-container .category-products .product-view .product-img-box .more-views ul .owl-controls .owl-next,
-.product-view .product-img-box .more-views body.cms-home .trending-products-container .category-products ul .owl-controls .owl-prev,
-body.cms-home .trending-products-container .category-products .product-view .product-img-box .more-views ul .owl-controls .owl-prev,
 .product-view .product-img-box .more-views ul .owl-controls .owl-next,
 .product-view .product-img-box .more-views ul .owl-controls .owl-prev,
 .product-view .product-img-box .more-views ul #addtocart-container .category-products ol .owl-controls .owl-next,
@@ -13478,9 +13477,7 @@ body.cms-home .trending-products-container .category-products .product-view .pro
 }
 .product-view .box-up-sell ol .owl-controls navigation, .product-view .box-up-sell body.checkout-cart-index .col-main .cart .crosssell ol .owl-controls .owl-next, body.checkout-cart-index .col-main .cart .crosssell .product-view .box-up-sell ol .owl-controls .owl-next,
 .product-view .box-up-sell ol body.checkout-cart-index .col-main .cart .crosssell ul .owl-controls .owl-next, .product-view .box-up-sell body.checkout-cart-index .col-main .cart .crosssell ol .owl-controls .owl-prev, body.checkout-cart-index .col-main .cart .crosssell .product-view .box-up-sell ol .owl-controls .owl-prev,
-.product-view .box-up-sell ol body.checkout-cart-index .col-main .cart .crosssell ul .owl-controls .owl-prev, .product-view .box-up-sell body.cms-home .trending-products-container .category-products ol .owl-controls .owl-next, body.cms-home .trending-products-container .category-products .product-view .box-up-sell ol .owl-controls .owl-next,
-.product-view .box-up-sell ol body.cms-home .trending-products-container .category-products ul .owl-controls .owl-next, .product-view .box-up-sell body.cms-home .trending-products-container .category-products ol .owl-controls .owl-prev, body.cms-home .trending-products-container .category-products .product-view .box-up-sell ol .owl-controls .owl-prev,
-.product-view .box-up-sell ol body.cms-home .trending-products-container .category-products ul .owl-controls .owl-prev, .product-view .box-up-sell .product-img-box .more-views ol .owl-controls .owl-next, .product-view .product-img-box .more-views .box-up-sell ol .owl-controls .owl-next,
+.product-view .box-up-sell ol body.checkout-cart-index .col-main .cart .crosssell ul .owl-controls .owl-prev, .product-view .box-up-sell .product-img-box .more-views ol .owl-controls .owl-next, .product-view .product-img-box .more-views .box-up-sell ol .owl-controls .owl-next,
 .product-view .box-up-sell ol .product-img-box .more-views ul .owl-controls .owl-next, .product-view .box-up-sell .product-img-box .more-views ol .owl-controls .owl-prev, .product-view .product-img-box .more-views .box-up-sell ol .owl-controls .owl-prev,
 .product-view .box-up-sell ol .product-img-box .more-views ul .owl-controls .owl-prev, .product-view .box-up-sell ol .owl-controls .owl-next, .product-view .box-up-sell ol .owl-controls .owl-prev, .product-view .box-up-sell #addtocart-container .category-products ol .owl-controls .owl-next,
 .product-view .box-up-sell ol #addtocart-container .category-products ul .owl-controls .owl-next,
@@ -13500,12 +13497,6 @@ body.checkout-cart-index .col-main .cart .crosssell .product-view .box-up-sell u
 .product-view .box-up-sell ul body.checkout-cart-index .col-main .cart .crosssell ol .owl-controls .owl-prev,
 .product-view .box-up-sell body.checkout-cart-index .col-main .cart .crosssell ul .owl-controls .owl-prev,
 body.checkout-cart-index .col-main .cart .crosssell .product-view .box-up-sell ul .owl-controls .owl-prev,
-.product-view .box-up-sell ul body.cms-home .trending-products-container .category-products ol .owl-controls .owl-next,
-.product-view .box-up-sell body.cms-home .trending-products-container .category-products ul .owl-controls .owl-next,
-body.cms-home .trending-products-container .category-products .product-view .box-up-sell ul .owl-controls .owl-next,
-.product-view .box-up-sell ul body.cms-home .trending-products-container .category-products ol .owl-controls .owl-prev,
-.product-view .box-up-sell body.cms-home .trending-products-container .category-products ul .owl-controls .owl-prev,
-body.cms-home .trending-products-container .category-products .product-view .box-up-sell ul .owl-controls .owl-prev,
 .product-view .box-up-sell ul .product-img-box .more-views ol .owl-controls .owl-next,
 .product-view .box-up-sell .product-img-box .more-views ul .owl-controls .owl-next,
 .product-view .product-img-box .more-views .box-up-sell ul .owl-controls .owl-next,
@@ -13602,9 +13593,7 @@ body.cms-home .trending-products-container .category-products .product-view .box
 }
 .product-view .block-related ol .owl-controls navigation, .product-view .block-related body.checkout-cart-index .col-main .cart .crosssell ol .owl-controls .owl-next, body.checkout-cart-index .col-main .cart .crosssell .product-view .block-related ol .owl-controls .owl-next,
 .product-view .block-related ol body.checkout-cart-index .col-main .cart .crosssell ul .owl-controls .owl-next, .product-view .block-related body.checkout-cart-index .col-main .cart .crosssell ol .owl-controls .owl-prev, body.checkout-cart-index .col-main .cart .crosssell .product-view .block-related ol .owl-controls .owl-prev,
-.product-view .block-related ol body.checkout-cart-index .col-main .cart .crosssell ul .owl-controls .owl-prev, .product-view .block-related body.cms-home .trending-products-container .category-products ol .owl-controls .owl-next, body.cms-home .trending-products-container .category-products .product-view .block-related ol .owl-controls .owl-next,
-.product-view .block-related ol body.cms-home .trending-products-container .category-products ul .owl-controls .owl-next, .product-view .block-related body.cms-home .trending-products-container .category-products ol .owl-controls .owl-prev, body.cms-home .trending-products-container .category-products .product-view .block-related ol .owl-controls .owl-prev,
-.product-view .block-related ol body.cms-home .trending-products-container .category-products ul .owl-controls .owl-prev, .product-view .block-related .product-img-box .more-views ol .owl-controls .owl-next, .product-view .product-img-box .more-views .block-related ol .owl-controls .owl-next,
+.product-view .block-related ol body.checkout-cart-index .col-main .cart .crosssell ul .owl-controls .owl-prev, .product-view .block-related .product-img-box .more-views ol .owl-controls .owl-next, .product-view .product-img-box .more-views .block-related ol .owl-controls .owl-next,
 .product-view .block-related ol .product-img-box .more-views ul .owl-controls .owl-next, .product-view .block-related .product-img-box .more-views ol .owl-controls .owl-prev, .product-view .product-img-box .more-views .block-related ol .owl-controls .owl-prev,
 .product-view .block-related ol .product-img-box .more-views ul .owl-controls .owl-prev, .product-view .block-related ol .owl-controls .owl-next, .product-view .block-related ol .owl-controls .owl-prev, .product-view .block-related #addtocart-container .category-products ol .owl-controls .owl-next,
 .product-view .block-related ol #addtocart-container .category-products ul .owl-controls .owl-next,
@@ -13624,12 +13613,6 @@ body.checkout-cart-index .col-main .cart .crosssell .product-view .block-related
 .product-view .block-related ul body.checkout-cart-index .col-main .cart .crosssell ol .owl-controls .owl-prev,
 .product-view .block-related body.checkout-cart-index .col-main .cart .crosssell ul .owl-controls .owl-prev,
 body.checkout-cart-index .col-main .cart .crosssell .product-view .block-related ul .owl-controls .owl-prev,
-.product-view .block-related ul body.cms-home .trending-products-container .category-products ol .owl-controls .owl-next,
-.product-view .block-related body.cms-home .trending-products-container .category-products ul .owl-controls .owl-next,
-body.cms-home .trending-products-container .category-products .product-view .block-related ul .owl-controls .owl-next,
-.product-view .block-related ul body.cms-home .trending-products-container .category-products ol .owl-controls .owl-prev,
-.product-view .block-related body.cms-home .trending-products-container .category-products ul .owl-controls .owl-prev,
-body.cms-home .trending-products-container .category-products .product-view .block-related ul .owl-controls .owl-prev,
 .product-view .block-related ul .product-img-box .more-views ol .owl-controls .owl-next,
 .product-view .block-related .product-img-box .more-views ul .owl-controls .owl-next,
 .product-view .product-img-box .more-views .block-related ul .owl-controls .owl-next,
@@ -13729,9 +13712,7 @@ body.cms-home .trending-products-container .category-products .product-view .blo
 }
 .product-view .block-viewed ol .owl-controls navigation, .product-view .block-viewed body.checkout-cart-index .col-main .cart .crosssell ol .owl-controls .owl-next, body.checkout-cart-index .col-main .cart .crosssell .product-view .block-viewed ol .owl-controls .owl-next,
 .product-view .block-viewed ol body.checkout-cart-index .col-main .cart .crosssell ul .owl-controls .owl-next, .product-view .block-viewed body.checkout-cart-index .col-main .cart .crosssell ol .owl-controls .owl-prev, body.checkout-cart-index .col-main .cart .crosssell .product-view .block-viewed ol .owl-controls .owl-prev,
-.product-view .block-viewed ol body.checkout-cart-index .col-main .cart .crosssell ul .owl-controls .owl-prev, .product-view .block-viewed body.cms-home .trending-products-container .category-products ol .owl-controls .owl-next, body.cms-home .trending-products-container .category-products .product-view .block-viewed ol .owl-controls .owl-next,
-.product-view .block-viewed ol body.cms-home .trending-products-container .category-products ul .owl-controls .owl-next, .product-view .block-viewed body.cms-home .trending-products-container .category-products ol .owl-controls .owl-prev, body.cms-home .trending-products-container .category-products .product-view .block-viewed ol .owl-controls .owl-prev,
-.product-view .block-viewed ol body.cms-home .trending-products-container .category-products ul .owl-controls .owl-prev, .product-view .block-viewed .product-img-box .more-views ol .owl-controls .owl-next, .product-view .product-img-box .more-views .block-viewed ol .owl-controls .owl-next,
+.product-view .block-viewed ol body.checkout-cart-index .col-main .cart .crosssell ul .owl-controls .owl-prev, .product-view .block-viewed .product-img-box .more-views ol .owl-controls .owl-next, .product-view .product-img-box .more-views .block-viewed ol .owl-controls .owl-next,
 .product-view .block-viewed ol .product-img-box .more-views ul .owl-controls .owl-next, .product-view .block-viewed .product-img-box .more-views ol .owl-controls .owl-prev, .product-view .product-img-box .more-views .block-viewed ol .owl-controls .owl-prev,
 .product-view .block-viewed ol .product-img-box .more-views ul .owl-controls .owl-prev, .product-view .block-viewed ol .owl-controls .owl-next, .product-view .block-viewed ol .owl-controls .owl-prev, .product-view .block-viewed #addtocart-container .category-products ol .owl-controls .owl-next, #addtocart-container .category-products .product-view .block-viewed ol .owl-controls .owl-next,
 .product-view .block-viewed ol #addtocart-container .category-products ul .owl-controls .owl-next,
@@ -13755,12 +13736,6 @@ body.checkout-cart-index .col-main .cart .crosssell .product-view .block-viewed 
 .product-view .block-viewed ul body.checkout-cart-index .col-main .cart .crosssell ol .owl-controls .owl-prev,
 .product-view .block-viewed body.checkout-cart-index .col-main .cart .crosssell ul .owl-controls .owl-prev,
 body.checkout-cart-index .col-main .cart .crosssell .product-view .block-viewed ul .owl-controls .owl-prev,
-.product-view .block-viewed ul body.cms-home .trending-products-container .category-products ol .owl-controls .owl-next,
-.product-view .block-viewed body.cms-home .trending-products-container .category-products ul .owl-controls .owl-next,
-body.cms-home .trending-products-container .category-products .product-view .block-viewed ul .owl-controls .owl-next,
-.product-view .block-viewed ul body.cms-home .trending-products-container .category-products ol .owl-controls .owl-prev,
-.product-view .block-viewed body.cms-home .trending-products-container .category-products ul .owl-controls .owl-prev,
-body.cms-home .trending-products-container .category-products .product-view .block-viewed ul .owl-controls .owl-prev,
 .product-view .block-viewed ul .product-img-box .more-views ol .owl-controls .owl-next,
 .product-view .block-viewed .product-img-box .more-views ul .owl-controls .owl-next,
 .product-view .product-img-box .more-views .block-viewed ul .owl-controls .owl-next,
@@ -13807,13 +13782,13 @@ body.cms-home .trending-products-container .category-products .product-view .blo
 /*----------------------------------------------------------------------------*/
 /* CMS Template Common
 /*----------------------------------------------------------------------------*/
-@media handheld, screen and (min-width: 1024px) {
+@media handheld, screen and (min-width: 1301px) {
   .template-container {
     padding-right: 20px;
     padding-left: 20px;
   }
 }
-@media handheld, screen and (max-width: 1023px) {
+@media handheld, screen and (max-width: 1300px) {
   .template-container {
     padding-right: 10px;
     padding-left: 10px;
@@ -13899,7 +13874,7 @@ body.cms-home .trending-products-container .category-products .product-view .blo
 /*----------------------------------------------------------------------------*/
 /* Reset page padding.
 /*----------------------------------------------------------------------------*/
-@media handheld, screen and (max-width: 1024px) {
+@media handheld, screen and (max-width: 1301px) {
   .cms-page-view .wrapper .page .main-container {
     padding-right: 0;
     padding-left: 0;
@@ -14014,7 +13989,7 @@ body.cms-home .trending-products-container .category-products .product-view .blo
   background-color: #ffffff;
   display: block;
   left: 0;
-  margin-top: 9px;
+  margin: 9px -20px 0 -20px;
   min-height: 200px;
   padding: 20px;
   position: absolute;
@@ -14760,7 +14735,7 @@ body.cms-home .trending-products-container .category-products .product-view .blo
   bottom: 5px;
   cursor: pointer;
 }
-@media handheld, screen and (max-width: 1204px) {
+@media handheld, screen and (max-width: 1481px) {
   #scrolltop-container {
     display: none;
   }
