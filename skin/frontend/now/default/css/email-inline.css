@@ -667,7 +667,7 @@ h2.products {
 
 .product-name {
   margin: 0 0 5px 0;
-  color: #636363;
+  color: #000000;
   font-style: normal;
   text-rendering: optimizeLegibility;
   text-transform: uppercase;
@@ -697,7 +697,7 @@ p.sku {
 }
 
 .price-notice {
-  color: #A0A0A0;
+  color: #6E6E6E;
 }
 
 .price-box .price {
@@ -711,7 +711,7 @@ p.sku {
 }
 
 .price-box .price-label {
-  color: #A0A0A0;
+  color: #6E6E6E;
   white-space: nowrap;
   font-family: "Roboto", Arial;
 }
@@ -723,7 +723,7 @@ p.sku {
   /* We want this to show on its own line, otherwise the layout looks funky */
 }
 .price-box .minimal-price-link .label {
-  color: #A0A0A0;
+  color: #6E6E6E;
 }
 
 /* -------------------------------------------- *
@@ -743,7 +743,7 @@ p.sku {
 }
 
 .price-box .old-price .price {
-  color: #A0A0A0;
+  color: #6E6E6E;
   text-decoration: line-through;
 }
 

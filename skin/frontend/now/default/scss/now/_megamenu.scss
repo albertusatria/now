@@ -1,9 +1,6 @@
 $menuDesktopWidth: 1024;
-$desktopLogoHeight: 118;
 
 .header-left {
-    height: $desktopLogoHeight*1px;
-    line-height: $desktopLogoHeight*1px;
 
 /*----------------------------------------------------------------------------*/
 /* Level 1
@@ -12,7 +9,6 @@ $desktopLogoHeight: 118;
     > ul {
         margin: 0;
         padding: 0;
-        vertical-align: bottom;
 
         a {
             &:hover {
@@ -28,29 +24,23 @@ $desktopLogoHeight: 118;
         }
 
         > li.level0 {
-            line-height: 1;
-            vertical-align: bottom;
+	        cursor: pointer;
+            line-height: 66px;
+            height: 75px;
 
             &:not(.last) {
                 margin-right: 30px;
-            }
-
-            &:hover:not(.nav-1) > a {
-                border-bottom: 2px solid $c-black;
-                padding-bottom: 8px;
             }
         }
 
         .nav-1 a {
             color: transparent;
             font-size: 0;
-            vertical-align: bottom;
 
             &:after {
                 @include use-sprite('icon_goto-home');
                 content: "";
                 display: inline-block;
-                vertical-align: bottom;
             }
         }
     }
@@ -58,8 +48,65 @@ $desktopLogoHeight: 118;
     /*----------------------------------------------------------------------------*/
     /* Level 2
     /*----------------------------------------------------------------------------*/
-    ul.level0 {
+    .submenu {
         display: none;
+        
+        .by-product,
+        .by-brands,
+        .leftmenu,
+        .rightmenu {
+	        float: left;
+	        width: 49.5%;
+        }
+        
+        .by-product,
+        .by-brands {
+	        &:after {
+		        @include clearfix;
+	        }
+        }
+        
+        .by-brands {
+	        position: relative;
+        }
+        
+        h6 {
+	        display: block;
+	        margin-bottom: 7px;
+	        text-transform: uppercase;
+	        
+	        &:after {
+		        @include clearfix;
+	        }
+        }
+        
+        &:after {
+	        @include clearfix;
+        }
+    }
+    
+    li.level0 {
+	    &:hover {
+		    
+		    &:hover:not(.nav-1) > a {
+			    border-bottom: 2px solid $c-black;
+			    padding-bottom: 8px;
+			}
+			
+			.submenu {
+				border-bottom: 2px solid $c-black;
+				border-top: 1px solid $c-black;
+		        background-color: $c-white;
+		        display: block;
+		        left: 0;
+		        margin-top: 9px;
+		        min-height: 200px;
+		        padding: 20px;
+		        position: absolute;
+		        right: 0;
+		        z-index: 9;
+	        }
+	    }
     }
     
 
@@ -67,5 +114,46 @@ $desktopLogoHeight: 118;
     /* Level 3
     /*----------------------------------------------------------------------------*/
 
+	.leftmenu,
+	.rightmenu {
+		@include font-family('Roboto Regular');
+		@include responsive-font-size(strip-units($f-size-xs));
+		@include responsive-line-height(18);
+		
+		li {
+			clear: both;
+			display: inherit;
+		}
+		
+		a:hover {
+			color: $c-text-gray;
+		}
+	}
+	
+	.leftmenu {
+		
+		.first {
+			margin-bottom: 20px;
+			
+			a {
+				@include font-family('Roboto Medium');
+			}
+			
+			.sale {
+				color: $c-red;
+			}
+			
+			.sale:hover {
+				color: #f68282;
+			}
+		}
+	}
+	
+	.brand-snapshot {
+		bottom: 0;
+		position: absolute;	
+	}
+	
+	
     
 }

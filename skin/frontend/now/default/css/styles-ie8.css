@@ -501,7 +501,7 @@ select,
 table,
 textarea {
   font-family: "Roboto", Arial;
-  color: #636363;
+  color: #000000;
   font-size: 14px;
   line-height: 1.5;
 }
@@ -547,7 +547,7 @@ h1, .h1 {
 h2, .h2 {
   margin: 0;
   margin-bottom: 0.5em;
-  color: #636363;
+  color: #000000;
   font-family: "Roboto", Arial;
   font-size: 24px;
   font-weight: 400;
@@ -560,7 +560,7 @@ h2, .h2 {
 h3, .h3 {
   margin: 0;
   margin-bottom: 10px;
-  color: #636363;
+  color: #000000;
   font-family: "Roboto", Arial;
   font-size: 18px;
   font-weight: 400;
@@ -573,7 +573,7 @@ h3, .h3 {
 h4, .h4 {
   margin: 0;
   margin-bottom: 10px;
-  color: #636363;
+  color: #000000;
   font-family: "Roboto", Arial;
   font-size: 14px;
   font-weight: bold;
@@ -586,7 +586,7 @@ h4, .h4 {
 h5, .h5 {
   margin: 0;
   margin-bottom: 10px;
-  color: #636363;
+  color: #000000;
   font-family: "Roboto", Arial;
   font-size: 13px;
   font-weight: bold;
@@ -599,7 +599,7 @@ h5, .h5 {
 h6, .h6 {
   margin: 0;
   margin-bottom: 5px;
-  color: #636363;
+  color: #000000;
   font-family: "Roboto", Arial;
   font-size: 12px;
   font-weight: bold;
@@ -650,7 +650,7 @@ h6, .h6 {
   text-transform: uppercase;
   font-size: 24px;
   font-weight: 600;
-  color: #636363;
+  color: #000000;
   border-bottom: 1px solid #EDEDED;
   padding-bottom: 3px;
   margin-bottom: 15px;
@@ -680,7 +680,7 @@ h6, .h6 {
 .block-title strong {
   margin: 0;
   margin-bottom: 10px;
-  color: #636363;
+  color: #000000;
   font-family: "Roboto", Arial;
   font-size: 14px;
   font-weight: bold;
@@ -696,7 +696,7 @@ h6, .h6 {
 .block-title small {
   font-size: 100%;
   font-weight: normal;
-  color: #A0A0A0;
+  color: #6E6E6E;
 }
 
 body:not(.customer-account) .block:first-child .block-title {
@@ -767,7 +767,7 @@ body:not(.customer-account) .block:first-child .block-title {
 }
 .block-account li a,
 .block-cms-menu li a {
-  color: #636363;
+  color: #000000;
 }
 .block-account li a:hover,
 .block-cms-menu li a:hover {
@@ -783,7 +783,7 @@ body:not(.customer-account) .block:first-child .block-title {
 .sidebar .actions .button,
 .button.button-secondary {
   background: #DDDDDD;
-  color: #636363;
+  color: #000000;
   padding: 7px 15px;
 }
 .cart .buttons-set .button:hover,
@@ -798,13 +798,13 @@ body:not(.customer-account) .block:first-child .block-title {
 .sidebar .actions .button:active,
 .button.button-secondary:active {
   background: #c4c4c4;
-  color: #636363;
+  color: #000000;
 }
 .cart .buttons-set .button:focus,
 .cart-table .button:focus,
 .sidebar .actions .button:focus,
 .button.button-secondary:focus {
-  color: #636363;
+  color: #000000;
   background: #c4c4c4;
   outline: none;
 }
@@ -1004,7 +1004,7 @@ a.button:hover {
 
 .breadcrumbs a {
   float: left;
-  color: #636363;
+  color: #000000;
 }
 
 .breadcrumbs a:hover {
@@ -1012,7 +1012,7 @@ a.button:hover {
 }
 
 .breadcrumbs strong {
-  color: #636363;
+  color: #000000;
   font-weight: normal;
 }
 
@@ -1280,7 +1280,7 @@ a.button:hover {
  */
 .global-site-notice {
   background: #676157;
-  color: #E6E6E6;
+  color: #ffffff;
   font-size: 10px;
 }
 .global-site-notice .notice-inner {
@@ -1530,7 +1530,7 @@ a.button:hover {
 }
 
 .price-notice {
-  color: #A0A0A0;
+  color: #6E6E6E;
 }
 
 .price-box .price {
@@ -1544,7 +1544,7 @@ a.button:hover {
 }
 
 .price-box .price-label {
-  color: #A0A0A0;
+  color: #6E6E6E;
   white-space: nowrap;
   font-family: "Roboto", Arial;
 }
@@ -1556,7 +1556,7 @@ a.button:hover {
   /* We want this to show on its own line, otherwise the layout looks funky */
 }
 .price-box .minimal-price-link .label {
-  color: #A0A0A0;
+  color: #6E6E6E;
 }
 
 /* -------------------------------------------- *
@@ -1576,7 +1576,7 @@ a.button:hover {
 }
 
 .price-box .old-price .price {
-  color: #A0A0A0;
+  color: #6E6E6E;
   text-decoration: line-through;
 }
 
@@ -1805,7 +1805,7 @@ span.weee {
 }
 
 .std .note {
-  color: #A0A0A0;
+  color: #6E6E6E;
   font-size: 13px;
 }
 
@@ -1845,7 +1845,7 @@ span.weee {
 .toolbar,
 .pager {
   font-family: "Roboto", Arial;
-  color: #636363;
+  color: #000000;
   line-height: 30px;
   font-size: 12px;
 }
@@ -1978,7 +1978,7 @@ span.weee {
 
 .pages .current,
 .pages .current:hover {
-  color: #636363;
+  color: #000000;
   border: 1px solid #CCCCCC;
   width: 30px;
   background-color: #FFFFFF;
@@ -2228,7 +2228,7 @@ body.customer-account .data-table .show-details .summary-collapse:hover:before {
 form .legend {
   margin: 0;
   margin-bottom: 10px;
-  color: #636363;
+  color: #000000;
   font-family: "Roboto", Arial;
   font-size: 18px;
   font-weight: 400;
@@ -2299,7 +2299,7 @@ span.required em {
  * Hints
  */
 .input-hint {
-  color: #A0A0A0;
+  color: #6E6E6E;
   font-size: 12px;
 }
 
@@ -2409,11 +2409,11 @@ input[type=text].qty {
  * Placeholder
  */
 ::-webkit-input-placeholder {
-  color: #A0A0A0;
+  color: #6E6E6E;
 }
 
 input:-moz-placeholder {
-  color: #A0A0A0;
+  color: #6E6E6E;
 }
 
 /* -------------------------------------------- *
@@ -2509,7 +2509,7 @@ p.required,
 #checkout-shipping-method-load .sp-methods dd label,
 #co-shipping-method-form .sp-methods dd label,
 .product-options ul.options-list label {
-  color: #636363;
+  color: #000000;
   background-color: #F4F4F4;
   padding: 5px 10px;
   display: inline-block;
@@ -2576,7 +2576,7 @@ form .form-instructions {
   font-style: italic;
   font-family: "Roboto", Arial;
   font-size: 13px;
-  color: #A0A0A0;
+  color: #6E6E6E;
 }
 
 /* ============================================ *
@@ -2763,7 +2763,7 @@ body {
 
 .header-language-background,
 .header-language-background a {
-  color: #E6E6E6;
+  color: #ffffff;
 }
 
 /* ============================================ *
@@ -2826,7 +2826,7 @@ body {
   width: 20%;
   height: 44px;
   background: #FFFFFF;
-  color: #636363;
+  color: #000000;
   line-height: 42px;
   text-align: center;
 }
@@ -2950,7 +2950,7 @@ a.skip-link {
   text-decoration: none;
   position: relative;
   display: block;
-  color: #636363;
+  color: #000000;
   line-height: 30px;
   font-family: "Roboto", Arial;
 }
@@ -3170,7 +3170,7 @@ a.skip-link {
 #header-account a {
   display: block;
   padding: 5px 10px;
-  color: #636363;
+  color: #000000;
   line-height: 2;
 }
 
@@ -3354,7 +3354,7 @@ a.skip-link {
 
 .mini-cart-list .has-options {
   margin-bottom: 0;
-  color: #A0A0A0;
+  color: #6E6E6E;
   font-size: 12px;
 }
 
@@ -3408,7 +3408,7 @@ a.skip-link {
   padding: 4px 0;
 }
 .footer .links a {
-  color: #636363;
+  color: #000000;
 }
 .footer .links a:hover {
   color: #3399CC;
@@ -3574,7 +3574,7 @@ h5.product-name,
 p.product-name {
   margin: 0;
   margin-bottom: 0.5em;
-  color: #636363;
+  color: #000000;
   font-family: "Roboto", Arial;
   font-size: 24px;
   font-weight: 400;
@@ -3592,7 +3592,7 @@ h3.product-name a,
 h4.product-name a,
 h5.product-name a,
 p.product-name a {
-  color: #636363;
+  color: #000000;
 }
 h2.product-name a:hover,
 h3.product-name a:hover,
@@ -3680,7 +3680,7 @@ p.product-name a:hover {
 }
 
 .products-grid .price-box {
-  color: #A0A0A0;
+  color: #6E6E6E;
   font-size: 13px;
   margin: 0 0 5px;
 }
@@ -4012,7 +4012,7 @@ p.product-name a:hover {
   display: none;
   margin: 0;
   margin-bottom: 10px;
-  color: #636363;
+  color: #000000;
   font-family: "Roboto", Arial;
   font-size: 14px;
   font-weight: bold;
@@ -4059,7 +4059,7 @@ p.product-name a:hover {
 .block-layered-nav .block-content > dl > dt {
   margin: 0;
   margin-bottom: 10px;
-  color: #636363;
+  color: #000000;
   font-family: "Roboto", Arial;
   font-size: 14px;
   font-weight: bold;
@@ -4119,7 +4119,7 @@ p.product-name a:hover {
   display: block;
 }
 .block-layered-nav dl dd ol > li > a .count {
-  color: #A0A0A0;
+  color: #6E6E6E;
 }
 
 .block-layered-nav .block-content > dl > dt {
@@ -4133,7 +4133,7 @@ p.product-name a:hover {
   display: block;
   margin: 0;
   margin-bottom: 10px;
-  color: #636363;
+  color: #000000;
   font-family: "Roboto", Arial;
   font-size: 14px;
   font-weight: bold;
@@ -4248,7 +4248,7 @@ p.product-name a:hover {
   text-transform: uppercase;
 }
 .product-view .product-shop .price-box .special-price span.weee {
-  color: #636363;
+  color: #000000;
 }
 .product-view .product-shop .price-box .special-price span.weee span.price {
   font-size: 20px;
@@ -4257,7 +4257,7 @@ p.product-name a:hover {
 .product-view .product-shop .price-box .price-including-tax {
   display: block;
   line-height: 1.2;
-  color: #636363;
+  color: #000000;
 }
 .product-view .product-shop .price-box .price-excluding-tax .label,
 .product-view .product-shop .price-box .price-including-tax .label {
@@ -4801,7 +4801,7 @@ p.product-name a:hover {
   padding: 0 0 10px;
   border: 0;
   background: 0;
-  color: #636363;
+  color: #000000;
   float: none;
   width: 100%;
   text-align: right;
@@ -4817,7 +4817,7 @@ p.product-name a:hover {
 
 .product-options-bottom .tier-prices .price,
 .product-options-bottom .tier-prices .benefit {
-  color: #636363;
+  color: #000000;
 }
 
 /* "display: none" should be removed if products on site have a long list of product options and those product options */
@@ -4846,7 +4846,7 @@ p.product-name a:hover {
 .block-related .block-title h2 {
   margin: 0;
   margin-bottom: 0.5em;
-  color: #636363;
+  color: #000000;
   font-family: "Roboto", Arial;
   font-size: 24px;
   font-weight: 400;
@@ -5259,7 +5259,7 @@ p.product-name a:hover {
   vertical-align: top;
 }
 .cart-table h2 {
-  color: #636363;
+  color: #000000;
   font-size: 14px;
   font-weight: 600;
   margin-bottom: 0;
@@ -5702,7 +5702,7 @@ p.product-name a:hover {
 }
 
 .opc .section.allow .step-title h2 {
-  color: #A0A0A0;
+  color: #6E6E6E;
 }
 
 .opc .section.allow .step-title:hover h2,
@@ -5902,7 +5902,7 @@ body:not(.opc-has-progressed-from-login) .opc.opc-firststep-login .section#opc-l
   padding-top: 6px;
   margin: 0;
   margin-bottom: 10px;
-  color: #636363;
+  color: #000000;
   font-family: "Roboto", Arial;
   font-size: 14px;
   font-weight: bold;
@@ -5913,10 +5913,10 @@ body:not(.opc-has-progressed-from-login) .opc.opc-firststep-login .section#opc-l
   margin-bottom: 6px;
   text-transform: uppercase;
   font-weight: normal;
-  color: #A0A0A0;
+  color: #6E6E6E;
 }
 .block-progress dt.complete {
-  color: #636363;
+  color: #000000;
 }
 .block-progress dd {
   padding-left: 15px;
@@ -5933,7 +5933,7 @@ body:not(.opc-has-progressed-from-login) .opc.opc-firststep-login .section#opc-l
 .block-progress .payment-info dt {
   padding: 0;
   margin: 0 0 3px 0;
-  color: #636363;
+  color: #000000;
   font-family: "Roboto", Arial;
   text-transform: none;
   font-style: italic;
@@ -6126,7 +6126,7 @@ body:not(.opc-has-progressed-from-login) .opc.opc-firststep-login .section#opc-l
   border-radius: 3px;
   font-size: 14px;
   text-align: center;
-  color: #636363;
+  color: #000000;
   text-decoration: none;
   box-sizing: content-box;
 }
@@ -6292,7 +6292,7 @@ body:not(.opc-has-progressed-from-login) .opc.opc-firststep-login .section#opc-l
 
 /* CUSTOM */
 .availability.out-of-stock span {
-  color: #A0A0A0;
+  color: #6E6E6E;
 }
 
 .product-view .product-options .swatch-attr {
@@ -6376,7 +6376,7 @@ body:not(.opc-has-progressed-from-login) .opc.opc-firststep-login .section#opc-l
   font-style: italic;
   font-family: "Roboto", Arial;
   font-size: 13px;
-  color: #A0A0A0;
+  color: #6E6E6E;
 }
 
 .remember-me-box a.hide {
@@ -6958,7 +6958,7 @@ div.paypal-logo span > img {
   text-transform: uppercase;
 }
 #customer-reviews h2 span {
-  color: #636363;
+  color: #000000;
 }
 #customer-reviews h3 {
   font-family: "Roboto", Arial;
@@ -7421,7 +7421,7 @@ div.paypal-logo span > img {
   font-size: 12px;
 }
 #wishlist-table .price-box .price {
-  color: #636363;
+  color: #000000;
 }
 #wishlist-table .giftregisty-add {
   margin-top: 5px;
@@ -7550,7 +7550,7 @@ div.paypal-logo span > img {
   width: 40px;
   float: right;
   display: block;
-  color: #636363;
+  color: #000000;
   text-decoration: none;
   font-weight: normal;
   font-size: 30px;
@@ -7820,7 +7820,7 @@ div.paypal-logo span > img {
 }
 .cms-page-view .std p,
 .cms-no-route .std p {
-  color: #636363;
+  color: #000000;
   font-family: "Roboto", Arial;
   font-size: 14px;
   font-style: italic;
@@ -7836,7 +7836,7 @@ div.paypal-logo span > img {
 }
 .cms-page-view .std li,
 .cms-no-route .std li {
-  color: #636363;
+  color: #000000;
   font-family: "Roboto", Arial;
   font-size: 14px;
   font-style: italic;
@@ -7878,7 +7878,7 @@ div.paypal-logo span > img {
 #accordion > dl > dt {
   margin: 0;
   margin-bottom: 10px;
-  color: #636363;
+  color: #000000;
   font-family: "Roboto", Arial;
   font-size: 14px;
   font-weight: bold;
@@ -7976,7 +7976,7 @@ div.paypal-logo span > img {
  * Pricing Conditions
  * ============================================ */
 .price-box .minimal-price-link .label {
-  color: #CF5050;
+  color: #ff0000;
   font-family: "Roboto", Arial;
   font-size: 12px;
   text-transform: uppercase;

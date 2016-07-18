@@ -92,10 +92,11 @@ $c-blue: #3399CC;
 $c-green: #11B400;
 $c-pink: #D85378;
 $c-orange: #F3793B;
-$c-red: #CF5050;
+$c-red: #ff0000;
 $c-yellow: #FFDD15;
 $c-black: #000000;
 $c-gray: #333333;
+$c-white: #ffffff;
 
 // =============================================
 // Base Colors
@@ -103,9 +104,9 @@ $c-gray: #333333;
 
 // Text
 
-$c-text: #636363;
-$c-text-gray: #A0A0A0;
-$c-text-white: #E6E6E6;
+$c-text: #000000;
+$c-text-gray: #6E6E6E;
+$c-text-white: #ffffff;
 // Primary font color for headings and other non-link text
 $c-text-primary: $c-blue;
 

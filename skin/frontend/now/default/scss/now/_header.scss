@@ -1,14 +1,14 @@
 /*----------------------------------------------------------------------------*/
 /* Header
 /*----------------------------------------------------------------------------*/
-$desktopLogoHeight: 118;
+
 /*----------------------------------------------------------------------------*/
 /* Header Container
 /*----------------------------------------------------------------------------*/
 
 .page header {
     border-bottom: 2px solid $c-black;
-    padding: 0 0 35px 0;
+    padding: 0;
 
 	.toplink-3column-wrapper {
 		position: relative;
@@ -44,6 +44,8 @@ $desktopLogoHeight: 118;
 /* Menu
 /*----------------------------------------------------------------------------*/
 .header-left {
+	margin-top: 78px;
+	
 	.menu-nav {
 		li {
 			display: inline-block;
@@ -72,8 +74,7 @@ $desktopLogoHeight: 118;
 /* Top Link : Search, Account, Minicart
 /*----------------------------------------------------------------------------*/
 .header-right {
-	height: ($desktopLogoHeight + 7) * 1px;
-    line-height: ($desktopLogoHeight + 7) * 1px;
+	margin-top: 98px;
 
 	#header-search,
 	.link-account,
