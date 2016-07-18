@@ -2,3 +2,97 @@
 /* Footer
 /*----------------------------------------------------------------------------*/
 
+.footer-container {
+	background-color: #f9f9f9;
+    @include global-page-margin-side();
+    padding-bottom: 0;
+    padding-top: 30px;
+}
+
+.footer {
+	border-top: none;
+
+/*----------------------------------------------------------------------------*/
+/* General Style
+/*----------------------------------------------------------------------------*/
+	.block-title {
+		padding: 0;
+		margin-bottom: 8px;
+		
+		strong > span {
+			@include font-family('Roboto Bold');
+			@include responsive-font-size(strip-units($f-size-s));
+			color: $c-text;
+			text-transform: uppercase;
+		}
+	}
+
+/*----------------------------------------------------------------------------*/
+/* Block Subscription
+/*----------------------------------------------------------------------------*/	
+	.block-subscribe {
+		clear: inherit;
+		float: right;
+		margin-bottom: 0;
+		
+		.block-content {
+			margin: 0;
+			padding: 0;
+		}
+		
+		.form-subscribe-header {
+			display: block;
+			margin-bottom: 8px;
+			
+			label {
+				@include font-family('Roboto Regular');
+				@include responsive-font-size(strip-units($f-size-xs));
+				text-transform: none;				
+			}
+		}
+		
+		.input-text {
+			border: 1px solid $c-black;
+			height: 35px;
+		}
+		
+		.block-content .actions button {
+			@include button-b1(90px);
+			@include font-family('Roboto Regular');
+			@include responsive-font-size(strip-units($f-size));
+			text-transform: lowercase;
+		}
+	}
+	
+/*----------------------------------------------------------------------------*/
+/* Block Links
+/*----------------------------------------------------------------------------*/	
+	.links {
+		width: 20%;
+		
+		li {
+			padding: 0;
+			@include responsive-line-height(20);
+			
+			a {
+				@include responsive-font-size(strip-units($f-size-xs));
+				text-transform: capitalize;
+			}
+			
+			a:hover {
+				color: $c-text-gray;
+				text-decoration: none;
+			}
+		}
+	}
+	
+/*----------------------------------------------------------------------------*/
+/* Copyright
+/*----------------------------------------------------------------------------*/	
+	.copyright {
+		@include font-family('Roboto Regular');
+		@include responsive-font-size(strip-units($f-size-xxs));
+		border-top: none;
+		color: $c-text;
+	}
+}

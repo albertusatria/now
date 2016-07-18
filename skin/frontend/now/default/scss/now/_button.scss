@@ -6,57 +6,57 @@
 /* Define project button mixins. Add/subtract/customize as needed by project.
 /*----------------------------------------------------------------------------*/
 
-// Red button.
-@mixin button-b1($width: auto, $height: 54px) {
-    @include button-color($width, $height, $font-size: 14, $color: #ffffff, $background-color: #ee3d42, $hover-color: #ffffff, $hover-background: #404041, $border-radius: 0);
-    font-weight: normal;
+// Black button.
+@mixin button-b1($width: auto, $height: 35px) {
+    @include button-color($width, $height, $font-size: 16, $color: #ffffff, $background-color: #000000, $hover-color: #ffffff, $hover-background: #505050, $border-radius: 0);
+    @include font-family('Roboto Medium');
     text-transform: uppercase;
-    @include font-family('Avenir Black');
 }
 
-// Blue button.
-@mixin button-b2($width: auto, $height: 54px) {
-    @include button-color($width, $height, $font-size: 14, $color: #ffffff, $background-color: #2caae2, $hover-color: #ffffff, $hover-background: #2581ab, $border-radius: 0);
-    font-weight: normal;
+// White button.
+@mixin button-b2($width: auto, $height: 35px) {
+    @include button-color($width, $height, $font-size: 10, $color: #000000, $background-color: #ffffff, $hover-color: #505050, $hover-background: #ffffff, $border-radius: 0);
+    @include font-family('Roboto Regular');
     text-transform: uppercase;
-    border: 1px solid #ffffff;
-    @include font-family('Avenir Black');
+    border: 1px solid #000000;
+
+    &:hover {
+        border: 1px solid #505050;    
+    }
 }
 
-// Light grey button.
-@mixin button-b3($width: auto, $height: 54px) {
-    @include button-color($width, $height, $font-size: 14, $color: #ffffff, $background-color: #bbbbbb, $hover-color: #ffffff, $hover-background: #404041, $border-radius: 0);
-    font-weight: normal;
+// shop now button.
+@mixin button-b3($width: auto, $height: 35px) {
+    @include button-color($width, $height, $font-size: 14, $color: #000000, $background-color: #ffffff, $hover-color: #000000, $hover-background: #ffffff, $border-radius: 0);
+    @include font-family('Roboto Medium');
+    border: 2px solid #000000;
     text-transform: uppercase;
-    @include font-family('Avenir Black');
 }
 
 // Display link as b1.
-@mixin button-blink1($width: auto, $height: 54px, $font-size: 14) {
-    @include button-from-link($width, $height, $font-size, $color: #ffffff, $background-color: #ee3d42, $hover-color: #ffffff, $hover-background: #404041, $border-radius: 0);
+@mixin button-blink1($width: auto, $height: 35px, $font-size: 16) {
+    @include button-from-link($width, $height, $font-size, $color: #ffffff, $background-color: #000000, $hover-color: #ffffff, $hover-background: #000000, $border-radius: 0);
+    @include font-family('Roboto Medium');
     padding: 0 30px;
-    font-weight: normal;
     white-space: nowrap;
-    @include font-family('Avenir Black');
 }
 
 // Display link as b2.
-@mixin button-blink2($width: auto, $height: 54px, $font-size: 14) {
-    @include button-from-link($width, $height, $font-size, $color: #666666, $background-color: #edecea, $hover-color: #666666, $hover-background: #2581ab, $border-radius: 0);
+@mixin button-blink2($width: auto, $height: 35px, $font-size: 10) {
+    @include button-from-link($width, $height, $font-size, $color: #000000, $background-color: #ffffff, $hover-color: #000000, $hover-background: #ffffff, $border-radius: 0);
+    @include font-family('Roboto Medium');
     padding: 0 30px;
-    font-weight: normal;
     white-space: nowrap;
-    @include font-family('Avenir Black');
 }
 
 // Display link as b3.
-@mixin button-blink3($width: auto, $height: 44px, $font-size: 14) {
+/*@mixin button-blink3($width: auto, $height: 44px, $font-size: 14) {
     @include button-from-link($width, $height, $font-size, $color: #ffffff, $background-color: #bbbbbb, $hover-color: #ffffff, $hover-background: #404041, $border-radius: 0);
     padding: 0 30px;
     font-weight: normal;
     white-space: nowrap;
-    @include font-family('Avenir Black');
-}
+    @include font-family('Roboto Bold');
+}*/
 
 /*----------------------------------------------------------------------------*/
 /* Standard button styles. In general, do not modify these.

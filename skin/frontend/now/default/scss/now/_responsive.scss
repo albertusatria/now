@@ -18,30 +18,17 @@ $bp-xsmall: 319px; //iPhone <=5 Portrait
 $bp-small: 639px; //Mobile
 $bp-medium: 767px; //iPad Portrait
 $bp-large: 1300px; //Desktop
-$bp-xlarge: 1920px; //Foundation
+$bp-xlarge: 1920px; //Lager Screen
 
 /*----------------------------------------------------------------------------*/
 /* Breakpoint mixin and width variables (no units).
 /*----------------------------------------------------------------------------*/
-
 $desktopWidth: strip-units($bp-large + 1);
-$tabletWidth: strip-units($bp-medium + 1);
 $tabletWidthLandscape: strip-units(1024);
+$tabletWidth: strip-units($bp-medium + 1);
 $mobileWidth: strip-units($bp-small + 1);
 $phoneWidth: strip-units($bp-xsmall + 1);
 
-/*
-$screen-lg: <1300px
-$screen-md: 1024px
-$screen-sm: 768px
-$screen-ms: 640px
-$screen-xs: <640px
-*/
-
-$lgWidth: strip-units($bp-large - 1);
-$mdWidth: $tabletWidthLandscape - 1;
-$smWidth: strip-units($bp-medium);
-$xsWidth: strip-units($bp-small);
 
 @mixin breakpoint($type, $width: $desktopWidth) {
 
@@ -53,12 +40,12 @@ $xsWidth: strip-units($bp-small);
             @media #{$media} and (min-width: #{$desktopWidth}px) {
                 @content;
             }
-        } @else if $type == 'tablet' {
-            @media #{$media} and (max-width: #{$tabletWidth}px) {
+        } @else if $type == 'tabletWidthLandscape' {
+            @media #{$media} and (max-width: #{$tabletWidthLandscape}px) {
                 @content;
             }
-        } @else if $type == 'tabletLandscape' {
-            @media #{$media} and (max-width: #{$tabletWidthLandscape}px) {
+        } @else if $type == 'tablet' {
+            @media #{$media} and (max-width: #{$tabletWidth}px) {
                 @content;
             }
         } @else if $type == 'mobile' {
@@ -71,22 +58,6 @@ $xsWidth: strip-units($bp-small);
             }
         } @else if $type == 'min' or $type == 'max' {
             @media #{$media} and (#{$type}-width: #{$width}px) {
-                @content;
-            }
-        } @else if $type == 'lg' {
-            @media #{$media} and (max-width: #{$lgWidth}px) {
-                @content;
-            }
-        } @else if $type == 'md' {
-            @media #{$media} and (max-width: #{$mdWidth}px) {
-                @content;
-            }
-        } @else if $type == 'sm' {
-            @media #{$media} and (max-width: #{$smWidth}px) {
-                @content;
-            }
-        } @else if $type == 'xs' {
-            @media #{$media} and (max-width: #{$xsWidth}px) {
                 @content;
             }
         }

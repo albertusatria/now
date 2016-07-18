@@ -32,7 +32,7 @@
 
         &:after {
             content: '';
-            @include use-sprite('dialog-close');
+            //@include use-sprite('dialog-close');
         }
     }
 
@@ -71,7 +71,7 @@
                     height: 34px;
                     padding: 0 1em;
                     border: none;
-                    @include font-family('Avenir Light');
+                    @include font-family('Roboto Light');
                     @include responsive-font-size(14);
                     text-transform: none;
                     color: #404041;
@@ -86,7 +86,7 @@
 
             #email-signup-email-validator {
                 padding-top: 0.25em;
-                @include font-family('Avenir Black');
+                @include font-family('Roboto Bold');
                 @include responsive-font-size(14);
                 color: $c-danger;
             }
@@ -98,7 +98,7 @@
             h1 {
                 margin: 0;
                 padding: 0;
-                @include font-family('Avenir Light');
+                @include font-family('Roboto Light');
                 @include responsive-font-size(31);
                 font-weight: normal;
                 text-transform: none;
@@ -108,7 +108,7 @@
             h2 {
                 margin: 0 20px 0 0;
                 padding: 0 0 6px 0;
-                @include font-family('Avenir Black');
+                @include font-family('Roboto Bold');
                 @include responsive-font-size(31);
                 font-weight: normal;
                 color: #373737;
@@ -123,7 +123,7 @@
                 li {
                     margin: 0;
                     padding: 0 0 .25em 0;
-                    @include font-family('Avenir Black');
+                    @include font-family('Roboto Black');
                     @include responsive-font-size(23);
                     line-height: normal;
                     @include letter-spacing-psd(20);
@@ -151,7 +151,7 @@
             .industry {
                 margin: -20px 0 0 0;
                 padding: 0;
-                @include font-family('Avenir Black');
+                @include font-family('Roboto Black');
                 @include responsive-font-size(23);
                 line-height: normal;
                 @include letter-spacing-psd(20);
@@ -175,7 +175,7 @@
                         }
 
                         label {
-                            @include font-family('Avenir Light');
+                            @include font-family('Roboto Light');
                             @include responsive-font-size(18);
                             @include letter-spacing-psd(20);
                             color: #373737;
@@ -187,7 +187,7 @@
             .thanks {
                 margin: 1em 0 0 0;
                 padding: 0;
-                @include font-family('Avenir Black');
+                @include font-family('Roboto Black');
                 @include responsive-font-size(17);
                 line-height: normal;
                 @include letter-spacing-psd(20);

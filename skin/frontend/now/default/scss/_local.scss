@@ -18,8 +18,6 @@ Documentation:
 @import 'now/tabs';
 @import 'now/carousel';
 @import 'now/magento-default/main';
-//@import 'now/banner-enhanced';
-@import 'now/banner-enhanced-bg'; // Background image banners with html content overlays.
 @import 'now/structure';
 @import 'now/header';
 @import 'now/footer';
@@ -31,9 +29,8 @@ Documentation:
 @import 'now/search';
 @import 'now/_cms-templates';
 @import 'now/_cms';
-//@import 'now/megamenu';
+@import 'now/megamenu';
 @import 'module/now/addtocart/addtocart';
-@import 'module/now/quickview/quickview';
 //@import module/now/emailsignup/emailsignup';
 @import 'now/scrolltop';
 @import 'now/forms';

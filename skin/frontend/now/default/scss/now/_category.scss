@@ -12,7 +12,7 @@
     h1 {
         margin: 0;
         padding: 0;
-        @include font-family('Avenir Black');
+        @include font-family('Roboto Bold');
         @include responsive-font-size(24);
         font-weight: normal;
         color: #404041;
@@ -31,7 +31,7 @@
         h3 {
             margin: 1em 0 0 0;
             padding: 0;
-            @include font-family('Avenir Light');
+            @include font-family('Roboto Light');
             @include responsive-font-size(14);
             text-transform: none;
             line-height: 20px;
@@ -64,7 +64,7 @@
         content: 'Scroll For More Products';
         display: block;
         margin: 1em 0 0 0;
-        @include font-family('Avenir Black');
+        @include font-family('Roboto Bold');
         @include responsive-font-size(13);
         text-align: center;
         text-transform: uppercase;
@@ -82,7 +82,7 @@
 
 // Base price style.
 price {
-    @include font-family('Avenir Black');
+    @include font-family('Roboto Bold');
     font-weight: normal;
     color: #262a2d;
 }
@@ -90,7 +90,7 @@ price {
 .price-box {
     margin: 0;
     padding: 0;
-    @include font-family('Avenir Light');
+    @include font-family('Roboto Light');
     @include responsive-font-size(18);
 
     p {
@@ -204,7 +204,7 @@ price {
         .quickview {
             display: block;
             margin: 18px 0 10px 0;
-            @include font-family('Avenir Medium');
+            @include font-family('Roboto Medium');
             @include responsive-font-size(14);
             text-align: right;
             text-decoration: none;
@@ -219,7 +219,7 @@ price {
             &:before {
                 content: '';
                 margin-right: 6px;
-                @include use-sprite('quickview');
+                //@include use-sprite('quickview');
                 display: inline-block;
             }
 
@@ -228,7 +228,7 @@ price {
                 color: #ee3d42;
 
                 &:before {
-                    @include use-sprite('quickview-hover');
+                    //@include use-sprite('quickview-hover');
                     display: inline-block;
                 }
             }
@@ -238,7 +238,7 @@ price {
             min-height: 3em; // Allow product names to be 3 lines.
             margin: 0;
             padding: 9px 0 0 0;
-            @include font-family('Avenir Black');
+            @include font-family('Roboto Bold');
             @include responsive-font-size(14);
             font-weight: normal;
             color: #404041;
@@ -257,7 +257,7 @@ price {
             }
 
             .product-sku {
-                @include font-family('Avenir Light');
+                @include font-family('Rbooto Light');
                 @include responsive-font-size(18);
                 font-weight: normal;
                 color: #a6a9ab;
@@ -288,7 +288,7 @@ price {
             float: right;
 
             label {
-                @include font-family('Avenir Light');
+                @include font-family('Roboto Light');
                 @include responsive-font-size(14);
                 text-transform: none;
                 color: #424242;
@@ -304,12 +304,12 @@ price {
                 vertical-align: middle;
 
                 &.sort-by-switcher--asc {
-                    @include use-sprite('category-asc');
+                    //@include use-sprite('category-asc');
                     display: inline-block;
                 }
 
                 &.sort-by-switcher--desc {
-                    @include use-sprite('category-desc');
+                    //@include use-sprite('category-desc');
                     display: inline-block;
                 }
             }
@@ -322,23 +322,23 @@ price {
             margin: 0 auto;
 
             .grid {
-                @include use-sprite('category-grid-inactive');
+                //@include use-sprite('category-grid-inactive');
                 top: 6px;
                 background-size: auto;
             }
             strong.grid {
-                @include use-sprite('category-grid');
+                //@include use-sprite('category-grid');
                 top: 6px;
                 background-size: auto;
             }
 
             .list {
-                @include use-sprite('category-list-inactive');
+                //@include use-sprite('category-list-inactive');
                 top: 5px;
                 background-size: auto;
             }
             strong.list {
-                @include use-sprite('category-list');
+                //@include use-sprite('category-list');
                 top: 5px;
                 background-size: auto;
             }

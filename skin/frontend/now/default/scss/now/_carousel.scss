@@ -24,11 +24,10 @@ $carouselPadding: 26;
     .box-title h2 {
         margin: 0 0 20px 0;
         padding: 0 0 7px 0;
-        @include font-family('Avenir Black');
+        @include font-family('Robot Bold');
         @include responsive-font-size(18);
-        color: #404041;
+        color: #000000;
         text-transform: uppercase;
-        border-bottom: 2px solid #d8d8d8;
 
         @include breakpoint(tablet) {
             margin: 45px 0 40px 0;
@@ -70,20 +69,20 @@ $carouselPadding: 26;
             .owl-next {
                 @extend navigation;
                 right: -$carouselPadding/2*1px;
-                @include use-sprite('carousel-next');
+                //@include use-sprite('carousel-next');
 
                 &:hover {
-                    @include use-sprite('carousel-next-hover');
+                    //@include use-sprite('carousel-next-hover');
                 }
             }
 
             .owl-prev {
                 @extend navigation;
                 left: -$carouselPadding/2*1px;
-                @include use-sprite('carousel-prev');
+                //@include use-sprite('carousel-prev');
 
                 &:hover {
-                    @include use-sprite('carousel-prev-hover');
+                    //@include use-sprite('carousel-prev-hover');
                 }
             }
         }

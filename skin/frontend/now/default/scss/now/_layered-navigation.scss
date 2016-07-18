@@ -13,12 +13,12 @@
     .currently {
         margin: 0;
         padding: 0;
-        @include font-family('Avenir Light');
+        @include font-family('Roboto Light');
         @include responsive-font-size(14);
         color: #404041;
 
         .block-subtitle {
-            @include font-family('Avenir Black');
+            @include font-family('Roboto Black');
             font-weight: normal;
             text-transform: uppercase;
         }
@@ -38,7 +38,7 @@
                     &:after {
                         content: '';
                         margin-top: 8px;
-                        @include use-sprite('layered-navigation-remove');
+                        //@include use-sprite('layered-navigation-remove');
                     }
                 }
             }
@@ -50,7 +50,7 @@
 
         a {
             float: none;
-            @include font-family('Avenir Light');
+            @include font-family('Roboto Light');
             @include responsive-font-size(12);
             text-decoration: underline;
         }
@@ -65,7 +65,7 @@
         dt {
             margin: 1em 0 0.5em 0;
             padding: 0;
-            @include font-family('Avenir Black');
+            @include font-family('Roboto Bold');
             @include responsive-font-size(14);
             text-transform: uppercase;
             color: #ee3d42;
@@ -85,7 +85,7 @@
                 padding: 0.1em 0;
 
                 a {
-                    @include font-family('Avenir Light');
+                    @include font-family('Roboto Light');
                     @include responsive-font-size(14);
                     color: #424242;
                 }

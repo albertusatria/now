@@ -1,10 +1,6 @@
-/*----------------------------------------------------------------------------*/
-/* Desktop Start Container
-/*----------------------------------------------------------------------------*/
+$menuDesktopWidth: 1024;
 
-nav.menu.large .megamenu-container {
-
-$menuDesktopWidth: 550;
+.header-left {
 
 /*----------------------------------------------------------------------------*/
 /* Level 1
@@ -14,71 +10,37 @@ $menuDesktopWidth: 550;
         margin: 0;
         padding: 0;
 
-        @include breakpoint(max, $desktopWidth) {
-            padding-right: 20px;
-            padding-left: 20px;
+        a {
+            &:hover {
+                text-decoration: none;
+            }
         }
 
-        li.sub {
-            display: inline-block;
-            margin: 0 0 0 40px;
+        a.level0 {
+            @include font-family('Roboto Bold');
+            @include responsive-font-size(strip-units($f-size-xs));
+            color: $c-black;
+            text-transform: uppercase;
+        }
 
-            @include breakpoint(max, $desktopWidth) {
-                margin-left: 25px;
+        > li.level0 {
+	        cursor: pointer;
+            line-height: 66px;
+            height: 75px;
+
+            &:not(.last) {
+                margin-right: 30px;
             }
+        }
 
-            &:first-child {
-                margin-left: 0;
-            }
+        .nav-1 a {
+            color: transparent;
+            font-size: 0;
 
-            @include breakpoint(tabletLandscape) {
-                margin-right: 0;
-            }
-
-            .close {
-                position: absolute;
-                top: 0;
-                right: 0;
-                padding: 20px;
-                cursor: pointer;
-
-                &:after {
-                    content: '';
-                    @include use-sprite('megamenu-close');
-                }
-            }
-
-            h3 {
-                margin: 0;
-                padding: 16px 0;
-
-                a {
-                    display: block;
-                    @include font-family('Avenir Black');
-                    @include responsive-font-size(18);
-                    font-weight: normal;
-                    text-decoration: none;
-                    text-transform: uppercase;
-                    color: #404041;
-
-                    @include breakpoint(max, $desktopWidth) {
-                        @include responsive-font-size(16);
-                    }
-
-                    &:hover {
-                        color: #ee3d42;
-                    }
-                }
-            }
-
-            &.active {
-
-                h3 {
-
-                    a {
-                        color: #ee3d42;
-                    }
-                }
+            &:after {
+                @include use-sprite('icon_goto-home');
+                content: "";
+                display: inline-block;
             }
         }
     }
@@ -86,326 +48,112 @@ $menuDesktopWidth: 550;
     /*----------------------------------------------------------------------------*/
     /* Level 2
     /*----------------------------------------------------------------------------*/
-
-    .sub1 {
+    .submenu {
         display: none;
-        position: absolute;
-        //left: 264px;
-        z-index: 200;
-        width: $menuDesktopWidth*1px;
-        margin: 0;
-        background-color: #ededee;
-        box-shadow: 3px 4px 10px 0px rgba(0, 0, 0, 0.32);
-        -webkit-box-shadow: 3px 4px 10px 0px rgba(0, 0, 0, 0.32);
-        -moz-box-shadow: 3px 4px 10px 0px rgba(0, 0, 0, 0.32);
-        /*
-        box-shadow: 0px 5px 9px 1px rgba(0, 0, 0, 0.32);
-        -webkit-box-shadow: 0px 5px 9px 1px rgba(0, 0, 0, 0.32);
-        -moz-box-shadow: 0px 5px 9px 1px rgba(0, 0, 0, 0.32);
-        */
-
-        .subinner1 {
-            padding: 25px 23px 23px 21px;
-
-            > ul {
-                float: left;
-                width: 50%;
-                margin: 0;
-                padding: 0;
-                vertical-align: top;
-
-                > li {
-                    margin: 0;
-                    padding: 0;
-
-                    h4 {
-                        margin: 0;
-                        padding: 0 0 20px 0;
-
-                        &:before {
-                            content: '>';
-                            margin-right: 15px;
-                        }
-
-                        a {
-                            @include font-family('Avenir Black');
-                            @include responsive-font-size(14);
-                            font-weight: normal;
-                            text-transform: uppercase;
-                            color: #404041;
-                        }
-                    }
-                }
-            }
+        
+        .by-product,
+        .by-brands,
+        .leftmenu,
+        .rightmenu {
+	        float: left;
+	        width: 49.5%;
         }
-
-        .promotion {
-            padding: 30px 0 0 0;
-            clear: left;
-
-            .img-container {
-                overflow: hidden;
-                width: 240px;
-                padding-bottom: 16px;
-
-                img {
-                    @include responsive-img;
-                }
-            }
+        
+        .by-product,
+        .by-brands {
+	        &:after {
+		        @include clearfix;
+	        }
+        }
+        
+        .by-brands {
+	        position: relative;
+        }
+        
+        h6 {
+	        display: block;
+	        margin-bottom: 7px;
+	        text-transform: uppercase;
+	        
+	        &:after {
+		        @include clearfix;
+	        }
+        }
+        
+        &:after {
+	        @include clearfix;
         }
     }
-
-    // Active menu.
-    .sub.active .sub1 {
-        display: block;
+    
+    li.level0 {
+	    &:hover {
+		    
+		    &:hover:not(.nav-1) > a {
+			    border-bottom: 2px solid $c-black;
+			    padding-bottom: 8px;
+			}
+			
+			.submenu {
+				border-bottom: 2px solid $c-black;
+				border-top: 1px solid $c-black;
+		        background-color: $c-white;
+		        display: block;
+		        left: 0;
+		        margin: 9px -20px 0 -20px;
+		        min-height: 200px;
+		        padding: 20px;
+		        position: absolute;
+		        right: 0;
+		        z-index: 9;
+	        }
+	    }
     }
-
-    // Set menu2 and menu3 width to narrow.
-    .sub.menu2,
-    .sub.menu3 {
-
-        .sub1 {
-            width: 485px;
-
-            @include breakpoint(tabletLandscape) {
-                width: 100%;
-            }
-        }
-
-        .promotion {
-            width: 50.5%
-        }
-    }
+    
 
     /*----------------------------------------------------------------------------*/
     /* Level 3
     /*----------------------------------------------------------------------------*/
 
-    .sub2 {
-
-        > ul {
-
-            > li {
-
-                h5 {
-                    margin: 0;
-                    padding: 0;
-
-                    a {
-                    }
-                }
-            }
-        }
-    }
-
-/*----------------------------------------------------------------------------*/
-/* End Container
-/*----------------------------------------------------------------------------*/
-
-}
-
-/*----------------------------------------------------------------------------*/
-/* Mobile Start Container
-/*----------------------------------------------------------------------------*/
-
-nav.menu.small .megamenu-container {
-    display: none;
-    position: absolute;
-    z-index: 200;
-    top: 0;
-    left: 0;
-    margin: 0;
-    padding: 0;
-    background: #ededef url(../images/megamenu/shadow.png) repeat-y right top;
-    //@include box-shadow(#d4d4d4 0 0 8px);
-
-    .back {
-        height: 43px;
-        border-bottom: 1px solid #cccccc;
-        cursor: pointer;
-
-        &:before {
-            content: '';
-            margin: 9px 0 0 17px;
-            @include use-sprite('megamenu-back');
-            float: left;
-        }
-    }
-
-    /*----------------------------------------------------------------------------*/
-    /* Level 1
-    /*----------------------------------------------------------------------------*/
-
-    > ul {
-        //display: none;
-
-        li.sub {
-            margin: 0;
-            padding: 0;
-
-            h3 {
-                height: 41px;
-                margin: 0;
-                padding: 8px 48px 0 16px;
-                border-bottom: 1px solid #cccccc;
-                cursor: pointer;
-
-                &:before {
-                    content: '';
-                    @include use-sprite('megamenu-plus');
-                    position: absolute;
-                    right: 0;
-                    margin: 9px 24px 0 0;
-                }
-
-                &:after {
-                    content: '';
-                    float: right;
-                    height: 41px;
-                    margin: -8px 0 0 1em;
-                    border-left: 1px solid #cccccc;
-                }
-
-                a {
-                    @include font-family('Avenir Medium');
-                    @include responsive-font-size(14);
-                    text-transform: none;
-                    font-weight: normal;
-                    color: #646464;
-
-                    &:hover {
-                        text-decoration: none;
-                        color: #d0112b;
-                    }
-                }
-            }
-
-            &.expanded {
-
-                h3 {
-
-                    &:before {
-                        @include use-sprite('megamenu-minus');
-                    }
-                }
-            }
-        }
-    }
-
-    /*----------------------------------------------------------------------------*/
-    /* Level 2
-    /*----------------------------------------------------------------------------*/
-
-    .sub1 {
-        display: none;
-        background-color: #ededef;
-        background: #ededef url(../images/megamenu/shadow.png) repeat-y right top;
-
-        >.subinner1 {
-
-            > ul {
-                margin: 0;
-                padding: 0;
-
-                > li {
-                    margin: 0;
-                    padding: 0;
-
-                    h4 {
-                        height: 41px;
-                        margin: 0;
-                        padding: 12px 0 0 16px;
-                        border-bottom: 1px solid #cccccc;
-
-                        /*
-                        &:before {
-                            content: '';
-                            @include use-sprite('megamenu-plus');
-                            position: absolute;
-                            right: 0;
-                            margin: 3px 24px 0 0;
-                        }
-                        */
-
-                        a {
-                            @include font-family('Avenir Medium');
-                            @include responsive-font-size(14);
-                            text-transform: none;
-                            font-weight: normal;
-                            color: #646464;
-
-                            &:hover {
-                                text-decoration: none;
-                                color: #d0112b;
-                            }
-                        }
-
-                        /*
-                        &.expanded {
-
-                            &:before {
-                                @include use-sprite('megamenu-minus');
-                            }
-                        }
-                        */
-                    }
-                }
-            }
-        }
-
-        .promotion {
-            display: none;
-            border: 5px solid red;
-            padding: 0 15px 15px 15px;
-            border-top: 1px solid #999999;
-
-            .img-container {
-                overflow: hidden;
-                width: 270px;
-                padding-top: 15px;
-
-                img {
-                    @include responsive-img;
-                }
-            }
-        }
-    }
-
-    /*----------------------------------------------------------------------------*/
-    /* Level 3
-    /*----------------------------------------------------------------------------*/
-
-    .sub2 {
-        display: none;
-
-        > ul {
-            margin: 0;
-            padding: 0;
-
-            > li {
-                margin: 0;
-                padding: 8px 0 0 0
-
-                h5 {
-                    margin: 0;
-                    padding: 0;
-                    @include font-family('Avenir Medium');
-                    @include responsive-font-size(13);
-                    text-transform: none;
-                    font-weight: normal;
-                    color: #666666;
-                }
-
-                .view-all {
-                    @include responsive-font-size(13);
-                    text-transform: none;
-                    color: #eabd07;
-                }
-            }
-        }
-    }
-
-/*----------------------------------------------------------------------------*/
-/* End Container
-/*----------------------------------------------------------------------------*/
+	.leftmenu,
+	.rightmenu {
+		@include font-family('Roboto Regular');
+		@include responsive-font-size(strip-units($f-size-xs));
+		@include responsive-line-height(18);
+		
+		li {
+			clear: both;
+			display: inherit;
+		}
+		
+		a:hover {
+			color: $c-text-gray;
+		}
+	}
+	
+	.leftmenu {
+		
+		.first {
+			margin-bottom: 20px;
+			
+			a {
+				@include font-family('Roboto Medium');
+			}
+			
+			.sale {
+				color: $c-red;
+			}
+			
+			.sale:hover {
+				color: #f68282;
+			}
+		}
+	}
+	
+	.brand-snapshot {
+		bottom: 0;
+		position: absolute;	
+	}
+	
+	
+    
 }

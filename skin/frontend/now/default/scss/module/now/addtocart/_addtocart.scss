@@ -43,7 +43,7 @@ $addtocartDialogMinHeightMobile: 200;
             content: '';
             float: right;
             margin: 15px 15px 0 0;
-            @include use-sprite('dialog-close');
+            //@include use-sprite('dialog-close');
         }
     }
 
@@ -86,13 +86,13 @@ $addtocartDialogMinHeightMobile: 200;
 
             .item-added {
                 color: #404041;
-                @include font-family('Avenir Black');
+                @include font-family('Roboto Bold');
                 @include responsive-font-size(16);
 
                 &:before {
                     content: '';
                     margin-right: 0.5em;
-                    @include use-sprite('addtocart-tick');
+                    //@include use-sprite('addtocart-tick');
                     display: inline-block;
                     vertical-align: middle;
                 }
@@ -127,7 +127,7 @@ $addtocartDialogMinHeightMobile: 200;
             .product-name {
                 margin: 0 0 0.5em 0;
                 padding: 0;
-                @include font-family('Avenir Black');
+                @include font-family('Roboto Bold');
                 @include responsive-font-size(24);
                 font-weight: normal;
                 text-transform: none;
@@ -135,12 +135,12 @@ $addtocartDialogMinHeightMobile: 200;
             }
 
             .product-sku {
-                @include font-family('Avenir Light');
+                @include font-family('Roboto Light');
                 @include responsive-font-size(16);
                 color: #404041;
 
                 span {
-                    @include font-family('Avenir Black');
+                    @include font-family('Roboto Bold');
                 }
             }
 
@@ -159,7 +159,7 @@ $addtocartDialogMinHeightMobile: 200;
             h2 {
                 margin: 0 0 0.75em 0;
                 padding: 0;
-                @include font-family('Avenir Black');
+                @include font-family('Roboto Bold');
                 @include responsive-font-size(16);
                 color: #404041;
             }
@@ -169,7 +169,7 @@ $addtocartDialogMinHeightMobile: 200;
                 color: #404041;
 
                 label {
-                    @include font-family('Avenir Black');
+                    @include font-family('Roboto Bold');
                 }
             }
 
@@ -246,7 +246,7 @@ $addtocartDialogMinHeightMobile: 200;
         h1 {
             margin: 0 0 1em 0;
             padding: 1em 0 0.5em 0;
-            @include font-family('Avenir Black');
+            @include font-family('Roboto Bold');
             @include responsive-font-size(18);
             text-transform: uppercase;
             color: #404041;

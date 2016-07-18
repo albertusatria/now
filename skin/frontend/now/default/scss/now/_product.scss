@@ -7,7 +7,7 @@
     .product-name {
         margin: 0 0 0.5em 0;
         padding: 0;
-        @include font-family('Avenir Black');
+        @include font-family('Roboto Bold');
         @include responsive-font-size(24);
         font-weight: normal;
         text-transform: none;
@@ -32,12 +32,12 @@
         }
 
         .product-sku {
-            @include font-family('Avenir Light');
+            @include font-family('Roboto Light');
             @include responsive-font-size(16);
             color: #404041;
 
             span {
-                @include font-family('Avenir Black');
+                @include font-family('Roboto Black');
             }
         }
 
@@ -83,7 +83,7 @@
         .short-description {
             margin: 2.5em 0 0 0;
             padding: 2.5em 0 0 0;
-            @include font-family('Avenir Light');
+            @include font-family('Roboto Light');
             @include responsive-font-size(14);
             color: #404041;
             border-top: 1px solid #cccccc;
@@ -104,7 +104,7 @@
                     display: inline-block;
                     margin: 0 0 0 1em;
                     padding: 0 0 0 1em;
-                    @include font-family('Avenir Black');
+                    @include font-family('Roboto Black');
                     @include responsive-font-size(14);
                     text-decoration: underline;
                     color: #404041;
@@ -264,7 +264,7 @@
             dt {
 
                 label {
-                    @include font-family('Avenir Light');
+                    @include font-family('Roboto Light');
                     @include responsive-font-size(14);
                     color: #404041;
 
@@ -318,7 +318,7 @@
         }
 
         .product-type {
-            @include font-family('Avenir Black');
+            @include font-family('Roboto Black');
         }
 
         .product-sku {

@@ -9,10 +9,10 @@ body.checkout-onepage-index {
         width: 75%;
         @include magento-default-page();
 
-        @include breakpoint(max, $tabletWidthLandscape - 1) {
+        /*@include breakpoint(max, $tabletWidthLandscape - 1) {
             float: none;
             width: auto;
-        }
+        }*/
 
         @include breakpoint(mobile) {
             width: auto;
@@ -458,9 +458,9 @@ body.checkout-onepage-index {
         display: block;
         width: 25%;
 
-        @include breakpoint(max, $tabletWidthLandscape - 1) {
+        /*@include breakpoint(max, $tabletWidthLandscape - 1) {
             display: none;
-        }
+        }*/
 
         // Magento hides checkout progress on the signin step by default. Uncomment to show (but why, there is no progress to show).
         .opc-block-progress-step-login {

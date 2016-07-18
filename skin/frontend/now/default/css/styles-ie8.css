@@ -1,7 +1,7 @@
 /*
- * Author: NOW
+ * Author: Default Mage + NOW (Albertus SY)
  * Description:
- *  - Change font variables to custom font ($f-stack-sans, $f-stack-serif, $f-stack-special).
+ *  - style variables, duplicated from "rwd" theme
  */
 /*
 // ----------------------------------------------
@@ -500,8 +500,8 @@ input,
 select,
 table,
 textarea {
-  font-family: "Avenir LT W04_35 Light";
-  color: #636363;
+  font-family: "Roboto", Arial;
+  color: #000000;
   font-size: 14px;
   line-height: 1.5;
 }
@@ -535,7 +535,7 @@ h1, .h1 {
   margin: 0;
   margin-bottom: 0.7em;
   color: #3399CC;
-  font-family: "Avenir LT W04_35 Light";
+  font-family: "Roboto", Arial;
   font-size: 28px;
   font-weight: 400;
   font-style: normal;
@@ -547,8 +547,8 @@ h1, .h1 {
 h2, .h2 {
   margin: 0;
   margin-bottom: 0.5em;
-  color: #636363;
-  font-family: "Avenir LT W04_35 Light";
+  color: #000000;
+  font-family: "Roboto", Arial;
   font-size: 24px;
   font-weight: 400;
   font-style: normal;
@@ -560,8 +560,8 @@ h2, .h2 {
 h3, .h3 {
   margin: 0;
   margin-bottom: 10px;
-  color: #636363;
-  font-family: "Avenir LT W04_35 Light";
+  color: #000000;
+  font-family: "Roboto", Arial;
   font-size: 18px;
   font-weight: 400;
   font-style: normal;
@@ -573,8 +573,8 @@ h3, .h3 {
 h4, .h4 {
   margin: 0;
   margin-bottom: 10px;
-  color: #636363;
-  font-family: "Avenir LT W04_35 Light";
+  color: #000000;
+  font-family: "Roboto", Arial;
   font-size: 14px;
   font-weight: bold;
   font-style: normal;
@@ -586,8 +586,8 @@ h4, .h4 {
 h5, .h5 {
   margin: 0;
   margin-bottom: 10px;
-  color: #636363;
-  font-family: "Avenir LT W04_35 Light";
+  color: #000000;
+  font-family: "Roboto", Arial;
   font-size: 13px;
   font-weight: bold;
   font-style: normal;
@@ -599,8 +599,8 @@ h5, .h5 {
 h6, .h6 {
   margin: 0;
   margin-bottom: 5px;
-  color: #636363;
-  font-family: "Avenir LT W04_35 Light";
+  color: #000000;
+  font-family: "Roboto", Arial;
   font-size: 12px;
   font-weight: bold;
   font-style: normal;
@@ -650,7 +650,7 @@ h6, .h6 {
   text-transform: uppercase;
   font-size: 24px;
   font-weight: 600;
-  color: #636363;
+  color: #000000;
   border-bottom: 1px solid #EDEDED;
   padding-bottom: 3px;
   margin-bottom: 15px;
@@ -680,8 +680,8 @@ h6, .h6 {
 .block-title strong {
   margin: 0;
   margin-bottom: 10px;
-  color: #636363;
-  font-family: "Avenir LT W04_35 Light";
+  color: #000000;
+  font-family: "Roboto", Arial;
   font-size: 14px;
   font-weight: bold;
   font-style: normal;
@@ -696,7 +696,7 @@ h6, .h6 {
 .block-title small {
   font-size: 100%;
   font-weight: normal;
-  color: #A0A0A0;
+  color: #6E6E6E;
 }
 
 body:not(.customer-account) .block:first-child .block-title {
@@ -757,7 +757,7 @@ body:not(.customer-account) .block:first-child .block-title {
 .block-account li,
 .block-cms-menu li {
   text-transform: uppercase;
-  font-family: "Avenir LT W04_35 Light";
+  font-family: "Roboto", Arial;
   margin: 7px 0;
 }
 .block-account li strong,
@@ -767,7 +767,7 @@ body:not(.customer-account) .block:first-child .block-title {
 }
 .block-account li a,
 .block-cms-menu li a {
-  color: #636363;
+  color: #000000;
 }
 .block-account li a:hover,
 .block-cms-menu li a:hover {
@@ -783,7 +783,7 @@ body:not(.customer-account) .block:first-child .block-title {
 .sidebar .actions .button,
 .button.button-secondary {
   background: #DDDDDD;
-  color: #636363;
+  color: #000000;
   padding: 7px 15px;
 }
 .cart .buttons-set .button:hover,
@@ -798,13 +798,13 @@ body:not(.customer-account) .block:first-child .block-title {
 .sidebar .actions .button:active,
 .button.button-secondary:active {
   background: #c4c4c4;
-  color: #636363;
+  color: #000000;
 }
 .cart .buttons-set .button:focus,
 .cart-table .button:focus,
 .sidebar .actions .button:focus,
 .button.button-secondary:focus {
-  color: #636363;
+  color: #000000;
   background: #c4c4c4;
   outline: none;
 }
@@ -825,7 +825,7 @@ body:not(.customer-account) .block:first-child .block-title {
   color: #FFFFFF;
   font-size: 13px;
   font-weight: normal;
-  font-family: "Avenir LT W04_35 Light";
+  font-family: "Roboto", Arial;
   line-height: 19px;
   text-align: center;
   text-transform: uppercase;
@@ -897,7 +897,7 @@ a.button:hover {
   text-transform: uppercase;
   display: inline-block;
   color: #3399CC;
-  font-family: "Avenir LT W04_35 Light";
+  font-family: "Roboto", Arial;
 }
 .button2 span:hover,
 .button2 span span:hover {
@@ -998,13 +998,13 @@ a.button:hover {
 .breadcrumbs li {
   float: left;
   font-size: 12px;
-  font-family: "Avenir LT W04_35 Light";
+  font-family: "Roboto", Arial;
   text-transform: uppercase;
 }
 
 .breadcrumbs a {
   float: left;
-  color: #636363;
+  color: #000000;
 }
 
 .breadcrumbs a:hover {
@@ -1012,7 +1012,7 @@ a.button:hover {
 }
 
 .breadcrumbs strong {
-  color: #636363;
+  color: #000000;
   font-weight: normal;
 }
 
@@ -1050,7 +1050,7 @@ a.button:hover {
   line-height: 20px;
   width: 100%;
   font-size: 10px;
-  font-family: Arial, "Avenir LT W04_35 Light";
+  font-family: Arial, "Roboto", Arial;
   font-weight: bold;
 }
 .btn-remove:hover:after {
@@ -1142,7 +1142,7 @@ a.button:hover {
 .main-container,
 .footer-container {
   position: relative;
-  max-width: 1260px;
+  max-width: 1300px;
   margin: 0 auto;
   padding: 15px;
 }
@@ -1155,7 +1155,7 @@ a.button:hover {
 
 .main-container,
 .footer-container {
-  padding: 30px;
+  padding: 20px;
 }
 
 .footer-container {
@@ -1270,9 +1270,9 @@ a.button:hover {
  * Top Container
  */
 .top-container {
-  max-width: 1260px;
+  max-width: 1300px;
   margin: 0 auto;
-  padding: 0 30px;
+  padding: 0 20px;
 }
 
 /* -------------------------------------------- *
@@ -1280,19 +1280,19 @@ a.button:hover {
  */
 .global-site-notice {
   background: #676157;
-  color: #E6E6E6;
-  font-size: 11px;
+  color: #ffffff;
+  font-size: 10px;
 }
 .global-site-notice .notice-inner {
   padding-left: 120px;
   width: 100%;
-  max-width: 1200px;
+  max-width: 1260px;
   margin-left: auto;
   margin-right: auto;
-  line-height: 11px;
+  line-height: 10px;
   min-height: 40px;
-  padding-top: 14.5px;
-  padding-bottom: 14.5px;
+  padding-top: 15px;
+  padding-bottom: 15px;
   background-image: url("../images/demo-logo.png");
   background-position: left;
   background-repeat: no-repeat;
@@ -1309,7 +1309,7 @@ a.button:hover {
   text-align: center;
   margin: 10px;
   text-transform: uppercase;
-  font-family: "Avenir LT W04_35 Light";
+  font-family: "Roboto", Arial;
 }
 
 /* -------------------------------------------- *
@@ -1350,7 +1350,7 @@ a.button:hover {
   margin-bottom: 5px;
   padding: 7px 10px 7px 20px;
   background: #F4F4F4;
-  font-size: 15px;
+  font-size: 16px;
 }
 
 .messages li li:before {
@@ -1522,7 +1522,7 @@ a.button:hover {
  */
 .price-box {
   margin: 7px 0;
-  font-family: "Avenir LT W04_35 Light";
+  font-family: "Roboto", Arial;
 }
 
 .price-box p {
@@ -1530,23 +1530,23 @@ a.button:hover {
 }
 
 .price-notice {
-  color: #A0A0A0;
+  color: #6E6E6E;
 }
 
 .price-box .price {
   color: #3399CC;
-  font-size: 16px;
+  font-size: 20px;
 }
 
 .price-box .price,
 .price {
-  font-family: "Avenir LT W04_35 Light";
+  font-family: "Roboto", Arial;
 }
 
 .price-box .price-label {
-  color: #A0A0A0;
+  color: #6E6E6E;
   white-space: nowrap;
-  font-family: "Avenir LT W04_35 Light";
+  font-family: "Roboto", Arial;
 }
 
 .price-box .minimal-price-link {
@@ -1556,7 +1556,7 @@ a.button:hover {
   /* We want this to show on its own line, otherwise the layout looks funky */
 }
 .price-box .minimal-price-link .label {
-  color: #A0A0A0;
+  color: #6E6E6E;
 }
 
 /* -------------------------------------------- *
@@ -1576,7 +1576,7 @@ a.button:hover {
 }
 
 .price-box .old-price .price {
-  color: #A0A0A0;
+  color: #6E6E6E;
   text-decoration: line-through;
 }
 
@@ -1633,7 +1633,7 @@ span.weee {
  * ============================================ */
 .item-options {
   font-size: 14px;
-  font-family: "Avenir LT W04_35 Light";
+  font-family: "Roboto", Arial;
 }
 .item-options:after {
   content: '';
@@ -1805,7 +1805,7 @@ span.weee {
 }
 
 .std .note {
-  color: #A0A0A0;
+  color: #6E6E6E;
   font-size: 13px;
 }
 
@@ -1844,8 +1844,8 @@ span.weee {
 
 .toolbar,
 .pager {
-  font-family: "Avenir LT W04_35 Light";
-  color: #636363;
+  font-family: "Roboto", Arial;
+  color: #000000;
   line-height: 30px;
   font-size: 12px;
 }
@@ -1925,7 +1925,7 @@ span.weee {
 }
 .pager .amount {
   float: left;
-  font-family: "Avenir LT W04_35 Light";
+  font-family: "Roboto", Arial;
   white-space: nowrap;
   margin: 0 15px 0 0;
 }
@@ -1973,12 +1973,12 @@ span.weee {
   height: 30px;
   padding: 0;
   color: #3399CC;
-  font-family: "Avenir LT W04_35 Light";
+  font-family: "Roboto", Arial;
 }
 
 .pages .current,
 .pages .current:hover {
-  color: #636363;
+  color: #000000;
   border: 1px solid #CCCCCC;
   width: 30px;
   background-color: #FFFFFF;
@@ -2050,6 +2050,32 @@ span.weee {
   border-bottom: 4px solid transparent;
   border-right: 4px solid #246b8f;
   border-left: none;
+}
+
+.col2-left-layout .sorter,
+.col2-left-layout .pager,
+.col2-right-layout .sorter,
+.col2-right-layout .pager,
+.col3-layout .sorter,
+.col3-layout .pager {
+  width: 100%;
+}
+.col2-left-layout .pager,
+.col2-right-layout .pager,
+.col3-layout .pager {
+  float: left;
+  clear: both;
+}
+.col2-left-layout .pager .pages,
+.col2-right-layout .pager .pages,
+.col3-layout .pager .pages {
+  float: left;
+  margin-left: 0;
+}
+.col2-left-layout .pager .count-container,
+.col2-right-layout .pager .count-container,
+.col3-layout .pager .count-container {
+  float: right;
 }
 
 .toolbar .view-mode > label {
@@ -2202,8 +2228,8 @@ body.customer-account .data-table .show-details .summary-collapse:hover:before {
 form .legend {
   margin: 0;
   margin-bottom: 10px;
-  color: #636363;
-  font-family: "Avenir LT W04_35 Light";
+  color: #000000;
+  font-family: "Roboto", Arial;
   font-size: 18px;
   font-weight: 400;
   font-style: normal;
@@ -2246,7 +2272,7 @@ li.centinel-logos div.input-box img {
 label {
   display: inline-block;
   font-size: 13px;
-  font-family: "Avenir LT W04_35 Light";
+  font-family: "Roboto", Arial;
   font-weight: 600;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -2260,7 +2286,7 @@ span.required:after {
   content: ' *';
   color: #DF280A;
   font-weight: normal;
-  font-family: "Avenir LT W04_35 Light";
+  font-family: "Roboto", Arial;
   font-size: 12px;
 }
 
@@ -2273,7 +2299,7 @@ span.required em {
  * Hints
  */
 .input-hint {
-  color: #A0A0A0;
+  color: #6E6E6E;
   font-size: 12px;
 }
 
@@ -2291,7 +2317,7 @@ select + select {
 select[multiple] {
   width: 270px;
   border: 1px solid #C0C0C0;
-  font-size: 15px;
+  font-size: 16px;
   padding: 5px;
 }
 
@@ -2318,7 +2344,7 @@ textarea {
   border-radius: 2px;
   border: 1px solid #C0C0C0;
   background: #FFFFFF;
-  font-size: 15px;
+  font-size: 16px;
 }
 .input-text:focus {
   border: 1px solid #3399CC;
@@ -2383,11 +2409,11 @@ input[type=text].qty {
  * Placeholder
  */
 ::-webkit-input-placeholder {
-  color: #A0A0A0;
+  color: #6E6E6E;
 }
 
 input:-moz-placeholder {
-  color: #A0A0A0;
+  color: #6E6E6E;
 }
 
 /* -------------------------------------------- *
@@ -2483,7 +2509,7 @@ p.required,
 #checkout-shipping-method-load .sp-methods dd label,
 #co-shipping-method-form .sp-methods dd label,
 .product-options ul.options-list label {
-  color: #636363;
+  color: #000000;
   background-color: #F4F4F4;
   padding: 5px 10px;
   display: inline-block;
@@ -2548,9 +2574,9 @@ p.required,
 
 form .form-instructions {
   font-style: italic;
-  font-family: "Avenir LT W04_35 Light";
+  font-family: "Roboto", Arial;
   font-size: 13px;
-  color: #A0A0A0;
+  color: #6E6E6E;
 }
 
 /* ============================================ *
@@ -2576,7 +2602,7 @@ form .form-instructions {
 .data-table th {
   background: #F4F4F4;
   text-transform: uppercase;
-  font-family: "Avenir LT W04_35 Light";
+  font-family: "Roboto", Arial;
   line-height: 1.4;
   white-space: nowrap;
 }
@@ -2588,7 +2614,7 @@ form .form-instructions {
 
 .data-table tbody td,
 .data-table tfoot td {
-  font-family: "Avenir LT W04_35 Light";
+  font-family: "Roboto", Arial;
 }
 
 .data-table tfoot tr {
@@ -2682,9 +2708,9 @@ body {
  * Header
  * ============================================ */
 .page-header {
-  max-width: 1260px;
+  max-width: 1300px;
   margin: 0 auto;
-  padding: 0 30px;
+  padding: 0 20px;
 }
 
 .page-header-container {
@@ -2693,7 +2719,7 @@ body {
 
 .header-language-container,
 .page-header {
-  font-family: "Avenir LT W04_35 Light";
+  font-family: "Roboto", Arial;
 }
 
 /* ============================================ *
@@ -2705,7 +2731,7 @@ body {
   text-transform: uppercase;
 }
 .header-language-background .header-language-container {
-  max-width: 1200px;
+  max-width: 1260px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -2737,7 +2763,7 @@ body {
 
 .header-language-background,
 .header-language-background a {
-  color: #E6E6E6;
+  color: #ffffff;
 }
 
 /* ============================================ *
@@ -2800,7 +2826,7 @@ body {
   width: 20%;
   height: 44px;
   background: #FFFFFF;
-  color: #636363;
+  color: #000000;
   line-height: 42px;
   text-align: center;
 }
@@ -2924,9 +2950,9 @@ a.skip-link {
   text-decoration: none;
   position: relative;
   display: block;
-  color: #636363;
+  color: #000000;
   line-height: 30px;
-  font-family: "Avenir LT W04_35 Light";
+  font-family: "Roboto", Arial;
 }
 .nav-primary li {
   position: relative;
@@ -3073,7 +3099,7 @@ a.skip-link {
   width: 100%;
   height: 40px;
   padding-right: 40px;
-  font-family: "Avenir LT W04_35 Light";
+  font-family: "Roboto", Arial;
 }
 
 #search_mini_form .search-button {
@@ -3144,7 +3170,7 @@ a.skip-link {
 #header-account a {
   display: block;
   padding: 5px 10px;
-  color: #636363;
+  color: #000000;
   line-height: 2;
 }
 
@@ -3216,10 +3242,10 @@ a.skip-link {
   height: 22px;
   background: rgba(51, 153, 204, 0.9);
   color: #FFFFFF;
-  font-size: 11px;
+  font-size: 10px;
   line-height: 22px;
   text-align: center;
-  font-family: "Avenir LT W04_35 Light";
+  font-family: "Roboto", Arial;
 }
 
 .skip-link.skip-active .count {
@@ -3292,7 +3318,7 @@ a.skip-link {
 /* Subtotal */
 .cart-menu .subtotal {
   padding: 0 15px 15px;
-  font-family: "Avenir LT W04_35 Light";
+  font-family: "Roboto", Arial;
   font-size: 24px;
   line-height: 1.2;
 }
@@ -3328,7 +3354,7 @@ a.skip-link {
 
 .mini-cart-list .has-options {
   margin-bottom: 0;
-  color: #A0A0A0;
+  color: #6E6E6E;
   font-size: 12px;
 }
 
@@ -3347,14 +3373,14 @@ a.skip-link {
  */
 .footer,
 .footer button {
-  font-family: "Avenir LT W04_35 Light";
+  font-family: "Roboto", Arial;
 }
 
 .footer {
   clear: both;
   width: 100%;
   border-top: 1px solid #CCCCCC;
-  padding-top: 30px;
+  padding-top: 20px;
   /* -------------------------------------------- *
    * Social icons
    */
@@ -3373,8 +3399,8 @@ a.skip-link {
 .footer .links {
   float: left;
   width: 17%;
-  padding: 0 30px 0 0;
-  margin-bottom: 30px;
+  padding: 0 20px 0 0;
+  margin-bottom: 20px;
 }
 .footer .links li {
   word-break: break-all;
@@ -3382,7 +3408,7 @@ a.skip-link {
   padding: 4px 0;
 }
 .footer .links a {
-  color: #636363;
+  color: #000000;
 }
 .footer .links a:hover {
   color: #3399CC;
@@ -3390,7 +3416,7 @@ a.skip-link {
 .footer .block-subscribe {
   float: right;
   width: 320px;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 .footer .links,
 .footer .block-subscribe {
@@ -3500,9 +3526,9 @@ a.skip-link {
   border-top: 1px solid #CCCCCC;
   text-align: center;
   width: 100%;
-  font-size: 11px;
-  margin-top: 30px;
-  padding: 30px 0;
+  font-size: 10px;
+  margin-top: 20px;
+  padding: 20px 0;
 }
 .footer .links {
   width: 22.65625%;
@@ -3515,7 +3541,7 @@ a.skip-link {
 .footer .block-subscribe {
   clear: both;
   float: none;
-  margin: 0 auto 30px auto;
+  margin: 0 auto 20px auto;
 }
 
 /* ================================================= *
@@ -3548,8 +3574,8 @@ h5.product-name,
 p.product-name {
   margin: 0;
   margin-bottom: 0.5em;
-  color: #636363;
-  font-family: "Avenir LT W04_35 Light";
+  color: #000000;
+  font-family: "Roboto", Arial;
   font-size: 24px;
   font-weight: 400;
   font-style: normal;
@@ -3557,7 +3583,7 @@ p.product-name {
   text-rendering: optimizeLegibility;
   text-transform: uppercase;
   font-size: 13px;
-  font-family: "Avenir LT W04_35 Light";
+  font-family: "Roboto", Arial;
   font-weight: normal;
   line-height: 1.4;
 }
@@ -3566,7 +3592,7 @@ h3.product-name a,
 h4.product-name a,
 h5.product-name a,
 p.product-name a {
-  color: #636363;
+  color: #000000;
 }
 h2.product-name a:hover,
 h3.product-name a:hover,
@@ -3582,7 +3608,7 @@ p.product-name a:hover {
   text-transform: uppercase;
   margin-bottom: 5px;
   font-size: 14px;
-  font-family: "Avenir LT W04_35 Light";
+  font-family: "Roboto", Arial;
 }
 .products-grid .product-name a,
 .products-list .product-name a {
@@ -3654,7 +3680,7 @@ p.product-name a:hover {
 }
 
 .products-grid .price-box {
-  color: #A0A0A0;
+  color: #6E6E6E;
   font-size: 13px;
   margin: 0 0 5px;
 }
@@ -3717,11 +3743,11 @@ p.product-name a:hover {
   clear: none;
 }
 .products-grid > li:nth-child(even) {
-  margin-right: 3.7037%;
+  margin-right: 3.57143%;
 }
 .products-grid > li {
-  width: 30.8642%;
-  margin-right: 3.7037%;
+  width: 30.95238%;
+  margin-right: 3.57143%;
 }
 .products-grid > li:nth-child(3n+1) {
   clear: left;
@@ -3742,17 +3768,17 @@ p.product-name a:hover {
 
 .products-grid--max-4-col > li:nth-child(even),
 .products-grid--max-4-col > li:nth-child(3n) {
-  margin-right: 2.22222%;
+  margin-right: 2.17391%;
 }
 
 /* Set column config */
 .products-grid--max-4-col > li {
-  margin-right: 2.22222%;
+  margin-right: 2.17391%;
 }
 
 .products-grid--max-4-col > li {
-  width: 23.33333%;
-  margin-right: 2.22222%;
+  width: 23.36957%;
+  margin-right: 2.17391%;
 }
 
 .products-grid--max-4-col > li:nth-child(4n+1) {
@@ -3775,17 +3801,17 @@ p.product-name a:hover {
 
 .products-grid--max-5-col > li:nth-child(even),
 .products-grid--max-5-col > li:nth-child(3n) {
-  margin-right: 2.22222%;
+  margin-right: 2.17391%;
 }
 
 /* Set column config */
 .products-grid--max-5-col > li {
-  margin-right: 2.22222%;
+  margin-right: 2.17391%;
 }
 
 .products-grid--max-5-col > li {
-  width: 18.22222%;
-  margin-right: 2.22222%;
+  width: 18.26087%;
+  margin-right: 2.17391%;
 }
 
 .products-grid--max-5-col > li:nth-child(5n+1) {
@@ -3808,17 +3834,17 @@ p.product-name a:hover {
 
 .products-grid--max-6-col > li:nth-child(even),
 .products-grid--max-6-col > li:nth-child(3n) {
-  margin-right: 2.22222%;
+  margin-right: 2.17391%;
 }
 
 /* Set column config */
 .products-grid--max-6-col > li {
-  margin-right: 2.22222%;
+  margin-right: 2.17391%;
 }
 
 .products-grid--max-6-col > li {
-  width: 14.81481%;
-  margin-right: 2.22222%;
+  width: 14.85507%;
+  margin-right: 2.17391%;
 }
 
 .products-grid--max-6-col > li:nth-child(6n+1) {
@@ -3882,7 +3908,7 @@ p.product-name a:hover {
   margin-top: 0;
 }
 .products-list .product-shop .price-box .price {
-  font-size: 18px;
+  font-size: 30px;
 }
 .products-list .product-shop .action {
   margin: 7px 0;
@@ -3904,7 +3930,7 @@ p.product-name a:hover {
 }
 
 .products-list .product-name a {
-  font-size: 18px;
+  font-size: 30px;
 }
 
 .products-list .product-shop .product-primary,
@@ -3986,8 +4012,8 @@ p.product-name a:hover {
   display: none;
   margin: 0;
   margin-bottom: 10px;
-  color: #636363;
-  font-family: "Avenir LT W04_35 Light";
+  color: #000000;
+  font-family: "Roboto", Arial;
   font-size: 14px;
   font-weight: bold;
   font-style: normal;
@@ -4033,8 +4059,8 @@ p.product-name a:hover {
 .block-layered-nav .block-content > dl > dt {
   margin: 0;
   margin-bottom: 10px;
-  color: #636363;
-  font-family: "Avenir LT W04_35 Light";
+  color: #000000;
+  font-family: "Roboto", Arial;
   font-size: 14px;
   font-weight: bold;
   font-style: normal;
@@ -4093,7 +4119,7 @@ p.product-name a:hover {
   display: block;
 }
 .block-layered-nav dl dd ol > li > a .count {
-  color: #A0A0A0;
+  color: #6E6E6E;
 }
 
 .block-layered-nav .block-content > dl > dt {
@@ -4107,8 +4133,8 @@ p.product-name a:hover {
   display: block;
   margin: 0;
   margin-bottom: 10px;
-  color: #636363;
-  font-family: "Avenir LT W04_35 Light";
+  color: #000000;
+  font-family: "Roboto", Arial;
   font-size: 14px;
   font-weight: bold;
   font-style: normal;
@@ -4178,13 +4204,13 @@ p.product-name a:hover {
 }
 .product-view .product-shop .extra-info {
   float: left;
-  padding-right: 15px;
+  padding-right: 10px;
   clear: left;
   width: 70%;
 }
 .product-view .product-shop .price-info {
   float: right;
-  padding-left: 15px;
+  padding-left: 10px;
   text-align: right;
 }
 .product-view .product-shop .extra-info,
@@ -4200,7 +4226,7 @@ p.product-name a:hover {
   margin-bottom: 8px;
 }
 .product-view .product-shop .availability {
-  font-size: 16px;
+  font-size: 20px;
 }
 .product-view .product-shop .price-box {
   margin-top: 0;
@@ -4218,24 +4244,24 @@ p.product-name a:hover {
   font-size: 24px;
 }
 .product-view .product-shop .price-box .special-price .price-label {
-  font-size: 16px;
+  font-size: 20px;
   text-transform: uppercase;
 }
 .product-view .product-shop .price-box .special-price span.weee {
-  color: #636363;
+  color: #000000;
 }
 .product-view .product-shop .price-box .special-price span.weee span.price {
-  font-size: 16px;
+  font-size: 20px;
 }
 .product-view .product-shop .price-box .price-excluding-tax,
 .product-view .product-shop .price-box .price-including-tax {
   display: block;
   line-height: 1.2;
-  color: #636363;
+  color: #000000;
 }
 .product-view .product-shop .price-box .price-excluding-tax .label,
 .product-view .product-shop .price-box .price-including-tax .label {
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 300;
 }
 .product-view .product-shop .price-box .price-excluding-tax .price,
@@ -4328,11 +4354,11 @@ p.product-name a:hover {
 .product-view .product-shop,
 .product-view .add-to-cart-wrapper,
 .product-view .block-related {
-  padding-left: 15px;
+  padding-left: 10px;
 }
 
 .product-img-box {
-  padding-right: 15px;
+  padding-right: 10px;
 }
 
 .product-view .product-shop,
@@ -4413,7 +4439,7 @@ p.product-name a:hover {
 .product-view .add-to-cart-buttons .button {
   min-height: 40px;
   line-height: 40px;
-  font-size: 16px;
+  font-size: 20px;
   padding: 0px 30px;
   float: left;
   min-width: 160px;
@@ -4524,7 +4550,7 @@ p.product-name a:hover {
   -o-user-select: none;
   user-select: none;
   display: inline-block;
-  padding: 0 30px;
+  padding: 0 20px;
   height: 40px;
   line-height: 40px;
   cursor: pointer;
@@ -4608,7 +4634,7 @@ p.product-name a:hover {
 
 .grouped-items-table .name-wrapper {
   color: #3399CC;
-  font-family: "Avenir LT W04_35 Light";
+  font-family: "Roboto", Arial;
 }
 .grouped-items-table .qty-wrapper {
   padding-top: 7px;
@@ -4644,6 +4670,10 @@ p.product-name a:hover {
   top: 6px;
   right: 15px;
   text-align: right;
+}
+
+.product-view .product-options .required {
+  position: static;
 }
 
 .product-options dt {
@@ -4747,7 +4777,7 @@ p.product-name a:hover {
 
 .product-options p.note {
   margin: 0;
-  font-size: 11px;
+  font-size: 10px;
 }
 
 .product-options-bottom {
@@ -4771,7 +4801,7 @@ p.product-name a:hover {
   padding: 0 0 10px;
   border: 0;
   background: 0;
-  color: #636363;
+  color: #000000;
   float: none;
   width: 100%;
   text-align: right;
@@ -4787,7 +4817,7 @@ p.product-name a:hover {
 
 .product-options-bottom .tier-prices .price,
 .product-options-bottom .tier-prices .benefit {
-  color: #636363;
+  color: #000000;
 }
 
 /* "display: none" should be removed if products on site have a long list of product options and those product options */
@@ -4816,8 +4846,8 @@ p.product-name a:hover {
 .block-related .block-title h2 {
   margin: 0;
   margin-bottom: 0.5em;
-  color: #636363;
-  font-family: "Avenir LT W04_35 Light";
+  color: #000000;
+  font-family: "Roboto", Arial;
   font-size: 24px;
   font-weight: 400;
   font-style: normal;
@@ -4856,7 +4886,7 @@ p.product-name a:hover {
 .block-related .product-details .price-box p:first-child,
 .block-related .product-details .price-box span:first-child {
   margin-left: 0;
-  font-size: 16px;
+  font-size: 20px;
   padding-right: 5px;
   padding-left: 5px;
 }
@@ -5115,6 +5145,29 @@ p.product-name a:hover {
   float: right;
 }
 
+.display-single-price .cart-table {
+  float: none;
+  width: 100%;
+}
+.display-single-price .cart-forms {
+  float: left;
+  padding-right: 10px;
+  padding-left: 0;
+}
+.display-single-price .cart-totals-wrapper,
+.display-single-price .crosssell {
+  padding-left: 10px;
+}
+.display-single-price .cart-forms,
+.display-single-price .cart-totals-wrapper,
+.display-single-price .crosssell {
+  width: 50%;
+}
+.display-single-price .crosssell {
+  clear: right;
+  float: right;
+}
+
 .display-single-price:after {
   content: '';
   display: table;
@@ -5197,7 +5250,7 @@ p.product-name a:hover {
 }
 
 .cart-table {
-  font-family: "Avenir LT W04_35 Light";
+  font-family: "Roboto", Arial;
 }
 .cart-table th,
 .cart-table td,
@@ -5206,7 +5259,7 @@ p.product-name a:hover {
   vertical-align: top;
 }
 .cart-table h2 {
-  color: #636363;
+  color: #000000;
   font-size: 14px;
   font-weight: 600;
   margin-bottom: 0;
@@ -5215,7 +5268,7 @@ p.product-name a:hover {
 .cart-table tbody td {
   background-color: transparent;
   padding: 10px 5px;
-  font-family: "Avenir LT W04_35 Light";
+  font-family: "Roboto", Arial;
 }
 .cart-table .product-cart-info,
 .cart-table .product-cart-actions {
@@ -5236,7 +5289,7 @@ p.product-name a:hover {
   font-size: 9px;
   padding: 0 5px;
   text-transform: uppercase;
-  font-family: "Avenir LT W04_35 Light";
+  font-family: "Roboto", Arial;
 }
 .cart-table .product-cart-image .cart-links,
 .cart-table .product-cart-info .btn-remove,
@@ -5255,7 +5308,7 @@ p.product-name a:hover {
   display: none;
 }
 .cart-table .product-cart-sku {
-  font-family: "Avenir LT W04_35 Light";
+  font-family: "Roboto", Arial;
   font-style: italic;
   font-size: 12px;
   margin: 5px 0 12px;
@@ -5388,7 +5441,7 @@ p.product-name a:hover {
   margin-top: 4px;
 }
 .shipping .form-list label {
-  font-family: "Avenir LT W04_35 Light";
+  font-family: "Roboto", Arial;
   font-size: 13px;
   font-weight: 400;
   text-transform: uppercase;
@@ -5402,13 +5455,13 @@ p.product-name a:hover {
   margin-bottom: 10px;
 }
 .shipping .sp-methods label {
-  font-family: "Avenir LT W04_35 Light";
+  font-family: "Roboto", Arial;
   font-size: 12px;
   font-style: italic;
   min-width: 100px;
 }
 .shipping .sp-methods label span {
-  font-family: "Avenir LT W04_35 Light";
+  font-family: "Roboto", Arial;
   font-weight: bold;
   font-style: normal;
 }
@@ -5434,7 +5487,7 @@ p.product-name a:hover {
   clear: both;
 }
 .cart .cart-totals table {
-  font-family: "Avenir LT W04_35 Light";
+  font-family: "Roboto", Arial;
   font-size: 12px;
   margin-bottom: 20px;
   text-transform: uppercase;
@@ -5462,7 +5515,7 @@ p.product-name a:hover {
 }
 .cart .cart-totals table tfoot strong span,
 .cart .cart-totals table tfoot span.price {
-  font-family: "Avenir LT W04_35 Light";
+  font-family: "Roboto", Arial;
 }
 .cart .cart-totals table tfoot strong {
   font-weight: 400;
@@ -5485,7 +5538,7 @@ p.product-name a:hover {
 }
 #discount-coupon-form label,
 .cart .giftcard label {
-  font-family: "Avenir LT W04_35 Light";
+  font-family: "Roboto", Arial;
   font-size: 12px;
   font-weight: 400;
   text-align: left;
@@ -5544,6 +5597,25 @@ p.product-name a:hover {
 }
 
 /* Change the layout to 2 columns at a breakpoint that is higher than a 3 columns layout would normally break */
+.crosssell {
+  /* Undo three-column config */
+}
+.crosssell .products-grid > li:nth-child(even),
+.crosssell .products-grid > li:nth-child(3n),
+.crosssell .products-grid > li {
+  width: 47.72727%;
+  margin-right: 4.54545%;
+}
+.crosssell .products-grid > li:nth-child(odd) {
+  clear: left;
+}
+.crosssell .products-grid > li:nth-child(even) {
+  margin-right: 0;
+}
+.crosssell .products-grid > li:nth-child(3n+1) {
+  clear: none;
+}
+
 /* ============================================ *
  * Checkout - One Page
  * ============================================ */
@@ -5555,20 +5627,6 @@ p.product-name a:hover {
 .checkout-onepage-index .col-main {
   width: auto;
   float: none;
-}
-
-.checkout-onepage-index .col-main {
-  float: left;
-  width: 68.75%;
-  padding-right: 20px;
-}
-.checkout-onepage-index .col-right,
-.checkout-onepage-index .col-left {
-  width: 31.25%;
-  display: block;
-}
-.checkout-onepage-index .col-right {
-  padding-left: 0;
 }
 
 .opc select {
@@ -5644,7 +5702,7 @@ p.product-name a:hover {
 }
 
 .opc .section.allow .step-title h2 {
-  color: #A0A0A0;
+  color: #6E6E6E;
 }
 
 .opc .section.allow .step-title:hover h2,
@@ -5653,7 +5711,7 @@ p.product-name a:hover {
 }
 
 .opc .section .step-title h2 {
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 400;
   line-height: 40px;
   height: 40px;
@@ -5663,6 +5721,7 @@ p.product-name a:hover {
 
 .opc .section .step {
   padding: 20px;
+  padding: 10px;
 }
 .opc .section .step:after {
   content: '';
@@ -5843,8 +5902,8 @@ body:not(.opc-has-progressed-from-login) .opc.opc-firststep-login .section#opc-l
   padding-top: 6px;
   margin: 0;
   margin-bottom: 10px;
-  color: #636363;
-  font-family: "Avenir LT W04_35 Light";
+  color: #000000;
+  font-family: "Roboto", Arial;
   font-size: 14px;
   font-weight: bold;
   font-style: normal;
@@ -5854,15 +5913,15 @@ body:not(.opc-has-progressed-from-login) .opc.opc-firststep-login .section#opc-l
   margin-bottom: 6px;
   text-transform: uppercase;
   font-weight: normal;
-  color: #A0A0A0;
+  color: #6E6E6E;
 }
 .block-progress dt.complete {
-  color: #636363;
+  color: #000000;
 }
 .block-progress dd {
   padding-left: 15px;
   margin-bottom: 10px;
-  font-family: "Avenir LT W04_35 Light";
+  font-family: "Roboto", Arial;
   font-style: italic;
 }
 .block-progress dd address {
@@ -5874,8 +5933,8 @@ body:not(.opc-has-progressed-from-login) .opc.opc-firststep-login .section#opc-l
 .block-progress .payment-info dt {
   padding: 0;
   margin: 0 0 3px 0;
-  color: #636363;
-  font-family: "Avenir LT W04_35 Light";
+  color: #000000;
+  font-family: "Roboto", Arial;
   text-transform: none;
   font-style: italic;
   float: left;
@@ -5966,7 +6025,7 @@ body:not(.opc-has-progressed-from-login) .opc.opc-firststep-login .section#opc-l
   content: '';
   display: table;
   clear: both;
-  margin-top: 30px;
+  margin-top: 20px;
 }
 .gift-messages-form .item h5 {
   font-weight: bold;
@@ -6067,7 +6126,7 @@ body:not(.opc-has-progressed-from-login) .opc.opc-firststep-login .section#opc-l
   border-radius: 3px;
   font-size: 14px;
   text-align: center;
-  color: #636363;
+  color: #000000;
   text-decoration: none;
   box-sizing: content-box;
 }
@@ -6233,7 +6292,7 @@ body:not(.opc-has-progressed-from-login) .opc.opc-firststep-login .section#opc-l
 
 /* CUSTOM */
 .availability.out-of-stock span {
-  color: #A0A0A0;
+  color: #6E6E6E;
 }
 
 .product-view .product-options .swatch-attr {
@@ -6305,7 +6364,7 @@ body:not(.opc-has-progressed-from-login) .opc.opc-firststep-login .section#opc-l
   padding-right: 0;
 }
 .customer-account-login .col2-set .col-2 {
-  padding-left: 60px;
+  padding-left: 40px;
   border-left: 1px solid #EDEDED;
 }
 
@@ -6315,9 +6374,9 @@ body:not(.opc-has-progressed-from-login) .opc.opc-firststep-login .section#opc-l
 
 .opc #opc-login p:not(.required) {
   font-style: italic;
-  font-family: "Avenir LT W04_35 Light";
+  font-family: "Roboto", Arial;
   font-size: 13px;
-  color: #A0A0A0;
+  color: #6E6E6E;
 }
 
 .remember-me-box a.hide {
@@ -6338,7 +6397,7 @@ body:not(.opc-has-progressed-from-login) .opc.opc-firststep-login .section#opc-l
   display: block;
 }
 .remember-me-popup p {
-  font-family: "Avenir LT W04_35 Light";
+  font-family: "Roboto", Arial;
 }
 .remember-me-popup .remember-me-popup-close {
   position: absolute;
@@ -6356,7 +6415,7 @@ body:not(.opc-has-progressed-from-login) .opc.opc-firststep-login .section#opc-l
 }
 .customer-account-create .fieldset,
 .customer-account-create .buttons-set {
-  margin-left: 30px;
+  margin-left: 20px;
 }
 .customer-account-create .fieldset .hidden {
   display: none;
@@ -6367,7 +6426,7 @@ body:not(.opc-has-progressed-from-login) .opc.opc-firststep-login .section#opc-l
 
 .customer-account-forgotpassword .fieldset,
 .customer-account-forgotpassword .buttons-set {
-  margin-left: 30px;
+  margin-left: 20px;
   max-width: 400px;
 }
 .customer-account-forgotpassword .fieldset .input-box input.input-text {
@@ -6409,14 +6468,14 @@ body.customer-account .my-account .addresses-list h3 {
   font-weight: 600;
 }
 body.customer-account .my-account .fieldset {
-  margin-top: 30px;
-  margin-bottom: 30px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 body.customer-account .data-table {
   margin-top: 5px;
 }
 body.customer-account .data-table td a {
-  font-family: "Avenir LT W04_35 Light";
+  font-family: "Roboto", Arial;
   text-transform: uppercase;
   font-style: normal;
   font-size: 13px;
@@ -6440,7 +6499,7 @@ body.customer-account .sidebar .block .block-content p.block-subtitle {
   margin-bottom: 15px;
 }
 body.customer-account .sidebar .block .block-content .actions {
-  margin-top: 30px;
+  margin-top: 20px;
 }
 body.customer-account .sidebar ol#cart-sidebar-reorder li {
   margin-top: 10px;
@@ -6480,12 +6539,12 @@ body.customer-account .sidebar .block-reorder ol#cart-sidebar-reorder p.product-
  * Dashboard
  * ============================================ */
 .dashboard .box-head {
-  margin-top: 30px;
+  margin-top: 20px;
   border-bottom: 1px solid #CCCCCC;
   padding-bottom: 7px;
 }
 .dashboard .box-head h2 {
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 600;
   display: inline-block;
   margin-bottom: 0;
@@ -6505,7 +6564,7 @@ body.customer-account .sidebar .block-reorder ol#cart-sidebar-reorder p.product-
 }
 .dashboard .box-account p,
 .dashboard .box-account address {
-  font-family: "Avenir LT W04_35 Light";
+  font-family: "Roboto", Arial;
   font-style: italic;
 }
 .dashboard .col2-set .col-1,
@@ -6557,7 +6616,7 @@ body.customer-account .sidebar .block-reorder ol#cart-sidebar-reorder p.product-
 }
 .dashboard .box-reviews li .details .ratings strong {
   float: left;
-  font-family: "Avenir LT W04_35 Light";
+  font-family: "Roboto", Arial;
   font-size: 13px;
   margin-right: 5px;
 }
@@ -6570,14 +6629,14 @@ body.customer-account .sidebar .block-reorder ol#cart-sidebar-reorder p.product-
  * Address Book
  * ============================================ */
 .my-account .addresses-list {
-  font-family: "Avenir LT W04_35 Light";
+  font-family: "Roboto", Arial;
 }
 .my-account .addresses-list .col-1,
 .my-account .addresses-list .col-2 {
   padding-bottom: 0;
 }
 .my-account .addresses-list .item {
-  margin: 0 0 30px 0;
+  margin: 0 0 20px 0;
 }
 .my-account .addresses-list .item p {
   margin-top: 10px;
@@ -6590,7 +6649,7 @@ body.customer-account .sidebar .block-reorder ol#cart-sidebar-reorder p.product-
   padding-bottom: 10px;
   border-bottom: 1px solid #EDEDED;
   width: 100%;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 .order-info dt,
 .order-info dd,
@@ -6612,7 +6671,7 @@ body.customer-account .sidebar .block-reorder ol#cart-sidebar-reorder p.product-
 }
 
 .order-date {
-  font-family: "Avenir LT W04_35 Light";
+  font-family: "Roboto", Arial;
   text-transform: uppercase;
 }
 
@@ -6644,7 +6703,7 @@ body.customer-account .sidebar .block-reorder ol#cart-sidebar-reorder p.product-
 }
 .order-info-box .box-title h2 {
   font-size: 14px;
-  font-family: "Avenir LT W04_35 Light";
+  font-family: "Roboto", Arial;
   font-weight: bold;
   line-height: 1.5;
 }
@@ -6653,11 +6712,11 @@ body.customer-account .sidebar .block-reorder ol#cart-sidebar-reorder p.product-
 }
 .order-info-box .box-content {
   float: left;
-  font-family: "Avenir LT W04_35 Light";
+  font-family: "Roboto", Arial;
 }
 .order-info-box .box-content td,
 .order-info-box .box-content th {
-  font-family: "Avenir LT W04_35 Light";
+  font-family: "Roboto", Arial;
   line-height: 1.3;
 }
 .order-info-box .box-content th {
@@ -6667,7 +6726,7 @@ body.customer-account .sidebar .block-reorder ol#cart-sidebar-reorder p.product-
   padding-left: 15px;
 }
 .order-info-box .box-content strong {
-  font-family: "Avenir LT W04_35 Light";
+  font-family: "Roboto", Arial;
   font-weight: normal;
   text-transform: uppercase;
 }
@@ -6706,12 +6765,20 @@ ol#cart-sidebar-reorder p.product-name {
 
 .dashboard .col2-set .col-1,
 .dashboard .col2-set .col-2 {
-  padding-right: 30px;
+  padding-right: 20px;
   padding-bottom: 0;
 }
 
 body.customer-account .data-table td.view a {
   white-space: normal;
+}
+
+body.customer-account .my-account .title-buttons {
+  text-align: left;
+}
+body.customer-account .my-account .title-buttons span.separator,
+body.customer-account .my-account .title-buttons a {
+  top: -12px;
 }
 
 /* ============================================ *
@@ -6732,7 +6799,7 @@ body.newsletter-manage-index .my-account .form-list {
  * Contacts
  * ============================================ */
 .contacts-index-index .buttons-set {
-  margin-left: 30px;
+  margin-left: 20px;
   max-width: 435px;
 }
 .contacts-index-index .buttons-set p.required {
@@ -6878,7 +6945,7 @@ div.paypal-logo span > img {
   margin-bottom: 0;
 }
 #customer-reviews .review-heading .pager .count-container .limiter label {
-  font-family: "Avenir LT W04_35 Light";
+  font-family: "Roboto", Arial;
   font-size: 10px;
   text-transform: uppercase;
 }
@@ -6891,10 +6958,10 @@ div.paypal-logo span > img {
   text-transform: uppercase;
 }
 #customer-reviews h2 span {
-  color: #636363;
+  color: #000000;
 }
 #customer-reviews h3 {
-  font-family: "Avenir LT W04_35 Light";
+  font-family: "Roboto", Arial;
   font-size: 12px;
   font-weight: normal;
   text-transform: uppercase;
@@ -6908,7 +6975,7 @@ div.paypal-logo span > img {
 }
 #customer-reviews .fieldset h4 {
   border-bottom: 1px solid #CCCCCC;
-  font-family: "Avenir LT W04_35 Light";
+  font-family: "Roboto", Arial;
   font-size: 12px;
   font-weight: normal;
   padding-bottom: 5px;
@@ -6918,7 +6985,7 @@ div.paypal-logo span > img {
   display: none;
 }
 #customer-reviews .fieldset .form-list {
-  font-family: "Avenir LT W04_35 Light";
+  font-family: "Roboto", Arial;
   font-size: 12px;
   font-weight: normal;
   margin: 10px 0;
@@ -6953,7 +7020,7 @@ div.paypal-logo span > img {
   width: 470px;
 }
 #customer-reviews dl {
-  font-family: "Avenir LT W04_35 Light";
+  font-family: "Roboto", Arial;
   font-size: 12px;
   font-weight: normal;
   margin-bottom: 10px;
@@ -6963,12 +7030,12 @@ div.paypal-logo span > img {
   text-transform: uppercase;
 }
 #customer-reviews dl dd {
-  font-family: "Avenir LT W04_35 Light";
+  font-family: "Roboto", Arial;
   font-size: 14px;
   margin: 10px 0;
 }
 #customer-reviews dl dd .ratings-table {
-  font-family: "Avenir LT W04_35 Light";
+  font-family: "Roboto", Arial;
   font-size: 12px;
   width: 100%;
 }
@@ -6984,7 +7051,7 @@ div.paypal-logo span > img {
 }
 #customer-reviews dl dd .review-meta {
   color: #3399CC;
-  font-family: "Avenir LT W04_35 Light";
+  font-family: "Roboto", Arial;
   font-size: 10px;
   font-weight: normal;
   text-transform: uppercase;
@@ -7034,7 +7101,7 @@ div.paypal-logo span > img {
  * Ratings - Global
  * ============================================ */
 .ratings-table {
-  font-family: "Avenir LT W04_35 Light";
+  font-family: "Roboto", Arial;
   font-size: 12px;
   text-transform: uppercase;
 }
@@ -7246,7 +7313,7 @@ div.paypal-logo span > img {
   text-align: center;
 }
 #wishlist-table.clean-table {
-  font-family: "Avenir LT W04_35 Light";
+  font-family: "Roboto", Arial;
   font-size: 12px;
   text-transform: uppercase;
   width: 100%;
@@ -7259,13 +7326,13 @@ div.paypal-logo span > img {
   vertical-align: top;
 }
 #wishlist-table.clean-table thead th {
-  font-family: "Avenir LT W04_35 Light";
+  font-family: "Roboto", Arial;
   font-size: 12px;
   text-transform: uppercase;
 }
 #wishlist-table .product-name {
-  font-size: 16px;
-  font-family: "Avenir LT W04_35 Light";
+  font-size: 20px;
+  font-family: "Roboto", Arial;
   margin-bottom: 0;
   text-transform: uppercase;
 }
@@ -7273,16 +7340,16 @@ div.paypal-logo span > img {
   color: #3399CC;
 }
 #wishlist-table .wishlist-sku {
-  font-size: 11px;
-  font-family: "Avenir LT W04_35 Light";
+  font-size: 10px;
+  font-family: "Roboto", Arial;
   margin: 5px 0;
 }
 #wishlist-table textarea {
   border: 1px solid #C0C0C0;
   width: 100%;
   height: 45px;
-  font-size: 11px;
-  font-family: "Avenir LT W04_35 Light";
+  font-size: 10px;
+  font-family: "Roboto", Arial;
 }
 #wishlist-table textarea::-webkit-input-placeholder {
   text-transform: uppercase;
@@ -7305,7 +7372,7 @@ div.paypal-logo span > img {
   padding-top: 5px;
 }
 #wishlist-table .item-manage .button {
-  font-size: 11px;
+  font-size: 10px;
   padding: 3px 5px;
 }
 #wishlist-table .cart-cell {
@@ -7350,11 +7417,11 @@ div.paypal-logo span > img {
   white-space: normal;
 }
 #wishlist-table .price-box {
-  font-family: "Avenir LT W04_35 Light";
+  font-family: "Roboto", Arial;
   font-size: 12px;
 }
 #wishlist-table .price-box .price {
-  color: #636363;
+  color: #000000;
 }
 #wishlist-table .giftregisty-add {
   margin-top: 5px;
@@ -7378,6 +7445,20 @@ div.paypal-logo span > img {
 #wishlist-table.clean-table td {
   padding-left: 10px;
   padding-right: 10px;
+}
+
+#wishlist-table.clean-table td {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+#wishlist-table.clean-table td textarea {
+  height: 100px;
+}
+#wishlist-table.clean-table td.customer-wishlist-item-cart {
+  width: 110px;
+}
+#wishlist-table .product-name {
+  font-size: 13px;
 }
 
 /* ============================================ *
@@ -7456,7 +7537,7 @@ div.paypal-logo span > img {
 }
 .header-minicart .block-subtitle {
   color: #50A4CF;
-  font-family: "Avenir LT W04_35 Light";
+  font-family: "Roboto", Arial;
   font-size: 10px;
   font-weight: bold;
   line-height: 1.4;
@@ -7469,7 +7550,7 @@ div.paypal-logo span > img {
   width: 40px;
   float: right;
   display: block;
-  color: #636363;
+  color: #000000;
   text-decoration: none;
   font-weight: normal;
   font-size: 30px;
@@ -7660,7 +7741,7 @@ div.paypal-logo span > img {
 .advanced-search {
   background: #F4F4F4;
   border: 1px solid #EDEDED;
-  padding: 30px;
+  padding: 20px;
 }
 .advanced-search select.multiselect option {
   border-bottom: 1px solid #EDEDED;
@@ -7672,8 +7753,8 @@ div.paypal-logo span > img {
  * ============================================ */
 .product-review .product-img-box p.label {
   border-bottom: 1px solid #CCCCCC;
-  font-size: 16px;
-  font-family: "Avenir LT W04_35 Light";
+  font-size: 20px;
+  font-family: "Roboto", Arial;
   margin-top: 20px;
   padding-bottom: 10px;
   text-transform: uppercase;
@@ -7684,13 +7765,13 @@ div.paypal-logo span > img {
 .product-review .product-details h2 {
   border-bottom: 1px solid #CCCCCC;
   color: #3399CC;
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 600;
-  font-family: "Avenir LT W04_35 Light";
+  font-family: "Roboto", Arial;
   padding-bottom: 10px;
 }
 .product-review .ratings-table {
-  font-family: "Avenir LT W04_35 Light";
+  font-family: "Roboto", Arial;
 }
 .product-review .ratings-table th {
   padding-right: 10px;
@@ -7703,16 +7784,16 @@ div.paypal-logo span > img {
 }
 .product-review .ratings-description dt {
   border-bottom: 1px solid #CCCCCC;
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 400;
-  font-family: "Avenir LT W04_35 Light";
+  font-family: "Roboto", Arial;
   margin-top: 20px;
   padding: 10px 0;
   text-transform: uppercase;
 }
 .product-review .ratings-description dd {
   color: #737373;
-  font-family: "Avenir LT W04_35 Light";
+  font-family: "Roboto", Arial;
   font-size: 13px;
 }
 
@@ -7739,8 +7820,8 @@ div.paypal-logo span > img {
 }
 .cms-page-view .std p,
 .cms-no-route .std p {
-  color: #636363;
-  font-family: "Avenir LT W04_35 Light";
+  color: #000000;
+  font-family: "Roboto", Arial;
   font-size: 14px;
   font-style: italic;
   line-height: 24px;
@@ -7755,8 +7836,8 @@ div.paypal-logo span > img {
 }
 .cms-page-view .std li,
 .cms-no-route .std li {
-  color: #636363;
-  font-family: "Avenir LT W04_35 Light";
+  color: #000000;
+  font-family: "Roboto", Arial;
   font-size: 14px;
   font-style: italic;
   line-height: 24px;
@@ -7788,7 +7869,7 @@ div.paypal-logo span > img {
   list-style: none;
   margin-left: 0;
   font-style: normal;
-  font-family: "Avenir LT W04_35 Light";
+  font-family: "Roboto", Arial;
 }
 
 #accordion .toggle-tabs {
@@ -7797,8 +7878,8 @@ div.paypal-logo span > img {
 #accordion > dl > dt {
   margin: 0;
   margin-bottom: 10px;
-  color: #636363;
-  font-family: "Avenir LT W04_35 Light";
+  color: #000000;
+  font-family: "Roboto", Arial;
   font-size: 14px;
   font-weight: bold;
   font-style: normal;
@@ -7895,8 +7976,8 @@ div.paypal-logo span > img {
  * Pricing Conditions
  * ============================================ */
 .price-box .minimal-price-link .label {
-  color: #CF5050;
-  font-family: "Avenir LT W04_35 Light";
+  color: #ff0000;
+  font-family: "Roboto", Arial;
   font-size: 12px;
   text-transform: uppercase;
 }
@@ -7935,13 +8016,17 @@ div.paypal-logo span > img {
   text-align: left;
 }
 .notice-cookie .notice-text p {
-  padding-bottom: 14.5px;
+  padding-bottom: 15px;
   line-height: 1.3;
 }
 .notice-cookie .actions {
   float: left;
   text-align: right;
-  padding-bottom: 14.5px;
+  padding-bottom: 15px;
+}
+
+.notice-cookie .notice-text {
+  max-width: 86%;
 }
 
 /* ============================================ *
@@ -8097,7 +8182,7 @@ div.paypal-logo span > img {
 body.customer-account .my-account .title-buttons.recurring-profiles-title-buttons {
   float: right;
   text-align: right;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 body.customer-account .my-account .title-buttons.recurring-profiles-title-buttons .button {
   position: static;
@@ -8117,7 +8202,7 @@ body.customer-account .my-account .title-buttons.recurring-profiles-title-button
  * Billing Agreements
  * ============================================ */
 .billing-agreements .info-box {
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 .billing-agreements .info-box:after {
   content: '';
@@ -8148,6 +8233,11 @@ body.customer-account .my-account .title-buttons.recurring-profiles-title-button
 
 .billing-agreement-details td, .billing-agreement-details th {
   padding: 3.5px;
+}
+
+.billing-agreements .data-table .created-at,
+.billing-agreements .data-table .updated-at {
+  display: none;
 }
 
 /* ============================================ *
@@ -8200,14 +8290,14 @@ body.customer-account .my-account .title-buttons.recurring-profiles-title-button
 }
 .col1-layout .col-main .widget .products-grid--max-4-col-widget > li:nth-child(even),
 .col1-layout .col-main .widget .products-grid--max-4-col-widget > li:nth-child(3n) {
-  margin-right: 2.22222%;
+  margin-right: 2.17391%;
 }
 .col1-layout .col-main .widget .products-grid--max-4-col-widget > li {
-  margin-right: 2.22222%;
+  margin-right: 2.17391%;
 }
 .col1-layout .col-main .widget .products-grid--max-4-col-widget > li {
-  width: 23.33333%;
-  margin-right: 2.22222%;
+  width: 23.36957%;
+  margin-right: 2.17391%;
 }
 .col1-layout .col-main .widget .products-grid--max-4-col-widget > li:nth-child(4n+1) {
   clear: left;
@@ -8223,14 +8313,14 @@ body.customer-account .my-account .title-buttons.recurring-profiles-title-button
 }
 .col1-layout .col-main .widget .products-grid--max-5-col-widget > li:nth-child(even),
 .col1-layout .col-main .widget .products-grid--max-5-col-widget > li:nth-child(3n) {
-  margin-right: 2.22222%;
+  margin-right: 2.17391%;
 }
 .col1-layout .col-main .widget .products-grid--max-5-col-widget > li {
-  margin-right: 2.22222%;
+  margin-right: 2.17391%;
 }
 .col1-layout .col-main .widget .products-grid--max-5-col-widget > li {
-  width: 18.22222%;
-  margin-right: 2.22222%;
+  width: 18.26087%;
+  margin-right: 2.17391%;
 }
 .col1-layout .col-main .widget .products-grid--max-5-col-widget > li:nth-child(5n+1) {
   clear: left;
@@ -8257,7 +8347,7 @@ body[class*="checkout-multishipping-"] .checkout-progress > li {
   border-bottom: 1px solid #CCCCCC;
   border-right: 1px solid #CCCCCC;
   margin-bottom: 10px;
-  font-family: "Avenir LT W04_35 Light";
+  font-family: "Roboto", Arial;
 }
 body[class*="checkout-multishipping-"] .checkout-progress > li.active {
   background-color: #DDDDDD;
@@ -8299,7 +8389,7 @@ body[class*="checkout-multishipping-"] .actions {
 }
 body[class*="checkout-multishipping-"] .grand-total {
   text-align: right;
-  font-size: 16px;
+  font-size: 20px;
   font-weight: bold;
 }
 body[class*="checkout-multishipping-"] #checkout-review-submit {
@@ -8389,6 +8479,19 @@ body[class*="checkout-multishipping-"] #review-buttons-container {
 #review-order-form > div:nth-child(3) > div.divider {
   width: 100%;
   clear: both;
+}
+
+body[class*="checkout-multishipping-"] .checkout-progress span {
+  word-spacing: 300px;
+}
+
+#review-order-form .col-1,
+#review-order-form .col-2 {
+  float: none;
+  width: auto;
+  border: 0;
+  padding-right: 0;
+  padding-left: 0;
 }
 
 /* ============================================ *

@@ -3,13 +3,32 @@
 /*----------------------------------------------------------------------------*/
 
 body {
-    @include clearfix;
+    @include font-family('Roboto Regular');
     overflow-x: hidden; // For megamenu mobile.
+
+    &:after {
+        @include clearfix;
+    }
+
+    .header-container,
+    .main-container,
+    .footer-container {
+        margin: 0 auto;
+        max-width: $max-container-width;
+    }
 }
 
-.main-container {
-    //max-width: $pageMaxWidth*1px;
-    max-width: none;
+.desktop {
+    @include breakpoint(tablet) {
+        display: none !important;
+    }
+}
+
+.mobile {
+    display: none !important;
+    @include breakpoint(tablet) {
+        display: block !important;
+    }
 }
 
 /*----------------------------------------------------------------------------*/
@@ -21,7 +40,7 @@ body {
     .page {
 
         .main-container {
-            @include global-page-margin-side;
+            //@include global-page-margin-side;
 
             .main {
             }
@@ -90,7 +109,7 @@ body {
         padding: 0;
 
         a {
-            @include font-family('Avenir Light');
+            @include font-family('Roboto Light');
             @include responsive-font-size(14);
             font-weight: normal;
             text-transform: none;
@@ -102,7 +121,7 @@ body {
         }
 
         strong {
-            @include font-family('Avenir Light');
+            @include font-family('Roboto Light');
             @include responsive-font-size(14);
             font-weight: normal;
             text-transform: none;

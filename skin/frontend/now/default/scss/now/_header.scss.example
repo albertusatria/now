@@ -25,7 +25,7 @@ header {
 
     nav.top {
         height: ($headerNavTopHeight*1px);
-        @include font-family('Avenir Light');
+        @include font-family('Roboto Light');
         @include responsive-font-size(14);
         color: #ffffff;
         background-color: #7a7a7a;
@@ -184,7 +184,7 @@ header {
         h1 {
             margin: 0 0 15px 0;
             padding: 0;
-            @include font-family('Avenir Black Oblique');
+            @include font-family('Roboto Bold Oblique');
             @include responsive-font-size(18);
             text-transform: none;
             color: #414042;
@@ -238,7 +238,7 @@ header {
                 }
 
                 #megamenumobile-button {
-                    @include use-sprite('megamenu-mobile');
+                    //@include use-sprite('megamenu-mobile');
                     float: left;
                     margin: 15px 0 0 13px;
                     cursor: pointer;
@@ -251,7 +251,7 @@ header {
                 .shop-by {
                     display: none;
                     padding: 0 43px 0 54px;
-                    @include font-family('Avenir Black');
+                    @include font-family('Roboto Bold');
                     @include responsive-font-size(18);
                     text-transform: uppercase;
                     color: #404041;
@@ -277,7 +277,7 @@ header {
                     width: 88px;
                     margin: 0;
                     padding: 0;
-                    @include font-family('Avenir Black');
+                    @include font-family('Roboto Bold');
                     @include responsive-font-size(14);
                     font-weight: normal;
                     line-height: 47px;
@@ -304,7 +304,7 @@ header {
                             height: 47px;
                             margin: 0;
                             padding: 0 40px 0 8px;
-                            @include font-family('Avenir Roman');
+                            @include font-family('Roboto Roman');
                             @include responsive-font-size(14);
                             border: 6px solid #ee3d42;
                             border-radius: 0;

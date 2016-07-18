@@ -227,10 +227,10 @@ body.checkout-cart-index {
                     }
 
                     .btn-remove2 {
-                        @include use-sprite('cart-delete');
+                        //@include use-sprite('cart-delete');
 
                         &:hover {
-                            @include use-sprite('cart-delete-hover');
+                            //@include use-sprite('cart-delete-hover');
                         }
                     }
                 }
