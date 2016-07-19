@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+* Author : Albertus Satria Yudha
+* Description:
+* - Remove unwanted default block from Magento
+* - Add font: Roboto from Google Fonts
+* - Remove fallback stylesheet (madisonisland.css)
+* - Add CMS Navigation replacement for default Magento category menu
+* - JS UI 1.11.4
+* - Add Custom JS widget
+* - Add 3rd party JS lib
+* - Modify Footer Links
+* - Add Font Awesome
+*/
+-->
+
+<layout>
+
+	<default>
+		<remove name="right.poll" />
+		<reference name="head">
+			<!-- Add 'Roboto' Google Font -->
+			<block type="core/text" name="google-fonts">
+				<action method="setText">
+					<text><![CDATA[<link href='https://fonts.googleapis.com/css?family=Roboto:400,300,700,900,700italic,500' rel='stylesheet' type='text/css'>]]></text>
+				</action>
+			</block>
+
+			<!-- remove fallback stylesheet -->
+            <action method="removeItem">
+                <type>skin_css</type>
+                <name>css/madisonisland.css</name>
+            </action>
+            <action method="removeItem">
+                <type>skin_css</type>
+                <name>css/madisonisland-ie8.css</name>
+            </action>
+            
+            <!-- Add corresponding style for 3rd party JS lib -->
+            <action method="addItem">
+                <type>skin_css</type>
+                <name>css/lib/owl.carousel.css</name>
+            </action>
+            
+            <!-- Add Font Awesome -->
+            <action method="addItem">
+                <type>skin_css</type>
+                <name>css/lib/font-awesome.css</name>
+            </action>
+
+			<!-- JS UI Core -->
+            <action method="addItem">
+                <type>skin_js</type>
+                <name>js/jquery-ui-1.11.4-custom.js</name>
+            </action>
+
+            <!-- Add 3rd party JS lib -->
+            <action method="addItem">
+            	<type>skin_js</type>
+            	<name>js/lib/owl.carousel.js</name>
+            </action>
+            
+            
+            <!-- Add Custom JS widget -->
+            <action method="addItem">
+            	<type>skin_js</type>
+            	<name>js/now.responsive.js</name>
+            </action>
+            <action method="addItem">
+            	<type>skin_js</type>
+            	<name>js/lib/enquire.js</name>
+            </action>
+            
+            <action method="addItem">
+                <type>skin_js</type>
+                <name>js/main.js</name>
+            </action>
+            <action method="addItem">
+                <type>skin_js</type>
+                <name>js/jquery.main.js</name>
+            </action>
+			
+            <action method="addItem">
+            	<type>skin_js</type>
+            	<name>js/jquery.now.headersearch.js</name>
+            </action>
+            <action method="addItem">
+            	<type>skin_js</type>
+            	<name>js/jquery.now.bestoffers.js</name>
+            </action>
+		</reference>
+		
+		<reference name="header">
+			<!-- CMS Menu Navigation -->
+			<block type="cms/block" name="menu-nav-anchor">
+			      <action method="setBlockId"><block_id>menu_nav_anchor</block_id></action>
+			</block>
+		</reference>
+		
+		<!-- Modify Footer Links -->
+		<reference name="footer">
+			<remove name="cms_footer_links" />
+			<remove name="footer_links" />
+			<remove name="footer_links2" />
+			
+			<block type="cms/block" name="footer_customerinfo_links">
+                <action method="setBlockId"><block_id>footer_customerinfo_links</block_id></action>
+            </block>
+			
+			<block type="page/template_links" name="footer_quicklinks" as="footer_quicklinks" template="page/template/links.phtml">
+                <action method="setTitle"><title>Quick Links</title></action>
+                <action method="addLink" translate="label title" module="catalog" ifconfig="catalog/seo/site_map">
+	                <label>Site Map</label>
+	                <url helper="catalog/map/getCategoryUrl" />
+	                <title>Site Map</title>
+	            </action>
+	            <action method="addLink" translate="label title" module="catalogsearch">
+	                <label>Advanced Search</label>
+	                <url helper="catalogsearch/getAdvancedSearchUrl" />
+	                <title>Advanced Search</title>
+	            </action>
+	            <action method="addLink" translate="label title">
+	                <label>Contact Us</label>
+	                <url>contacts</url>
+	                <title>Contact Us</title>
+	            </action>
+            </block>
+            
+            <block type="cms/block" name="footer_aboutus_links">
+                <action method="setBlockId"><block_id>footer_aboutus_links</block_id></action>
+            </block>
+		</reference>
+        
+	</default>
+</layout>
