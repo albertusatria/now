@@ -20,6 +20,7 @@ h1 {
 	@include responsive-font-size(strip-units($f-size-l) + 2);
 	color: $c-black;
 	letter-spacing: 4px;
+	margin-bottom: 25px;
 	text-align: center;
 	text-transform: uppercase;
 }
@@ -165,7 +166,7 @@ h1 {
 			left: 50%;
 			position: absolute;
 			top: 50%;
-			transform: translate(-50%);
+			transform: translate(-50%, -50%);
 			text-align: center;
 		}
 	}
@@ -177,7 +178,7 @@ h1 {
 .homepage-featuredproducts {
 	
 	@include breakpoint(desktop) {
-		margin-top: 50px;
+		margin-top: 40px;
 	}
 	
 	@include breakpoint(mobile) {
@@ -189,23 +190,6 @@ h1 {
 		
 		.toolbar {
 			display: none;
-		}
-		
-		.products-grid {
-			margin: 0 auto;
-			width: 100%;
-			
-			.item {
-				width: 24%;
-				
-				&:not(:nth-last-child(1)) {
-					margin-right: 1.2%;
-				}
-				
-				.product-info {
-					min-height: 100px !important;
-				}
-			}
 		}
 	}
 	
@@ -230,6 +214,7 @@ h1 {
 	.shorts-description {
 		@include font-family('Roboto Light');
 		@include responsive-font-size(strip-units($f-size-xs));
+		@include responsive-line-height(25);
 		margin-bottom: 50px;
 		text-align: center;
 	}

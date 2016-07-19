@@ -68,7 +68,15 @@
 /* Block Links
 /*----------------------------------------------------------------------------*/	
 	.links {
-		width: 20%;
+		margin-right: 2%;
+		
+		@include breakpoint(desktop) {
+			width: 21%;
+		}
+		
+		@include breakpoint('min', strip-units($bp-large)) {	
+			width: 22%;
+		}
 		
 		li {
 			padding: 0;
