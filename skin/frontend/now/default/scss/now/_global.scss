@@ -215,6 +215,41 @@ $pagePaddingMobile: 10;
 }
 
 /*----------------------------------------------------------------------------*/
+/* Breadcrumbs
+/*----------------------------------------------------------------------------*/
+.main .breadcrumbs {
+	
+	li {
+		@include font-family('Roboto Regular');
+		color: $c-text;
+		text-transform: uppercase;
+		
+		@include breakpoint(desktop) {
+		    @include responsive-font-size(strip-units($f-size-s));
+	    }
+	    
+	    @include breakpoint(mobile) {
+		    @include responsive-font-size(strip-units($f-size-xs));
+	    }
+		
+		a:hover {
+			text-decoration: none;
+		}
+		
+		a,
+		span,
+		strong {
+			color: inherit;
+			font-family: inherit;
+			font-size: inherit;
+			text-transform: inherit;
+		}
+	}
+	
+}
+
+
+/*----------------------------------------------------------------------------*/
 /* Owl Caraousel Nav
 /*----------------------------------------------------------------------------*/
 .owl-carousel {
@@ -248,7 +283,7 @@ $pagePaddingMobile: 10;
 /* Forms, Input, Validation.
 /*----------------------------------------------------------------------------*/
 
-$globalInputHeight: 44;
+$globalInputHeight: 35;
 
 input:focus {
     outline: none;
@@ -273,7 +308,16 @@ input:focus {
         height: $globalInputHeight*1px;
         line-height: $globalInputHeight*1px;
         background-image: none;
-        border: 1px solid #cccccc;
+        border: 1px solid $c-black;
+	    cursor:pointer;
+	    
+	    -webkit-appearance:none;
+	    -moz-appearance:none;
+	    appearance:none;
+	    
+	    -webkit-border-radius: 3px;
+	    -moz-border-radius: 3px;
+	    border-radius: 3px;
     }
 
     textarea {

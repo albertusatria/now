@@ -3,12 +3,16 @@
 /*----------------------------------------------------------------------------*/
 
 .block-layered-nav {
-    padding: 20px;
+    padding: 0;
     background-color: #ffffff;
 
     > .block-title {
         display: none;
     }
+
+	.block-content {
+		margin-top: 25px;
+	}
 
     .currently {
         margin: 0;
@@ -63,33 +67,46 @@
     #narrow-by-list {
 
         dt {
-            margin: 1em 0 0.5em 0;
+            margin: 13px 0 2px 0;
             padding: 0;
-            @include font-family('Roboto Bold');
-            @include responsive-font-size(14);
-            text-transform: uppercase;
-            color: #ee3d42;
+            @include font-family('Roboto Medium');
+            @include responsive-font-size(strip-units($f-size-s));
+            text-transform: capitalize;
 
             &:first-child {
                 margin-top: 0;
-            }
-
-            &:before {
-                content: 'By ';
             }
         }
 
         dd {
 
+			ol {
+				@include responsive-line-height(18);
+			}
+			
             li {
-                padding: 0.1em 0;
+                padding: 0;
 
                 a {
-                    @include font-family('Roboto Light');
-                    @include responsive-font-size(14);
-                    color: #424242;
+                    @include font-family('Roboto Regular');
+                    @include responsive-font-size(strip-units($f-size-xs));
+                }
+                
+                a:hover {
+	                color: $c-text-gray;
                 }
             }
         }
+    }
+    
+    .configurable-swatch-list {
+	    li {
+		    width: auto !important;
+	    }
+	    
+	    .swatch-label,
+	    .swatch-label img {
+		    border-radius: 50% !important;
+	    }
     }
 }
