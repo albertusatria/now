@@ -10,11 +10,11 @@ body {
         @include clearfix;
     }
 
-    .header-container,
+    .page-header,
     .main-container,
     .footer-container {
         margin: 0 auto;
-        max-width: $max-container-width;
+        max-width: none;
     }
 }
 

@@ -114,6 +114,39 @@ $pagePaddingMobile: 10;
 }
 
 /*----------------------------------------------------------------------------*/
+/* Global Opacity
+/*----------------------------------------------------------------------------*/
+@mixin global-opacity-onhover($opacity: 0.6, $opacity2: 60) {
+	&:hover {
+	  /* IE 8 */
+	  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=$opacity2)";
+	
+	  /* IE 5-7 */
+	  filter: alpha(opacity=$opacity2);
+	
+	  /* Netscape */
+	  -moz-opacity: $opacity;
+	
+	  /* Safari 1.x */
+	  -khtml-opacity: $opacity;
+	
+	  /* Good browsers */
+	  opacity: $opacity;
+	}
+}
+
+/*----------------------------------------------------------------------------*/
+/* Global FontAwesome
+/*----------------------------------------------------------------------------*/
+@mixin global-font-awesome($font-size) {
+	display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: $font-size;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+/*----------------------------------------------------------------------------*/
 /* Messages
 /*----------------------------------------------------------------------------*/
 
@@ -180,6 +213,36 @@ $pagePaddingMobile: 10;
     left: 16px;
     border-style: none;
 }
+
+/*----------------------------------------------------------------------------*/
+/* Owl Caraousel Nav
+/*----------------------------------------------------------------------------*/
+.owl-carousel {
+	position: relative;
+}
+
+.owl-buttons {
+	.owl-prev,
+	.owl-next {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		
+		i {
+			@include responsive-font-size(40);
+			color: $c-text-white;
+		}
+	}
+	
+	.owl-prev {
+		left: 0;
+	}
+	
+	.owl-next {
+		right: 0;
+	}
+}
+
 
 /*----------------------------------------------------------------------------*/
 /* Forms, Input, Validation.
