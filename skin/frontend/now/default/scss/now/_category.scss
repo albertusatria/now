@@ -5,10 +5,6 @@
 .catalog-category-view,
 .catalogsearch-result-index {
 
-    .main {
-        @include global-page-margin-side;
-    }
-
     .category-title {
        display: none;
     }
@@ -52,29 +48,6 @@
     .actions {
         height: 0; // Prevent Magento js from setting height/padding for hidden actions block;
         display: none;
-    }
-}
-
-/*----------------------------------------------------------------------------*/
-/* Infinite Scroll
-/*----------------------------------------------------------------------------*/
-
-.ajax-loader {
-    margin: 1em 0 0 0;
-
-    &:after {
-        content: 'Scroll For More Products';
-        display: block;
-        margin: 1em 0 0 0;
-        @include font-family('Roboto Bold');
-        @include responsive-font-size(13);
-        text-align: center;
-        text-transform: uppercase;
-        color: #404041;
-    }
-
-    img {
-        margin: 0 auto;
     }
 }
 
@@ -173,8 +146,7 @@ price {
 /* Products Grid
 /*----------------------------------------------------------------------------*/
 
-.products-grid,
-.mini-products-list { // upsell w/ checkbox
+.products-grid { // upsell w/ checkbox
 	
     $itemPaddingRight: 0;
 
@@ -277,6 +249,12 @@ price {
 		
 		.pager {
 			float: left;
+		}
+		
+		.pager,
+		.sorter {
+			clear: none;
+			width: 	auto;
 		}
 		
 		.count-container .amount {

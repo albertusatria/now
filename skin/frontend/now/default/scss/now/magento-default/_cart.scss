@@ -29,21 +29,19 @@ body.checkout-cart-index {
 
             .page-title {
                 @include clearfix;
+                margin-bottom: 35px;
+                width: 100%;
 
                 h1 {
+	                @include base-h-font;
+					@include responsive-font-size(strip-units($f-size-xl) + 8);
                     float: left;
-                    margin: 16px 0 0 0;
-                }
-
-                .checkout-types.top {
-                    margin-bottom: 12px;
                 }
             }
 
             .cart-table {
                 float: none;
                 width: 100%;
-                border-top: 1px solid #cccccc;
 
                 /*----------------------------------------------------------------------------*/
                 /* Cart Items Head
@@ -59,10 +57,10 @@ body.checkout-cart-index {
 
                         th {
                             @include base-h-font;
-                            @include responsive-font-size(14);
-                            text-align: left;
-                            color: #ffffff;
-                            background-color: $baseBackgroundColor;
+                            @include responsive-font-size(strip-units($f-size));
+                            text-align: center;
+                            color: $c-white;
+                            background-color: $c-text;
 
                             &:first-child {
                                 padding-left: 17px;
@@ -93,24 +91,27 @@ body.checkout-cart-index {
                         }
 
                         td:nth-child(2) {
-                            width: 50%;
+                            width: 40%;
                         }
 
                         td:nth-child(3) {
-                            width: 10%;
-                        }
-
-                        td:nth-child(4) {
+	                        text-align: right;
                             width: 15%;
                         }
 
+                        td:nth-child(4) {
+	                        text-align: center;
+                            width: 20%;
+                        }
+
                         td:nth-child(5) {
-                            width: 5%;
+	                        text-align: right;
+                            width: 15%;
                         }
 
                         // Cart remove column.
                         td:nth-child(6) {
-                            width: 15%;
+                            width: 5%;
 
                             @include breakpoint(mobile) {
                                 width: 1%;
@@ -169,20 +170,41 @@ body.checkout-cart-index {
 
                         a {
                             @include responsive-font-size(14);
-                            color: #666666;
+                            color: $c-text;
+                            text-transform: capitalize;
                         }
                     }
 
                     .product-cart-sku {
                         @include responsive-font-size(12);
                         font-style: normal;
-                        color: #999999;
+                        color: $c-text-gray;
 
                         @include breakpoint(mobile) {
                             display: none;
                         }
                     }
-
+					
+					.item-options {
+						@include responsive-line-height(16);
+						color: $c-text;
+						margin: 12px 0 0 0;
+						
+						dt,
+						dd {
+							@include font-family('Roboto Regular');
+							@include responsive-font-size(strip-units($f-size-xs));
+							font-style: normal;
+							padding-right: 4px;
+						}
+						
+						dd {
+							@include font-family('Roboto Bold');
+							margin-bottom: 0;
+							text-transform: uppercase;
+						}
+					}
+					
                     .product-cart-price {
                         padding-top: 0;
                         padding-bottom: 0;
@@ -192,8 +214,8 @@ body.checkout-cart-index {
                         }
 
                         .cart-price {
-                            @include responsive-font-size(14);
-                            color: #666666;
+                            @include responsive-font-size(strip-units($f-size));
+                            color: $c-text;
                         }
                     }
 
@@ -201,14 +223,13 @@ body.checkout-cart-index {
 
                         .qty {
                             width: 3.5em;
-                            height: 52px;
-                            border: 1px solid #cccccc;
+                            border: 1px solid #dedede;
                         }
 
                         // Quantity update button.
                         .btn-update {
                             display: none;
-                            @include button-b3(auto, 44px);
+                            @include button-b2(auto, 35px);
                         }
 
                         // Desktop edit link.
@@ -218,8 +239,8 @@ body.checkout-cart-index {
                     }
 
                     .product-cart-total {
-                        @include responsive-font-size(14);
-                        color: #666666;
+                        @include responsive-font-size(strip-units($f-size));
+                        color: $c-text;
 
                         @include breakpoint(mobile) {
                             padding-bottom: 10px !important;
@@ -227,7 +248,15 @@ body.checkout-cart-index {
                     }
 
                     .btn-remove2 {
-                        //@include use-sprite('cart-delete');
+	                    background: none;
+	                    font-size: 0;
+                        text-indent: inherit;
+                        
+                        &:before {
+	                    	@include global-font-awesome($f-size-l + 2);
+	                    	color: $c-text;
+	                    	content: '\f014';
+                        }
 
                         &:hover {
                             //@include use-sprite('cart-delete-hover');
@@ -245,7 +274,7 @@ body.checkout-cart-index {
                         background-color: transparent;
 
                         .btn-update {
-                            @include button-b3(220px);
+                            @include button-b2(220px, 35px);
                         }
 
                         // Mobile update button? Causes gap on mobile.
@@ -304,7 +333,7 @@ body.checkout-cart-index {
 
             .cart-forms {
                 float: left;
-                width: 49%;
+                width: 35%;
 
                 @include breakpoint(mobile) {
                     float: none;
@@ -314,29 +343,32 @@ body.checkout-cart-index {
                 #discount-coupon-form {
 
                     .discount {
-                        padding: 21px 17px;
-                        border: 5px solid $baseBorderColor;
+	                    background: #f7f7f7;
+                        padding: 25px 15px;
 
                         h2 {
-                            margin: 0;
-                            padding: 0;
                             @include base-h-font;
-                            @include responsive-font-size(18);
-                            text-transform: uppercase;
+                            @include responsive-font-size(strip-units($f-size-l) + 2);
                             background-color: transparent;
+                            margin-bottom: 15px;
+                            padding: 0;
                         }
 
                         label {
-                            @include responsive-font-size(14);
-                            color: #646464;
+                            display: none;
                         }
 
                         .input-text {
-                            margin: 0.5em 0;
+	                        @include responsive-font-size(strip-units($f-size-xs));
+	                        width: 100%;
                         }
 
+						.button-wrapper {
+							margin-top: 12px;
+							text-align: right;
+						}
                         button {
-                            @include button-b3(160px);
+                            @include button-b1mini(100px);
                         }
                     }
                 }
@@ -346,11 +378,14 @@ body.checkout-cart-index {
             /* Totals
             /*----------------------------------------------------------------------------*/
 
-            .cart-totals-wrapper {
-                @include clearfix;
+            .cart-totals-wrapper {                
                 float: right;
                 width: 49%;
                 background-color: #ffffff;
+                
+                &:after {
+	                @include clearfix;
+                }
 
                 @include breakpoint(mobile) {
                     float: none;
@@ -367,19 +402,23 @@ body.checkout-cart-index {
                     @include clearfix;
                     padding: 37px 20px;
                     text-align: right;
+                    width: 100%;
 
                     @include breakpoint(mobile) {
                         padding-bottom: 15px;
                     }
 
                     #shopping-cart-totals-table {
+	                    color: $c-text;
                         width: 100%;
 
                         td {
                             padding-right: 0;
+                            text-transform: uppercase;
 
                             &:first-child {
-                                padding-right: 40px;
+                                padding-right: 20px;
+                                width: 68%;
                             }
                         }
 
@@ -389,12 +428,17 @@ body.checkout-cart-index {
                             color: #313131;
 
                             td {
-                                padding: 1em 0;
+	                            @include font-family('Roboto Bold');
+                                padding: 10px 0 25px 0;
                             }
 
                             strong {
-                                font-weight: normal;
+                                @include font-family('Roboto Bold');
                             }
+                        }
+                        
+                        tbody td {
+	                        color: $c-text-gray;
                         }
                     }
                 }

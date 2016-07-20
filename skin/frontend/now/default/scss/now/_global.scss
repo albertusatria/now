@@ -12,12 +12,12 @@ $pagePaddingMobile: 10;
 
 @mixin global-page-margin-side() {
 
-    @include breakpoint(min, $desktopWidth) {
+    @include breakpoint(max, strip-units($max-content-width)) {
         padding-right: $pagePadding*1px;
         padding-left: $pagePadding*1px;
     }
 
-    @include breakpoint(max, $desktopWidth - 1) {
+    @include breakpoint(mobile) {
         padding-right: $pagePaddingMobile*1px;
         padding-left: $pagePaddingMobile*1px;
     }
@@ -305,11 +305,19 @@ input:focus {
     }
 
     select {
+	    @include background-retina('sprites/icon_select-arrow-normal.png','sprites2x/icon_select-arrow-normal.png');
+	    @include responsive-font-size(strip-units($f-size-xs));
+	    background-color: $c-white;
+        background-position: 95% 50%;
+        background-repeat: no-repeat;
+
         height: $globalInputHeight*1px;
         line-height: $globalInputHeight*1px;
-        background-image: none;
+
         border: 1px solid $c-black;
 	    cursor:pointer;
+	    background-color: $c-white;
+	    padding-left: 5px;
 	    
 	    -webkit-appearance:none;
 	    -moz-appearance:none;

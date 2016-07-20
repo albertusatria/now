@@ -13,6 +13,7 @@ body {
     .page-header,
     .main-container,
     .footer-container {
+	    @include global-page-margin-side;
         margin: 0 auto;
         max-width: none;
     }
@@ -40,8 +41,9 @@ body {
     .page {
 
         .main-container {
-            //@include global-page-margin-side;
-
+			margin: 0 auto;
+		    max-width: $max-content-width;
+		    
             .main {
             }
         }

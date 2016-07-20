@@ -1,4 +1,11 @@
 <?php
+/*
+* Author: NOW (Albertus S Yudha)
+* Description:
+*  - add single space before ":" sign
+*/
+?>
+<?php
 /**
  * Magento
  *
@@ -43,7 +50,7 @@ $_swatchArray = $_config->attributes->$_id;
 ?>
 <dt class="swatch-attr">
     <label id="<?php echo $_attrCode ?>_label" class="required">
-        <em>*</em><?php echo $_attribute->getLabel() ?>:
+        <em>*</em><?php echo $_attribute->getLabel() ?>&nbsp;:
         <span id="select_label_<?php echo $_attrCode ?>" class="select-label"></span>
     </label>
 </dt>

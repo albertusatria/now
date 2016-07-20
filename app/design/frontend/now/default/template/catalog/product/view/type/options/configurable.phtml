@@ -1,4 +1,13 @@
 <?php
+/*
+* Author: NOW (Albertus S Yudha)
+* Description:
+*  - Hide "Size" Label
+*  - Add link : size guide
+*/
+?>
+
+<?php
 /**
  * Magento
  *
@@ -30,6 +39,14 @@ $_product    = $this->getProduct();
 $_attributes = Mage::helper('core')->decorateArray($this->getAllowAttributes());
 $_jsonConfig = $this->getJsonConfig();
 $_renderers = $this->getChild('attr_renderers')->getSortedChildren();
+
+// get attribute sets & gender custom attribute
+$attributeSetModel = Mage::getModel("eav/entity_attribute_set");
+$attributeSetModel->load($_product->getAttributeSetId());
+$attributeSetName  = strtolower(preg_replace('/\s*/', '', $attributeSetModel->getAttributeSetName()));
+
+$gender  = strtolower(preg_replace('/\s*/', '', $_product->getResource()->getAttribute('gender')->getFrontend()->getValue($_product)));
+$anchor = '#'.$gender.'-'.$attributeSetName;
 ?>
 <?php if ($_product->isSaleable() && count($_attributes)):?>
     <dl>
@@ -49,13 +66,18 @@ $_renderers = $this->getChild('attr_renderers')->getSortedChildren();
 
         if (!$_rendered):
         ?>
-        <dt><label class="required"><em>*</em><?php echo $_attribute->getLabel() ?></label></dt>
-        <dd<?php if ($_attribute->decoratedIsLast){?> class="last"<?php }?>>
+        <dt><label class="required attribute-<?php echo $_attribute->getAttributeId() ?>"><em>*</em><?php echo $_attribute->getLabel() ?></label></dt>
+        <dd<?php if ($_attribute->decoratedIsLast){?> class="last wrapperfor-attr-<?php echo $_attribute->getAttributeId() ?>"<?php }?>>
             <div class="input-box">
-                <select name="super_attribute[<?php echo $_attribute->getAttributeId() ?>]" id="attribute<?php echo $_attribute->getAttributeId() ?>" class="required-entry super-attribute-select">
-                    <option><?php echo $this->__('Choose an Option...') ?></option>
-                  </select>
-              </div>
+				<select name="super_attribute[<?php echo $_attribute->getAttributeId() ?>]" id="attribute<?php echo $_attribute->getAttributeId() ?>" class="required-entry super-attribute-select">
+					<option><?php echo $this->__('Choose an Option...') ?></option>
+				</select>
+          </div>
+          <?php if ($_attribute->getAttributeId() == "136"): ?>
+	          	<div class="size-guide">
+		          	<a id="<?php echo $gender.'-'.$attributeSetName?>" href="<?php echo $anchor;?>"><?php echo $this->__('Size Guide')?></a>
+		        </div>
+          <?php endif;?>
         </dd>
         <?php endif; ?>
     <?php endforeach; ?>

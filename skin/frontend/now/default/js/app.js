@@ -1,12 +1,19 @@
+/*
+* Author: NOW (Albertus S Yudha)
+* Description:
+*  - Ensure this file is a copy of current version of Magento: \skin\frontend\rwd\default\js\app.js (i.e. do not copy paste with theme).
+*  - Disable alignProductGridActions.
+*/
+
 /**
- * Magento
+ * Magento Enterprise Edition
  *
  * NOTICE OF LICENSE
  *
- * This source file is subject to the Academic Free License (AFL 3.0)
- * that is bundled with this package in the file LICENSE_AFL.txt.
+ * This source file is subject to the Magento Enterprise Edition End User License Agreement
+ * that is bundled with this package in the file LICENSE_EE.txt.
  * It is also available through the world-wide-web at this URL:
- * http://opensource.org/licenses/afl-3.0.php
+ * http://www.magento.com/license/enterprise-edition
  * If you did not receive a copy of the license and are unable to
  * obtain it through the world-wide-web, please send an email
  * to license@magento.com so we can send you a copy immediately.
@@ -19,8 +26,8 @@
  *
  * @category    design
  * @package     rwd_default
- * @copyright   Copyright (c) 2006-2016 X.commerce, Inc. and affiliates (http://www.magento.com)
- * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ * @copyright Copyright (c) 2006-2014 X.commerce, Inc. (http://www.magento.com)
+ * @license http://www.magento.com/license/enterprise-edition
  */
 
 // =============================================
@@ -872,7 +879,7 @@ $j(document).ready(function () {
     // ==============================================
     // UI Pattern - Toggle Content (tabs and accordions in one setup)
     // ==============================================
-    
+
     $j('.toggle-content').each(function () {
         var wrapper = jQuery(this);
 
@@ -1123,13 +1130,17 @@ $j(document).ready(function () {
                 });
             });
         }
-        alignProductGridActions();
+        //mod start Aydus: Disable category item set height.
+        //alignProductGridActions();
+        //mod end.
 
         // Since the height of each cell and the number of columns per page may change when the page is resized, we are
         // going to run the alignment function each time the page is resized.
-        $j(window).on('delayed-resize', function (e, resizeEvent) {
-            alignProductGridActions();
-        });
+        //mod start Aydus: Disable category item set height.
+        //$j(window).on('delayed-resize', function (e, resizeEvent) {
+            //alignProductGridActions();
+        //});
+        //mod end.
     }
 
     // ==============================================
@@ -1161,7 +1172,7 @@ var ProductMediaManager = {
 
     createZoom: function(image) {
         // Destroy since zoom shouldn't be enabled under certain conditions
-        ProductMediaManager.destroyZoom();
+        /*ProductMediaManager.destroyZoom();
 
         if(
             // Don't use zoom on devices where touch has been used
@@ -1191,7 +1202,7 @@ var ProductMediaManager = {
             }
         }
 
-        image.elevateZoom();
+        image.elevateZoom();*/
     },
 
     swapImage: function(targetImage) {
@@ -1253,7 +1264,7 @@ var ProductMediaManager = {
     },
 
     initZoom: function() {
-        ProductMediaManager.createZoom($j(".gallery-image.visible")); //set zoom on first image
+        //ProductMediaManager.createZoom($j(".gallery-image.visible")); //set zoom on first image
     },
 
     init: function() {
@@ -1274,5 +1285,7 @@ var ProductMediaManager = {
 };
 
 $j(document).ready(function() {
+    //mod start Aydus: Disable image zoom.
     ProductMediaManager.init();
+    //mod end
 });

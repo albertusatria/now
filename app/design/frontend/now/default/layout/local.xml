@@ -13,12 +13,14 @@
 * - Add Font Awesome
 
 * - Set Category Product List template
+* - Fix Swap Images on Attribute changes
 */
 -->
 
 <layout>
 
 	<default>
+		<remove name="product_tag_list" />
 		<remove name="right.poll" />
 		<reference name="head">
 			<!-- Add 'Roboto' Google Font -->
@@ -43,6 +45,14 @@
                 <type>skin_css</type>
                 <name>css/lib/owl.carousel.css</name>
             </action>
+            <action method="addItem">
+                <type>skin_css</type>
+                <name>css/lib/jquery.sidr.bare.css</name>
+            </action>
+            <action method="addItem">
+                <type>skin_css</type>
+                <name>css/lib/jquery.sidr.light.css</name>
+            </action>                        
             
             <!-- Add Font Awesome -->
             <action method="addItem">
@@ -60,6 +70,10 @@
             <action method="addItem">
             	<type>skin_js</type>
             	<name>js/lib/owl.carousel.js</name>
+            </action>
+            <action method="addItem">
+            	<type>skin_js</type>
+            	<name>js/lib/jquery.sidr.min.js</name>
             </action>
             
             
@@ -111,6 +125,10 @@
 			</block>
 		</reference>
 		
+		<reference name="after_body_start">
+            <block type="core/template" name="body.overlay" template="page/html/overlay.phtml" />
+        </reference>
+		
 		<!-- Modify Footer Links -->
 		<reference name="footer">
 			<remove name="cms_footer_links" />
@@ -159,34 +177,51 @@
         </reference>
 	</catalog_category_layered>
 	
+	<!-- Fix Swap Images on Attribute changes -->
 	<catalog_product_view>
-
         <reference name="head">
-
-            <action method="addItem"><type>skin_js</type><script>js/lib/elevatezoom/jquery.elevateZoom-3.0.8.min.js</script></action>
-
+			<action method="addItem"><type>skin_js</type><script>js/lib/fixswap.js</script></action>	
         </reference>
-
-        <reference name="product.info.media">
-
-            <block type="core/text_list" name="product.info.media.after" as="after" />
-
+		<reference name="product.info">
+			<remove name="product.description" />
+			<remove name="product.attributes" />
+			
+			<block type="catalog/product_view_attributes" name="product.description.new" template="catalog/product/view/description.phtml" before="-">
+                <action method="addToParentGroup"><group>detailed_info</group></action>
+                <action method="setTitle" translate="value"><value>Product Description</value></action>
+            </block>
+            <block type="catalog/product_view_attributes" name="product.care" template="catalog/product/view/now/clothing-care.phtml" after="product.description.new">
+                <action method="addToParentGroup"><group>detailed_info</group></action>
+                <action method="setTitle" translate="value"><value>Material and Washing Instructions</value></action>
+            </block>
+            
+            <!-- CMS Block Measurement -->
+			<block type="cms/block" name="men_sizeguide_upperparts">
+				<action method="setBlockId"><block_id>men_sizeguide_upperparts</block_id></action>
+			</block>
+			<block type="cms/block" name="men_sizeguide_bottomparts">
+				<action method="setBlockId"><block_id>men_sizeguide_bottomparts</block_id></action>
+			</block>
+			<block type="cms/block" name="men_sizeguide_coatsjackets">
+				<action method="setBlockId"><block_id>men_sizeguide_coatsjackets</block_id></action>
+			</block>
+			<block type="cms/block" name="women_sizeguide_upperparts">
+				<action method="setBlockId"><block_id>women_sizeguide_upperparts</block_id></action>
+			</block>
+			<block type="cms/block" name="women_sizeguide_bottomparts">
+				<action method="setBlockId"><block_id>women_sizeguide_bottomparts</block_id></action>
+			</block>
+			<block type="cms/block" name="women_sizeguide_coatsjackets">
+				<action method="setBlockId"><block_id>women_sizeguide_coatsjackets</block_id></action>
+			</block>
+			<block type="cms/block" name="women_sizeguide_dresses">
+				<action method="setBlockId"><block_id>women_sizeguide_dresses</block_id></action>
+			</block>
         </reference>
-
     </catalog_product_view>
+    
+	<checkout_cart_index>
+		<remove name="checkout.cart.shipping" />
+	</checkout_cart_index>
 
-    <PRODUCT_TYPE_configurable>
-
-        <reference name="product.info.options.configurable">
-
-            <block type="core/text_list" name="product.info.options.configurable.renderers" as="attr_renderers">
-                        <block type="configurableswatches/catalog_product_view_type_configurable_swatches" template="configurableswatches/catalog/product/view/type/options/configurable/swatches.phtml" />
-            </block>
-            <block type="core/text_list" name="product.info.options.configurable.after" as="after">
-            <block type="core/template" template="configurableswatches/catalog/product/view/type/configurable/swatch-js.phtml" />
-            </block>
-
-        </reference>
-
-    </PRODUCT_TYPE_configurable>
 </layout>
