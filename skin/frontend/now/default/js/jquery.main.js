@@ -63,6 +63,7 @@ $.widget('now.main', {
 	        // JS hack to force placeholder on Configurable Product
 	        $('#attribute136 option:first-child').text('Choose your size');
 	        
+	        // Close sidr Size Guide on resize and body click
 	        $j(window).on('resize', function(){
 		        $.sidr('close', 'sidr-size');
 			});

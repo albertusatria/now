@@ -7851,7 +7851,7 @@ input:focus {
 }
 .main select,
 .quickview-container select {
-  background-image: url('../images/sprites/icon_select-arrow-normal.png?1468977515');
+  background-image: url('../images/sprites/icon_select-arrow-normal.png?1469010792');
   font-size: 12px;
   font-size: 0.75rem;
   background-color: #ffffff;
@@ -7873,7 +7873,7 @@ input:focus {
 @media (-webkit-min-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 3 / 2), (min--moz-device-pixel-ratio: 2), (min-device-pixel-ratio: 2), (min-resolution: 144dppx) {
   .main select,
   .quickview-container select {
-    background-image: url('../images/sprites2x/icon_select-arrow-normal.png?1468977522');
+    background-image: url('../images/sprites2x/icon_select-arrow-normal.png?1469010792');
     background-size: 9px 5px;
   }
 }
@@ -7903,6 +7903,100 @@ input:focus {
   font-size: 0.75rem;
   text-transform: uppercase;
   color: #7f1212;
+}
+
+/*----------------------------------------------------------------------------*/
+/* Ratings
+/*----------------------------------------------------------------------------*/
+.product-info .ratings .rating-box,
+.product-info .ratings .rating,
+.col-left.sidebar .ratings .rating-box,
+.col-left.sidebar .ratings .rating,
+.products-grid .ratings .rating-box,
+.products-grid .ratings .rating,
+.product-shop .ratings .rating-box,
+.product-shop .ratings .rating,
+.product-img-box .ratings .rating-box,
+.product-img-box .ratings .rating,
+#customer-reviews .ratings .rating-box,
+#customer-reviews .ratings .rating,
+.ratings-table .ratings .rating-box,
+.ratings-table .ratings .rating {
+  width: 84px;
+  height: 15px;
+  background-position: left center;
+}
+.product-info .ratings .rating-box,
+.col-left.sidebar .ratings .rating-box,
+.products-grid .ratings .rating-box,
+.product-shop .ratings .rating-box,
+.product-img-box .ratings .rating-box,
+#customer-reviews .ratings .rating-box,
+.ratings-table .ratings .rating-box {
+  overflow: hidden;
+  background-image: url('../images/sprites/icon_rating-empty.png?1469025454');
+}
+@media (-webkit-min-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 3 / 2), (min--moz-device-pixel-ratio: 2), (min-device-pixel-ratio: 2), (min-resolution: 144dppx) {
+  .product-info .ratings .rating-box,
+  .col-left.sidebar .ratings .rating-box,
+  .products-grid .ratings .rating-box,
+  .product-shop .ratings .rating-box,
+  .product-img-box .ratings .rating-box,
+  #customer-reviews .ratings .rating-box,
+  .ratings-table .ratings .rating-box {
+    background-image: url('../images/sprites2x/icon_rating-empty.png?1469025469');
+    background-size: 85px 16px;
+  }
+}
+.product-info .ratings .rating,
+.col-left.sidebar .ratings .rating,
+.products-grid .ratings .rating,
+.product-shop .ratings .rating,
+.product-img-box .ratings .rating,
+#customer-reviews .ratings .rating,
+.ratings-table .ratings .rating {
+  background-image: url('../images/sprites/icon_rating-full.png?1469025488');
+}
+@media (-webkit-min-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 3 / 2), (min--moz-device-pixel-ratio: 2), (min-device-pixel-ratio: 2), (min-resolution: 144dppx) {
+  .product-info .ratings .rating,
+  .col-left.sidebar .ratings .rating,
+  .products-grid .ratings .rating,
+  .product-shop .ratings .rating,
+  .product-img-box .ratings .rating,
+  #customer-reviews .ratings .rating,
+  .ratings-table .ratings .rating {
+    background-image: url('../images/sprites2x/icon_rating-full.png?1469025499');
+    background-size: 85px 16px;
+  }
+}
+.product-info .ratings .rating-box,
+.product-info .ratings .amount,
+.col-left.sidebar .ratings .rating-box,
+.col-left.sidebar .ratings .amount,
+.products-grid .ratings .rating-box,
+.products-grid .ratings .amount,
+.product-shop .ratings .rating-box,
+.product-shop .ratings .amount,
+.product-img-box .ratings .rating-box,
+.product-img-box .ratings .amount,
+#customer-reviews .ratings .rating-box,
+#customer-reviews .ratings .amount,
+.ratings-table .ratings .rating-box,
+.ratings-table .ratings .amount {
+  float: left;
+}
+.product-info .ratings .amount,
+.col-left.sidebar .ratings .amount,
+.products-grid .ratings .amount,
+.product-shop .ratings .amount,
+.product-img-box .ratings .amount,
+#customer-reviews .ratings .amount,
+.ratings-table .ratings .amount {
+  font-size: 13px;
+  font-size: 0.8125rem;
+  font-family: 'Roboto';
+  margin: 2px 0 0 12px;
+  color: #000000;
 }
 
 /*----------------------------------------------------------------------------*/
@@ -11947,8 +12041,8 @@ body .footer-container {
     font-size: 0;
   }
   .link-search > a:after {
-    background-image: url('../images/sprites-se742ada3df.png');
-    background-position: -89px -58px;
+    background-image: url('../images/sprites-sa93f4c5127.png');
+    background-position: 0 0;
     background-repeat: no-repeat;
     overflow: hidden;
     display: block;
@@ -11960,9 +12054,9 @@ body .footer-container {
 }
 @media handheld and (-webkit-min-device-pixel-ratio: 2), screen and (max-width: 768px) and (-webkit-min-device-pixel-ratio: 2), handheld and (min-resolution: 192dpi), screen and (max-width: 768px) and (min-resolution: 192dpi) {
   .link-search > a:after {
-    background-image: url('../images/sprites2x-s6f34b093b0.png');
-    background-size: 74px 191px;
-    background-position: -15px -68px;
+    background-image: url('../images/sprites2x-sfba9e203a2.png');
+    background-size: 85px 4307px;
+    background-position: 0 0;
     height: 17px;
     width: 16px;
   }
@@ -12006,8 +12100,8 @@ body .footer-container {
   width: 16px;
 }
 .link-search #search_mini_form .input-box .search-button:before {
-  background-image: url('../images/sprites-se742ada3df.png');
-  background-position: -89px -58px;
+  background-image: url('../images/sprites-sa93f4c5127.png');
+  background-position: 0 0;
   background-repeat: no-repeat;
   overflow: hidden;
   display: block;
@@ -12018,9 +12112,9 @@ body .footer-container {
 }
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
   .link-search #search_mini_form .input-box .search-button:before {
-    background-image: url('../images/sprites2x-s6f34b093b0.png');
-    background-size: 74px 191px;
-    background-position: -15px -68px;
+    background-image: url('../images/sprites2x-sfba9e203a2.png');
+    background-size: 85px 4307px;
+    background-position: 0 0;
     height: 17px;
     width: 16px;
   }
@@ -12047,8 +12141,8 @@ body .footer-container {
     font-size: 0;
   }
   .link-account .label:after {
-    background-image: url('../images/sprites-se742ada3df.png');
-    background-position: -20px -105px;
+    background-image: url('../images/sprites-sa93f4c5127.png');
+    background-position: -36px 0;
     background-repeat: no-repeat;
     overflow: hidden;
     display: block;
@@ -12060,9 +12154,9 @@ body .footer-container {
 }
 @media handheld and (-webkit-min-device-pixel-ratio: 2), screen and (max-width: 768px) and (-webkit-min-device-pixel-ratio: 2), handheld and (min-resolution: 192dpi), screen and (max-width: 768px) and (min-resolution: 192dpi) {
   .link-account .label:after {
-    background-image: url('../images/sprites2x-s6f34b093b0.png');
-    background-size: 74px 191px;
-    background-position: -51px -68px;
+    background-image: url('../images/sprites2x-sfba9e203a2.png');
+    background-size: 85px 4307px;
+    background-position: -36px 0;
     height: 18px;
     width: 18px;
   }
@@ -12088,8 +12182,8 @@ body .footer-container {
   font-size: 0;
 }
 .header-minicart .label:after {
-  background-image: url('../images/sprites-se742ada3df.png');
-  background-position: 0 -105px;
+  background-image: url('../images/sprites-sa93f4c5127.png');
+  background-position: -16px 0;
   background-repeat: no-repeat;
   overflow: hidden;
   display: block;
@@ -12100,9 +12194,9 @@ body .footer-container {
 }
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
   .header-minicart .label:after {
-    background-image: url('../images/sprites2x-s6f34b093b0.png');
-    background-size: 74px 191px;
-    background-position: -31px -68px;
+    background-image: url('../images/sprites2x-sfba9e203a2.png');
+    background-size: 85px 4307px;
+    background-position: -16px 0;
     height: 18px;
     width: 20px;
   }
@@ -13463,7 +13557,7 @@ price, .price-box, .price-box .regular-price .price, .price-box .old-price .pric
   display: none;
 }
 .toolbar .sorter .sort-by select {
-  background-image: url('../images/sprites/icon_select-arrow.png?1468945380');
+  background-image: url('../images/sprites/icon_select-arrow.png?1469010792');
   font-size: 12px;
   font-size: 0.75rem;
   line-height: 20px;
@@ -13477,7 +13571,7 @@ price, .price-box, .price-box .regular-price .price, .price-box .old-price .pric
 }
 @media (-webkit-min-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 3 / 2), (min--moz-device-pixel-ratio: 2), (min-device-pixel-ratio: 2), (min-resolution: 144dppx) {
   .toolbar .sorter .sort-by select {
-    background-image: url('../images/sprites2x/icon_select-arrow.png?1468945418');
+    background-image: url('../images/sprites2x/icon_select-arrow.png?1469010792');
     background-size: 6px 10px;
   }
 }
@@ -13748,6 +13842,10 @@ price, .price-box, .price-box .regular-price .price, .price-box .old-price .pric
 .product-view .product-img-box .product-image-gallery {
   position: relative;
 }
+.product-view .product-img-box .product-image-gallery .magnify {
+  overflow: hidden;
+  width: 100%;
+}
 .product-view .product-img-box .product-image-gallery .gallery-image {
   display: none;
 }
@@ -13871,9 +13969,45 @@ price, .price-box, .price-box .regular-price .price, .price-box .old-price .pric
 .product-view .product-collateral .clothing-symbol li:not(:nth-last-child(1)) {
   margin-right: 20px;
 }
+.product-view .product-collateral .clothing-symbol a.laundryicon-symbol7 {
+  background-image: url('../images/sprites-sa93f4c5127.png');
+  background-position: 0 -3052px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: block;
+  height: 63px;
+  width: 74px;
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .product-view .product-collateral .clothing-symbol a.laundryicon-symbol7 {
+    background-image: url('../images/sprites2x-sfba9e203a2.png');
+    background-size: 85px 4307px;
+    background-position: 0 -3052px;
+    height: 63px;
+    width: 74px;
+  }
+}
+.product-view .product-collateral .clothing-symbol a.laundryicon-symbol8 {
+  background-image: url('../images/sprites-sa93f4c5127.png');
+  background-position: 0 -1553px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: block;
+  height: 55px;
+  width: 75px;
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .product-view .product-collateral .clothing-symbol a.laundryicon-symbol8 {
+    background-image: url('../images/sprites2x-sfba9e203a2.png');
+    background-size: 85px 4307px;
+    background-position: 0 -1553px;
+    height: 55px;
+    width: 75px;
+  }
+}
 .product-view .product-collateral .clothing-symbol a.laundryicon-symbol9 {
-  background-image: url('../images/sprites-se742ada3df.png');
-  background-position: 0 -58px;
+  background-image: url('../images/sprites-sa93f4c5127.png');
+  background-position: 0 -370px;
   background-repeat: no-repeat;
   overflow: hidden;
   display: block;
@@ -13882,16 +14016,592 @@ price, .price-box, .price-box .regular-price .price, .price-box .old-price .pric
 }
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
   .product-view .product-collateral .clothing-symbol a.laundryicon-symbol9 {
-    background-image: url('../images/sprites2x-s6f34b093b0.png');
-    background-size: 74px 191px;
-    background-position: 0 -86px;
+    background-image: url('../images/sprites2x-sfba9e203a2.png');
+    background-size: 85px 4307px;
+    background-position: 0 -370px;
     height: 47px;
     width: 74px;
   }
 }
+.product-view .product-collateral .clothing-symbol a.laundryicon-symbol10 {
+  background-image: url('../images/sprites-sa93f4c5127.png');
+  background-position: 0 -658px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: block;
+  height: 52px;
+  width: 82px;
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .product-view .product-collateral .clothing-symbol a.laundryicon-symbol10 {
+    background-image: url('../images/sprites2x-sfba9e203a2.png');
+    background-size: 85px 4307px;
+    background-position: 0 -658px;
+    height: 52px;
+    width: 82px;
+  }
+}
+.product-view .product-collateral .clothing-symbol a.laundryicon-symbol11 {
+  background-image: url('../images/sprites-sa93f4c5127.png');
+  background-position: 0 -558px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: block;
+  height: 48px;
+  width: 75px;
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .product-view .product-collateral .clothing-symbol a.laundryicon-symbol11 {
+    background-image: url('../images/sprites2x-sfba9e203a2.png');
+    background-size: 85px 4307px;
+    background-position: 0 -558px;
+    height: 48px;
+    width: 75px;
+  }
+}
+.product-view .product-collateral .clothing-symbol a.laundryicon-symbol12 {
+  background-image: url('../images/sprites-sa93f4c5127.png');
+  background-position: 0 -3115px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: block;
+  height: 63px;
+  width: 74px;
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .product-view .product-collateral .clothing-symbol a.laundryicon-symbol12 {
+    background-image: url('../images/sprites2x-sfba9e203a2.png');
+    background-size: 85px 4307px;
+    background-position: 0 -3115px;
+    height: 63px;
+    width: 74px;
+  }
+}
+.product-view .product-collateral .clothing-symbol a.laundryicon-symbol13 {
+  background-image: url('../images/sprites-sa93f4c5127.png');
+  background-position: 0 -1608px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: block;
+  height: 55px;
+  width: 75px;
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .product-view .product-collateral .clothing-symbol a.laundryicon-symbol13 {
+    background-image: url('../images/sprites2x-sfba9e203a2.png');
+    background-size: 85px 4307px;
+    background-position: 0 -1608px;
+    height: 55px;
+    width: 75px;
+  }
+}
+.product-view .product-collateral .clothing-symbol a.laundryicon-symbol14 {
+  background-image: url('../images/sprites-sa93f4c5127.png');
+  background-position: 0 -276px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: block;
+  height: 47px;
+  width: 75px;
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .product-view .product-collateral .clothing-symbol a.laundryicon-symbol14 {
+    background-image: url('../images/sprites2x-sfba9e203a2.png');
+    background-size: 85px 4307px;
+    background-position: 0 -276px;
+    height: 47px;
+    width: 75px;
+  }
+}
+.product-view .product-collateral .clothing-symbol a.laundryicon-symbol15 {
+  background-image: url('../images/sprites-sa93f4c5127.png');
+  background-position: 0 -2614px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: block;
+  height: 62px;
+  width: 74px;
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .product-view .product-collateral .clothing-symbol a.laundryicon-symbol15 {
+    background-image: url('../images/sprites2x-sfba9e203a2.png');
+    background-size: 85px 4307px;
+    background-position: 0 -2614px;
+    height: 62px;
+    width: 74px;
+  }
+}
+.product-view .product-collateral .clothing-symbol a.laundryicon-symbol16 {
+  background-image: url('../images/sprites-sa93f4c5127.png');
+  background-position: 0 -1718px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: block;
+  height: 55px;
+  width: 74px;
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .product-view .product-collateral .clothing-symbol a.laundryicon-symbol16 {
+    background-image: url('../images/sprites2x-sfba9e203a2.png');
+    background-size: 85px 4307px;
+    background-position: 0 -1718px;
+    height: 55px;
+    width: 74px;
+  }
+}
+.product-view .product-collateral .clothing-symbol a.laundryicon-symbol17 {
+  background-image: url('../images/sprites-sa93f4c5127.png');
+  background-position: 0 -417px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: block;
+  height: 47px;
+  width: 74px;
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .product-view .product-collateral .clothing-symbol a.laundryicon-symbol17 {
+    background-image: url('../images/sprites2x-sfba9e203a2.png');
+    background-size: 85px 4307px;
+    background-position: 0 -417px;
+    height: 47px;
+    width: 74px;
+  }
+}
+.product-view .product-collateral .clothing-symbol a.laundryicon-symbol18 {
+  background-image: url('../images/sprites-sa93f4c5127.png');
+  background-position: 0 -2926px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: block;
+  height: 63px;
+  width: 75px;
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .product-view .product-collateral .clothing-symbol a.laundryicon-symbol18 {
+    background-image: url('../images/sprites2x-sfba9e203a2.png');
+    background-size: 85px 4307px;
+    background-position: 0 -2926px;
+    height: 63px;
+    width: 75px;
+  }
+}
+.product-view .product-collateral .clothing-symbol a.laundryicon-symbol19 {
+  background-image: url('../images/sprites-sa93f4c5127.png');
+  background-position: 0 -1773px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: block;
+  height: 55px;
+  width: 74px;
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .product-view .product-collateral .clothing-symbol a.laundryicon-symbol19 {
+    background-image: url('../images/sprites2x-sfba9e203a2.png');
+    background-size: 85px 4307px;
+    background-position: 0 -1773px;
+    height: 55px;
+    width: 74px;
+  }
+}
+.product-view .product-collateral .clothing-symbol a.laundryicon-symbol20 {
+  background-image: url('../images/sprites-sa93f4c5127.png');
+  background-position: 0 -323px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: block;
+  height: 47px;
+  width: 74px;
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .product-view .product-collateral .clothing-symbol a.laundryicon-symbol20 {
+    background-image: url('../images/sprites2x-sfba9e203a2.png');
+    background-size: 85px 4307px;
+    background-position: 0 -323px;
+    height: 47px;
+    width: 74px;
+  }
+}
+.product-view .product-collateral .clothing-symbol a.laundryicon-symbol21 {
+  background-image: url('../images/sprites-sa93f4c5127.png');
+  background-position: 0 -2552px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: block;
+  height: 62px;
+  width: 74px;
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .product-view .product-collateral .clothing-symbol a.laundryicon-symbol21 {
+    background-image: url('../images/sprites2x-sfba9e203a2.png');
+    background-size: 85px 4307px;
+    background-position: 0 -2552px;
+    height: 62px;
+    width: 74px;
+  }
+}
+.product-view .product-collateral .clothing-symbol a.laundryicon-symbol22 {
+  background-image: url('../images/sprites-sa93f4c5127.png');
+  background-position: 0 -1444px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: block;
+  height: 54px;
+  width: 74px;
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .product-view .product-collateral .clothing-symbol a.laundryicon-symbol22 {
+    background-image: url('../images/sprites2x-sfba9e203a2.png');
+    background-size: 85px 4307px;
+    background-position: 0 -1444px;
+    height: 54px;
+    width: 74px;
+  }
+}
+.product-view .product-collateral .clothing-symbol a.laundryicon-symbol23 {
+  background-image: url('../images/sprites-sa93f4c5127.png');
+  background-position: 0 -511px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: block;
+  height: 47px;
+  width: 73px;
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .product-view .product-collateral .clothing-symbol a.laundryicon-symbol23 {
+    background-image: url('../images/sprites2x-sfba9e203a2.png');
+    background-size: 85px 4307px;
+    background-position: 0 -511px;
+    height: 47px;
+    width: 73px;
+  }
+}
+.product-view .product-collateral .clothing-symbol a.laundryicon-symbol24 {
+  background-image: url('../images/sprites-sa93f4c5127.png');
+  background-position: 0 -2989px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: block;
+  height: 63px;
+  width: 75px;
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .product-view .product-collateral .clothing-symbol a.laundryicon-symbol24 {
+    background-image: url('../images/sprites2x-sfba9e203a2.png');
+    background-size: 85px 4307px;
+    background-position: 0 -2989px;
+    height: 63px;
+    width: 75px;
+  }
+}
+.product-view .product-collateral .clothing-symbol a.laundryicon-symbol25 {
+  background-image: url('../images/sprites-sa93f4c5127.png');
+  background-position: 0 -1663px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: block;
+  height: 55px;
+  width: 74px;
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .product-view .product-collateral .clothing-symbol a.laundryicon-symbol25 {
+    background-image: url('../images/sprites2x-sfba9e203a2.png');
+    background-size: 85px 4307px;
+    background-position: 0 -1663px;
+    height: 55px;
+    width: 74px;
+  }
+}
+.product-view .product-collateral .clothing-symbol a.laundryicon-symbol26 {
+  background-image: url('../images/sprites-sa93f4c5127.png');
+  background-position: 0 -464px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: block;
+  height: 47px;
+  width: 74px;
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .product-view .product-collateral .clothing-symbol a.laundryicon-symbol26 {
+    background-image: url('../images/sprites2x-sfba9e203a2.png');
+    background-size: 85px 4307px;
+    background-position: 0 -464px;
+    height: 47px;
+    width: 74px;
+  }
+}
+.product-view .product-collateral .clothing-symbol a.laundryicon-symbol27 {
+  background-image: url('../images/sprites-sa93f4c5127.png');
+  background-position: 0 -2490px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: block;
+  height: 62px;
+  width: 74px;
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .product-view .product-collateral .clothing-symbol a.laundryicon-symbol27 {
+    background-image: url('../images/sprites2x-sfba9e203a2.png');
+    background-size: 85px 4307px;
+    background-position: 0 -2490px;
+    height: 62px;
+    width: 74px;
+  }
+}
+.product-view .product-collateral .clothing-symbol a.laundryicon-symbol28 {
+  background-image: url('../images/sprites-sa93f4c5127.png');
+  background-position: 0 -1390px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: block;
+  height: 54px;
+  width: 74px;
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .product-view .product-collateral .clothing-symbol a.laundryicon-symbol28 {
+    background-image: url('../images/sprites2x-sfba9e203a2.png');
+    background-size: 85px 4307px;
+    background-position: 0 -1390px;
+    height: 54px;
+    width: 74px;
+  }
+}
+.product-view .product-collateral .clothing-symbol a.laundryicon-symbol29 {
+  background-image: url('../images/sprites-sa93f4c5127.png');
+  background-position: 0 -230px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: block;
+  height: 46px;
+  width: 74px;
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .product-view .product-collateral .clothing-symbol a.laundryicon-symbol29 {
+    background-image: url('../images/sprites2x-sfba9e203a2.png');
+    background-size: 85px 4307px;
+    background-position: 0 -230px;
+    height: 46px;
+    width: 74px;
+  }
+}
+.product-view .product-collateral .clothing-symbol a.laundryicon-symbol30 {
+  background-image: url('../images/sprites-sa93f4c5127.png');
+  background-position: 0 -3436px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: block;
+  height: 66px;
+  width: 74px;
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .product-view .product-collateral .clothing-symbol a.laundryicon-symbol30 {
+    background-image: url('../images/sprites2x-sfba9e203a2.png');
+    background-size: 85px 4307px;
+    background-position: 0 -3436px;
+    height: 66px;
+    width: 74px;
+  }
+}
+.product-view .product-collateral .clothing-symbol a.laundryicon-symbol31 {
+  background-image: url('../images/sprites-sa93f4c5127.png');
+  background-position: 0 -3502px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: block;
+  height: 66px;
+  width: 74px;
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .product-view .product-collateral .clothing-symbol a.laundryicon-symbol31 {
+    background-image: url('../images/sprites2x-sfba9e203a2.png');
+    background-size: 85px 4307px;
+    background-position: 0 -3502px;
+    height: 66px;
+    width: 74px;
+  }
+}
+.product-view .product-collateral .clothing-symbol a.laundryicon-symbol32 {
+  background-image: url('../images/sprites-sa93f4c5127.png');
+  background-position: 0 -3370px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: block;
+  height: 66px;
+  width: 75px;
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .product-view .product-collateral .clothing-symbol a.laundryicon-symbol32 {
+    background-image: url('../images/sprites2x-sfba9e203a2.png');
+    background-size: 85px 4307px;
+    background-position: 0 -3370px;
+    height: 66px;
+    width: 75px;
+  }
+}
+.product-view .product-collateral .clothing-symbol a.laundryicon-symbol33 {
+  background-image: url('../images/sprites-sa93f4c5127.png');
+  background-position: 0 -1126px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: block;
+  height: 52px;
+  width: 53px;
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .product-view .product-collateral .clothing-symbol a.laundryicon-symbol33 {
+    background-image: url('../images/sprites2x-sfba9e203a2.png');
+    background-size: 85px 4307px;
+    background-position: 0 -1126px;
+    height: 52px;
+    width: 53px;
+  }
+}
+.product-view .product-collateral .clothing-symbol a.laundryicon-symbol34 {
+  background-image: url('../images/sprites-sa93f4c5127.png');
+  background-position: 0 -970px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: block;
+  height: 52px;
+  width: 53px;
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .product-view .product-collateral .clothing-symbol a.laundryicon-symbol34 {
+    background-image: url('../images/sprites2x-sfba9e203a2.png');
+    background-size: 85px 4307px;
+    background-position: 0 -970px;
+    height: 52px;
+    width: 53px;
+  }
+}
+.product-view .product-collateral .clothing-symbol a.laundryicon-symbol35 {
+  background-image: url('../images/sprites-sa93f4c5127.png');
+  background-position: 0 -1074px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: block;
+  height: 52px;
+  width: 53px;
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .product-view .product-collateral .clothing-symbol a.laundryicon-symbol35 {
+    background-image: url('../images/sprites2x-sfba9e203a2.png');
+    background-size: 85px 4307px;
+    background-position: 0 -1074px;
+    height: 52px;
+    width: 53px;
+  }
+}
+.product-view .product-collateral .clothing-symbol a.laundryicon-symbol36 {
+  background-image: url('../images/sprites-sa93f4c5127.png');
+  background-position: 0 -918px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: block;
+  height: 52px;
+  width: 54px;
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .product-view .product-collateral .clothing-symbol a.laundryicon-symbol36 {
+    background-image: url('../images/sprites2x-sfba9e203a2.png');
+    background-size: 85px 4307px;
+    background-position: 0 -918px;
+    height: 52px;
+    width: 54px;
+  }
+}
+.product-view .product-collateral .clothing-symbol a.laundryicon-symbol37 {
+  background-image: url('../images/sprites-sa93f4c5127.png');
+  background-position: 0 -814px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: block;
+  height: 52px;
+  width: 54px;
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .product-view .product-collateral .clothing-symbol a.laundryicon-symbol37 {
+    background-image: url('../images/sprites2x-sfba9e203a2.png');
+    background-size: 85px 4307px;
+    background-position: 0 -814px;
+    height: 52px;
+    width: 54px;
+  }
+}
+.product-view .product-collateral .clothing-symbol a.laundryicon-symbol38 {
+  background-image: url('../images/sprites-sa93f4c5127.png');
+  background-position: 0 -2307px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: block;
+  height: 61px;
+  width: 53px;
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .product-view .product-collateral .clothing-symbol a.laundryicon-symbol38 {
+    background-image: url('../images/sprites2x-sfba9e203a2.png');
+    background-size: 85px 4307px;
+    background-position: 0 -2307px;
+    height: 61px;
+    width: 53px;
+  }
+}
+.product-view .product-collateral .clothing-symbol a.laundryicon-symbol39 {
+  background-image: url('../images/sprites-sa93f4c5127.png');
+  background-position: 0 -2429px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: block;
+  height: 61px;
+  width: 53px;
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .product-view .product-collateral .clothing-symbol a.laundryicon-symbol39 {
+    background-image: url('../images/sprites2x-sfba9e203a2.png');
+    background-size: 85px 4307px;
+    background-position: 0 -2429px;
+    height: 61px;
+    width: 53px;
+  }
+}
+.product-view .product-collateral .clothing-symbol a.laundryicon-symbol40 {
+  background-image: url('../images/sprites-sa93f4c5127.png');
+  background-position: 0 -2368px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: block;
+  height: 61px;
+  width: 53px;
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .product-view .product-collateral .clothing-symbol a.laundryicon-symbol40 {
+    background-image: url('../images/sprites2x-sfba9e203a2.png');
+    background-size: 85px 4307px;
+    background-position: 0 -2368px;
+    height: 61px;
+    width: 53px;
+  }
+}
+.product-view .product-collateral .clothing-symbol a.laundryicon-symbol41 {
+  background-image: url('../images/sprites-sa93f4c5127.png');
+  background-position: 0 -2185px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: block;
+  height: 61px;
+  width: 54px;
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .product-view .product-collateral .clothing-symbol a.laundryicon-symbol41 {
+    background-image: url('../images/sprites2x-sfba9e203a2.png');
+    background-size: 85px 4307px;
+    background-position: 0 -2185px;
+    height: 61px;
+    width: 54px;
+  }
+}
 .product-view .product-collateral .clothing-symbol a.laundryicon-symbol42 {
-  background-image: url('../images/sprites-se742ada3df.png');
-  background-position: 0 -123px;
+  background-image: url('../images/sprites-sa93f4c5127.png');
+  background-position: 0 -4171px;
   background-repeat: no-repeat;
   overflow: hidden;
   display: block;
@@ -13900,16 +14610,664 @@ price, .price-box, .price-box .regular-price .price, .price-box .old-price .pric
 }
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
   .product-view .product-collateral .clothing-symbol a.laundryicon-symbol42 {
-    background-image: url('../images/sprites2x-s6f34b093b0.png');
-    background-size: 74px 191px;
-    background-position: -16px 0;
+    background-image: url('../images/sprites2x-sfba9e203a2.png');
+    background-size: 85px 4307px;
+    background-position: 0 -4171px;
     height: 68px;
     width: 53px;
   }
 }
+.product-view .product-collateral .clothing-symbol a.laundryicon-symbol43 {
+  background-image: url('../images/sprites-sa93f4c5127.png');
+  background-position: 0 -4239px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: block;
+  height: 68px;
+  width: 53px;
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .product-view .product-collateral .clothing-symbol a.laundryicon-symbol43 {
+    background-image: url('../images/sprites2x-sfba9e203a2.png');
+    background-size: 85px 4307px;
+    background-position: 0 -4239px;
+    height: 68px;
+    width: 53px;
+  }
+}
+.product-view .product-collateral .clothing-symbol a.laundryicon-symbol44 {
+  background-image: url('../images/sprites-sa93f4c5127.png');
+  background-position: 0 -4103px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: block;
+  height: 68px;
+  width: 53px;
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .product-view .product-collateral .clothing-symbol a.laundryicon-symbol44 {
+    background-image: url('../images/sprites2x-sfba9e203a2.png');
+    background-size: 85px 4307px;
+    background-position: 0 -4103px;
+    height: 68px;
+    width: 53px;
+  }
+}
+.product-view .product-collateral .clothing-symbol a.laundryicon-symbol45 {
+  background-image: url('../images/sprites-sa93f4c5127.png');
+  background-position: 0 -4035px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: block;
+  height: 68px;
+  width: 54px;
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .product-view .product-collateral .clothing-symbol a.laundryicon-symbol45 {
+    background-image: url('../images/sprites2x-sfba9e203a2.png');
+    background-size: 85px 4307px;
+    background-position: 0 -4035px;
+    height: 68px;
+    width: 54px;
+  }
+}
+.product-view .product-collateral .clothing-symbol a.laundryicon-symbol46 {
+  background-image: url('../images/sprites-sa93f4c5127.png');
+  background-position: 0 -2246px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: block;
+  height: 61px;
+  width: 54px;
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .product-view .product-collateral .clothing-symbol a.laundryicon-symbol46 {
+    background-image: url('../images/sprites2x-sfba9e203a2.png');
+    background-size: 85px 4307px;
+    background-position: 0 -2246px;
+    height: 61px;
+    width: 54px;
+  }
+}
+.product-view .product-collateral .clothing-symbol a.laundryicon-symbol47 {
+  background-image: url('../images/sprites-sa93f4c5127.png');
+  background-position: 0 -1284px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: block;
+  height: 53px;
+  width: 53px;
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .product-view .product-collateral .clothing-symbol a.laundryicon-symbol47 {
+    background-image: url('../images/sprites2x-sfba9e203a2.png');
+    background-size: 85px 4307px;
+    background-position: 0 -1284px;
+    height: 53px;
+    width: 53px;
+  }
+}
+.product-view .product-collateral .clothing-symbol a.laundryicon-symbol48 {
+  background-image: url('../images/sprites-sa93f4c5127.png');
+  background-position: 0 -866px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: block;
+  height: 52px;
+  width: 54px;
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .product-view .product-collateral .clothing-symbol a.laundryicon-symbol48 {
+    background-image: url('../images/sprites2x-sfba9e203a2.png');
+    background-size: 85px 4307px;
+    background-position: 0 -866px;
+    height: 52px;
+    width: 54px;
+  }
+}
+.product-view .product-collateral .clothing-symbol a.laundryicon-symbol49 {
+  background-image: url('../images/sprites-sa93f4c5127.png');
+  background-position: 0 -1022px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: block;
+  height: 52px;
+  width: 53px;
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .product-view .product-collateral .clothing-symbol a.laundryicon-symbol49 {
+    background-image: url('../images/sprites2x-sfba9e203a2.png');
+    background-size: 85px 4307px;
+    background-position: 0 -1022px;
+    height: 52px;
+    width: 53px;
+  }
+}
+.product-view .product-collateral .clothing-symbol a.laundryicon-symbol50 {
+  background-image: url('../images/sprites-sa93f4c5127.png');
+  background-position: 0 -762px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: block;
+  height: 52px;
+  width: 54px;
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .product-view .product-collateral .clothing-symbol a.laundryicon-symbol50 {
+    background-image: url('../images/sprites2x-sfba9e203a2.png');
+    background-size: 85px 4307px;
+    background-position: 0 -762px;
+    height: 52px;
+    width: 54px;
+  }
+}
+.product-view .product-collateral .clothing-symbol a.laundryicon-symbol51 {
+  background-image: url('../images/sprites-sa93f4c5127.png');
+  background-position: 0 -710px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: block;
+  height: 52px;
+  width: 80px;
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .product-view .product-collateral .clothing-symbol a.laundryicon-symbol51 {
+    background-image: url('../images/sprites2x-sfba9e203a2.png');
+    background-size: 85px 4307px;
+    background-position: 0 -710px;
+    height: 52px;
+    width: 80px;
+  }
+}
+.product-view .product-collateral .clothing-symbol a.laundryicon-symbol52 {
+  background-image: url('../images/sprites-sa93f4c5127.png');
+  background-position: 0 -1231px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: block;
+  height: 53px;
+  width: 53px;
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .product-view .product-collateral .clothing-symbol a.laundryicon-symbol52 {
+    background-image: url('../images/sprites2x-sfba9e203a2.png');
+    background-size: 85px 4307px;
+    background-position: 0 -1231px;
+    height: 53px;
+    width: 53px;
+  }
+}
+.product-view .product-collateral .clothing-symbol a.laundryicon-symbol53 {
+  background-image: url('../images/sprites-sa93f4c5127.png');
+  background-position: 0 -1178px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: block;
+  height: 53px;
+  width: 54px;
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .product-view .product-collateral .clothing-symbol a.laundryicon-symbol53 {
+    background-image: url('../images/sprites2x-sfba9e203a2.png');
+    background-size: 85px 4307px;
+    background-position: 0 -1178px;
+    height: 53px;
+    width: 54px;
+  }
+}
+.product-view .product-collateral .clothing-symbol a.laundryicon-symbol54 {
+  background-image: url('../images/sprites-sa93f4c5127.png');
+  background-position: 0 -1337px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: block;
+  height: 53px;
+  width: 53px;
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .product-view .product-collateral .clothing-symbol a.laundryicon-symbol54 {
+    background-image: url('../images/sprites2x-sfba9e203a2.png');
+    background-size: 85px 4307px;
+    background-position: 0 -1337px;
+    height: 53px;
+    width: 53px;
+  }
+}
+.product-view .product-collateral .clothing-symbol a.laundryicon-symbol103 {
+  background-image: url('../images/sprites-sa93f4c5127.png');
+  background-position: 0 -606px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: block;
+  height: 52px;
+  width: 85px;
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .product-view .product-collateral .clothing-symbol a.laundryicon-symbol103 {
+    background-image: url('../images/sprites2x-sfba9e203a2.png');
+    background-size: 85px 4307px;
+    background-position: 0 -606px;
+    height: 52px;
+    width: 85px;
+  }
+}
+.product-view .product-collateral .clothing-symbol a.laundryicon-symbol55 {
+  background-image: url('../images/sprites-sa93f4c5127.png');
+  background-position: 0 -140px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: block;
+  height: 45px;
+  width: 79px;
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .product-view .product-collateral .clothing-symbol a.laundryicon-symbol55 {
+    background-image: url('../images/sprites2x-sfba9e203a2.png');
+    background-size: 85px 4307px;
+    background-position: 0 -140px;
+    height: 45px;
+    width: 79px;
+  }
+}
+.product-view .product-collateral .clothing-symbol a.laundryicon-symbol56 {
+  background-image: url('../images/sprites-sa93f4c5127.png');
+  background-position: 0 -185px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: block;
+  height: 45px;
+  width: 79px;
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .product-view .product-collateral .clothing-symbol a.laundryicon-symbol56 {
+    background-image: url('../images/sprites2x-sfba9e203a2.png');
+    background-size: 85px 4307px;
+    background-position: 0 -185px;
+    height: 45px;
+    width: 79px;
+  }
+}
+.product-view .product-collateral .clothing-symbol a.laundryicon-symbol57 {
+  background-image: url('../images/sprites-sa93f4c5127.png');
+  background-position: 0 -95px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: block;
+  height: 45px;
+  width: 79px;
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .product-view .product-collateral .clothing-symbol a.laundryicon-symbol57 {
+    background-image: url('../images/sprites2x-sfba9e203a2.png');
+    background-size: 85px 4307px;
+    background-position: 0 -95px;
+    height: 45px;
+    width: 79px;
+  }
+}
+.product-view .product-collateral .clothing-symbol a.laundryicon-symbol58 {
+  background-image: url('../images/sprites-sa93f4c5127.png');
+  background-position: 0 -50px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: block;
+  height: 45px;
+  width: 79px;
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .product-view .product-collateral .clothing-symbol a.laundryicon-symbol58 {
+    background-image: url('../images/sprites2x-sfba9e203a2.png');
+    background-size: 85px 4307px;
+    background-position: 0 -50px;
+    height: 45px;
+    width: 79px;
+  }
+}
+.product-view .product-collateral .clothing-symbol a.laundryicon-symbol59 {
+  background-image: url('../images/sprites-sa93f4c5127.png');
+  background-position: 0 -1498px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: block;
+  height: 55px;
+  width: 79px;
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .product-view .product-collateral .clothing-symbol a.laundryicon-symbol59 {
+    background-image: url('../images/sprites2x-sfba9e203a2.png');
+    background-size: 85px 4307px;
+    background-position: 0 -1498px;
+    height: 55px;
+    width: 79px;
+  }
+}
+.product-view .product-collateral .clothing-symbol a.laundryicon-symbol60 {
+  background-image: url('../images/sprites-sa93f4c5127.png');
+  background-position: 0 -2800px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: block;
+  height: 63px;
+  width: 79px;
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .product-view .product-collateral .clothing-symbol a.laundryicon-symbol60 {
+    background-image: url('../images/sprites2x-sfba9e203a2.png');
+    background-size: 85px 4307px;
+    background-position: 0 -2800px;
+    height: 63px;
+    width: 79px;
+  }
+}
+.product-view .product-collateral .clothing-symbol a.laundryicon-symbol61 {
+  background-image: url('../images/sprites-sa93f4c5127.png');
+  background-position: 0 -3242px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: block;
+  height: 64px;
+  width: 78px;
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .product-view .product-collateral .clothing-symbol a.laundryicon-symbol61 {
+    background-image: url('../images/sprites2x-sfba9e203a2.png');
+    background-size: 85px 4307px;
+    background-position: 0 -3242px;
+    height: 64px;
+    width: 78px;
+  }
+}
+.product-view .product-collateral .clothing-symbol a.laundryicon-symbol62 {
+  background-image: url('../images/sprites-sa93f4c5127.png');
+  background-position: 0 -3178px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: block;
+  height: 64px;
+  width: 79px;
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .product-view .product-collateral .clothing-symbol a.laundryicon-symbol62 {
+    background-image: url('../images/sprites2x-sfba9e203a2.png');
+    background-size: 85px 4307px;
+    background-position: 0 -3178px;
+    height: 64px;
+    width: 79px;
+  }
+}
+.product-view .product-collateral .clothing-symbol a.laundryicon-symbol63 {
+  background-image: url('../images/sprites-sa93f4c5127.png');
+  background-position: 0 -2863px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: block;
+  height: 63px;
+  width: 79px;
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .product-view .product-collateral .clothing-symbol a.laundryicon-symbol63 {
+    background-image: url('../images/sprites2x-sfba9e203a2.png');
+    background-size: 85px 4307px;
+    background-position: 0 -2863px;
+    height: 63px;
+    width: 79px;
+  }
+}
+.product-view .product-collateral .clothing-symbol a.laundryicon-symbol64 {
+  background-image: url('../images/sprites-sa93f4c5127.png');
+  background-position: 0 -2124px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: block;
+  height: 61px;
+  width: 61px;
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .product-view .product-collateral .clothing-symbol a.laundryicon-symbol64 {
+    background-image: url('../images/sprites2x-sfba9e203a2.png');
+    background-size: 85px 4307px;
+    background-position: 0 -2124px;
+    height: 61px;
+    width: 61px;
+  }
+}
+.product-view .product-collateral .clothing-symbol a.laundryicon-symbol65 {
+  background-image: url('../images/sprites-sa93f4c5127.png');
+  background-position: 0 -2063px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: block;
+  height: 61px;
+  width: 61px;
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .product-view .product-collateral .clothing-symbol a.laundryicon-symbol65 {
+    background-image: url('../images/sprites2x-sfba9e203a2.png');
+    background-size: 85px 4307px;
+    background-position: 0 -2063px;
+    height: 61px;
+    width: 61px;
+  }
+}
+.product-view .product-collateral .clothing-symbol a.laundryicon-symbol65 {
+  background-image: url('../images/sprites-sa93f4c5127.png');
+  background-position: 0 -2676px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: block;
+  height: 62px;
+  width: 61px;
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .product-view .product-collateral .clothing-symbol a.laundryicon-symbol65 {
+    background-image: url('../images/sprites2x-sfba9e203a2.png');
+    background-size: 85px 4307px;
+    background-position: 0 -2676px;
+    height: 62px;
+    width: 61px;
+  }
+}
+.product-view .product-collateral .clothing-symbol a.laundryicon-symbol66 {
+  background-image: url('../images/sprites-sa93f4c5127.png');
+  background-position: 0 -2002px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: block;
+  height: 61px;
+  width: 62px;
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .product-view .product-collateral .clothing-symbol a.laundryicon-symbol66 {
+    background-image: url('../images/sprites2x-sfba9e203a2.png');
+    background-size: 85px 4307px;
+    background-position: 0 -2002px;
+    height: 61px;
+    width: 62px;
+  }
+}
+.product-view .product-collateral .clothing-symbol a.laundryicon-symbol67 {
+  background-image: url('../images/sprites-sa93f4c5127.png');
+  background-position: 0 -2002px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: block;
+  height: 61px;
+  width: 62px;
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .product-view .product-collateral .clothing-symbol a.laundryicon-symbol67 {
+    background-image: url('../images/sprites2x-sfba9e203a2.png');
+    background-size: 85px 4307px;
+    background-position: 0 -2002px;
+    height: 61px;
+    width: 62px;
+  }
+}
+.product-view .product-collateral .clothing-symbol a.laundryicon-symbol68 {
+  background-image: url('../images/sprites-sa93f4c5127.png');
+  background-position: 0 -2738px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: block;
+  height: 62px;
+  width: 61px;
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .product-view .product-collateral .clothing-symbol a.laundryicon-symbol68 {
+    background-image: url('../images/sprites2x-sfba9e203a2.png');
+    background-size: 85px 4307px;
+    background-position: 0 -2738px;
+    height: 62px;
+    width: 61px;
+  }
+}
+.product-view .product-collateral .clothing-symbol a.laundryicon-symbol69 {
+  background-image: url('../images/sprites-sa93f4c5127.png');
+  background-position: 0 -3834px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: block;
+  height: 67px;
+  width: 66px;
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .product-view .product-collateral .clothing-symbol a.laundryicon-symbol69 {
+    background-image: url('../images/sprites2x-sfba9e203a2.png');
+    background-size: 85px 4307px;
+    background-position: 0 -3834px;
+    height: 67px;
+    width: 66px;
+  }
+}
+.product-view .product-collateral .clothing-symbol a.laundryicon-symbol70 {
+  background-image: url('../images/sprites-sa93f4c5127.png');
+  background-position: 0 -3700px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: block;
+  height: 67px;
+  width: 67px;
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .product-view .product-collateral .clothing-symbol a.laundryicon-symbol70 {
+    background-image: url('../images/sprites2x-sfba9e203a2.png');
+    background-size: 85px 4307px;
+    background-position: 0 -3700px;
+    height: 67px;
+    width: 67px;
+  }
+}
+.product-view .product-collateral .clothing-symbol a.laundryicon-symbol71 {
+  background-image: url('../images/sprites-sa93f4c5127.png');
+  background-position: 0 -3901px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: block;
+  height: 67px;
+  width: 66px;
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .product-view .product-collateral .clothing-symbol a.laundryicon-symbol71 {
+    background-image: url('../images/sprites2x-sfba9e203a2.png');
+    background-size: 85px 4307px;
+    background-position: 0 -3901px;
+    height: 67px;
+    width: 66px;
+  }
+}
+.product-view .product-collateral .clothing-symbol a.laundryicon-symbol72 {
+  background-image: url('../images/sprites-sa93f4c5127.png');
+  background-position: 0 -3634px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: block;
+  height: 66px;
+  width: 64px;
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .product-view .product-collateral .clothing-symbol a.laundryicon-symbol72 {
+    background-image: url('../images/sprites2x-sfba9e203a2.png');
+    background-size: 85px 4307px;
+    background-position: 0 -3634px;
+    height: 66px;
+    width: 64px;
+  }
+}
+.product-view .product-collateral .clothing-symbol a.laundryicon-symbol73 {
+  background-image: url('../images/sprites-sa93f4c5127.png');
+  background-position: 0 -3968px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: block;
+  height: 67px;
+  width: 66px;
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .product-view .product-collateral .clothing-symbol a.laundryicon-symbol73 {
+    background-image: url('../images/sprites2x-sfba9e203a2.png');
+    background-size: 85px 4307px;
+    background-position: 0 -3968px;
+    height: 67px;
+    width: 66px;
+  }
+}
+.product-view .product-collateral .clothing-symbol a.laundryicon-symbol74 {
+  background-image: url('../images/sprites-sa93f4c5127.png');
+  background-position: 0 -3568px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: block;
+  height: 66px;
+  width: 66px;
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .product-view .product-collateral .clothing-symbol a.laundryicon-symbol74 {
+    background-image: url('../images/sprites2x-sfba9e203a2.png');
+    background-size: 85px 4307px;
+    background-position: 0 -3568px;
+    height: 66px;
+    width: 66px;
+  }
+}
+.product-view .product-collateral .clothing-symbol a.laundryicon-symbol75 {
+  background-image: url('../images/sprites-sa93f4c5127.png');
+  background-position: 0 -3306px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: block;
+  height: 64px;
+  width: 65px;
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .product-view .product-collateral .clothing-symbol a.laundryicon-symbol75 {
+    background-image: url('../images/sprites2x-sfba9e203a2.png');
+    background-size: 85px 4307px;
+    background-position: 0 -3306px;
+    height: 64px;
+    width: 65px;
+  }
+}
+.product-view .product-collateral .clothing-symbol a.laundryicon-symbol76 {
+  background-image: url('../images/sprites-sa93f4c5127.png');
+  background-position: 0 -3767px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: block;
+  height: 67px;
+  width: 66px;
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .product-view .product-collateral .clothing-symbol a.laundryicon-symbol76 {
+    background-image: url('../images/sprites2x-sfba9e203a2.png');
+    background-size: 85px 4307px;
+    background-position: 0 -3767px;
+    height: 67px;
+    width: 66px;
+  }
+}
 .product-view .product-collateral .clothing-symbol a.laundryicon-symbol77 {
-  background-image: url('../images/sprites-se742ada3df.png');
-  background-position: 0 0;
+  background-image: url('../images/sprites-sa93f4c5127.png');
+  background-position: 0 -1944px;
   background-repeat: no-repeat;
   overflow: hidden;
   display: block;
@@ -13918,11 +15276,47 @@ price, .price-box, .price-box .regular-price .price, .price-box .old-price .pric
 }
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
   .product-view .product-collateral .clothing-symbol a.laundryicon-symbol77 {
-    background-image: url('../images/sprites2x-s6f34b093b0.png');
-    background-size: 74px 191px;
-    background-position: 0 -133px;
+    background-image: url('../images/sprites2x-sfba9e203a2.png');
+    background-size: 85px 4307px;
+    background-position: 0 -1944px;
     height: 58px;
     width: 63px;
+  }
+}
+.product-view .product-collateral .clothing-symbol a.laundryicon-symbol78 {
+  background-image: url('../images/sprites-sa93f4c5127.png');
+  background-position: 0 -1886px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: block;
+  height: 58px;
+  width: 64px;
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .product-view .product-collateral .clothing-symbol a.laundryicon-symbol78 {
+    background-image: url('../images/sprites2x-sfba9e203a2.png');
+    background-size: 85px 4307px;
+    background-position: 0 -1886px;
+    height: 58px;
+    width: 64px;
+  }
+}
+.product-view .product-collateral .clothing-symbol a.laundryicon-symbol79 {
+  background-image: url('../images/sprites-sa93f4c5127.png');
+  background-position: 0 -1828px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: block;
+  height: 58px;
+  width: 80px;
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .product-view .product-collateral .clothing-symbol a.laundryicon-symbol79 {
+    background-image: url('../images/sprites2x-sfba9e203a2.png');
+    background-size: 85px 4307px;
+    background-position: 0 -1828px;
+    height: 58px;
+    width: 80px;
   }
 }
 .product-view .box-collateral {
@@ -14745,8 +16139,8 @@ body.checkout-cart-index .col-main .cart .crosssell .product-view .block-viewed 
   font-size: 0;
 }
 .header-left > ul .nav-1 a:after {
-  background-image: url('../images/sprites-se742ada3df.png');
-  background-position: -38px -105px;
+  background-image: url('../images/sprites-sa93f4c5127.png');
+  background-position: -54px 0;
   background-repeat: no-repeat;
   overflow: hidden;
   display: block;
@@ -14757,9 +16151,9 @@ body.checkout-cart-index .col-main .cart .crosssell .product-view .block-viewed 
 }
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
   .header-left > ul .nav-1 a:after {
-    background-image: url('../images/sprites2x-s6f34b093b0.png');
-    background-size: 74px 191px;
-    background-position: 0 0;
+    background-image: url('../images/sprites2x-sfba9e203a2.png');
+    background-size: 85px 4307px;
+    background-position: -54px 0;
     height: 18px;
     width: 16px;
   }

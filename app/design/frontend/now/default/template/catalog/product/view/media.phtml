@@ -54,7 +54,7 @@
 </div>
 <?php endif; ?>
 
-<div class="product-image product-image-zoom">
+<div class="product-image">
     <div class="product-image-gallery">
         <img id="image-main"
              class="gallery-image visible"
@@ -67,7 +67,7 @@
             <img id="image-<?php echo $i; ?>"
                  class="gallery-image"
                  src="<?php echo $this->getGalleryImageUrl($_image); ?>"
-                 data-zoom-image="<?php echo  $this->getGalleryImageUrl($_image); ?>" />
+                 data-zoom-image="<?php echo  $this->getGalleryImageUrl($_image); ?>"/>
             <?php endif; ?>
         <?php $i++; endforeach; ?>
     </div>

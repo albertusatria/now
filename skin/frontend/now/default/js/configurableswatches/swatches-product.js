@@ -433,6 +433,18 @@ Product.ConfigurableSwatches.prototype = {
                 if (opt._f.isSwatch && !attr._f.isCustomOption && this._F.firstOptionSelected) {
                     this.previewAvailableOptions();
                 };
+                
+                // custom by Albertus S Yudha - load correct thumbnail when option selected
+                swatchClicked = attr._e.attrLabel.innerHTML.toLowerCase();
+
+                jQuery('.more-views a').each(function(){
+	                titleA = jQuery(this).attr('title');
+	                jQuery(this).closest('li').show();
+	                
+	               if(titleA.indexOf(swatchClicked)) {
+		               jQuery(this).closest('li').hide();
+	               } 
+                });
             };
         } else { // opt is null (e.g. the first option in a select "--Please Select--")
             // remove last active option from activeConfigurableOptions
