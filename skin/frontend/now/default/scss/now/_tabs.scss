@@ -70,14 +70,235 @@
 	}
 	
 	.clothing-symbol a.laundryicon {
+		&-symbol7 {
+			@include use-sprite('icon_laundry-machinewash-gentledelicate');
+		}
+		&-symbol8 {
+			@include use-sprite('icon_laundry-machinewash-permanentpress');
+		}
 		&-symbol9 {
 			@include use-sprite('icon_laundry-machinewash-normal');
 		}
-		&-symbol42 {
-			@include use-sprite('icon_laundry-tumble-dry');
+		&-symbol10 {
+			@include use-sprite('icon_laundry-dontwash');
 		}
+		&-symbol11 {
+			@include use-sprite('icon_laundry-handwashonly');
+		}
+		&-symbol12 {
+			@include use-sprite('icon_laundry-machinewash-gentledelicate30degrees');
+		}
+		&-symbol13 {
+			@include use-sprite('icon_laundry-machinewash-permanentpress30degrees');
+		}
+		&-symbol14 {
+			@include use-sprite('icon_laundry-machinewash-regularnormal30degrees');
+		}
+		&-symbol15 {
+			@include use-sprite('icon_laundry-machinewash-gentledelicate40degrees');
+		}
+		&-symbol16 {
+			@include use-sprite('icon_laundry-machinewash-permanentpress40degrees');
+		}
+		&-symbol17 {
+			@include use-sprite('icon_laundry-machinewash-regularnormal40degrees');
+		}
+		&-symbol18 {
+			@include use-sprite('icon_laundry-machinewash-gentledelicate50degrees');
+		}
+		&-symbol19 {
+			@include use-sprite('icon_laundry-machinewash-permanentpress50degrees');
+		}
+		&-symbol20 {
+			@include use-sprite('icon_laundry-machinewash-regularnormal50degrees');
+		}
+		&-symbol21 {
+			@include use-sprite('icon_laundry-machinewash-gentledelicate60degrees');
+		}
+		&-symbol22 {
+			@include use-sprite('icon_laundry-machinewash-permanentpress60degrees');
+		}
+		&-symbol23 {
+			@include use-sprite('icon_laundry-machinewash-regularnormal60degrees');
+		}
+		&-symbol24 {
+			@include use-sprite('icon_laundry-machinewash-gentledelicate70degrees');
+		}
+		&-symbol25 {
+			@include use-sprite('icon_laundry-machinewash-permanentpress70degrees');
+		}
+		&-symbol26 {
+			@include use-sprite('icon_laundry-machinewash-regularnormal70degrees');
+		}
+		&-symbol27 {
+			@include use-sprite('icon_laundry-machinewash-gentledelicate95degrees');
+		}
+		&-symbol28 {
+			@include use-sprite('icon_laundry-machinewash-permanentpress95degrees');
+		}
+		&-symbol29 {
+			@include use-sprite('icon_laundry-machinewash-regularnormal95degrees');
+		}
+		&-symbol30 {
+			@include use-sprite('icon_laundry-machinewash-handwash30degrees');
+		}
+		&-symbol31 {
+			@include use-sprite('icon_laundry-machinewash-handwash40degrees');
+		}
+		&-symbol32 {
+			@include use-sprite('icon_laundry-machinewash-handwash50degrees');
+		}
+		
+		
+		&-symbol33 {
+			@include use-sprite('icon_laundry-tumbledry-normal');
+		}
+		&-symbol34 {
+			@include use-sprite('icon_laundry-tumbledry-normallowheat');
+		}
+		&-symbol35 {
+			@include use-sprite('icon_laundry-tumbledry-normalmediumheat');
+		}
+		&-symbol36 {
+			@include use-sprite('icon_laundry-tumbledry-normalhighheat');
+		}
+		&-symbol37 {
+			@include use-sprite('icon_laundry-tumbledry-normalnoheat');
+		}
+		&-symbol38 {
+			@include use-sprite('icon_laundry-tumbledry-permanentpress');
+		}
+		&-symbol39 {
+			@include use-sprite('icon_laundry-tumbledry-permanentpresslowheat');
+		}
+		&-symbol40 {
+			@include use-sprite('icon_laundry-tumbledry-permanentpressmediumheat');
+		}
+		&-symbol41 {
+			@include use-sprite('icon_laundry-tumbledry-permanentpresshighheat');
+		}		
+		&-symbol42 {
+			@include use-sprite('icon_laundry-tumbledry-gentle');
+		}		
+		&-symbol43 {
+			@include use-sprite('icon_laundry-tumbledry-gentlelowheat');
+		}
+		&-symbol44 {
+			@include use-sprite('icon_laundry-tumbledry-gentlemediumheat');
+		}
+		&-symbol45 {
+			@include use-sprite('icon_laundry-tumbledry-gentlehighheat');
+		}
+		&-symbol46 {
+			@include use-sprite('icon_laundry-tumbledry-permanentpressnoheat');
+		}
+		&-symbol47 {
+			@include use-sprite('icon_laundry-tumbledry-linedry');
+		}
+		&-symbol48 {
+			@include use-sprite('icon_laundry-tumbledry-dripdry');
+		}
+		&-symbol49 {
+			@include use-sprite('icon_laundry-tumbledry-dryflat');
+		}
+		&-symbol50 {
+			@include use-sprite('icon_laundry-tumbledry-dryinshade');
+		}
+		&-symbol51 {
+			@include use-sprite('icon_laundry-tumbledry-dontdry');
+		}
+		&-symbol52 {
+			@include use-sprite('icon_laundry-tumbledry-linedryinshade');
+		}
+		&-symbol53 {
+			@include use-sprite('icon_laundry-tumbledry-dripdryinshade');
+		}
+		&-symbol54 {
+			@include use-sprite('icon_laundry-tumbledry-dryflatinshade');
+		}
+		&-symbol103 {
+			@include use-sprite('icon_laundry-tumbledry-dontwring');
+		}
+		
+		&-symbol55 {
+			@include use-sprite('icon_laundry-ironing-required');
+		}
+		&-symbol56 {
+			@include use-sprite('icon_laundry-ironing-lowtemperature');
+		}
+		&-symbol57 {
+			@include use-sprite('icon_laundry-ironing-mediumtemperature');
+		}
+		&-symbol58 {
+			@include use-sprite('icon_laundry-ironing-hightemperature');
+		}
+		&-symbol59 {
+			@include use-sprite('icon_laundry-ironing-dont');
+		}
+		&-symbol60 {
+			@include use-sprite('icon_laundry-ironing-nosteam');
+		}
+		&-symbol61 {
+			@include use-sprite('icon_laundry-ironing-nosteamlowtemperature');
+		}
+		&-symbol62 {
+			@include use-sprite('icon_laundry-ironing-nosteammediumtemperature');
+		}
+		&-symbol63 {
+			@include use-sprite('icon_laundry-ironing-nosteamhightemperature');
+		}
+		
+		&-symbol64 {
+			@include use-sprite('icon_laundry-dryclean');
+		}
+		&-symbol65 {
+			@include use-sprite('icon_laundry-dryclean-anysolvent');
+		}
+		&-symbol65 {
+			@include use-sprite('icon_laundry-dryclean-petroleumbasedsolvent');
+		}
+		&-symbol66 {
+			@include use-sprite('icon_laundry-dryclean-anysolventothertrichloroethylene');
+		}
+		&-symbol67 {
+			@include use-sprite('icon_laundry-dryclean-anysolventothertrichloroethylene');
+		}
+		&-symbol68 {
+			@include use-sprite('icon_laundry-dryclean-dont');
+		}
+		&-symbol69 {
+			@include use-sprite('icon_laundry-dryclean-shortcycle');
+		}
+		&-symbol70 {
+			@include use-sprite('icon_laundry-dryclean-lowmoisture');
+		}
+		&-symbol71 {
+			@include use-sprite('icon_laundry-dryclean-lowheat');
+		}
+		&-symbol72 {
+			@include use-sprite('icon_laundry-dryclean-nosteam');
+		}
+		&-symbol73 {
+			@include use-sprite('icon_laundry-dryclean-anysolventshortcycle');
+		}
+		&-symbol74 {
+			@include use-sprite('icon_laundry-dryclean-anysolventlowmoisture');
+		}
+		&-symbol75 {
+			@include use-sprite('icon_laundry-dryclean-anysolventlowheat');
+		}
+		&-symbol76 {
+			@include use-sprite('icon_laundry-dryclean-anysolventnosteam');
+		}
+		
 		&-symbol77 {
 			@include use-sprite('icon_laundry-bleach-useany');
+		}
+		&-symbol78 {
+			@include use-sprite('icon_laundry-bleach-onlynonchlorine');
+		}
+		&-symbol79 {
+			@include use-sprite('icon_laundry-bleach-dont');
 		}
 	}
 }

@@ -353,3 +353,49 @@ input:focus {
         color: #7f1212;
     }
 }
+
+/*----------------------------------------------------------------------------*/
+/* Ratings
+/*----------------------------------------------------------------------------*/
+
+.product-info,
+.col-left.sidebar,
+.products-grid,
+.product-shop,
+.product-img-box,
+#customer-reviews,
+.ratings-table {
+	
+	.ratings {
+		
+		.rating-box,
+		.rating {
+			width: 84px;
+			height: 15px;
+			background-position: left center;
+		}
+			
+		.rating-box {
+			overflow: hidden;
+			@include background-retina('sprites/icon_rating-empty.png','sprites2x/icon_rating-empty.png');
+			
+		}
+		
+		.rating {
+			@include background-retina('sprites/icon_rating-full.png','sprites2x/icon_rating-full.png');
+		}
+		
+		.rating-box,
+		.amount {
+			float: left;
+		}
+		
+		.amount {
+			@include responsive-font-size(strip-units($f-size-s));
+			@include font-family('Roboto');
+			margin: 2px 0 0 12px;
+			color: $c-text;
+		}
+	
+	}
+}

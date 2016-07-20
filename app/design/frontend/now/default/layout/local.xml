@@ -52,7 +52,7 @@
             <action method="addItem">
                 <type>skin_css</type>
                 <name>css/lib/jquery.sidr.light.css</name>
-            </action>                        
+            </action>                       
             
             <!-- Add Font Awesome -->
             <action method="addItem">
@@ -75,7 +75,6 @@
             	<type>skin_js</type>
             	<name>js/lib/jquery.sidr.min.js</name>
             </action>
-            
             
             <!-- Add Custom JS widget -->
             <action method="addItem">
@@ -223,5 +222,10 @@
 	<checkout_cart_index>
 		<remove name="checkout.cart.shipping" />
 	</checkout_cart_index>
-
+	
+	<review_product_list>
+		<reference name="root">
+            <action method="setTemplate"><template>page/1column.phtml</template></action>
+        </reference>
+	</review_product_list>
 </layout>
