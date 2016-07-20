@@ -3,33 +3,80 @@
 /*----------------------------------------------------------------------------*/
 
 .product-view {
-
-    .product-name {
-        margin: 0 0 0.5em 0;
-        padding: 0;
-        @include font-family('Roboto Bold');
-        @include responsive-font-size(24);
-        font-weight: normal;
-        text-transform: none;
-        color: #404041;
-
-        @include breakpoint(mobile) {
-            display: none;
+	.product-essential {
+		clear: both;
+		overflow: auto;
+	}
+	
+	.product-brand {
+		@include font-family('Roboto Regular');
+        @include responsive-font-size(strip-units($f-size-s));
+        color: $c-text;
+        line-height: 1;
+        text-transform: uppercase;
+        
+        h6 {
+	        color: inherit;
+	        font-family: inherit;
+	        font-size: inherit;
+	        font-weight: inherit;
+	        margin-bottom: 0;
         }
+	}
+    .product-name {
+        @include font-family('Roboto Regular');
+        @include responsive-font-size(31);
+        color: $c-text;
+        line-height: 1;
+        margin: 0 0 38px 0;
+        padding: 0;
+        text-transform: capitalize;
+		
+		h1 {
+			border: none;
+	        color: inherit;
+	        font-family: inherit;
+	        font-size: inherit;
+	        font-weight: inherit;
+	        margin: 0 auto;
+	        max-width: 80%;
+	        padding: 0;
+	        text-transform: inherit;
+        }
+		
+        /*@include breakpoint(mobile) {
+            display: none;
+        }*/
+    }
+    
+    .price-info {
+	    margin-bottom: 32px;
+	    
+	    .regular-price span,
+	    .special-price span {
+		    @include font-family('Roboto Bold');
+		    @include responsive-font-size(23);
+	    }
+	    
+	    .old-price span{
+		    @include responsive-font-size(17);
+	    }
     }
 
     .product-shop {
-        float: right;
-        width: 50%;
         @include box-sizing(border-box);
+        float: right;
+        padding-top: 110px;
+        width: 40%;
+        text-align: center;
 
-        @include breakpoint(mobile) {
+        /*@include breakpoint(mobile) {
             clear: both;
             float: none;
             width: auto;
             padding-top: 30px;
             @include global-page-margin-side;
-        }
+        }*/
 
         .product-sku {
             @include font-family('Roboto Light');
@@ -63,91 +110,45 @@
         }
     }
 
-    /*----------------------------------------------------------------------------*/
-    /* Summary
-    /*----------------------------------------------------------------------------*/
-
-    .summary-container {
-        clear: right;
-        float: right;
-        width: 50%;
-
-        @include breakpoint(mobile) {
-            clear: both;
-            float: none;
-            width: auto;
-            padding-top: 30px;
-            @include global-page-margin-side;
-        }
-
-        .short-description {
-            margin: 2.5em 0 0 0;
-            padding: 2.5em 0 0 0;
-            @include font-family('Roboto Light');
-            @include responsive-font-size(14);
-            color: #404041;
-            border-top: 1px solid #cccccc;
-        }
-
-        nav.content {
-            margin: 2em 0 0 0;
-
-            @include breakpoint(tabletLandscape) {
-                display: none;
-            }
-
-            ul {
-                margin: 0;
-                padding: 0;
-
-                li {
-                    display: inline-block;
-                    margin: 0 0 0 1em;
-                    padding: 0 0 0 1em;
-                    @include font-family('Roboto Black');
-                    @include responsive-font-size(14);
-                    text-decoration: underline;
-                    color: #404041;
-                    border-left: 1px solid #404041;
-                    cursor: pointer;
-
-                    &:first-child {
-                        margin-left: 0;
-                        padding-left: 0;
-                        border-left: none;
-                    }
-                }
-            }
-        }
-    }
 
     /*----------------------------------------------------------------------------*/
     /* Product Image
     /*----------------------------------------------------------------------------*/
 
     .product-img-box {
-        width: 50%;
+        width: 60%;
         float: left;
-        padding-right: 20px;
+        padding-right: 10px;
         @include box-sizing(border-box);
 
-        @include breakpoint(mobile) {
+        /*@include breakpoint(mobile) {
             float: none;
             width: auto;
             padding-right: 0;
             @include global-page-margin-side;
-        }
+        }*/
 
         .product-name {
             display: none;
 
-            @include breakpoint(mobile) {
+            /*@include breakpoint(mobile) {
                 display: block;
-            }
+            }*/
         }
 
+        .product-image {
+	        border: none;
+	        float: left;
+	        width: 85%;
+	        
+	        &:hover {
+		        border: none !important;
+	        }
+        }
+        
         .product-image img {
             @include responsive-img;
+            width: 100%;
         }
 
         .product-image-gallery {
@@ -169,8 +170,10 @@
         }
 
         .more-views {
-            margin-top: 5px;
-            @include carousel;
+	        float: left;
+            margin: 0 auto;
+            padding: 0;
+            width: 15%;
 
             h2 {
                 display: none;
@@ -181,8 +184,9 @@
                 padding: 0;
 
                 li {
-                    float: left;
                     @include box-sizing(border-box);
+                    max-width: 75px;
+                    margin-bottom: 10px;
 
                     a {
                         display: block;
@@ -203,11 +207,44 @@
 
     .product-collateral {
         clear: both;
+        @include tabs-productview;
     }
 
     .box-collateral {
         clear: both;
-        @include tabs;
+        padding: 0;
+        
+        h2 {
+	        @include font-family('Roboto Medium');
+			@include responsive-font-size(strip-units($f-size-l) + 2);
+			color: $c-black;
+			letter-spacing: 4px;
+			margin-bottom: 15px;
+			text-align: center;
+			text-transform: uppercase;
+        }
+        
+        ul {
+	        width: 100% !important;
+        }
+        
+        .item {
+	        padding: 0 !important;
+	        text-align: center !important;
+	        
+	        &:not(:nth-child(4n)) {
+				margin-right: 1.2% !important;
+			}
+			
+			&:nth-child(4n+1) {
+				clear: left !important;
+			}
+			
+			h2 {
+				letter-spacing: normal;
+				text-transform: capitalize;
+			}
+        }
     }
 }
 
@@ -218,17 +255,25 @@
 .product-view {
 
     .add-to-cart {
-        margin-top: 2em;
+        margin-top: 0;
 
         .qty-wrapper {
-            display: inline-block;
+			clear: both;
+            display: block;
+            
+            @include breakpoint(desktop) {
+	            margin-bottom: 30px;
+            }
+            
+            select {
+	            width: 250px;
+            }
         }
 
         .add-to-cart-buttons {
-            display: inline-block;
 
             button {
-                @include button-b1(140px);
+		        @include button-b1(250px, 42px);
             }
         }
     }
@@ -238,11 +283,94 @@
     }
 
     .add-to-links {
-        display: none;
+	    margin: 10px 0 0 0;
+	    li {
+		    display: inline-block;
+		    
+		    &:first-child {
+			    margin-right: 7px;
+		    }
+		    
+		    &:first-child a {
+			    @include font-family('Roboto Regular');
+				@include responsive-font-size(strip-units($f-size));
+				border: none;
+				color: $c-black;
+			    cursor: pointer;
+				display: inline-block;
+			    height: 35px;
+			    line-height: 35px;
+			    text-align: center;
+			    text-decoration: none;
+			    text-transform: uppercase;
+		    }
+		    
+		    &:first-child a:before {
+			    @include global-font-awesome($f-size-l + 2);
+			    content: '\f08a';
+			    margin-right: 10px;
+			    vertical-align: middle;
+		    }
+		    
+		    &:first-child a:hover:before {
+			    content: '\f004';
+			    color: $c-red;
+		    }
+	    }
+	    
     }
-
+	
+	.share-product {
+		margin-top: 25px;
+		
+		h6,
+		ul,
+		ul li {
+			display: inline-block;
+		}
+		
+		h6 {
+			@include font-family('Roboto Regular');
+			@include responsive-font-size(strip-units($f-size-xxs));
+			color: $c-text-gray;
+			text-transform: uppercase;
+		}
+	}
+	
     .sharing-links {
-        display: none;
+	    li {
+		    &:not(:nth-last-child(1)) {
+			    margin-right: 5px;
+		    }
+	    }
+	    
+        li a {
+	        font-size: 0;
+	        
+	        &:hover {
+		        @include global-opacity-onhover();
+	        }
+	        
+	        &.link-facebook:before,
+	        &.link-twitter:before,
+	        &.link-pinterest:before,
+	        &.link-gplus:before {
+		        @include global-font-awesome($f-size-l + 2);
+	        }
+	        
+	        &.link-facebook:before {
+		        content: '\f082';
+	        }
+	        &.link-twitter:before {
+		        content: '\f081';
+	        }
+	        &.link-pinterest:before {
+		        content: '\f0d3';
+	        }
+	        &.link-gplus:before {
+		        content: '\f0d4';
+	        }
+        }
     }
 }
 
@@ -255,6 +383,8 @@
     .product-options {
 
         dl {
+	        clear: both;
+	        display: inline-block;
             margin: 1em 0 0 0;
 
             .last {
@@ -264,15 +394,75 @@
             dt {
 
                 label {
-                    @include font-family('Roboto Light');
-                    @include responsive-font-size(14);
-                    color: #404041;
+                    @include font-family('Roboto Regular');
+                    @include responsive-font-size(strip-units($f-size-xs));
+                    color: $c-text-gray;
+                    margin-bottom: 5px;
+                    text-transform: uppercase;
 
                     // Hide asterisk.
                     &:after, em {
                         display: none;
                     }
                 }
+                
+                label .select-label {
+	                color: $c-black;
+                }
+            }
+            
+            dd {
+	            &:not(.last) {
+		            margin-bottom: 20px;
+	            }
+            }
+            
+            // Color Swatces
+            #configurable_swatch_color {
+	            display: inline-block;
+	            margin: 0 auto;
+	            
+	            > li:not(:nth-last-child(1)) {
+		            margin: 0 12px 0 0;
+	            }
+	            
+	            .swatch-link,
+	            .swatch-label,
+	            .swatch-label img {
+		            border-radius: 50%;
+	            }
+            }
+            
+            .configurable-swatch-list .hover .swatch-link,
+            .configurable-swatch-list .selected .swatch-link,
+            .swatch-link:hover {
+	            border-color: $c-black
+            }
+            
+            // Size Select
+            .wrapperfor-attr-136 {
+	            > div {
+		            display: inline-block;
+	            }
+	            
+	            .size-guide {
+		            @include font-family('Roboto Regular');
+		            @include responsive-font-size(strip-units($f-size-xs));
+		            color: $c-text-gray;
+		            margin-left: 2.5px;
+		            text-decoration: underline;
+		            text-transform: uppercase;
+	            }
+            }
+            
+            .attribute-136 {
+	            display: none;
+            }
+            
+            #attribute136 {
+	            @include breakpoint(desktop) {
+		            width: 185px;
+	            }
             }
         }
     }
@@ -409,4 +599,94 @@
 
 .product-view .block-viewed {
     @include carousel(30%);
+}
+
+/*----------------------------------------------------------------------------*/
+/* Size/Measurement Guide
+/*----------------------------------------------------------------------------*/
+.sizeguide {
+	display: none;
+}
+
+.catalog-product-view.sidr-open {
+	
+	.body-overlay {
+		background-color: rgba(0,0,0,0.5);
+	    position: fixed;
+	    top: 0;
+	    height: 100%;
+	    width: 100%;
+	    z-index: 99;
+    }
+    
+    #sidr-size {
+	    z-index: 100;
+    }
+}
+
+#sidr-size {
+	@include font-family('Roboto Regular');
+	@include responsive-font-size(strip-units($f-size));
+	background: $c-white;
+	color: $c-text;
+	padding: 15px 0;
+	right: -450px;
+	width: 450px;
+	text-align: center;
+	
+	h6 {
+		@include font-family('Roboto Medium');
+		@include responsive-font-size(strip-units($f-size-l));
+		background: none;
+		border-bottom: 1px solid $c-text-gray;;
+		box-shadow: none;
+		text-transform: uppercase;
+		
+		span {
+			@include font-family('Roboto Regular');
+			@include responsive-font-size(strip-units($f-size-xxs));	
+			text-transform: lowercase;
+		}
+	}
+	
+		
+	img {
+		margin: 0 auto;
+		text-align: center;
+	}
+}
+
+.sidr-class {
+	
+	&-measurement-guide {
+		margin: 20px auto 0 auto;
+		width: 90%;
+		
+		table {
+			cursor: default;
+			width: 100%;
+		}	
+		tr:hover {
+			background-color: #efefef;
+		}
+		td {
+			@include font-family('Roboto Light');
+			@include responsive-font-size(strip-units($f-size-xs));
+			padding: 5px 0;
+		}
+	}
+	&-table-header {
+		border-bottom: 1px solid $c-text-gray;
+		
+		&:hover {
+			background-color: transparent !important;
+		}
+		
+		td {
+			@include font-family('Roboto Medium');
+			@include responsive-font-size(strip-units($f-size));	
+			padding: 0;
+			text-transform: uppercase;
+		}
+	}	
 }

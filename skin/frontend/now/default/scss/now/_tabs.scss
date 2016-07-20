@@ -2,32 +2,82 @@
 /* Tabs
 /*----------------------------------------------------------------------------*/
 
-@mixin tabs-boostrap() {
-
-    .nav-pills {
-        border-bottom: 2px solid #d8d8d8;
-
-        li {
-
-            @include breakpoint(mobile) {
-                width: 100%;
-            }
-
-            &.active {
-
-                > a {
-                    color: #ffffff;
-                    background-color: #ee3d42;
-                }
-            }
-
-            > a {
-                border-radius: 0;
-                @include responsive-font-size(18);
-                font-weight: bold;
-                text-transform: uppercase;
-                color: #404041;
-            }
-        }
+@mixin tabs-productview() {
+	margin: 60px auto;
+	
+    .toggle-tabs {
+	    border-bottom: 1px solid #dedede;
+	    
+	    li {
+		    cursor: pointer;
+		    display: inline-block;
+		    
+		    &.current {
+			    border-bottom: 2px solid $c-black;
+		    }
+		    
+		    &:not(:nth-last-child(1)) {
+			    margin-right: 50px;
+		    }
+	    }
+	    
+	    span {
+		    @include font-family('Roboto Regular');
+		    @include responsive-font-size($f-size-xs);
+		    text-transform: uppercase;
+	    }
     }
+    
+    .collateral-tabs {
+	    margin-top: 20px;
+	    
+	    dt,
+	    dd {
+		    display: none;
+	    }
+	    
+	    dd.current {
+		    display: block;
+	    }
+	    
+	    ul {
+		    list-style: disc;
+		    margin-left: 20px;
+	    }
+    }
+    
+    
+/*----------------------------------------------------------------------------*/
+/* Laundry Attributes Symbols
+/*----------------------------------------------------------------------------*/
+	.clothing-symbol {
+		margin-bottom: 10px;
+		
+		ul {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+		}
+		
+		li {
+			display: inline-block;
+			vertical-align: middle;
+			
+			&:not(:nth-last-child(1)) {
+				margin-right: 20px;
+			}
+		}
+	}
+	
+	.clothing-symbol a.laundryicon {
+		&-symbol9 {
+			@include use-sprite('icon_laundry-machinewash-normal');
+		}
+		&-symbol42 {
+			@include use-sprite('icon_laundry-tumble-dry');
+		}
+		&-symbol77 {
+			@include use-sprite('icon_laundry-bleach-useany');
+		}
+	}
 }

@@ -9,9 +9,15 @@
 .page header {
 	@include global-page-margin-side();
     border-bottom: 2px solid $c-black;
-
+	position: relative;
+	
+	.page-header-container {
+		max-width: $max-content-width;
+		margin: 0 auto;
+		position: static;
+	}
+	
 	.toplink-3column-wrapper {
-		position: relative;
 		width: 100%;
 		&:after {
 			@include clearfix;
@@ -219,6 +225,11 @@
 /* Mini Cart
 /*----------------------------------------------------------------------------*/
 .header-minicart {
+	
+	&.desktop {
+		position: relative;
+	}
+	
 	> a {
 		float: none;
 		height: inherit;
@@ -237,5 +248,158 @@
             content: "";
             display: inline-block;
         }
+	}
+	.count {
+		@include responsive-font-size(strip-units($f-size-xxs));
+		background-color: $c-black;
+		border-radius: 50%;
+		color: $c-white !important;
+		height: 20px;
+		line-height: 20px;
+		position: absolute;
+		text-align: center;
+		width: 20px;
+		
+		&:before,
+		&:after {
+			display: none;
+		}
+	}
+	
+	#header-cart .minicart-wrapper {
+		
+		.block-subtitle {
+			@include font-family('Roboto Regular');
+			@include responsive-font-size(strip-units($f-size-xs));
+			border-color: #dedede;
+			padding: 0 0 4px 0;
+			margin: 0;
+			text-transform: uppercase;
+		}
+		
+		#cart-sidebar li {
+			overflow: auto;
+			border-bottom: 1px solid #dedede;
+			padding: 10px 0;
+			
+			&:after {
+				@include clearfix;	
+			}
+		}
+		
+		.product-image {
+			float: left;
+			width: 15%;
+			
+			img {
+				width: 100%;
+			}
+		}
+		
+		.product-details {
+			@include font-family('Roboto Regular');
+			@include responsive-font-size(strip-units($f-size-xs));
+			float: right;
+			text-align: left;
+			width: 80%;
+		}
+		
+		.product-name {
+			text-transform: capitalize;
+		}
+		
+		.info-wrapper {
+			
+			.left {
+				float: left;
+			}
+			.right {
+				float: right;
+			}
+			
+			.value {
+				@include font-family('Roboto Bold');
+			}
+			
+			&:after {
+				@include clearfix;
+			}	
+		}
+		
+		.truncated {
+			cursor: default;
+			margin: 8px 0;
+			
+			.truncated_full_value {
+				z-index: 9;
+			}
+			
+			.item-options {
+				@include responsive-font-size(strip-units($f-size-xs));
+				background-color: transparent;
+				border: none;
+				display: block;
+				padding: 0;
+				position: static !important;
+				overflow: auto;
+				left: inherit;
+				top: inherit;
+				width: auto;
+				z-index: inherit;
+				
+				dt {
+					@include font-family('Roboto Regular');
+					font-style: normal;
+					padding: 0;
+				}
+				
+				dd {
+					@include font-family('Roboto Bold');
+					margin: 0;
+					padding-left: 4px;
+					text-transform: uppercase;
+				}
+			}
+			
+			.item-options:after {
+				display: none;
+			}
+		}
+		
+		.link-update {
+			color: $c-text-gray;
+			text-align: right;
+		}
+		
+		.subtotal {
+			margin-top: 20px;
+			
+			.label {
+				@include responsive-font-size(strip-units($f-size-xs));
+				color: $c-black;
+			}
+			.label:after {
+				display: none;
+			}
+		}
+		
+		.minicart-actions > ul {
+			display: inline-block;
+			width: auto;
+		}
+		
+		.minicart-actions > ul > li > a.checkout-button {
+			@include button-blink1(135px, 30px, 10);
+			&:hover {
+				@include global-opacity-onhover;
+			}
+		}
+		
+		.minicart-actions .cart-link {
+			@include button-blink2(135px, 30px, 10);
+			&:hover {
+				@include global-opacity-onhover;
+			}
+		}
 	}
 }

@@ -61,21 +61,20 @@ $baseHeadingFontSizeH3: 16;
     padding: 0;
 
     h1 {
-        margin: 0;
-        padding: 0;
         @include base-h-font;
-        @include responsive-font-size($baseHeadingFontSizeH1);
+        @include responsive-font-size(strip-units($f-size-xl) + 8);
+        padding: 0;
         text-align: left;
-        color: $baseHeadingColorH1;
         border-style: none;
     }
 }
 
 // Font styles used across all h tags.
 @mixin base-h-font {
-    @include font-family('Roboto Bold');
-    font-weight: normal;
-    //text-transform: none;
+    @include font-family('Roboto Medium');
+    color: $c-text;
+    margin: 0 auto;
+    text-transform: uppercase;
 }
 
 @mixin base-required-fields {

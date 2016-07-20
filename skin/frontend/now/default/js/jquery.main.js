@@ -59,7 +59,17 @@ $.widget('now.main', {
     initProductPage: function() {
 
         if ($('body.catalog-product-view').length) {
-            
+	        
+	        // JS hack to force placeholder on Configurable Product
+	        $('#attribute136 option:first-child').text('Choose your size');
+	        
+	        $j(window).on('resize', function(){
+		        $.sidr('close', 'sidr-size');
+			});
+			
+			$j('.body-overlay').on('click', function(){
+		        $.sidr('close', 'sidr-size');
+			});
         }
     },
 

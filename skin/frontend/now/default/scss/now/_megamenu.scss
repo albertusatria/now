@@ -1,4 +1,4 @@
-$menuDesktopWidth: 1024;
+$menuDesktopWidth: 1260;
 
 .header-left {
 
@@ -51,6 +51,11 @@ $menuDesktopWidth: 1024;
     .submenu {
         display: none;
         
+        .width-wrapper {
+	        max-width: $menuDesktopWidth * 1px;
+	        margin: 0 auto;
+        }
+        
         .by-product,
         .by-brands,
         .leftmenu,
@@ -99,7 +104,7 @@ $menuDesktopWidth: 1024;
 		        background-color: $c-white;
 		        display: block;
 		        left: 0;
-		        margin: 9px -20px 0 -20px;
+		        margin: 9px auto 0 auto;
 		        min-height: 200px;
 		        padding: 20px;
 		        position: absolute;
