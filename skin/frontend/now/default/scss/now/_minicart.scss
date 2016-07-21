@@ -66,7 +66,6 @@
         clear: both;
         position: relative;
         display: block;
-        margin-top: -20px;
         padding: 0 20px 21px;
         @include box-sizing(border-box);
 		
@@ -92,9 +91,9 @@
 		.close {
 			font-size: 0;
 			background: none;
-			top: 5px;
+			top: -10px;
 			position: absolute;
-			right: 5px;
+			right: 10px;
 			
 			&:after {
 				@include global-font-awesome(16px);

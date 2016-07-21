@@ -26,11 +26,19 @@
             font-weight: normal;
             text-transform: uppercase;
         }
+        
+        .swatch-link,
+        .swatch-link span,
+        .swatch-link span img {
+	        border-radius: 50%;
+        }
 
         ol {
 
             li {
-
+				clear: both;
+				display: block;
+				
                 .btn-remove {
                     border: none;
                     cursor: pointer;
@@ -50,6 +58,7 @@
     }
 
     .actions {
+	    margin-bottom: 20px;
         text-align: right;
 
         a {

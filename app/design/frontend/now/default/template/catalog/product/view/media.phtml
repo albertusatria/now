@@ -55,19 +55,21 @@
 <?php endif; ?>
 
 <div class="product-image">
-    <div class="product-image-gallery">
+	<div style="display: none" class="image-loading-overlay"></div>
+    <div id="product-media-image" class="product-image-gallery product-image-zoom">
         <img id="image-main"
              class="gallery-image visible"
              src="<?php echo $this->helper('catalog/image')->init($_product, 'image') ?>"
              alt="<?php echo $this->escapeHtml($this->getImageLabel()) ?>"
-             title="<?php echo $this->escapeHtml($this->getImageLabel()); ?>"/>
+             title="<?php echo $this->escapeHtml($this->getImageLabel()); ?>"
+             data-magnify-src="<?php echo $this->helper('catalog/image')->init($_product, 'image') ?>"/>
 
         <?php $i=0; foreach ($this->getGalleryImages() as $_image): ?>
             <?php if ($this->isGalleryImageVisible($_image)): ?>
             <img id="image-<?php echo $i; ?>"
                  class="gallery-image"
                  src="<?php echo $this->getGalleryImageUrl($_image); ?>"
-                 data-zoom-image="<?php echo  $this->getGalleryImageUrl($_image); ?>"/>
+                 data-magnify-src="<?php echo  $this->getGalleryImageUrl($_image); ?>"/>
             <?php endif; ?>
         <?php $i++; endforeach; ?>
     </div>

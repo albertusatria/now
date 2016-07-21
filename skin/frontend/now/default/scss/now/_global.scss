@@ -158,6 +158,80 @@ body * {
 	-ms-user-select: none;
 	user-select: none;
 }
+
+/*----------------------------------------------------------------------------*/
+/* Body Overlay & Global Message
+/*----------------------------------------------------------------------------*/
+.store-popup {
+	z-index: 99;
+	position: fixed;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	background-color: rgba(0,0,0,0.5);
+	
+	.content {
+		//@include responsive-font-size(strip-units($f-size-s));
+	    display: block;
+	    margin: 0 auto;
+	    position: absolute;
+	    bottom: 0;
+	    right: 0;
+	    left: 0;
+	    width: 40%;
+	    top: 50%;
+	    padding: 20px;
+	    transform: translateY(-50%);
+	    
+	    h1 {
+		    font-weight: bold;
+		    margin: 15px auto 25px auto;
+		    text-align: center;
+		    text-transform: uppercase;
+	    }
+	    
+	    .email {
+		    font-style: italic;
+	    }
+	    
+	    p {
+		    text-align: left;
+		    
+		    &.author {
+			    @include font-family('Roboto Medium');
+			    display: block;
+			    clear: both;
+			    margin-top: 15px;
+		    }
+	    }
+	}
+	
+	&.thesis-only .content {
+	    background: $c-white;
+	    border: 5px solid $c-black;
+	}
+	
+	.store-information-close {
+	    position: relative;
+
+	    a:before {
+		    @include global-font-awesome(18px);
+		    content: '\f00d';
+		    color: $c-text;
+		    height: 16px;
+		    position: absolute;
+		    right: -10px;
+		    top: -10px;
+	    }
+	    
+	    span {
+		    color: transparent;
+		    font-size: 0;
+		    visibility: hidden;
+	    }
+	}
+}
 /*----------------------------------------------------------------------------*/
 /* Messages
 /*----------------------------------------------------------------------------*/
@@ -184,27 +258,35 @@ a {
 }
 
 .messages li span {
+	@include font-family('Roboto Bold');
+	@include responsive-font-size(strip-units($f-size-xs));
     padding-left: 16px;
+    text-transform: uppercase;
 }
 
 .messages .error-msg li {
-    border: 1px solid $c-danger;
+    border: none;
+    
+    span {
+	    color: $c-red;
+    }
 }
 
-.messages .error-msg li:before {
-    @include triangle(right, 6px, $c-danger);
-}
 
 .messages .notice-msg li {
-    border: 1px solid $c-warn;
-}
-
-.messages .notice-msg li:before {
-    @include triangle(right, 6px, $c-warn);
+    border: none;
+    
+    span {
+	    color: $c-warn;
+    }
 }
 
 .messages .success-msg li {
-    border: 1px solid $c-success;
+    border: none;
+    
+    span {
+	    color: green;
+    }
 }
 
 .messages .success-msg li:before {

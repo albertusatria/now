@@ -144,6 +144,17 @@
 	        &:hover {
 		        border: none !important;
 	        }
+	        
+	        .image-loading-overlay {
+				display: none;
+				background: url('../images/ajax-loader.gif') no-repeat center center;
+			    height: 500px;
+			    left: 50%;
+			    position: absolute;
+			    top: 75%;
+			    width: 80px;
+			    z-index: 99;
+			}
         }
         
         .product-image img {

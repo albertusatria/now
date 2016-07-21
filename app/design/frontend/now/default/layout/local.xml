@@ -52,7 +52,11 @@
             <action method="addItem">
                 <type>skin_css</type>
                 <name>css/lib/jquery.sidr.light.css</name>
-            </action>                       
+            </action>   
+            <action method="addItem">
+                <type>skin_css</type>
+                <name>css/lib/magnify.css</name>
+            </action>                    
             
             <!-- Add Font Awesome -->
             <action method="addItem">
@@ -75,6 +79,19 @@
             	<type>skin_js</type>
             	<name>js/lib/jquery.sidr.min.js</name>
             </action>
+            <action method="addItem">
+            	<type>skin_js</type>
+            	<name>js/lib/picturefill.min.js</name>
+            </action>
+            <action method="addItem">
+            	<type>skin_js</type>
+            	<name>js/lib/jquery.magnify.js</name>
+            </action>
+            <action method="addItem">
+            	<type>skin_js</type>
+            	<name>js/lib/jquery.magnify-mobile.js</name>
+            </action>
+            
             
             <!-- Add Custom JS widget -->
             <action method="addItem">
@@ -126,6 +143,9 @@
 		
 		<reference name="after_body_start">
             <block type="core/template" name="body.overlay" template="page/html/overlay.phtml" />
+            <block type="cms/block" name="global.notice">
+			      <action method="setBlockId"><block_id>global_message_notice</block_id></action>
+			</block>
         </reference>
 		
 		<!-- Modify Footer Links -->
