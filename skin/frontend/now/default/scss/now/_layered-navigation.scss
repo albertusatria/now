@@ -67,7 +67,7 @@
     #narrow-by-list {
 
         dt {
-            margin: 13px 0 2px 0;
+            margin: 13px 0 5px 0;
             padding: 0;
             @include font-family('Roboto Medium');
             @include responsive-font-size(strip-units($f-size-s));
@@ -81,7 +81,7 @@
         dd {
 
 			ol {
-				@include responsive-line-height(18);
+				@include responsive-line-height(16);
 			}
 			
             li {
@@ -102,6 +102,10 @@
     .configurable-swatch-list {
 	    li {
 		    width: auto !important;
+		    
+		    a:hover .swatch-label {
+			    border-color: $c-black !important;
+		    }
 	    }
 	    
 	    .swatch-label,

@@ -1,88 +1,49 @@
 /*----------------------------------------------------------------------------*/
-/* Minicart
-/* Based on skin/frontend/rwd/default/scss/module/_checkout-cart-minicart.scss
+/* Mini Cart
 /*----------------------------------------------------------------------------*/
-
-/*----------------------------------------------------------------------------*/
-/* Header
-/*----------------------------------------------------------------------------*/
-
 .header-minicart {
-    display: inline-block;
+	
+	&.desktop {
+		position: relative;
+	}
+	
+	> a {
+		float: none;
+		height: inherit;
+		padding: 0;
+		width: auto;
+	}
+	.icon {
+		display: none;
+	}
+	.label {
+		color: transparent;
+        font-size: 0;
 
-    .menu-cart, .menu-cart-mobile {
-        cursor: pointer;
-        text-decoration: none;
-
-        &:hover {
-            color: inherit;
-        }
-
-        .count {
+        &:after {
+            @include use-sprite('icon_minicart');
+            content: "";
             display: inline-block;
-            @include responsive-font-size(14);
-            font-weight: normal;
-            text-align: center;
-            color: #ffffff;
         }
-    }
-
-    .hidden-mobile {
-
-        @include breakpoint(mobile) {
-            display: none;
-        }
-    }
-
-    .hidden-all {
-        display: none;
-    }
-
-    .show-mobile {
-
-        @include breakpoint(mobile) {
-            display: block;
-        }
-    }
-}
-
-/*----------------------------------------------------------------------------*/
-/* Body
-/*----------------------------------------------------------------------------*/
-
-#header-cart {
-    display: none;
-    position: absolute;
-    z-index: 200;
-    top: 30px;
-    right: inherit;
-    width: 330px;
-    margin-left: -92px;
-    color: #404041;
-    border: none;
-    background-color: #ffffff;
-    box-shadow: 3px 4px 10px 0px rgba(0, 0, 0, 0.25);
-    -webkit-box-shadow: 3px 4px 10px 0px rgba(0, 0, 0, 0.25);
-    -moz-box-shadow: 3px 4px 10px 0px rgba(0, 0, 0, 0.25);
-
-    &.undocked {
-        position: fixed;
-    }
-
-    .close {
-        content: '';
-        display: block;
-        position: absolute;
-        right: 10px;
-        top: 10px;
-        width: 11px;
-        height: 10px;
-        background-image: url('../images/minicart/cross.png');
-        cursor: pointer;
-    }
-
-
-    .message {
+	}
+	.count {
+		@include responsive-font-size(strip-units($f-size-xxs));
+		background-color: $c-black;
+		border-radius: 50%;
+		color: $c-white !important;
+		height: 20px;
+		line-height: 20px;
+		position: absolute;
+		text-align: center;
+		width: 20px;
+		
+		&:before,
+		&:after {
+			display: none;
+		}
+	}
+	
+	.message {
         display: block;
         padding: 5px 20px;
         @include responsive-font-size(14);
@@ -92,157 +53,195 @@
 
     #minicart-success-message {
         @extend .message;
-        color: #85b14e;
+        color: green;
     }
 
     #minicart-error-message {
         @extend .message;
-        color: #ff4f39;
+        color: $c-red;
     }
-
-    .minicart-wrapper {
-        @include loadingOverlay();
+	
+	#header-cart .minicart-wrapper {
+		@include loadingOverlay();
         clear: both;
         position: relative;
         display: block;
+        margin-top: -20px;
         padding: 0 20px 21px;
         @include box-sizing(border-box);
+		
+		.block-subtitle {
 
-        .close {
-            display: none;
-        }
-
-        .block-subtitle {
-            margin: 0 0 10px 0;
-            padding: 0 0 8px 0;
-            @include font-family('Roboto Bold');
-            @include responsive-font-size(16);
+			border-bottom: 1px solid #dedede;
+			margin: 0;
+            padding: 8px 0;
+            @include font-family('Roboto Regular');
+            @include responsive-font-size(strip-units($f-size-xs));
             font-weight: normal;
             text-align: left;
-            color: #404041;
-            border-bottom: 1px solid #c7c7c7;
+            text-transform: uppercase;
+            
+		}
+		
+		.empty {
+            text-align: center;
+		    margin: 15px 0;
+		    font-style: italic;
         }
-
-        .empty {
-            text-align: left;
-        }
-
-        > div {
-            display: block; // Fix Magento inline block bug.
-        }
-
-        .minicart-products-list {
-
-            li {
-                margin: 0 0 10px 0;
-                padding: 0 0 10px 0;
-                border-bottom: 1px solid #c7c7c7;
-
-                .product-image {
-                    float: left;
-                }
-
-                .product-details {
-                    position: relative;
-                    display: block;
-                    margin-left: 80px;
-
-                    .product-name {
-                        width: 90%; // Allow for absolute position delete icon.
-                        margin: 0;
-                        padding: 0;
-                        text-align: left;
-
-                        a {
-                            @include font-family('Roboto Bold');
-                            @include responsive-font-size(14);
-                            font-weight: normal;
-                            color: #404041;
-                            text-transform: none;
-                        }
-                    }
-
-                    table.info-wrapper {
-                        width: 100%;
-                        margin-top: 1em;
-
-                        .qty {
-                            display: block;
-                            float: left;
-                            @include font-family('Roboto Bold');
-                            @include responsive-font-size(14);
-                            font-weight: normal;
-                            color: #404041;
-                        }
-
-                        .price {
-                            display: block;
-                            float: right;
-                            @include font-family('Roboto Bold');
-                            @include responsive-font-size(14);
-                            font-weight: normal;
-                            color: #404041;
-                        }
-                    }
-
-                    .btn-edit {
-                        display: none;
-                    }
-
-                    .remove {
-                        position: absolute;
-                        top: 5px;
-                        right: 0;
-                        @include link-to-button-image(11px, 10px, '../images/minicart/remove.png');
-                    }
-                }
-            }
-        }
-
-        .block-content {
+		
+		.close {
+			font-size: 0;
+			background: none;
+			top: 5px;
+			position: absolute;
+			right: 5px;
+			
+			&:after {
+				@include global-font-awesome(16px);
+				content: '\f00d';
+				color: $c-text;
+			}
+		}
+		
+		> div {
+			max-height: 240px;
+			overflow-y: auto;
+		}
+		
+		#cart-sidebar li {
+			overflow: auto;
+			border-bottom: 1px solid #dedede;
+			padding: 10px 0;
+			
+			&:after {
+				@include clearfix;	
+			}
+		}
+		
+		.product-image {
+			float: left;
+			width: 15%;
+			
+			img {
+				width: 100%;
+			}
+		}
+		
+		.product-details {
+			@include font-family('Roboto Regular');
+			@include responsive-font-size(strip-units($f-size-xs));
+			float: right;
+			text-align: left;
+			width: 80%;
+		}
+		
+		.product-name {
+			text-transform: capitalize;
+		}
+		
+		.info-wrapper {
+			
+			.left {
+				float: left;
+			}
+			.right {
+				float: right;
+			}
+			
+			.value {
+				@include font-family('Roboto Bold');
+			}
+			
+			&:after {
+				@include clearfix;
+			}	
+		}
+		
+		.truncated {
+			cursor: default;
+			margin: 8px 0;
+			
+			.truncated_full_value {
+				z-index: 9;
+			}
+			
+			.item-options {
+				@include responsive-font-size(strip-units($f-size-xs));
+				background-color: transparent;
+				border: none;
+				display: block;
+				padding: 0;
+				position: static !important;
+				overflow: auto;
+				left: inherit;
+				top: inherit;
+				width: auto;
+				z-index: inherit;
+				
+				dt {
+					@include font-family('Roboto Regular');
+					font-style: normal;
+					padding: 0;
+				}
+				
+				dd {
+					@include font-family('Roboto Bold');
+					margin: 0;
+					padding-left: 4px;
+					text-transform: uppercase;
+				}
+			}
+			
+			.item-options:after {
+				display: none;
+			}
+		}
+		
+		.link-update {
+			color: $c-text-gray;
+			text-align: right;
+		}
+		
+		.block-content {
             display: block;
-            margin: 0 0 25px 0;
+            margin: 12.5px 0;
             text-align: right;
 
             .subtotal {
                 @include font-family('Roboto Bold');
                 text-transform: uppercase;
-
+				
+				.label {
+					@include responsive-font-size(strip-units($f-size-xs));
+					color: $c-black;
+				}
+				.label:after {
+					display: none;
+				}
+				
                 .price {
                     @include font-family('Roboto Bold');
                 }
             }
         }
-
-        .minicart-actions {
-            display: block;
-
-            .cart-link {
-                display: none;
-            }
-
-            ul.checkout-types {
-                float: none;
-                text-align: center;
-
-                .paypal-logo {
-                    display: none; // Hide PayPal Express button.
-                }
-
-                li {
-                    margin: 0;
-                    padding: 0;
-                    border-top: none;
-
-                    .cart-button {
-                        @include button-blink2(140px, 34px);
-                    }
-
-                    .checkout-button {
-                        @include button-blink1(140px, 34px);
-                    }
-                }
-            }
-        }
-    }
+		
+		.minicart-actions > ul {
+			display: inline-block;
+			width: auto;
+		}
+		
+		.minicart-actions > ul > li > a.checkout-button {
+			@include button-blink1(135px, 30px, 10);
+			&:hover {
+				@include global-opacity-onhover;
+			}
+		}
+		
+		.minicart-actions .cart-link {
+			@include button-blink2(135px, 30px, 10);
+			&:hover {
+				@include global-opacity-onhover;
+			}
+		}
+	}
 }

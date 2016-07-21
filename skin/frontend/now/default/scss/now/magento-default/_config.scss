@@ -10,15 +10,15 @@
 $basePagePaddingTop: 20px;
 
 // Primary background color to use across headings, titles, etc.
-$baseBackgroundColor: #3b3b3b;
+$baseBackgroundColor: none;
 // Secondary background color to use across headings, titles, etc.
-$baseBackgroundColor2: #7a7a7a;
+$baseBackgroundColor2: none;
 // Main border color to use across forms, containers, title underlines, etc.
-$baseBorderColor: #cdcdcd;
+$baseBorderColor: #dedede;
 // Heading font styles.
-$baseHeadingColorH1: #555555;
-$baseHeadingColorH2: #ffffff;
-$baseHeadingColorH3: #154020;
+$baseHeadingColorH1: $c-black;
+$baseHeadingColorH2: $c-black;
+$baseHeadingColorH3: $c-black;
 $baseHeadingFontSizeH1: 24;
 $baseHeadingFontSizeH2: 16;
 $baseHeadingFontSizeH3: 16;
@@ -48,7 +48,6 @@ $baseHeadingFontSizeH3: 16;
     .page-title {
         margin-bottom: 2em;
         padding-bottom: 1em;
-        border-bottom: 1px solid #cccccc;
     }
 }
 

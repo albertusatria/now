@@ -7,14 +7,14 @@
 /*----------------------------------------------------------------------------*/
 
 // Black button.
-@mixin button-b1($width: auto, $height: 35px) {
+@mixin button-b1($width: auto, $height: 30px) {
     @include button-color($width, $height, $font-size: 16, $color: #ffffff, $background-color: #000000, $hover-color: #ffffff, $hover-background: #505050, $border-radius: 0);
     @include font-family('Roboto Medium');
     text-transform: uppercase;
 }
 
 // White button.
-@mixin button-b2($width: auto, $height: 35px) {
+@mixin button-b2($width: auto, $height: 30px) {
     @include button-color($width, $height, $font-size: 10, $color: #000000, $background-color: #ffffff, $hover-color: #505050, $hover-background: #ffffff, $border-radius: 0);
     @include font-family('Roboto Regular');
     text-transform: uppercase;
@@ -33,7 +33,7 @@
 }
 
 // shop now button.
-@mixin button-b3($width: auto, $height: 35px) {
+@mixin button-b3($width: auto, $height: 30px) {
     @include button-color($width, $height, $font-size: 14, $color: #000000, $background-color: #ffffff, $hover-color: #000000, $hover-background: #ffffff, $border-radius: 0);
     @include font-family('Roboto Medium');
     border: 2px solid #000000;
@@ -41,7 +41,7 @@
 }
 
 // Display link as b1.
-@mixin button-blink1($width: auto, $height: 35px, $font-size: 16) {
+@mixin button-blink1($width: auto, $height: 30px, $font-size: 16) {
     @include button-from-link($width, $height, $font-size, $color: #ffffff, $background-color: #000000, $hover-color: #ffffff, $hover-background: #000000, $border-radius: 0);
     @include font-family('Roboto Medium');
     padding: 0;
@@ -49,7 +49,7 @@
 }
 
 // Display link as b2.
-@mixin button-blink2($width: auto, $height: 35px, $font-size: 10) {
+@mixin button-blink2($width: auto, $height: 30px, $font-size: 10) {
     @include button-from-link($width, $height, $font-size, $color: #000000, $background-color: #ffffff, $hover-color: #000000, $hover-background: #ffffff, $border-radius: 0);
     @include font-family('Roboto Medium');
     padding: 0;

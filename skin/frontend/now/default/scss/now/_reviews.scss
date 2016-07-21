@@ -1,0 +1,179 @@
+/*----------------------------------------------------------------------------*/
+/* Product Review
+/*----------------------------------------------------------------------------*/
+.product-shop .ratings {
+	
+	.rating-box {
+		margin: 4px auto 0 auto;
+		float: none;
+	}
+	
+	.rating-box,
+	.rating-links {
+		display: inline-block;
+	}
+	
+	.rating-links {
+		margin: 0 auto 0 8px;
+		vertical-align: top;
+		
+		span,
+		a:nth-last-child(1) {
+			display: none;
+		}
+		
+		a:first-child {
+			@include font-family('Roboto Light');
+			@include responsive-font-size(strip-units($f-size-xxs));
+			color: $c-text-gray;
+			text-transform: uppercase;			
+		}
+	}
+}
+
+.product-collateral #customer-reviews {
+	dt,
+	dd {
+		display: block;
+	}
+	
+	.review-heading {
+		border: none;
+		padding: 0;
+		text-align: left;
+		width: auto;
+		span {
+			display: none;
+		}
+	}
+	
+	.review-heading h2,
+	.form-add h2 {
+		@include base-h-font;
+		@include font-family('Roboto Bold');
+		@include responsive-font-size(strip-units($f-size-l));
+		margin-bottom: 10px;
+		letter-spacing: normal;
+		text-align: left;
+		text-transform: uppercase;
+	}
+	
+	dl {
+		float: left;
+		width: 50%;
+	}
+	
+	dt {
+		margin-bottom: 0;
+		
+		a {
+			@include font-family('Roboto Medium');
+			@include responsive-font-size(25);
+			margin-bottom: 0;
+			text-transform: uppercase;
+			
+			&:hover {
+				text-decoration: none;
+			}
+		}
+	}
+	
+	dd {
+		border-bottom: 1px solid #dedede;
+		margin-top: 0;
+		padding-bottom: 10px;
+		
+		.review-meta,
+		.reviewed-by {
+			@include font-family('Roboto Light');
+			@include responsive-font-size(strip-units($f-size-xxs));
+			color: $c-text;
+		}
+		
+		.review-meta {
+			text-transform: none;
+		}
+		
+		.reviewed-by {
+			text-transform: capitalize;
+		}
+		
+		.review-meta,
+		.ratings {
+			float: left;
+		}
+		
+		.ratings {
+			margin: -8px 0 0 8px;
+			&:after {
+				@include clearfix;
+			}
+		}
+		
+		.review-details {
+			@include responsive-font-size(strip-units($f-size));
+			clear: both;
+			padding-top: 12px;
+			text-align: justify;
+		}
+	}
+	
+	.form-add {
+		float: right;
+		margin-top: -30px;
+		width: 45%;
+		
+		h3 {
+			color: $c-text;
+			text-transform: none;
+			
+			span {
+				@include font-family('Roboto Medium');
+				color: inherit;
+				text-transform: capitalize;
+			}
+		}
+		
+		.fieldset {
+			padding-top: 0;
+			width: 100%;
+			
+			h4,
+			.review-summary-table th:first-child {
+				display: none;
+			}
+			
+			.form-list {
+				list-style: none;
+				
+				label {
+					@include responsive-font-size(strip-units($f-size) - 1);
+					@include font-family('Roboto Medium');
+					color: $c-text;
+				}
+				
+				input {
+					border: 1px solid #dedede;
+					border-radius: 3px;
+				}
+			}
+			
+		}
+		
+		.buttons-set {
+			width: 100%;
+			
+			button {
+				@include button-b1(150px);
+			}
+		}
+		
+		.review-summary-table {
+			border: none;
+		}
+	}
+	
+	&:after {
+		@include clearfix;
+	}
+}

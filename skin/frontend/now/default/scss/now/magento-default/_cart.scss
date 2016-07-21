@@ -15,7 +15,7 @@ body.checkout-cart-index {
         /*----------------------------------------------------------------------------*/
 
         .cart-empty {
-
+			margin-bottom: 180px;
             a {
                 @include global-underline;
             }
@@ -229,7 +229,7 @@ body.checkout-cart-index {
                         // Quantity update button.
                         .btn-update {
                             display: none;
-                            @include button-b2(auto, 35px);
+                            @include button-b2(auto, 30px);
                         }
 
                         // Desktop edit link.
@@ -274,7 +274,7 @@ body.checkout-cart-index {
                         background-color: transparent;
 
                         .btn-update {
-                            @include button-b2(220px, 35px);
+                            @include button-b2(220px, 30px);
                         }
 
                         // Mobile update button? Causes gap on mobile.

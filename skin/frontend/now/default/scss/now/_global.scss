@@ -12,7 +12,7 @@ $pagePaddingMobile: 10;
 
 @mixin global-page-margin-side() {
 
-    @include breakpoint(max, strip-units($max-content-width)) {
+    @include breakpoint(max, strip-units($max-container-width)) {
         padding-right: $pagePadding*1px;
         padding-left: $pagePadding*1px;
     }
@@ -146,10 +146,24 @@ $pagePaddingMobile: 10;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
+
+/*----------------------------------------------------------------------------*/
+/* Prevent Blue Highlight from browser
+/*----------------------------------------------------------------------------*/
+body * {
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
 /*----------------------------------------------------------------------------*/
 /* Messages
 /*----------------------------------------------------------------------------*/
-
+a {
+	outline: 0 !important;
+}
 .messages {
     margin-bottom: $gap;
     @include responsive-font-size(14);
@@ -170,7 +184,7 @@ $pagePaddingMobile: 10;
 }
 
 .messages li span {
-    padding-left: 28px;
+    padding-left: 16px;
 }
 
 .messages .error-msg li {
@@ -194,23 +208,29 @@ $pagePaddingMobile: 10;
 }
 
 .messages .success-msg li:before {
-    //@include triangle(right, 6px, $c-success);
-    //@include use-sprite('message-success');
+    @include global-font-awesome(16px);
+    color: green;
+    content: '\f058';
     left: 16px;
+    top: 22px;
     border-style: none;
 }
 
 .messages .notice-msg li:before {
-    //@include triangle(right, 6px, $c-warn);
-    //@include use-sprite('message-notice');
+    @include global-font-awesome(16px);
+    content: '\f06a';
+    color: $c-warn;
     left: 16px;
+    top: 22px;
     border-style: none;
 }
 
 .messages .error-msg li:before {
-    //@include triangle(right, 6px, $c-danger);
-    //@include use-sprite('message-error');
+    @include global-font-awesome(16px);
+    color: $c-red;
+    content: '\f057';
     left: 16px;
+    top: 22px;
     border-style: none;
 }
 
@@ -276,82 +296,6 @@ $pagePaddingMobile: 10;
 	.owl-next {
 		right: 0;
 	}
-}
-
-
-/*----------------------------------------------------------------------------*/
-/* Forms, Input, Validation.
-/*----------------------------------------------------------------------------*/
-
-$globalInputHeight: 35;
-
-input:focus {
-    outline: none;
-    border-color: auto;
-}
-
-.main,
-.quickview-container {
-
-    .input-text {
-        height: $globalInputHeight*1px;
-        background-image: none;
-        border: 1px solid #cccccc;
-
-        @include breakpoint(mobile) {
-            width: 100%;
-            @include box-sizing(border-box);
-        }
-    }
-
-    select {
-	    @include background-retina('sprites/icon_select-arrow-normal.png','sprites2x/icon_select-arrow-normal.png');
-	    @include responsive-font-size(strip-units($f-size-xs));
-	    background-color: $c-white;
-        background-position: 95% 50%;
-        background-repeat: no-repeat;
-
-        height: $globalInputHeight*1px;
-        line-height: $globalInputHeight*1px;
-
-        border: 1px solid $c-black;
-	    cursor:pointer;
-	    background-color: $c-white;
-	    padding-left: 5px;
-	    
-	    -webkit-appearance:none;
-	    -moz-appearance:none;
-	    appearance:none;
-	    
-	    -webkit-border-radius: 3px;
-	    -moz-border-radius: 3px;
-	    border-radius: 3px;
-    }
-
-    textarea {
-        background-image: none;
-        border: 1px solid #cccccc;
-    }
-
-    .form-list label {
-        @include responsive-font-size(14);
-        text-transform: uppercase;
-        color: #666666;
-
-        &:first-child {
-            width: auto; // Prevent wrapping of label text.
-        }
-
-        em {
-            color: #7f1212;
-        }
-    }
-
-    p.required {
-        @include responsive-font-size(12);
-        text-transform: uppercase;
-        color: #7f1212;
-    }
 }
 
 /*----------------------------------------------------------------------------*/

@@ -28,7 +28,7 @@
         @include responsive-font-size(31);
         color: $c-text;
         line-height: 1;
-        margin: 0 0 38px 0;
+        margin: 0 auto;
         padding: 0;
         text-transform: capitalize;
 		
@@ -50,7 +50,7 @@
     }
     
     .price-info {
-	    margin-bottom: 32px;
+	    margin: 38px 0 32px 0;
 	    
 	    .regular-price span,
 	    .special-price span {
