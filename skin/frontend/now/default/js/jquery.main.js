@@ -71,6 +71,12 @@ $.widget('now.main', {
 			$j('.body-overlay').on('click', function(){
 		        $.sidr('close', 'sidr-size');
 			});
+			
+			$j(".ratings-amount").click(function() {
+				var attrID = $j(this).attr('href');
+				$j('.toggle-tabs li.last').trigger('click');
+				$j('html, body').animate({ scrollTop:$(attrID).offset().top}, 500);
+			});
         }
     },
 

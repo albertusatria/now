@@ -4,8 +4,13 @@
 
 .catalog-category-view,
 .catalogsearch-result-index {
-
-    .category-title {
+	
+	.page-title h1 {
+		border-bottom: none;
+	}
+	
+    .category-title,
+    .ratings {
        display: none;
     }
 
@@ -40,6 +45,84 @@
     }
 }
 
+/*----------------------------------------------------------------------------*/
+/* Search Result
+/*----------------------------------------------------------------------------*/
+.catalogsearch-result-index {
+	.page-title {
+		margin-top: 18px;
+	}
+	.block-layered-nav .block-content {
+		margin-top: 50px;
+	}
+}
+
+/*----------------------------------------------------------------------------*/
+/* Advanced Search & Adv. Search Result
+/*----------------------------------------------------------------------------*/
+.catalogsearch-advanced-index,
+.catalogsearch-advanced-result {
+	
+	h1 {
+		border-bottom: none !important;
+	}
+	
+	.form-validate {
+		margin-bottom: 120px;
+	}
+}
+
+.catalogsearch-advanced-index {
+	
+	.legend {
+		display: none;
+	}
+	
+	.advanced-search {
+		background: none;
+		border: none;
+		padding: 0;		
+	}
+	
+	.buttons-set {
+		border: none;
+		
+		button {
+			@include button-b1(150px);
+			float: left
+		}
+	}
+}
+
+.catalogsearch-advanced-result {
+
+	.advanced-search-summary {
+		border-bottom: 1px solid #dedede;
+		padding-bottom: 10px;
+		
+		ul {
+			@include responsive-line-height(16);
+			margin-left: 20px;
+		}		
+		
+		p {
+			margin-top: 15px;
+			
+			a {
+				@include font-family('Roboto Medium');
+				text-decoration: underline;
+				
+				&:hover {
+					text-decoration: none;
+				}
+			}
+		}
+	}
+	
+	.category-products {
+		margin-top: 20px;
+	}
+}
 /*----------------------------------------------------------------------------*/
 /* Product Actions
 /*----------------------------------------------------------------------------*/
