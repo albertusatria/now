@@ -24,16 +24,16 @@ body {
 }
 
 .desktop {
-    @include breakpoint(tablet) {
+    /*@include breakpoint(tablet) {
         display: none !important;
-    }
+    }*/
 }
 
 .mobile {
     display: none !important;
-    @include breakpoint(tablet) {
+    /*@include breakpoint(tablet) {
         display: block !important;
-    }
+    }*/
 }
 
 /*----------------------------------------------------------------------------*/

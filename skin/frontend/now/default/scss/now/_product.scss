@@ -102,12 +102,12 @@
         float: right;
         width: 50%;
 
-        @include breakpoint(mobile) {
+        /*@include breakpoint(mobile) {
             clear: both;
             float: none;
             width: auto;
             @include global-page-margin-side;
-        }
+        }*/
     }
 
 
@@ -536,9 +536,9 @@
 
         .qty-wrapper {
 
-            @include breakpoint(mobile) {
+            /*@include breakpoint(mobile) {
                 text-align: center;
-            }
+            }*/
 
             label {
 

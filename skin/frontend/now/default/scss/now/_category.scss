@@ -146,9 +146,9 @@ price {
 	    @include responsive-font-size(strip-units($f-size-s));
     }
     
-    @include breakpoint(mobile) {
+    /*@include breakpoint(mobile) {
 	    @include responsive-font-size(strip-units($f-size-xs));
-    }
+    }*/
 }
 
 .price-box {
@@ -171,9 +171,9 @@ price {
 		    margin-right: 18px;
 	    }
 	    
-	    @include breakpoint(mobile) {
+	    /*@include breakpoint(mobile) {
 		    margin-right: 10px;
-	    }
+	    }*/
 	    
         .price-label {
             display: none;
@@ -245,9 +245,9 @@ price {
         list-style: none;
         @include box-sizing(border-box);
 
-        @include breakpoint(mobile) {
+        /*@include breakpoint(mobile) {
             width: 50%;
-        }
+        }*/
 
         @include breakpoint(phone) {
             width: 100%;
@@ -287,9 +287,9 @@ price {
 			    @include responsive-font-size(strip-units($f-size-xs));
 		    }
 		    
-		    @include breakpoint(mobile) {
+		    /*@include breakpoint(mobile) {
 			    @include responsive-font-size(strip-units($f-size));
-		    }
+		    }*/
 		}
 
         .product-name {
@@ -298,9 +298,9 @@ price {
             padding: 5px 0 0 0;
             border: none;
 
-            @include breakpoint(mobile) {
+            /*@include breakpoint(mobile) {
                 min-height: 0;
-            }
+            }*/
 
             a {
                 font-family: inherit;
@@ -328,7 +328,7 @@ price {
     border: none;
 	
 	&:first-child {
-		margin: 0 auto 5px auto;;
+		margin: 0 auto 15px auto;;
 		
 		.pager {
 			float: left;

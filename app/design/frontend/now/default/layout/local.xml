@@ -260,4 +260,42 @@
             <action method="setTemplate"><template>page/1column.phtml</template></action>
         </reference>
 	</review_product_list>
+	
+	<!-- Login Account Page -->    
+    <customer_account_login>
+        <reference name="root">
+	        <action method="setTemplate"><template>page/1column.phtml</template></action>
+		</reference>
+		<reference name="customer_form_login">
+			<action method="setTemplate"><template>now/persistent/customer/form/login.phtml</template></action>
+	         <block type="customer/form_register" name="persistent_customer_form_register" template="now/persistent/customer/form/register.phtml">
+		        <block type="page/html_wrapper" name="customer.form.register.fields.before" as="form_fields_before" translate="label">
+					<label>Form Fields Before</label>
+				</block>
+	         </block>
+	         <remove name="persistent.remember.me.tooltip"/>
+	         <remove name="persistent.remember.me"/>
+	    </reference>        
+    </customer_account_login>
+    
+    <!-- My Account Page -->    
+	<customer_account translate="label">
+		 <reference name="customer_account_navigation">
+            <action method="removeLinkByName"><name>billing_agreements</name></action>
+            <action method="removeLinkByName"><name>recurring_profiles</name></action>
+            <action method="removeLinkByName"><name>OAuth Customer Tokens</name></action>
+            <action method="removeLinkByName"><name>tags</name></action>
+            <action method="removeLinkByName"><name>applications</name></action>
+            <action method="removeLinkByName"><name>enterprise_customerbalance</name></action>
+            <action method="removeLinkByName"><name>invitations</name></action>
+            <action method="removeLinkByName"><name>enterprise_giftcardaccount</name></action>
+            <action method="removeLinkByName"><name>downloadable_products</name></action>
+        </reference>
+        <reference name="left">
+            <!-- Remove last compare product block. -->
+            <action method="unsetChild"><name>catalog.compare.sidebar</name></action>
+            <!-- Remove last ordered items block. -->
+            <action method="unsetChild"><name>reorder</name></action>
+        </reference>
+	</customer_account>
 </layout>
