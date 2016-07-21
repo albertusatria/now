@@ -1166,15 +1166,18 @@ var ProductMediaManager = {
     imageWrapper: null,
 
     destroyZoom: function() {
-        $j('.zoomContainer').remove();
-        $j('.product-image-gallery .gallery-image').removeData('elevateZoom');
+        //$j('.zoomContainer').remove();
+        //$j('.product-image-gallery .gallery-image').removeData('elevateZoom');
+        
+        $j('.product-image-gallery .magnify img').hide().appendTo('.product-image-gallery');
+        $j('.magnify').remove();
     },
 
     createZoom: function(image) {
         // Destroy since zoom shouldn't be enabled under certain conditions
-        /*ProductMediaManager.destroyZoom();
+        ProductMediaManager.destroyZoom();
 
-        if(
+        /*if(
             // Don't use zoom on devices where touch has been used
             PointerManager.getPointer() == PointerManager.TOUCH_POINTER_TYPE
             // Don't use zoom when screen is small, or else zoom window shows outside body
@@ -1203,6 +1206,7 @@ var ProductMediaManager = {
         }
 
         image.elevateZoom();*/
+        image.magnify();
     },
 
     swapImage: function(targetImage) {
@@ -1265,6 +1269,7 @@ var ProductMediaManager = {
 
     initZoom: function() {
         //ProductMediaManager.createZoom($j(".gallery-image.visible")); //set zoom on first image
+        ProductMediaManager.createZoom($j(".gallery-image.visible")); //set zoom on first image
     },
 
     init: function() {
@@ -1285,7 +1290,5 @@ var ProductMediaManager = {
 };
 
 $j(document).ready(function() {
-    //mod start Aydus: Disable image zoom.
     ProductMediaManager.init();
-    //mod end
 });

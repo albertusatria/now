@@ -47,6 +47,18 @@ $.widget('now.main', {
 		    }
 		    
 	    });
+	    
+	    /* Latest Store News Pop Up */
+	   $j('.store-popup .close').on('click', function(){
+		   $j('.store-popup').fadeTo('normal', 0).slideUp();
+		   sessionStorage.setItem('store-news-popup', 'hidden');
+	   });   
+	   
+	   if(sessionStorage.getItem('store-news-popup') != null) {
+		   $('.store-popup').hide();
+	   } else {
+		   $('.store-popup').show();
+	   }
     },
 
     initHomePage: function() {
