@@ -1,0 +1,8 @@
+<config>
+    <modules>
+        <Now_Customerlinks>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Now_Customerlinks>
+    </modules>
+</config>

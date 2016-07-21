@@ -12,7 +12,12 @@
                 font-style: normal;
             }
         }
-
+        
+        .col2-set .col-1,
+        .col2-set .col-2 {
+	        padding-top: 0;
+        }
+		
         .box-account {
             padding-bottom: 0;
             border-bottom-style: none;
@@ -50,20 +55,20 @@
                 p {
                     font-style: normal;
                     @include responsive-font-size(14);
-                    color: #999999;
+                    color: $c-text;
                 }
 
                 a {
                     @include responsive-font-size(12);
                     text-transform: uppercase;
                     @include global-underline();
-                    color: #666666;
+                    color: $c-text-gray;
                 }
 
                 address {
                     font-style: normal;
                     @include responsive-font-size(14);
-                    color: #999999;
+                    color: $c-text;
                 }
             }
         }

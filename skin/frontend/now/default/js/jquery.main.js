@@ -26,6 +26,27 @@ $.widget('now.main', {
     initAllPages: function() {
 	    // header search box
 	    $j('#header-search > a').headersearch();
+	    
+	    // my account
+	    $j('.link-account.loggedin').click(function(e){
+		    e.preventDefault();
+		    if($j('#header-cart').is(':visible')) {
+				$j('.header-minicart .skip-link').removeClass('skip-active');
+				$j('#header-cart').removeClass('skip-active');    
+		    }
+		    
+		    $j('#header-account').toggle(1);
+		    
+	    });
+	    
+	    
+	    // minicart 
+	    $j('.skip-cart').click(function(e){
+		    if($j('#header-account').is(':visible')) {
+				$j('#header-account').toggle(1);
+		    }
+		    
+	    });
     },
 
     initHomePage: function() {

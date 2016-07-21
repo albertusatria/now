@@ -195,6 +195,10 @@
 /*----------------------------------------------------------------------------*/
 /* Link Account
 /*----------------------------------------------------------------------------*/
+.account-link {
+	display: inline-block;
+	position: relative;
+}
 .link-account {
 	
 	&:hover {
@@ -219,4 +223,24 @@
 	        }
 	    }
 	}
+}
+#header-account {
+    border: solid 1px #ccc;
+    display: block;
+    position: absolute;
+    z-index: 99;
+    top: 32px;
+    right: 0;
+    width: 200px;
+    background: white;
+    
+    li a {
+	    @include responsive-font-size(strip-units($f-size-xs));
+	    text-transform: uppercase;
+	    
+	    &:hover {
+		    color: $c-text-gray;
+		    text-decoration: none;
+	    }
+    }
 }

@@ -17,13 +17,18 @@
         width: 63%;
         margin: 0;
         padding: 67px 0 0 0;
-
+		
+		.page-title {
+			margin-bottom: 10px;
+			padding-bottom: 0;
+		}
+		
         @include breakpoint(tablet) {
             width: auto;
             padding-top: 1.5em;
         }
 
-        @include breakpoint(mobile) {
+        /*@include breakpoint(mobile) {
 
             .col2-set {
 
@@ -39,14 +44,16 @@
                     float: none;
                 }
             }
-        }
+        }*/
 
         h2 {
-            padding: 17px 15px;
             @include base-h-font;
             @include responsive-font-size($baseHeadingFontSizeH2);
-            color: $baseHeadingColorH2;
-            background-color: $baseBackgroundColor2;
+            color: $c-text;
+            border-bottom: 1px solid #dedede;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            width: 100%;
         }
 
         h3 {
@@ -54,7 +61,7 @@
             padding: 0;
             @include responsive-font-size(14);
             text-transform: uppercase;
-            color: #999999;
+            color: $c-text;
         }
 
         .title-buttons {
@@ -70,10 +77,10 @@
                 margin-top: -1em;
                 @include button-b1();
 
-                @include breakpoint(mobile) {
+                /*@include breakpoint(mobile) {
                     position: static !important;
                     margin-top: 0;
-                }
+                }*/
             }
 
             a {
@@ -86,25 +93,25 @@
 
         .data-table {
 
-            @include breakpoint(mobile) {
+            /*@include breakpoint(mobile) {
                 @include linearize-table;
-            }
+            }*/
 
             thead {
 
                 th {
-                    padding-top: 20px;
-                    padding-bottom: 20px;
+                    padding-top: 10px;
+                    padding-bottom: 10px;
                     @include responsive-font-size(14);
                     font-weight: bold;
                     text-transform: uppercase;
-                    color: #999999;
+                    color: $c-text;
                     background-color: transparent;
 
-                    @include breakpoint(mobile) {
+                    /*@include breakpoint(mobile) {
                         padding-top: 5px;
                         padding-bottom: 10px;
-                    }
+                    }*/
                 }
             }
 
@@ -114,11 +121,11 @@
                     padding-top: 30px;
                     padding-bottom: 30px;
                     @include responsive-font-size(14);
-                    color: #666666;
+                    color: $c-text;
 
-                    @include breakpoint(mobile) {
+                    /*@include breakpoint(mobile) {
                         text-align: left !important;
-                    }
+                    }*/
 
                     em {
                         font-style: normal;
@@ -126,23 +133,23 @@
 
                     &.last {
 
-                        @include breakpoint(mobile) {
+                        /*@include breakpoint(mobile) {
                             padding-top: 1em;
                             padding-bottom: 1em;
                             @include responsive-font-size(14);
                             text-align: left;
-                            color: #666666;
-                        }
+                            color: $c-text-gray;
+                        }*/
 
                         a {
                             @include global-underline();
                         }
                     }
 
-                    @include breakpoint(mobile) {
+                    /*@include breakpoint(mobile) {
                         padding-top: 5px;
                         padding-bottom: 5px;
-                    }
+                    }*/
                 }
             }
         }
@@ -208,8 +215,7 @@
             .block-title {
                 margin-bottom: 1em;
                 @include responsive-font-size(14);
-                font-style: bold;
-                color: #154020;
+                color: $c-text;
 
                 @include breakpoint(tablet) {
                     display: none;
@@ -236,33 +242,38 @@
                         margin: 0;
                         padding: 0;
 
-                        @include breakpoint(tablet) {
+                        /*@include breakpoint(tablet) {
                             display: inline-block;
                             margin-right: 1.25em;
-                        }
+                        }*/
 
-                        @include breakpoint(mobile) {
+                        /*@include breakpoint(mobile) {
                             display: block;
                             margin-right: 0;
-                        }
+                        }*/
 
                         a {
                             @include responsive-font-size(14);
                             @include responsive-line-height(30);
-                            font-weight: normal;
+                            color: $c-text-gray;
                             font-style: normal;
-                            color: #999999;
+                            text-transform: capitalize;
+                            
+                            &:hover {
+	                            color: $c-text;
+	                            text-decoration: none;
+                            }
                         }
 
                         &.current {
 
-                            @include breakpoint(mobile) {
+                            /*@include breakpoint(mobile) {
                                 display: block;
-                            }
+                            }*/
 
                             a strong {
-                                font-weight: normal;
-                                color: #154020 !important;
+	                            @include font-family('Roboto Bold');
+                                color: $c-black;
                             }
                         }
                     }
