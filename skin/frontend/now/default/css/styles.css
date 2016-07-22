@@ -12791,6 +12791,7 @@ body .main-container {
   margin-top: 8px;
 }
 .block-layered-nav .actions {
+  clear: both;
   margin-bottom: 20px;
   text-align: right;
 }
