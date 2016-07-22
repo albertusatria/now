@@ -110,7 +110,12 @@
     
     .configurable-swatch-list {
 	    li {
+		    margin: 0 0 8px 3px !important;
 		    width: auto !important;
+		    
+		    &:nth-child(4n+1) {
+			    clear: left;
+		    }
 		    
 		    a:hover .swatch-label {
 			    border-color: $c-black !important;

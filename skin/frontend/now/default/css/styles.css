@@ -12824,7 +12824,11 @@ body .main-container {
   color: #6E6E6E;
 }
 .block-layered-nav .configurable-swatch-list li {
+  margin: 0 0 8px 3px !important;
   width: auto !important;
+}
+.block-layered-nav .configurable-swatch-list li:nth-child(4n+1) {
+  clear: left;
 }
 .block-layered-nav .configurable-swatch-list li a:hover .swatch-label {
   border-color: #000000 !important;
@@ -13384,7 +13388,7 @@ price, .price-box, .price-box .regular-price .price, .price-box .old-price .pric
   border: none;
 }
 .toolbar:first-child {
-  margin: 25px auto 15px auto;
+  margin: 18px auto 15px auto;
 }
 .toolbar:first-child .pager {
   float: left;
@@ -13401,6 +13405,8 @@ price, .price-box, .price-box .regular-price .price, .price-box .old-price .pric
   font-size: 0.75rem;
   line-height: 25px;
   line-height: 1.5625rem;
+  line-height: 35px;
+  height: 35px;
   margin-bottom: 0;
   text-transform: lowercase;
 }
@@ -13420,7 +13426,8 @@ price, .price-box, .price-box .regular-price .price, .price-box .old-price .pric
 }
 .toolbar .sorter .sort-by {
   float: right;
-  height: 25px;
+  height: 35px;
+  line-height: 35px;
   margin-right: 0;
 }
 .toolbar .sorter .sort-by label {
@@ -13827,6 +13834,12 @@ price, .price-box, .price-box .regular-price .price, .price-box .old-price .pric
 .product-view .product-collateral .collateral-tabs ul {
   list-style: disc;
   margin-left: 20px;
+}
+.product-view .product-collateral .collateral-tabs .tab-container:nth-child(2) .std, .product-view .product-collateral .collateral-tabs .tab-container:nth-child(4) .std {
+  text-transform: capitalize;
+}
+.product-view .product-collateral .collateral-tabs .tab-container:nth-child(2) .std .normal, .product-view .product-collateral .collateral-tabs .tab-container:nth-child(4) .std .normal {
+  text-transform: none;
 }
 .product-view .product-collateral .clothing-symbol {
   margin-bottom: 10px;
@@ -15865,6 +15878,9 @@ body.checkout-cart-index .col-main .cart .crosssell .product-view .block-viewed 
   padding: 0;
   text-transform: uppercase;
 }
+.sidr-class-image-guide, .sidr-class-image-guide img {
+  width: 100%;
+}
 
 /*----------------------------------------------------------------------------*/
 /* Product Review
@@ -16142,10 +16158,10 @@ body.checkout-cart-index .col-main .cart .crosssell .product-view .block-viewed 
 /* Search Result
 /*----------------------------------------------------------------------------*/
 .catalogsearch-result-index .page-title {
-  margin-top: 18px;
+  margin-top: 0;
 }
 .catalogsearch-result-index .block-layered-nav .block-content {
-  margin-top: 50px;
+  margin-top: 60px;
 }
 
 /*----------------------------------------------------------------------------*/
