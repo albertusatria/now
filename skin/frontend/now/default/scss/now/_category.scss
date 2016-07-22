@@ -200,7 +200,6 @@ price {
 
 		.product-name,
 		.product-brand {
-			@include responsive-font-size(strip-units($f-size-s));
 			@include font-family('Roboto Regular');
 			color: $c-text-gray;
 			text-align: center;
@@ -215,9 +214,9 @@ price {
 		}
 
         .product-name {
-            //min-height: 3em; // Allow product names to be 3 lines.
+	        @include responsive-font-size(strip-units($f-size-s));
             margin: 0;
-            padding: 5px 0 0 0;
+            padding: 8px 0 0 0;
             border: none;
 
             /*@include breakpoint(mobile) {
@@ -229,11 +228,16 @@ price {
                 font-size: inherit;
                 color: inherit;
                 text-decoration: inherit;
+                text-transform: capitalize;
             }
         }
         
         .product-brand {
-	        text-transform: none;
+	        @include responsive-font-size(strip-units($f-size-s) - 1);
+	        
+	        span {
+	        	text-transform: uppercase;
+	        }
         }
     }
 }

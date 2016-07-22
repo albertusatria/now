@@ -120,6 +120,10 @@
             	<type>skin_js</type>
             	<name>js/jquery.now.bestoffers.js</name>
             </action>
+            <action method="addItem">
+            	<type>skin_js</type>
+            	<name>js/jquery.now.reviewlimit.js</name>
+            </action>
             
             <action method="addItem"><type>skin_js</type><name>js/lib/modernizr.custom.min.js</name></action>
             <action method="addItem"><type>skin_js</type><name>js/lib/selectivizr.js</name></action>
@@ -196,15 +200,11 @@
         </reference>
 	</catalog_category_layered>
 	
-	<!-- Fix Swap Images on Attribute changes -->
 	<catalog_product_view>
-        <reference name="head">
-			<action method="addItem"><type>skin_js</type><script>js/lib/fixswap.js</script></action>	
-        </reference>
 		<reference name="product.info">
 			<remove name="product.description" />
 			<remove name="product.attributes" />
-			
+			<remove name="product.reviews" />
 			<block type="catalog/product_view_attributes" name="product.description.new" template="catalog/product/view/description.phtml" before="-">
                 <action method="addToParentGroup"><group>detailed_info</group></action>
                 <action method="setTitle" translate="value"><value>Product Description</value></action>
@@ -215,18 +215,17 @@
             </block>
             
             <!-- Add form review subsmission -->
-            <reference name="product.reviews">
-                <block type="review/form" name="product.review.form" as="review_form"/>
-                <block type="review/product_view_list" name="product.review.list" as="review_list" template="review/product/view/list.phtml">
-	                <block type="review/form" name="product.review.form" as="review_form">
-	                    <block type="page/html_wrapper" name="product.review.form.fields.before" as="form_fields_before" translate="label">
-	                        <label>Review Form Fields Before</label>
-	                        <action method="setMayBeInvisible"><value>1</value></action>
-	                        <action method="setElementClass"><value>rewards</value></action>
-	                    </block>
-	                </block>
-	            </block>
-            </reference>
+            <block type="page/html_pager" name="product_review_list.toolbar" />
+			<block type="review/product_view_list" name="product.review" as="review" template="review/product/view/list.phtml" after="additional">
+			    <action method="addToParentGroup"><group>detailed_info</group></action>
+			    <action method="setTitle" translate="value"><value>Reviews</value></action>
+			    <block type="review/form" name="product.review.form" as="review_form">
+			        <block type="page/html_wrapper" name="product.review.form.fields.before" as="form_fields_before" translate="label">
+			            <label>Review Form Fields Before</label>
+			            <action method="setMayBeInvisible"><value>1</value></action>
+			        </block>
+			    </block>
+			</block>
             
             <!-- CMS Block Measurement -->
 			<block type="cms/block" name="men_sizeguide_upperparts">
@@ -252,6 +251,13 @@
 			</block>
         </reference>
     </catalog_product_view>
+    
+    <!-- Fix Swap Images on Attribute changes -->
+	<PRODUCT_TYPE_configurable>
+		<reference name="head">
+			<action method="addItem"><type>skin_js</type><script>js/lib/fixswap.js</script></action>	
+        </reference>
+	</PRODUCT_TYPE_configurable>
     
     <catalogsearch_result_index>
 	    <reference name="root">

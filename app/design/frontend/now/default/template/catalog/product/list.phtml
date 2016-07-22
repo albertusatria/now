@@ -144,7 +144,7 @@
 	                    <?php
 		                    $brand = $_product->getResource()->getAttribute('brand')->getFrontend()->getValue($_product);
 		                    if($brand != "") {
-			            		echo 'By '.$brand;         
+			            		echo 'by <span>'.$brand.'</span>';
 		                    }
 		                ?>
                     </h2>
