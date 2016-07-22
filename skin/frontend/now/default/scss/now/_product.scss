@@ -395,7 +395,64 @@
 /*----------------------------------------------------------------------------*/
 
 .product-view.configurable {
-
+	
+	// Single Color Product
+	.product-singlecolor-info {
+		label {
+			display: block;
+			line-height: 1.3;
+			margin-bottom: 5px;
+		}
+		label:after {
+			@include clearfix;
+		}
+		
+		a, span, img {
+			border-radius: 50%;
+		}
+		
+		a, span:not(.swatch-detail) {
+			@include responsive-font-size(strip-units($f-size));
+			box-sizing: content-box;
+			display: block;
+			text-align: center;
+		}
+		
+		a {
+			border: 1px solid $c-black;
+			box-sizing: content-box;
+			cursor: default;
+			height: 23px;
+			margin: 0 auto;
+			width: 23px;
+			text-decoration: none;
+		}
+		
+		span:not(.swatch-detail) {
+			@include responsive-line-height(21);
+			background: #f4f4f4;
+			border: 1px solid #fff;
+			height: 21px;
+			margin: 0;
+			position: relative;
+			white-space: nowrap;
+			width: 21px;
+			text-align: center;
+		}
+		
+		.swatch-detail {
+			@include font-family('Roboto Light');
+			@include responsive-font-size(strip-units($f-size-xs));
+			padding-left: 5px;
+		}
+		
+		img {
+			left: 0;
+			top: 0;
+			position: absolute;
+		}
+	}
+	
     .product-options {
 
         dl {
