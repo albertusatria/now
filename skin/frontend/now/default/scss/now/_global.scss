@@ -176,7 +176,6 @@ body * {
 	    display: block;
 	    margin: 0 auto;
 	    position: absolute;
-	    bottom: 0;
 	    right: 0;
 	    left: 0;
 	    width: 40%;
@@ -203,6 +202,7 @@ body * {
 			    @include font-family('Roboto Medium');
 			    display: block;
 			    clear: both;
+			    margin-bottom: 20px;
 			    margin-top: 15px;
 		    }
 	    }
