@@ -459,7 +459,7 @@ Product.ConfigurableSwatches.prototype = {
 					jQuery(window).resize();
 					jQuery('.image-loading-overlay').hide();
 					jQuery('.product-image-gallery').show();
-				}, 400);
+				}, 480);
             };
         } else { // opt is null (e.g. the first option in a select "--Please Select--")
             // remove last active option from activeConfigurableOptions
