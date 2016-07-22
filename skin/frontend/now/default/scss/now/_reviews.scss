@@ -32,6 +32,11 @@
 }
 
 .product-collateral #customer-reviews {
+	.review-product-wrapper {
+		float: left;
+		width: 50%;
+	}
+	
 	dt,
 	dd {
 		display: block;
@@ -45,6 +50,70 @@
 		span {
 			display: none;
 		}
+		
+		.pager {
+			clear: both;
+			float: none;
+			margin-bottom: 25px;
+		}
+		
+		.limiter select {
+			background-position: 80% center;
+			width: 45px;
+		}
+	}
+	
+	.pages {
+		margin-bottom: 0; 
+		
+		.current {
+			@include font-family('Roboto Bold');
+			border: none;
+		}
+		
+		ol {
+			
+			li {
+				@include responsive-line-height(30);
+				display: inline-block;
+				float: none;
+				height: 30px;
+			}
+			
+			li a {
+				@include font-family('Roboto Light');
+				color: $c-text;
+			}
+			
+			li a:hover {
+				text-decoration: none;
+			}
+			
+			.next:before,
+			.previous:before {
+				margin-top: 0;
+				transform: translateY(-50%);
+			}
+			
+			.next:hover,
+			.previous:hover {
+				border: none;
+			}
+			
+			li a:hover,
+			.next:hover,
+			.previous:hover {
+				@include global-opacity-onhover(0.4,40);
+			}
+			
+			.previous:before {
+				border-right-color: $c-text;
+			}
+			
+			.next:before {
+				border-left-color: $c-text;
+			}
+		}
 	}
 	
 	.review-heading h2,
@@ -56,11 +125,6 @@
 		letter-spacing: normal;
 		text-align: left;
 		text-transform: uppercase;
-	}
-	
-	dl {
-		float: left;
-		width: 50%;
 	}
 	
 	dt {
@@ -120,7 +184,6 @@
 	
 	.form-add {
 		float: right;
-		margin-top: -30px;
 		width: 45%;
 		
 		h3 {

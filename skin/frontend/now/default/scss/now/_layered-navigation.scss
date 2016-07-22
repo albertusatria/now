@@ -76,11 +76,11 @@
     #narrow-by-list {
 
         dt {
-            margin: 13px 0 5px 0;
+            margin: 25px 0 5px 0;
             padding: 0;
             @include font-family('Roboto Medium');
-            @include responsive-font-size(strip-units($f-size-s));
-            text-transform: capitalize;
+            @include responsive-font-size(strip-units($f-size));
+            text-transform: uppercase;
 
             &:first-child {
                 margin-top: 0;

@@ -63,14 +63,6 @@ $.widget('now.main', {
 
     initHomePage: function() {
         if ($('body.cms-index-index').length) {
-	        $j("#home-bannerslider").owlCarousel({
-				navigation : true, // Show next and prev buttons
-				slideSpeed : 300,
-				pagination : false,
-				navigationText: ['<i class="fa fa-chevron-left" aria-hidden="true"></i>','<i class="fa fa-chevron-right" aria-hidden="true"></i>'],
-				singleItem: true,
-				autoPlay: 4000
-			});
 			
 			// Best Offers Overlay Effect
 			$j('.promo-content').bestoffers();
@@ -105,14 +97,18 @@ $.widget('now.main', {
 		        $.sidr('close', 'sidr-size');
 			});
 			
+			// trigger slide to rating section when rating link clicked
 			$j(".ratings-amount").click(function() {
 				var attrID = $j(this).attr('href');
 				$j('.toggle-tabs li.last').trigger('click');
 				$j('html, body').animate({ scrollTop:$(attrID).offset().top}, 500);
 			});
+			
+			
+			$j(document).reviewlimit();
         }
     },
-
+    
     initSearchPage: function() {
 
         if ($('body.catalogsearch-result-index').length) {
