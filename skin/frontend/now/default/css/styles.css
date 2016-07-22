@@ -15417,6 +15417,59 @@ price, .price-box, .price-box .regular-price .price, .price-box .old-price .pric
 /*----------------------------------------------------------------------------*/
 /* Product: Configurable
 /*----------------------------------------------------------------------------*/
+.product-view.configurable .product-singlecolor-info label {
+  display: block;
+  line-height: 1.3;
+  margin-bottom: 5px;
+}
+.product-view.configurable .product-singlecolor-info label:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+.product-view.configurable .product-singlecolor-info a, .product-view.configurable .product-singlecolor-info span, .product-view.configurable .product-singlecolor-info img {
+  border-radius: 50%;
+}
+.product-view.configurable .product-singlecolor-info a, .product-view.configurable .product-singlecolor-info span:not(.swatch-detail) {
+  font-size: 14px;
+  font-size: 0.875rem;
+  box-sizing: content-box;
+  display: block;
+  text-align: center;
+}
+.product-view.configurable .product-singlecolor-info a {
+  border: 1px solid #000000;
+  box-sizing: content-box;
+  cursor: default;
+  height: 23px;
+  margin: 0 auto;
+  width: 23px;
+  text-decoration: none;
+}
+.product-view.configurable .product-singlecolor-info span:not(.swatch-detail) {
+  line-height: 21px;
+  line-height: 1.3125rem;
+  background: #f4f4f4;
+  border: 1px solid #fff;
+  height: 21px;
+  margin: 0;
+  position: relative;
+  white-space: nowrap;
+  width: 21px;
+  text-align: center;
+}
+.product-view.configurable .product-singlecolor-info .swatch-detail {
+  font-family: 'Roboto';
+  font-weight: 300;
+  font-size: 12px;
+  font-size: 0.75rem;
+  padding-left: 5px;
+}
+.product-view.configurable .product-singlecolor-info img {
+  left: 0;
+  top: 0;
+  position: absolute;
+}
 .product-view.configurable .product-options dl {
   clear: both;
   display: inline-block;

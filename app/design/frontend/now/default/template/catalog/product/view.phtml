@@ -78,6 +78,22 @@
                 <div class="extra-info">
                     <?php echo $this->getChildHtml('product_type_availability'); ?>
                 </div>
+                
+                <!-- Product Color if attr "color" return only 1 -->
+                <?php
+	                $color = $_product->getResource()->getAttribute('color')->getFrontend()->getValue($_product);
+	                if($color !="" && $color != "No") {
+		                $colorSwatches = str_replace(' ', '-', strtolower($color));
+	                ?>
+	                
+	                <div class="product-singlecolor-info">
+		                <label><?php echo $this->__('Color : ');?><span class="swatch-detail"><?php echo $color;?></span></label>
+		                <a href="javascript:;">
+			                <span><img src="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA).'wysiwyg/swatches/'.$colorSwatches.'.png'?>" alt="swatches_<?php echo $colorSwatches;?>" />
+		                </a>
+	                </div>
+	                
+                <?php } ?>
 
                 <?php echo $this->getChildHtml('alert_urls') ?>
 
