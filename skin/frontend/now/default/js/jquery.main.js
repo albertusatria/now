@@ -24,6 +24,7 @@ $.widget('now.main', {
     },
 
     initAllPages: function() {
+	    
 	    // header search box
 	    $j('#header-search > a').headersearch();
 	    

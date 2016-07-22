@@ -705,4 +705,8 @@
 			text-transform: uppercase;
 		}
 	}	
+	&-image-guide,
+	&-image-guide img {
+		width: 100%;
+	}
 }

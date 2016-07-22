@@ -44,6 +44,17 @@
 		    list-style: disc;
 		    margin-left: 20px;
 	    }
+	    
+	    .tab-container {
+		    &:nth-child(2) .std,
+		    &:nth-child(4) .std {
+			    text-transform: capitalize;
+			    
+			    .normal {
+				    text-transform: none;
+			    }
+		    }
+	    }
     }
     
     
