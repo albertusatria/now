@@ -12774,10 +12774,20 @@ body .main-container {
   cursor: pointer;
 }
 .block-layered-nav .currently ol li .btn-remove:hover {
-  background-color: inherit;
+  background-color: transparent;
+}
+.block-layered-nav .currently ol li .btn-remove:hover:after {
+  color: #000000;
 }
 .block-layered-nav .currently ol li .btn-remove:after {
-  content: '';
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: 16;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #a7a7a7;
+  content: '\f147';
   margin-top: 8px;
 }
 .block-layered-nav .actions {
