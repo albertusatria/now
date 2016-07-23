@@ -51,7 +51,13 @@
 			    text-transform: capitalize;
 			    
 			    .normal {
+				    @include responsive-line-height(18);
+				    margin-top: 15px;
 				    text-transform: none;
+				    
+				    p {
+					    margin-bottom: 2px;
+				    }
 			    }
 		    }
 	    }
