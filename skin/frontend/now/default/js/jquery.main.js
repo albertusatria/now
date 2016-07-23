@@ -149,6 +149,11 @@ $.widget('now.main', {
     initCmsPage: function() {
 
         if ($('body.cms-page-view').length) {
+	        
+	        // cms faq
+	        if( $('body.cms-faq').length) {
+		        $('.std .faqs h2').faq();   
+	        }
         }
     }
 });
