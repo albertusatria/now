@@ -24,14 +24,7 @@ body.customer-account-login {
 			.form-list {
 				margin-top: 20px;
 				
-				&:after {
-	                @include responsive-font-size(strip-units($f-size-xxs));
-	                color: #b90303;
-	                content: "* Required Fields";
-	                display: block;
-	                margin-top: 5px;
-	                text-transform: uppercase;
-                }
+				@include base-required-fields;
 			}
 			
             .buttons-set {

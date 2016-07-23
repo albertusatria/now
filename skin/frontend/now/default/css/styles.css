@@ -5857,30 +5857,6 @@ body.newsletter-manage-index .my-account .form-list {
 }
 
 /* ============================================ *
- * Contacts
- * ============================================ */
-.contacts-index-index .buttons-set {
-  margin-left: 20px;
-  max-width: 435px;
-}
-.contacts-index-index .buttons-set p.required {
-  float: left;
-}
-@media only screen and (max-width: 640px) {
-  .contacts-index-index .buttons-set {
-    max-width: 330px;
-    margin-left: 0;
-  }
-  .contacts-index-index .buttons-set button {
-    float: left;
-    margin-left: 0px;
-  }
-  .contacts-index-index .buttons-set p.required {
-    float: right;
-  }
-}
-
-/* ============================================ *
  * PayPal
  * ============================================ */
 @media only screen and (max-width: 867px) and (min-width: 768px) {
@@ -8172,7 +8148,7 @@ a {
 /* Variables
 /*----------------------------------------------------------------------------*/
 /*----------------------------------------------------------------------------*/
-/* Page Styles Mixin. Try to keep all major page styles here. Customize for each project as needed.
+/* Page Styles Mixin. Try to keep all major page styles here.
 /*----------------------------------------------------------------------------*/
 /*----------------------------------------------------------------------------*/
 /* Base Mixins.
@@ -8183,9 +8159,6 @@ a {
 /*----------------------------------------------------------------------------*/
 /* Shopping Cart
 /*----------------------------------------------------------------------------*/
-body.checkout-cart-index .col-main {
-  padding-top: 20px;
-}
 body.checkout-cart-index .col-main .page-title {
   margin: 0 0 20px 0;
   padding: 0;
@@ -8198,6 +8171,7 @@ body.checkout-cart-index .col-main .page-title h1 {
   text-transform: uppercase;
   font-size: 28px;
   font-size: 1.75rem;
+  border-bottom: none !important;
   padding: 0;
   text-align: left;
   border-style: none;
@@ -8903,7 +8877,6 @@ body.checkout-cart-index .col-main .cart .crosssell .actions {
 body.checkout-onepage-index .col-main {
   float: left;
   width: 75%;
-  padding-top: 20px;
   /*@include breakpoint(max, $tabletWidthLandscape - 1) {
       float: none;
       width: auto;
@@ -8921,6 +8894,7 @@ body.checkout-onepage-index .col-main .page-title h1 {
   text-transform: uppercase;
   font-size: 28px;
   font-size: 1.75rem;
+  border-bottom: none !important;
   padding: 0;
   text-align: left;
   border-style: none;
@@ -9189,14 +9163,13 @@ body.checkout-onepage-index .col-main .opc .section #checkout-step-shipping .but
 }
 body.checkout-onepage-index .col-main .opc .section #checkout-step-billing .buttons-set:after,
 body.checkout-onepage-index .col-main .opc .section #checkout-step-shipping .buttons-set:after {
-  font-size: 12px;
-  font-size: 0.75rem;
+  font-size: 10px;
+  font-size: 0.625rem;
+  color: #b90303;
+  content: "* Required Fields";
+  display: block;
+  margin-top: 5px;
   text-transform: uppercase;
-  color: #7f1212;
-  content: '*Required Fields';
-  float: none !important;
-  margin-bottom: 0 !important;
-  padding-top: 5px;
 }
 body.checkout-onepage-index .col-main .opc .section #checkout-step-billing .buttons-set button,
 body.checkout-onepage-index .col-main .opc .section #checkout-step-shipping .buttons-set button {
@@ -9339,14 +9312,13 @@ body.checkout-onepage-index .col-main .opc .section #checkout-step-payment .butt
   border-top-style: none;
 }
 body.checkout-onepage-index .col-main .opc .section #checkout-step-payment .buttons-set:after {
-  font-size: 12px;
-  font-size: 0.75rem;
+  font-size: 10px;
+  font-size: 0.625rem;
+  color: #b90303;
+  content: "* Required Fields";
+  display: block;
+  margin-top: 5px;
   text-transform: uppercase;
-  color: #7f1212;
-  content: '*Required Fields';
-  float: none !important;
-  margin-bottom: 0 !important;
-  padding-top: 5px;
 }
 body.checkout-onepage-index .col-main .opc .section #checkout-step-payment .buttons-set button {
   width: 180px;
@@ -9862,7 +9834,6 @@ body.checkout-onepage-index .col-right .opc-block-progress .block-content dl .bu
 /*----------------------------------------------------------------------------*/
 body.checkout-onepage-success .col-main {
   min-height: 460px;
-  padding-top: 20px;
   text-align: left;
 }
 body.checkout-onepage-success .col-main .page-title {
@@ -9877,6 +9848,7 @@ body.checkout-onepage-success .col-main .page-title h1 {
   text-transform: uppercase;
   font-size: 28px;
   font-size: 1.75rem;
+  border-bottom: none !important;
   padding: 0;
   text-align: left;
   border-style: none;
@@ -10025,9 +9997,6 @@ body.checkout-onepage-success .col-main .buttons-set > a:hover {
 /*----------------------------------------------------------------------------*/
 /* Login & Register
 /*----------------------------------------------------------------------------*/
-body.customer-account-login .col-main {
-  padding-top: 20px;
-}
 body.customer-account-login .col-main .page-title {
   margin: 0 0 20px 0;
   padding: 0;
@@ -10040,6 +10009,7 @@ body.customer-account-login .col-main .page-title h1 {
   text-transform: uppercase;
   font-size: 28px;
   font-size: 1.75rem;
+  border-bottom: none !important;
   padding: 0;
   text-align: left;
   border-style: none;
@@ -10056,6 +10026,7 @@ body.customer-account-login .col-main .col2-set h1 {
   text-transform: uppercase;
   font-size: 28px;
   font-size: 1.75rem;
+  border-bottom: none !important;
   padding: 0;
   text-align: left;
   border-style: none;
@@ -10178,7 +10149,6 @@ body.customer-account-login .col-main .col2-set .account-create .form-list .cont
 /* Logout
 /*----------------------------------------------------------------------------*/
 body.customer-account-logoutsuccess .col-main {
-  padding-top: 20px;
   padding-top: 40px;
 }
 body.customer-account-logoutsuccess .col-main .page-title {
@@ -10193,6 +10163,7 @@ body.customer-account-logoutsuccess .col-main .page-title h1 {
   text-transform: uppercase;
   font-size: 28px;
   font-size: 1.75rem;
+  border-bottom: none !important;
   padding: 0;
   text-align: left;
   border-style: none;
@@ -10207,7 +10178,6 @@ body.customer-account-logoutsuccess .col-main .page-title {
 /*----------------------------------------------------------------------------*/
 body.customer-account-forgotpassword .col-main,
 body.customer-account-confirmation .col-main {
-  padding-top: 20px;
   padding-top: 40px;
 }
 body.customer-account-forgotpassword .col-main .page-title,
@@ -10224,6 +10194,7 @@ body.customer-account-confirmation .col-main .page-title h1 {
   text-transform: uppercase;
   font-size: 28px;
   font-size: 1.75rem;
+  border-bottom: none !important;
   padding: 0;
   text-align: left;
   border-style: none;
@@ -10331,7 +10302,6 @@ body.customer-account-confirmation .col-main .buttons-set button span span:hover
 /* Reset Password
 /*----------------------------------------------------------------------------*/
 body.customer-account-resetpassword .col-main {
-  padding-top: 20px;
   padding-top: 40px;
 }
 body.customer-account-resetpassword .col-main .page-title {
@@ -10346,6 +10316,7 @@ body.customer-account-resetpassword .col-main .page-title h1 {
   text-transform: uppercase;
   font-size: 28px;
   font-size: 1.75rem;
+  border-bottom: none !important;
   padding: 0;
   text-align: left;
   border-style: none;
@@ -10424,7 +10395,6 @@ body.customer-account-resetpassword .col-main .buttons-set button span span:hove
 /* 404 Page Not Found Error
 /*----------------------------------------------------------------------------*/
 body.cms-index-noroute .col-main {
-  padding-top: 20px;
   padding-top: 40px;
 }
 body.cms-index-noroute .col-main .page-title {
@@ -10439,6 +10409,7 @@ body.cms-index-noroute .col-main .page-title h1 {
   text-transform: uppercase;
   font-size: 28px;
   font-size: 1.75rem;
+  border-bottom: none !important;
   padding: 0;
   text-align: left;
   border-style: none;
@@ -10462,7 +10433,6 @@ body.cms-index-noroute .col-main .std ul {
 /* 503 Service Unavailable
 /*----------------------------------------------------------------------------*/
 body.cms-service-unavailable .col-main {
-  padding-top: 20px;
   padding-top: 40px;
 }
 body.cms-service-unavailable .col-main .page-title {
@@ -10477,6 +10447,7 @@ body.cms-service-unavailable .col-main .page-title h1 {
   text-transform: uppercase;
   font-size: 28px;
   font-size: 1.75rem;
+  border-bottom: none !important;
   padding: 0;
   text-align: left;
   border-style: none;
@@ -10499,9 +10470,6 @@ body.cms-service-unavailable .col-main .std ul {
 /*----------------------------------------------------------------------------*/
 /* Paypal Express Review Order
 /*----------------------------------------------------------------------------*/
-body.paypal-express-review .col-main {
-  padding-top: 20px;
-}
 body.paypal-express-review .col-main .page-title {
   margin: 0 0 20px 0;
   padding: 0;
@@ -10514,6 +10482,7 @@ body.paypal-express-review .col-main .page-title h1 {
   text-transform: uppercase;
   font-size: 28px;
   font-size: 1.75rem;
+  border-bottom: none !important;
   padding: 0;
   text-align: left;
   border-style: none;
@@ -10658,6 +10627,46 @@ body.paypal-express-review .col-main .buttons-set button span span:hover {
   color: #666666;
 }
 
+/* ============================================ *
+ * Contacts
+ * ============================================ */
+.contacts-index-index .page-title {
+  margin: 0 0 20px 0;
+  padding: 0;
+}
+.contacts-index-index .page-title h1 {
+  font-family: 'Roboto';
+  font-weight: 500;
+  color: #000000;
+  margin: 0 auto;
+  text-transform: uppercase;
+  font-size: 28px;
+  font-size: 1.75rem;
+  border-bottom: none !important;
+  padding: 0;
+  text-align: left;
+  border-style: none;
+}
+.contacts-index-index .form-validate {
+  margin-bottom: 120px;
+}
+.contacts-index-index .form-list:after {
+  font-size: 10px;
+  font-size: 0.625rem;
+  color: #b90303;
+  content: "* Required Fields";
+  display: block;
+  margin-top: 5px;
+  text-transform: uppercase;
+}
+.contacts-index-index .buttons-set {
+  margin-left: 0;
+  max-width: inherit;
+}
+.contacts-index-index .buttons-set p.required {
+  display: none;
+}
+
 /*----------------------------------------------------------------------------*/
 /* Customer Account: All
 /*----------------------------------------------------------------------------*/
@@ -10670,7 +10679,6 @@ body.paypal-express-review .col-main .buttons-set button span span:hover {
   }
 }
 .customer-account .col-main {
-  padding-top: 20px;
   padding-top: 40px;
   width: 63%;
   margin: 0;
@@ -10705,6 +10713,7 @@ body.paypal-express-review .col-main .buttons-set button span span:hover {
   text-transform: uppercase;
   font-size: 28px;
   font-size: 1.75rem;
+  border-bottom: none !important;
   padding: 0;
   text-align: left;
   border-style: none;
@@ -11109,14 +11118,13 @@ body.customer-address-index .col-main p a:hover {
 /* Customer Account: Add New Address
 /*----------------------------------------------------------------------------*/
 body.customer-address-form .col-main .buttons-set:after {
-  font-size: 12px;
-  font-size: 0.75rem;
+  font-size: 10px;
+  font-size: 0.625rem;
+  color: #b90303;
+  content: "* Required Fields";
+  display: block;
+  margin-top: 5px;
   text-transform: uppercase;
-  color: #7f1212;
-  content: '*Required Fields';
-  float: none !important;
-  margin-bottom: 0 !important;
-  padding-top: 5px;
 }
 
 /*----------------------------------------------------------------------------*/
@@ -11126,14 +11134,13 @@ body.customer-account-edit .col-main li.customer-user-attributes {
   list-style: none;
 }
 body.customer-account-edit .col-main .buttons-set:after {
-  font-size: 12px;
-  font-size: 0.75rem;
+  font-size: 10px;
+  font-size: 0.625rem;
+  color: #b90303;
+  content: "* Required Fields";
+  display: block;
+  margin-top: 5px;
   text-transform: uppercase;
-  color: #7f1212;
-  content: '*Required Fields';
-  float: none !important;
-  margin-bottom: 0 !important;
-  padding-top: 5px;
 }
 
 /*----------------------------------------------------------------------------*/
@@ -16240,18 +16247,22 @@ body.checkout-cart-index .col-main .cart .crosssell .product-view .block-viewed 
   margin-bottom: 120px;
 }
 
-.catalogsearch-advanced-index .legend {
+.catalogsearch-advanced-index .legend,
+.contacts-index-index .legend {
   display: none;
 }
-.catalogsearch-advanced-index .advanced-search {
+.catalogsearch-advanced-index .advanced-search,
+.contacts-index-index .advanced-search {
   background: none;
   border: none;
   padding: 0;
 }
-.catalogsearch-advanced-index .buttons-set {
+.catalogsearch-advanced-index .buttons-set,
+.contacts-index-index .buttons-set {
   border: none;
 }
-.catalogsearch-advanced-index .buttons-set button {
+.catalogsearch-advanced-index .buttons-set button,
+.contacts-index-index .buttons-set button {
   width: 150px;
   height: 30px;
   font-size: 16px;
@@ -16272,11 +16283,13 @@ body.checkout-cart-index .col-main .cart .crosssell .product-view .block-viewed 
   text-transform: uppercase;
   float: left;
 }
-.catalogsearch-advanced-index .buttons-set button:hover {
+.catalogsearch-advanced-index .buttons-set button:hover,
+.contacts-index-index .buttons-set button:hover {
   color: #ffffff;
   background-color: #505050;
 }
-.catalogsearch-advanced-index .buttons-set button span {
+.catalogsearch-advanced-index .buttons-set button span,
+.contacts-index-index .buttons-set button span {
   width: auto;
   height: auto !important;
   padding: 0 !important;
@@ -16287,7 +16300,8 @@ body.checkout-cart-index .col-main .cart .crosssell .product-view .block-viewed 
   color: inherit;
   background-image: none;
 }
-.catalogsearch-advanced-index .buttons-set button span span {
+.catalogsearch-advanced-index .buttons-set button span span,
+.contacts-index-index .buttons-set button span span {
   width: auto;
   height: auto !important;
   padding: 0 !important;
@@ -16298,7 +16312,8 @@ body.checkout-cart-index .col-main .cart .crosssell .product-view .block-viewed 
   background-image: none;
   color: inherit;
 }
-.catalogsearch-advanced-index .buttons-set button span span:hover {
+.catalogsearch-advanced-index .buttons-set button span span:hover,
+.contacts-index-index .buttons-set button span span:hover {
   color: #ffffff;
   text-decoration: none;
 }
