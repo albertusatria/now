@@ -112,47 +112,55 @@ $.widget('now.main', {
     
     initSearchPage: function() {
 
-        if ($('body.catalogsearch-result-index').length) {
+        if ($j('body.catalogsearch-result-index').length) {
         }
     },
 
     initCategorySearchPage: function() {
 
-        if ($('body.catalog-category-view').length || $('body.catalogsearch-result-index').length) {
+        if ($j('body.catalog-category-view').length || $('body.catalogsearch-result-index').length) {
         }
     },
 
     initShoppingCartPage: function() {
 
-        if ($('body.checkout-cart-index').length) {
+        if ($j('body.checkout-cart-index').length) {
         }
     },
 
     initCheckoutPage: function() {
 
-        if ($('body.checkout-onepage-index').length) {
+        if ($j('body.checkout-onepage-index').length) {
         }
     },
 
     initRegisterPage: function() {
 
-        if ($('body.customer-account-create').length) {
+        if ($j('body.customer-account-create').length) {
         }
     },
 
     initCustomerPage: function() {
 
-        if ($('body.customer-account').length) {
+        if ($j('body.customer-account').length) {
         }
     },
 
     initCmsPage: function() {
 
-        if ($('body.cms-page-view').length) {
+        if ($j('body.cms-page-view').length) {
 	        
 	        // cms faq
-	        if( $('body.cms-faq').length) {
-		        $('.std .faqs h2').faq();   
+	        if( $j('body.cms-faq').length) {
+		        $j('.std .faqs h2').faq();   
+		        
+		        // Check if #return present and redirect
+		        // if present redirect to "return & cancellation" section
+		        var isReturn = window.location.hash.substr(1);
+		        if(isReturn == "returns" || isReturn == "returns/") {
+			        $j("html, body").animate({scrollTop: $j('#returns').offset().top }, 2000);
+			        $j('#returns h2').addClass('poo').trigger('click');
+		        }
 	        }
         }
     }
