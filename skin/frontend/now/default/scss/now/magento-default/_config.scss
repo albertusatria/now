@@ -25,11 +25,10 @@ $baseHeadingFontSizeH3: 16;
 
 
 /*----------------------------------------------------------------------------*/
-/* Page Styles Mixin. Try to keep all major page styles here. Customize for each project as needed.
+/* Page Styles Mixin. Try to keep all major page styles here.
 /*----------------------------------------------------------------------------*/
 
 @mixin magento-default-page {
-    padding-top: $basePagePaddingTop;
 
     @include breakpoint(mobile) {
         //padding-top: $basePagePaddingTopTablet;
@@ -62,6 +61,7 @@ $baseHeadingFontSizeH3: 16;
     h1 {
         @include base-h-font;
         @include responsive-font-size(strip-units($f-size-xl) + 8);
+        border-bottom: none !important;
         padding: 0;
         text-align: left;
         border-style: none;
@@ -78,12 +78,11 @@ $baseHeadingFontSizeH3: 16;
 
 @mixin base-required-fields {
     &:after {
-        @include responsive-font-size(12);
-        text-transform: uppercase;
-        color: #7f1212;
-        content: '*Required Fields';
-        float: none !important;
-        margin-bottom: 0 !important;
-        padding-top: 5px;
+       @include responsive-font-size(strip-units($f-size-xxs));
+	    color: #b90303;
+	    content: "* Required Fields";
+	    display: block;
+	    margin-top: 5px;
+	    text-transform: uppercase;
     }
 }

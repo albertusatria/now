@@ -162,23 +162,8 @@
                 <action method="setBlockId"><block_id>footer_customerinfo_links</block_id></action>
             </block>
 			
-			<block type="page/template_links" name="footer_quicklinks" as="footer_quicklinks" template="page/template/links.phtml">
-                <action method="setTitle"><title>Quick Links</title></action>
-                <action method="addLink" translate="label title" module="catalog" ifconfig="catalog/seo/site_map">
-	                <label>Site Map</label>
-	                <url helper="catalog/map/getCategoryUrl" />
-	                <title>Site Map</title>
-	            </action>
-	            <action method="addLink" translate="label title" module="catalogsearch">
-	                <label>Advanced Search</label>
-	                <url helper="catalogsearch/getAdvancedSearchUrl" />
-	                <title>Advanced Search</title>
-	            </action>
-	            <action method="addLink" translate="label title">
-	                <label>Contact Us</label>
-	                <url>contacts</url>
-	                <title>Contact Us</title>
-	            </action>
+			<block type="cms/block" name="footer_quicklinks">
+                <action method="setBlockId"><block_id>footer_quicklinks</block_id></action>
             </block>
             
             <block type="cms/block" name="footer_aboutus_links">
@@ -324,4 +309,29 @@
             <action method="unsetChild"><name>reorder</name></action>
         </reference>
 	</customer_account>
+	
+	<contacts_index_index>
+		<reference name="root">
+            <action method="setTemplate"><template>page/1column.phtml</template></action>
+        </reference>
+        <!-- Add breadcrumbs. -->
+        <reference name="breadcrumbs">
+            <action method="addCrumb">
+                <crumbName>home</crumbName>
+                <crumbInfo>
+                    <label>Home</label>
+                    <title>Go to Home Page</title>
+                    <link>/</link>
+                </crumbInfo>
+            </action>
+            <action method="addCrumb">
+                <crumbName>contacts</crumbName>
+                <crumbInfo>
+                    <label>Contact Us</label>
+                    <title>Contact Us</title>
+                    <link>/contacts</link>
+                </crumbInfo>
+            </action>
+        </reference>
+	</contacts_index_index>
 </layout>
