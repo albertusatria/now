@@ -166,6 +166,10 @@
 		color: $c-text;
 	}
 	
+	h2 {
+		@include responsive-font-size(strip-units($f-size-xl));
+	}
+	
 }
 
 /*----------------------------------------------------------------------------*/
@@ -176,16 +180,25 @@
 		@include font-family('Roboto Bold');
 		color: $c-text;
 	}	
+	
+	h2 {
+		@include responsive-font-size(strip-units($f-size-xl));
+	}
 }
 
 /*----------------------------------------------------------------------------*/
 /* CMS : FAQs
 /*----------------------------------------------------------------------------*/
 .cms-faq {
-	.col-left.sidebar ul li a.faq {
+	.col-left.sidebar ul li a.active.faq {
 		@include font-family('Roboto Bold');
 		color: $c-text;
 	}	
+	
+	.col-left.sidebar ul li a.returns.active {
+		@include font-family('Roboto Bold');
+		color: $c-text;
+	}
 	
 	.faqs {
 		list-style: none;
@@ -233,4 +246,101 @@
 			}
 		}
 	}
+}
+
+/*----------------------------------------------------------------------------*/
+/* CMS : Shipping & Delivery
+/*----------------------------------------------------------------------------*/
+.cms-shipping-information {
+	
+	h2 {
+		@include responsive-font-size(strip-units($f-size-xl));
+	}
+	
+	.col-left.sidebar ul li a.shipping-info {
+		@include font-family('Roboto Bold');
+		color: $c-text;
+	}
+	
+	.section ul {
+		list-style: decimal;
+	}	
+}
+
+/*----------------------------------------------------------------------------*/
+/* CMS : Size Measurement
+/*----------------------------------------------------------------------------*/
+.cms-size-measurement {
+	.col-left.sidebar ul li a.size-measurement {
+		@include font-family('Roboto Bold');
+		color: $c-text;
+	}
+	
+	.sizeguide {
+		margin: 10px 0 40px 0;
+		display: block;
+		overflow: auto;
+		
+		h6 {
+			@include font-family('Roboto Regular');
+			@include responsive-font-size(strip-units($f-size-xl));
+			background: $c-black;
+			color: $c-white;
+			display: block;
+			position: relative;
+			text-align: center;
+			z-index: 9;
+		}
+		
+		img {
+			display: block;
+			margin: -25px auto 0 auto;
+			position: relative;
+			width: 65%;
+			z-index: 1;
+		}
+		
+		.measurement-guide {
+			float: left;
+			margin: 25px 0 0 15px;
+			width: 55%;
+			
+			table {
+				cursor: default;
+				width: 100%;
+			}	
+			tr:hover {
+				background-color: #efefef;
+			}
+			td {
+				@include font-family('Roboto Light');
+				@include responsive-font-size(strip-units($f-size-xs));
+				padding: 5px 0;
+			}
+		}
+		
+		.table-header {
+			border-bottom: 1px solid $c-text-gray;
+			
+			&:hover {
+				background-color: transparent !important;
+			}
+			
+			td {
+				@include font-family('Roboto Medium');
+				@include responsive-font-size(strip-units($f-size));	
+				padding: 0;
+				text-transform: uppercase;
+			}
+		}
+		
+		.image-guide {
+			float: right;
+			width: 40%;
+		}
+		
+		&:after {
+			@include clearfix;
+		}
+	}	
 }

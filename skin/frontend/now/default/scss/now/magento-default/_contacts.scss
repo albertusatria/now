@@ -34,8 +34,16 @@
 		margin-bottom: 120px;
 	}
 	
+	p.required {
+		display: none;
+	}
+	
 	.form-list {
 		@include base-required-fields;
+	}
+	
+	#comment {
+		height: 80px;
 	}
 	
     .buttons-set {

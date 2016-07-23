@@ -158,8 +158,11 @@ $.widget('now.main', {
 		        // if present redirect to "return & cancellation" section
 		        var isReturn = window.location.hash.substr(1);
 		        if(isReturn == "returns" || isReturn == "returns/") {
+			        $j('.col-left.sidebar ul li').removeClass('active');
+			        $j('.col-left.sidebar li .returns').addClass('active');
 			        $j("html, body").animate({scrollTop: $j('#returns').offset().top }, 2000);
-			        $j('#returns h2').addClass('poo').trigger('click');
+		        } else {
+			        $j('.col-left.sidebar .faq').addClass('active');
 		        }
 	        }
         }

@@ -10650,6 +10650,9 @@ body.paypal-express-review .col-main .buttons-set button span span:hover {
 .contacts-index-index .form-validate {
   margin-bottom: 120px;
 }
+.contacts-index-index p.required {
+  display: none;
+}
 .contacts-index-index .form-list:after {
   font-size: 10px;
   font-size: 0.625rem;
@@ -10658,6 +10661,9 @@ body.paypal-express-review .col-main .buttons-set button span span:hover {
   display: block;
   margin-top: 5px;
   text-transform: uppercase;
+}
+.contacts-index-index #comment {
+  height: 80px;
 }
 .contacts-index-index .buttons-set {
   margin-left: 0;
@@ -16532,6 +16538,10 @@ body.checkout-cart-index .col-main .cart .crosssell .product-view .block-viewed 
   font-weight: 700;
   color: #000000;
 }
+.cms-privacy-policy h2 {
+  font-size: 20px;
+  font-size: 1.25rem;
+}
 
 /*----------------------------------------------------------------------------*/
 /* CMS : Terms & Conditions
@@ -16541,11 +16551,20 @@ body.checkout-cart-index .col-main .cart .crosssell .product-view .block-viewed 
   font-weight: 700;
   color: #000000;
 }
+.cms-terms-conditions h2 {
+  font-size: 20px;
+  font-size: 1.25rem;
+}
 
 /*----------------------------------------------------------------------------*/
 /* CMS : FAQs
 /*----------------------------------------------------------------------------*/
-.cms-faq .col-left.sidebar ul li a.faq {
+.cms-faq .col-left.sidebar ul li a.active.faq {
+  font-family: 'Roboto';
+  font-weight: 700;
+  color: #000000;
+}
+.cms-faq .col-left.sidebar ul li a.returns.active {
   font-family: 'Roboto';
   font-weight: 700;
   color: #000000;
@@ -16585,6 +16604,97 @@ body.checkout-cart-index .col-main .cart .crosssell .product-view .block-viewed 
 }
 .cms-faq .faqs > li .faq-content p:not(:first-child) {
   margin-top: 20px;
+}
+
+/*----------------------------------------------------------------------------*/
+/* CMS : Shipping & Delivery
+/*----------------------------------------------------------------------------*/
+.cms-shipping-information h2 {
+  font-size: 20px;
+  font-size: 1.25rem;
+}
+.cms-shipping-information .col-left.sidebar ul li a.shipping-info {
+  font-family: 'Roboto';
+  font-weight: 700;
+  color: #000000;
+}
+.cms-shipping-information .section ul {
+  list-style: decimal;
+}
+
+/*----------------------------------------------------------------------------*/
+/* CMS : Size Measurement
+/*----------------------------------------------------------------------------*/
+.cms-size-measurement .col-left.sidebar ul li a.size-measurement {
+  font-family: 'Roboto';
+  font-weight: 700;
+  color: #000000;
+}
+.cms-size-measurement .sizeguide {
+  margin: 10px 0 40px 0;
+  display: block;
+  overflow: auto;
+}
+.cms-size-measurement .sizeguide h6 {
+  font-family: 'Roboto';
+  font-weight: 400;
+  font-size: 20px;
+  font-size: 1.25rem;
+  background: #000000;
+  color: #ffffff;
+  display: block;
+  position: relative;
+  text-align: center;
+  z-index: 9;
+}
+.cms-size-measurement .sizeguide img {
+  display: block;
+  margin: -25px auto 0 auto;
+  position: relative;
+  width: 65%;
+  z-index: 1;
+}
+.cms-size-measurement .sizeguide .measurement-guide {
+  float: left;
+  margin: 25px 0 0 15px;
+  width: 55%;
+}
+.cms-size-measurement .sizeguide .measurement-guide table {
+  cursor: default;
+  width: 100%;
+}
+.cms-size-measurement .sizeguide .measurement-guide tr:hover {
+  background-color: #efefef;
+}
+.cms-size-measurement .sizeguide .measurement-guide td {
+  font-family: 'Roboto';
+  font-weight: 300;
+  font-size: 12px;
+  font-size: 0.75rem;
+  padding: 5px 0;
+}
+.cms-size-measurement .sizeguide .table-header {
+  border-bottom: 1px solid #6E6E6E;
+}
+.cms-size-measurement .sizeguide .table-header:hover {
+  background-color: transparent !important;
+}
+.cms-size-measurement .sizeguide .table-header td {
+  font-family: 'Roboto';
+  font-weight: 500;
+  font-size: 14px;
+  font-size: 0.875rem;
+  padding: 0;
+  text-transform: uppercase;
+}
+.cms-size-measurement .sizeguide .image-guide {
+  float: right;
+  width: 40%;
+}
+.cms-size-measurement .sizeguide:after {
+  content: '';
+  display: table;
+  clear: both;
 }
 
 .header-left {
