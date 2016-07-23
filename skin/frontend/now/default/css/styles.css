@@ -8159,6 +8159,9 @@ a {
 /*----------------------------------------------------------------------------*/
 /* Shopping Cart
 /*----------------------------------------------------------------------------*/
+body.checkout-cart-index .col-main {
+  margin-top: 35px;
+}
 body.checkout-cart-index .col-main .page-title {
   margin: 0 0 20px 0;
   padding: 0;
@@ -8358,6 +8361,24 @@ body.checkout-cart-index .col-main .cart .cart-table tbody .item-options dd {
   font-weight: 700;
   margin-bottom: 0;
   text-transform: uppercase;
+}
+body.checkout-cart-index .col-main .cart .cart-table tbody .cart-links li {
+  display: inline-block;
+}
+body.checkout-cart-index .col-main .cart .cart-table tbody .cart-links li:not(:nth-last-child(1)) {
+  margin-right: 8px;
+}
+body.checkout-cart-index .col-main .cart .cart-table tbody .cart-links li a {
+  font-size: 10px;
+  font-size: 0.625rem;
+  font-style: normal;
+  color: #6E6E6E;
+  text-decoration: underline;
+}
+body.checkout-cart-index .col-main .cart .cart-table tbody .cart-links:after {
+  content: '';
+  display: table;
+  clear: both;
 }
 body.checkout-cart-index .col-main .cart .cart-table tbody .product-cart-price {
   padding-top: 0;
@@ -12781,6 +12802,7 @@ body .main-container {
 .block-layered-nav .currently ol li {
   clear: both;
   display: block;
+  margin-bottom: 8px;
 }
 .block-layered-nav .currently ol li .btn-remove {
   border: none;
@@ -16380,6 +16402,10 @@ body.checkout-cart-index .col-main .cart .crosssell .product-view .block-viewed 
 /*----------------------------------------------------------------------------*/
 /* CMS Common Styles
 /*----------------------------------------------------------------------------*/
+.cms-page-view .main-container {
+  padding: 0 20px !important;
+}
+
 .cms-page-view .main .page-title {
   margin: 0 0 20px 0;
   padding: 0;
@@ -16645,14 +16671,14 @@ body.checkout-cart-index .col-main .cart .crosssell .product-view .block-viewed 
   display: block;
   position: relative;
   text-align: center;
-  z-index: 9;
+  z-index: 1;
 }
 .cms-size-measurement .sizeguide img {
   display: block;
   margin: -25px auto 0 auto;
   position: relative;
   width: 65%;
-  z-index: 1;
+  z-index: 0;
 }
 .cms-size-measurement .sizeguide .measurement-guide {
   float: left;

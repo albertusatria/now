@@ -2,6 +2,10 @@
 /* CMS Common Styles
 /*----------------------------------------------------------------------------*/
 
+.cms-page-view .main-container {
+	padding: 0 20px !important;
+}
+
 .cms-page-view .main {
 	
 	@include magento-default-page;
@@ -289,7 +293,7 @@
 			display: block;
 			position: relative;
 			text-align: center;
-			z-index: 9;
+			z-index: 1;
 		}
 		
 		img {
@@ -297,7 +301,7 @@
 			margin: -25px auto 0 auto;
 			position: relative;
 			width: 65%;
-			z-index: 1;
+			z-index: 0;
 		}
 		
 		.measurement-guide {

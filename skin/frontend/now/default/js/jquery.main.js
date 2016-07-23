@@ -161,6 +161,7 @@ $.widget('now.main', {
 			        $j('.col-left.sidebar ul li').removeClass('active');
 			        $j('.col-left.sidebar li .returns').addClass('active');
 			        $j("html, body").animate({scrollTop: $j('#returns').offset().top }, 2000);
+			        $j('.std .faqs #returns h2').trigger('click');
 		        } else {
 			        $j('.col-left.sidebar .faq').addClass('active');
 		        }

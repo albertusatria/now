@@ -6,6 +6,7 @@ body.checkout-cart-index {
 
     .col-main {
         @include magento-default-page();
+        margin-top: 35px;
     }
 
     .col-main {
@@ -205,6 +206,26 @@ body.checkout-cart-index {
 						}
 					}
 					
+					.cart-links {
+						li {
+							display: inline-block;
+							&:not(:nth-last-child(1)) {
+								margin-right: 8px;	
+							}
+							
+							a {
+								@include responsive-font-size(10);
+		                        font-style: normal;
+		                        color: $c-text-gray;
+		                        text-decoration: underline;
+							}
+						}
+						
+						&:after {
+							@include clearfix;
+						}
+					}
+					
                     .product-cart-price {
                         padding-top: 0;
                         padding-bottom: 0;
@@ -231,10 +252,9 @@ body.checkout-cart-index {
                             display: none;
                             @include button-b2(auto, 30px);
                         }
-
-                        // Desktop edit link.
+                        
                         .cart-links {
-                            display: none;
+	                        display: none;
                         }
                     }
 
