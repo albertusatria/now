@@ -8159,6 +8159,9 @@ a {
 /*----------------------------------------------------------------------------*/
 /* Shopping Cart
 /*----------------------------------------------------------------------------*/
+body.checkout-cart-index .col-main {
+  margin-top: 35px;
+}
 body.checkout-cart-index .col-main .page-title {
   margin: 0 0 20px 0;
   padding: 0;
@@ -8358,6 +8361,24 @@ body.checkout-cart-index .col-main .cart .cart-table tbody .item-options dd {
   font-weight: 700;
   margin-bottom: 0;
   text-transform: uppercase;
+}
+body.checkout-cart-index .col-main .cart .cart-table tbody .cart-links li {
+  display: inline-block;
+}
+body.checkout-cart-index .col-main .cart .cart-table tbody .cart-links li:not(:nth-last-child(1)) {
+  margin-right: 8px;
+}
+body.checkout-cart-index .col-main .cart .cart-table tbody .cart-links li a {
+  font-size: 10px;
+  font-size: 0.625rem;
+  font-style: normal;
+  color: #6E6E6E;
+  text-decoration: underline;
+}
+body.checkout-cart-index .col-main .cart .cart-table tbody .cart-links:after {
+  content: '';
+  display: table;
+  clear: both;
 }
 body.checkout-cart-index .col-main .cart .cart-table tbody .product-cart-price {
   padding-top: 0;
@@ -10650,6 +10671,9 @@ body.paypal-express-review .col-main .buttons-set button span span:hover {
 .contacts-index-index .form-validate {
   margin-bottom: 120px;
 }
+.contacts-index-index p.required {
+  display: none;
+}
 .contacts-index-index .form-list:after {
   font-size: 10px;
   font-size: 0.625rem;
@@ -10658,6 +10682,9 @@ body.paypal-express-review .col-main .buttons-set button span span:hover {
   display: block;
   margin-top: 5px;
   text-transform: uppercase;
+}
+.contacts-index-index #comment {
+  height: 80px;
 }
 .contacts-index-index .buttons-set {
   margin-left: 0;
@@ -12775,6 +12802,7 @@ body .main-container {
 .block-layered-nav .currently ol li {
   clear: both;
   display: block;
+  margin-bottom: 8px;
 }
 .block-layered-nav .currently ol li .btn-remove {
   border: none;
@@ -16374,64 +16402,142 @@ body.checkout-cart-index .col-main .cart .crosssell .product-view .block-viewed 
 /*----------------------------------------------------------------------------*/
 /* CMS Common Styles
 /*----------------------------------------------------------------------------*/
-.cms-page-view .main h1 {
-  margin: 1em 0;
-  padding: 0;
-  font-family: 'Roboto';
-  font-weight: 700;
-  font-size: 32px;
-  font-size: 2rem;
-  font-weight: normal;
-  text-align: center;
-  text-transform: none;
-  color: #404041;
-  border: none;
+.cms-page-view .main-container {
+  padding: 0 20px !important;
 }
-.cms-page-view .main h2 {
-  margin: 2em 0 1em 0;
-  padding: 0 0 1em 0;
-  font-family: 'Roboto';
-  font-weight: 700;
-  font-size: 20px;
-  font-size: 1.25rem;
-  text-transform: none;
-  color: #404042;
-  border-bottom: 2px solid #eb464f;
-}
-.cms-page-view .main h3 {
-  margin: 2em 0 0 0;
+
+.cms-page-view .main .page-title {
+  margin: 0 0 20px 0;
   padding: 0;
+}
+.cms-page-view .main .page-title h1 {
   font-family: 'Roboto';
   font-weight: 500;
-  font-size: 20px;
-  font-size: 1.25rem;
-  text-transform: none;
-  color: #404042;
-}
-.cms-page-view .main ul,
-.cms-page-view .main ol {
-  margin: 0 0 0 2em;
-  font-size: 17px;
-  font-size: 1.0625rem;
-}
-.cms-page-view .main p {
-  margin: 0 0 1em 0;
+  color: #000000;
+  margin: 0 auto;
+  text-transform: uppercase;
+  font-size: 28px;
+  font-size: 1.75rem;
+  border-bottom: none !important;
   padding: 0;
-  font-size: 17px;
-  font-size: 1.0625rem;
-  line-height: 24px;
-  color: #404041;
+  text-align: left;
+  border-style: none;
 }
-.cms-page-view .main a {
-  color: #ee3d42;
-  text-decoration: underline;
+.cms-page-view .main small {
+  color: #e6e6e6;
+  float: right;
+}
+.cms-page-view .main h3 {
+  font-family: 'Roboto';
+  font-weight: 500;
+  display: block;
+  margin-bottom: 5px;
+  margin-top: 40px;
+}
+.cms-page-view .main h3.first {
+  margin-top: 25px;
+}
+.cms-page-view .main h3:after {
+  content: '';
+  display: table;
+  clear: both;
 }
 .cms-page-view .main img {
   max-width: 100%;
   height: auto !important;
 }
-.cms-page-view .main .breadcrumbs {
-  display: none;
+.cms-page-view .main .col-left.sidebar {
+  padding-top: 18px;
+}
+.cms-page-view .main .col-left.sidebar h6 {
+  font-family: 'Roboto';
+  font-weight: 700;
+  font-size: 14px;
+  font-size: 0.875rem;
+  color: #000000;
+  margin-bottom: 18px;
+  text-transform: uppercase;
+}
+.cms-page-view .main .col-left.sidebar ul {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+.cms-page-view .main .col-left.sidebar ul li {
+  margin-bottom: 10px;
+}
+.cms-page-view .main .col-left.sidebar ul li a {
+  font-family: 'Roboto';
+  font-weight: 400;
+  font-size: 14px;
+  font-size: 0.875rem;
+  color: #6E6E6E;
+  display: block;
+  text-decoration: none;
+  text-transform: capitalize;
+  width: 100%;
+  vertical-align: middle;
+}
+.cms-page-view .main .col-left.sidebar ul li a:hover {
+  color: #000000;
+  text-decoration: none;
+}
+.cms-page-view .main .col-main {
+  padding-top: 16px;
+}
+.cms-page-view .main .col-main h2 {
+  text-transform: capitalize;
+}
+.cms-page-view .main .col-main p {
+  font-family: 'Roboto';
+  font-weight: 300;
+  color: #6E6E6E;
+  margin-bottom: 20px;
+}
+.cms-page-view .main .col-main p a {
+  font-style: italic;
+}
+.cms-page-view .main .col-main .info {
+  margin-bottom: 5px;
+}
+.cms-page-view .main .col-main ul {
+  margin: 0 0  15px 0;
+  padding: 0;
+}
+.cms-page-view .main .col-main ul li {
+  font-family: 'Roboto';
+  font-weight: 300;
+  color: #6E6E6E;
+  margin-left: 20px;
+}
+.cms-page-view .main .col-main ul li a {
+  color: inherit;
+  font-style: italic;
+  font-weight: inherit;
+  text-decoration: underline;
+}
+.cms-page-view .main .col-main .section {
+  margin-bottom: 40px;
+}
+.cms-page-view .main .col-main .section.small {
+  margin-bottom: 20px;
+}
+.cms-page-view .main .col-main .data-table thead th {
+  background: #000000;
+  color: #ffffff;
+}
+.cms-page-view .main .col-main .data-table tbody tr:hover {
+  background: #dedede;
+}
+.cms-page-view .main .col-main .data-table tbody th,
+.cms-page-view .main .col-main .data-table tbody td {
+  font-family: 'Roboto';
+  font-weight: 300;
+  border-bottom: 1px solid #dedede;
+  color: #6E6E6E;
+}
+.cms-page-view .main .col-main .data-table tbody th {
+  background-color: transparent;
 }
 
 /*----------------------------------------------------------------------------*/
@@ -16448,6 +16554,173 @@ body.checkout-cart-index .col-main .cart .crosssell .product-view .block-viewed 
     padding-right: 0;
     padding-left: 0;
   }
+}
+
+/*----------------------------------------------------------------------------*/
+/* CMS : Privacy Policy
+/*----------------------------------------------------------------------------*/
+.cms-privacy-policy .col-left.sidebar ul li a.privacy-policy {
+  font-family: 'Roboto';
+  font-weight: 700;
+  color: #000000;
+}
+.cms-privacy-policy h2 {
+  font-size: 20px;
+  font-size: 1.25rem;
+}
+
+/*----------------------------------------------------------------------------*/
+/* CMS : Terms & Conditions
+/*----------------------------------------------------------------------------*/
+.cms-terms-conditions .col-left.sidebar ul li a.terms-conditions {
+  font-family: 'Roboto';
+  font-weight: 700;
+  color: #000000;
+}
+.cms-terms-conditions h2 {
+  font-size: 20px;
+  font-size: 1.25rem;
+}
+
+/*----------------------------------------------------------------------------*/
+/* CMS : FAQs
+/*----------------------------------------------------------------------------*/
+.cms-faq .col-left.sidebar ul li a.active.faq {
+  font-family: 'Roboto';
+  font-weight: 700;
+  color: #000000;
+}
+.cms-faq .col-left.sidebar ul li a.returns.active {
+  font-family: 'Roboto';
+  font-weight: 700;
+  color: #000000;
+}
+.cms-faq .faqs {
+  list-style: none;
+}
+.cms-faq .faqs > li {
+  border-bottom: 1px solid #dedede;
+  margin-left: 0 !important;
+  padding: 30px 0;
+}
+.cms-faq .faqs > li:first-child {
+  border-top: 1px solid #dedede;
+}
+.cms-faq .faqs > li:not(.first) .faq-content {
+  display: none;
+}
+.cms-faq .faqs > li h2 {
+  font-size: 16px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-bottom: 0;
+  text-transform: none !important;
+}
+.cms-faq .faqs > li .faq-content {
+  padding: 20px 15px 10px 15px;
+}
+.cms-faq .faqs > li .faq-content ul {
+  list-style: decimal;
+}
+.cms-faq .faqs > li .faq-content li {
+  border: none;
+}
+.cms-faq .faqs > li .faq-content p {
+  margin-bottom: 5px;
+}
+.cms-faq .faqs > li .faq-content p:not(:first-child) {
+  margin-top: 20px;
+}
+
+/*----------------------------------------------------------------------------*/
+/* CMS : Shipping & Delivery
+/*----------------------------------------------------------------------------*/
+.cms-shipping-information h2 {
+  font-size: 20px;
+  font-size: 1.25rem;
+}
+.cms-shipping-information .col-left.sidebar ul li a.shipping-info {
+  font-family: 'Roboto';
+  font-weight: 700;
+  color: #000000;
+}
+.cms-shipping-information .section ul {
+  list-style: decimal;
+}
+
+/*----------------------------------------------------------------------------*/
+/* CMS : Size Measurement
+/*----------------------------------------------------------------------------*/
+.cms-size-measurement .col-left.sidebar ul li a.size-measurement {
+  font-family: 'Roboto';
+  font-weight: 700;
+  color: #000000;
+}
+.cms-size-measurement .sizeguide {
+  margin: 10px 0 40px 0;
+  display: block;
+  overflow: auto;
+}
+.cms-size-measurement .sizeguide h6 {
+  font-family: 'Roboto';
+  font-weight: 400;
+  font-size: 20px;
+  font-size: 1.25rem;
+  background: #000000;
+  color: #ffffff;
+  display: block;
+  position: relative;
+  text-align: center;
+  z-index: 1;
+}
+.cms-size-measurement .sizeguide img {
+  display: block;
+  margin: -25px auto 0 auto;
+  position: relative;
+  width: 65%;
+  z-index: 0;
+}
+.cms-size-measurement .sizeguide .measurement-guide {
+  float: left;
+  margin: 25px 0 0 15px;
+  width: 55%;
+}
+.cms-size-measurement .sizeguide .measurement-guide table {
+  cursor: default;
+  width: 100%;
+}
+.cms-size-measurement .sizeguide .measurement-guide tr:hover {
+  background-color: #efefef;
+}
+.cms-size-measurement .sizeguide .measurement-guide td {
+  font-family: 'Roboto';
+  font-weight: 300;
+  font-size: 12px;
+  font-size: 0.75rem;
+  padding: 5px 0;
+}
+.cms-size-measurement .sizeguide .table-header {
+  border-bottom: 1px solid #6E6E6E;
+}
+.cms-size-measurement .sizeguide .table-header:hover {
+  background-color: transparent !important;
+}
+.cms-size-measurement .sizeguide .table-header td {
+  font-family: 'Roboto';
+  font-weight: 500;
+  font-size: 14px;
+  font-size: 0.875rem;
+  padding: 0;
+  text-transform: uppercase;
+}
+.cms-size-measurement .sizeguide .image-guide {
+  float: right;
+  width: 40%;
+}
+.cms-size-measurement .sizeguide:after {
+  content: '';
+  display: table;
+  clear: both;
 }
 
 .header-left {

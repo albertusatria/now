@@ -124,6 +124,10 @@
             	<type>skin_js</type>
             	<name>js/jquery.now.reviewlimit.js</name>
             </action>
+            <action method="addItem">
+            	<type>skin_js</type>
+            	<name>js/jquery.now.faq.js</name>
+            </action>
             
             <action method="addItem"><type>skin_js</type><name>js/lib/modernizr.custom.min.js</name></action>
             <action method="addItem"><type>skin_js</type><name>js/lib/selectivizr.js</name></action>
