@@ -36,6 +36,7 @@
         ol {
 
             li {
+	            @include responsive-font-size(strip-units($f-size-s));
 				clear: both;
 				display: block;
 				margin-bottom: 8px;
@@ -58,6 +59,10 @@
                         content: '\f147';
                         margin-top: 8px;
                     }
+                }
+                
+                .value {
+	                display: block;
                 }
             }
         }
