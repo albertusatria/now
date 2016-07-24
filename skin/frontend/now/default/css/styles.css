@@ -12957,6 +12957,9 @@ body.cms-home .homepage-bannerslider {
   background-color: #eaeaea;
   min-height: 320px;
 }
+body.cms-home .homepage-bannerslider .item {
+  cursor: pointer;
+}
 body.cms-home .homepage-bannerslider .item img {
   display: block;
   height: auto;
