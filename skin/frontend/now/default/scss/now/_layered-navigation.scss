@@ -90,7 +90,7 @@
         dt {
             margin: 25px 0 5px 0;
             padding: 0;
-            @include font-family('Roboto Medium');
+            @include font-family('Roboto Bold');
             @include responsive-font-size(strip-units($f-size));
             text-transform: uppercase;
 
@@ -107,6 +107,10 @@
 			
             li {
                 padding: 0;
+                
+                &:not(:nth-last-child(1)) {
+	                margin-bottom: 2px;
+                }
 
                 a {
                     @include font-family('Roboto Regular');
@@ -115,7 +119,65 @@
                 
                 a:hover {
 	                color: $c-text-gray;
+	                cursor: pointer;
+	                text-decoration: none;
                 }
+            }
+            
+            &.labelfilter-collection {
+	            
+	            /*.filterto-sale a,
+	            .filterto-new-arrival a {
+		            @include font-family('Roboto Medium');
+	            }
+	            
+	            .filterto-sale a {
+		            color: $c-red;
+		            text-transform: uppercase;
+	            }
+	            
+	            .filterto-new-arrival {
+		            margin-bottom: 10px;
+	            }*/
+            }
+            
+            &.labelfilter-size {
+	            
+	            > ol {
+		            display: block;
+		            max-width: 170px;
+		            
+		            &:after {
+			            @include clearfix;
+		            }
+	            }
+	            
+	            ol > li {
+		            clear: none;
+		            float: left;
+		            margin: 0 0 8px 3px !important;
+		            
+		            &.filterto-26 {
+			            clear: left;
+		            }
+	            }
+	            
+	            ol > li > a {
+		            @include responsive-font-size(strip-units($f-size-xs));
+		            background: transparent;
+		            border: 1px solid $c-black;
+		            border-radius: 3px !important;
+		            display: block;
+			        padding: 1px 3px;			        
+			        min-width: 18px;
+			        text-align: center;
+			        text-decoration: none;
+	            }
+	            
+	            ol > li:hover > a {
+		            background: $c-black;
+		            color: $c-text-white;
+	            }
             }
         }
     }

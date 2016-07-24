@@ -65,7 +65,7 @@ price {
     @include font-family('Roboto Bold');
 
     @include breakpoint(desktop) {
-	    @include responsive-font-size(strip-units($f-size-s));
+	    @include responsive-font-size(strip-units($f-size-s) - 1.5);
     }
     
     /*@include breakpoint(mobile) {
