@@ -9,6 +9,7 @@ body.cms-home {
 /*----------------------------------------------------------------------------*/
 .homepage-promohighlight,
 .homepage-featuredproducts,
+.homepage-onsaleproducts,
 .homepage-aboutnow {
 	@include global-page-margin-side;
 	margin: 0 auto;
@@ -40,6 +41,12 @@ h1 {
 	
 	.item {
 		cursor: pointer;
+		
+		a:hover,
+		img:hover {
+			cursor: pointer;
+		}
+		
 		img {
 			display: block;
 		    height: auto;
@@ -182,7 +189,8 @@ h1 {
 /*----------------------------------------------------------------------------*/
 /* Featured Products
 /*----------------------------------------------------------------------------*/
-.homepage-featuredproducts {
+.homepage-featuredproducts,
+.homepage-onsaleproducts {
 	
 	@include breakpoint(desktop) {
 		margin-top: 40px;
@@ -202,6 +210,19 @@ h1 {
 		}
 	}
 	
+}
+
+/*----------------------------------------------------------------------------*/
+/* OnSale Products
+/*----------------------------------------------------------------------------*/
+.homepage-onsaleproducts {
+	.highlight {
+		&.sale {
+			background: $c-red;
+			color: $c-white;
+			padding: 5px;
+		}
+	}
 }
 
 /*----------------------------------------------------------------------------*/

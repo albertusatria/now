@@ -336,7 +336,7 @@ body.checkout-cart-index {
                     }
 
                     .btn-proceed-checkout {
-                        @include button-b1(220px);
+                        @include button-b1(245px, 38px);
                         margin: 0;
                         vertical-align: top;
                     }

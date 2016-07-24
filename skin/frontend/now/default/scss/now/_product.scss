@@ -730,10 +730,13 @@
 }
 
 .sidr-class {
+	&-sizeguide {
+		padding: 10px 20px;
+		overflow: hidden;
+	}
 	
 	&-measurement-guide {
 		margin: 20px auto 0 auto;
-		width: 90%;
 		
 		table {
 			cursor: default;
