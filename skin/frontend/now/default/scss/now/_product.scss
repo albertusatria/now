@@ -718,12 +718,6 @@
 		border-bottom: 1px solid $c-text-gray;;
 		box-shadow: none;
 		text-transform: uppercase;
-		
-		span {
-			@include font-family('Roboto Regular');
-			@include responsive-font-size(strip-units($f-size-xxs));	
-			text-transform: lowercase;
-		}
 	}
 	
 		
@@ -738,6 +732,21 @@
 		padding: 10px 20px;
 		overflow: hidden;
 	}
+	
+	&-info-cm {
+		@include font-family('Roboto Regular');
+		@include responsive-font-size(strip-units($f-size-xxs));	
+		text-transform: lowercase;
+	}
+		
+	&-info-guidefor {
+		@include responsive-font-size(strip-units($f-size-xs));
+	}
+	
+	&-info-guidefor-small {
+		@include responsive-font-size(strip-units($f-size-xs) - 1);
+	}
+
 	
 	&-measurement-guide {
 		margin: 20px auto 0 auto;

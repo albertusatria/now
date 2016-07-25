@@ -16219,13 +16219,6 @@ body.checkout-cart-index .col-main .cart .crosssell .product-view .block-viewed 
   box-shadow: none;
   text-transform: uppercase;
 }
-#sidr-size h6 span {
-  font-family: 'Roboto';
-  font-weight: 400;
-  font-size: 10px;
-  font-size: 0.625rem;
-  text-transform: lowercase;
-}
 #sidr-size img {
   margin: 0 auto;
   text-align: center;
@@ -16234,6 +16227,21 @@ body.checkout-cart-index .col-main .cart .crosssell .product-view .block-viewed 
 .sidr-class-sizeguide {
   padding: 10px 20px;
   overflow: hidden;
+}
+.sidr-class-info-cm {
+  font-family: 'Roboto';
+  font-weight: 400;
+  font-size: 10px;
+  font-size: 0.625rem;
+  text-transform: lowercase;
+}
+.sidr-class-info-guidefor {
+  font-size: 12px;
+  font-size: 0.75rem;
+}
+.sidr-class-info-guidefor-small {
+  font-size: 11px;
+  font-size: 0.6875rem;
 }
 .sidr-class-measurement-guide {
   margin: 20px auto 0 auto;
