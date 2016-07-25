@@ -46,7 +46,7 @@
                     <?php
 	                    $brand = $_link->getResource()->getAttribute('brand')->getFrontend()->getValue($_link);
 	                    if($brand != "") {
-		            		echo 'By '.$brand;         
+		            		echo 'By <span>'.$brand.'</span>';
 	                    }
 	                ?>
                 </h2>
