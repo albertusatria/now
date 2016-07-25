@@ -67,7 +67,7 @@
 			<!-- JS UI Core -->
             <action method="addItem">
                 <type>skin_js</type>
-                <name>js/jquery-ui-1.11.4-custom.js</name>
+                <name>js/complete_jquery-ui-1.11.4-custom.js</name>
             </action>
 
             <!-- Add 3rd party JS lib -->

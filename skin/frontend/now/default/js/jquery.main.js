@@ -125,6 +125,70 @@ $.widget('now.main', {
     initShoppingCartPage: function() {
 
         if ($j('body.checkout-cart-index').length) {
+	        
+	        // Remove Selected item Cart
+	        $j('.product-cart-remove .btn-remove2').on('click', function(e){
+		        var href = $j(this).attr('href');
+		        var prodName = $j(this).closest('tr').find('.product-name a').text();
+		        e.preventDefault();
+
+		        $j('.body-overlay').addClass('active');
+		        
+		        $j("#dialog-emptySelected").dialog({
+					modal: true,
+					title: 'Delete Confirmation',
+					width: 400,
+					buttons : [{
+						text: "Delete",					
+						click: function() {
+							// delete selected item from prev attr "href"
+							window.location.href = href;
+						}
+					}, {
+						text: "Cancel",					
+						click: function() {
+							// close dialog
+							$j('.body-overlay').removeClass('active');
+							$j(this).dialog("destroy");
+						}
+					}],
+					create: function() {
+						$j(this).closest('div.ui-dialog').find('.ui-dialog-titlebar-close').click(function() {
+							$j(this).closest('div.ui-dialog').find('.ui-dialog-buttonset button:nth-child(2)').trigger('click');
+						});
+						$j(this).closest('div.ui-dialog').find('.ui-dialog-content .important').text('').text(prodName);
+					}
+				}); 
+	        });
+	        
+	        // Empty All Cart
+	        $j('#empty_cart_button2').on('click', function(){
+		        $j('.body-overlay').addClass('active');
+		        $j("#dialog-emptyAll").dialog({
+					modal: true,
+					title: 'Delete Confirmation',
+					width: 400,
+					buttons : [{
+						text: "Yes, delete all",					
+						click: function() {
+							// delete all item
+							$j('#empty_cart_button').trigger('click');
+						}
+					}, {
+						text: "Cancel",					
+						click: function() {
+							// close dialog
+							$j('.body-overlay').removeClass('active');
+							$j(this).dialog("close");
+						}
+					}],
+					create: function() {
+						$j(this).closest('div.ui-dialog').find('.ui-dialog-titlebar-close').click(function() {
+							$j(this).closest('div.ui-dialog').find('.ui-dialog-buttonset button:nth-child(2)').trigger('click');
+						});
+					}
+				}); 
+	        });
         }
     },
 
