@@ -15379,6 +15379,9 @@ price, .price-box, .price-box .regular-price .price, .price-box .old-price .pric
   letter-spacing: normal;
   text-transform: capitalize;
 }
+.product-view .box-collateral .item .product-brand {
+  margin-bottom: 7px;
+}
 
 /*----------------------------------------------------------------------------*/
 /* Add To Cart
