@@ -372,7 +372,7 @@ body.checkout-cart-index {
 
                         h2 {
                             @include base-h-font;
-                            @include responsive-font-size(strip-units($f-size-l) + 2);
+                            @include responsive-font-size(strip-units($f-size-l));
                             background-color: transparent;
                             margin-bottom: 15px;
                             padding: 0;
