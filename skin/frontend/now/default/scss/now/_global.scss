@@ -164,6 +164,58 @@ body * {
 }
 
 /*----------------------------------------------------------------------------*/
+/* jQ UI Dialog Style
+/*----------------------------------------------------------------------------*/
+.ui-dialog {
+	background: $c-white;
+	border: 5px solid $c-black;
+	padding: 20px;
+	position: relative;
+	z-index: 999;
+}
+.ui-dialog-titlebar {
+	@include font-family('Roboto Medium');
+	@include responsive-font-size(strip-units($f-size-l));
+	color: $c-black;	
+	letter-spacing: 4px;
+    margin: 15px auto 25px auto;
+    text-align: center;
+    text-transform: uppercase;
+    
+    .ui-dialog-titlebar-close {
+	    background: transparent;
+	    border: none;
+	    font-size: 0;
+	    position: absolute;
+	    right: 10px;
+	    top: 10px;
+	    
+	    &:after {
+		    @include global-font-awesome($f-size-l);
+		    content: '\f00d';
+	    }
+    }
+}
+.ui-dialog-content {
+	.important {
+	    @include font-family('Roboto Medium');
+	    color: $c-red;
+    }
+}
+.ui-dialog-buttonset {
+	margin-top: 30px;
+	text-align: center;
+	
+	button{
+		@include button-b1mini(120px, 30px);
+		
+		&:first-child {
+			margin-right: 10px;
+		}
+	}
+}
+
+/*----------------------------------------------------------------------------*/
 /* Body Overlay & Global Message
 /*----------------------------------------------------------------------------*/
 .store-popup {

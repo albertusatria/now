@@ -10,6 +10,7 @@
 @mixin button-b1($width: auto, $height: 30px) {
     @include button-color($width, $height, $font-size: 16, $color: #ffffff, $background-color: #000000, $hover-color: #ffffff, $hover-background: #505050, $border-radius: 0);
     @include font-family('Roboto Medium');
+    border: none;
     text-transform: uppercase;
 }
 
@@ -29,6 +30,7 @@
 @mixin button-b1mini($width: auto, $height: 30px) {
     @include button-color($width, $height, $font-size: 13, $color: #ffffff, $background-color: #000000, $hover-color: #ffffff, $hover-background: #505050, $border-radius: 0);
     @include font-family('Roboto Medium');
+    border: none;
     text-transform: uppercase;
 }
 

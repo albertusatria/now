@@ -7651,6 +7651,22 @@ html {
 /* Font size and related styles. Use mixin to set all font sizes/styles.
 /*----------------------------------------------------------------------------*/
 /*----------------------------------------------------------------------------*/
+/* Button
+/*----------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------*/
+/* Define project button mixins. Add/subtract/customize as needed by project.
+/*----------------------------------------------------------------------------*/
+/*@mixin button-blink3($width: auto, $height: 44px, $font-size: 14) {
+    @include button-from-link($width, $height, $font-size, $color: #ffffff, $background-color: #bbbbbb, $hover-color: #ffffff, $hover-background: #404041, $border-radius: 0);
+    padding: 0 30px;
+    font-weight: normal;
+    white-space: nowrap;
+    @include font-family('Roboto Bold');
+}*/
+/*----------------------------------------------------------------------------*/
+/* Standard button styles. In general, do not modify these.
+/*----------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------*/
 /* Global Variables
 /*----------------------------------------------------------------------------*/
 /*----------------------------------------------------------------------------*/
@@ -7679,6 +7695,111 @@ body * {
 
 .no-touch .product-image:hover {
   border: 1px solid #dedede;
+}
+
+/*----------------------------------------------------------------------------*/
+/* jQ UI Dialog Style
+/*----------------------------------------------------------------------------*/
+.ui-dialog {
+  background: #ffffff;
+  border: 5px solid #000000;
+  padding: 20px;
+  position: relative;
+  z-index: 999;
+}
+
+.ui-dialog-titlebar {
+  font-family: 'Roboto';
+  font-weight: 500;
+  font-size: 16px;
+  font-size: 1rem;
+  color: #000000;
+  letter-spacing: 4px;
+  margin: 15px auto 25px auto;
+  text-align: center;
+  text-transform: uppercase;
+}
+.ui-dialog-titlebar .ui-dialog-titlebar-close {
+  background: transparent;
+  border: none;
+  font-size: 0;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+.ui-dialog-titlebar .ui-dialog-titlebar-close:after {
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: 16px;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: '\f00d';
+}
+
+.ui-dialog-content .important {
+  font-family: 'Roboto';
+  font-weight: 500;
+  color: #ff0000;
+}
+
+.ui-dialog-buttonset {
+  margin-top: 30px;
+  text-align: center;
+}
+.ui-dialog-buttonset button {
+  width: 120px;
+  height: 30px;
+  font-size: 13px;
+  font-size: 0.8125rem;
+  line-height: 1;
+  text-decoration: none;
+  color: #ffffff;
+  background-color: #000000;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  cursor: pointer;
+  transition: background-color .25s ease-in-out;
+  -moz-transition: background-color .25s ease-in-out;
+  -webkit-transition: background-color .25s ease-in-out;
+  font-family: 'Roboto';
+  font-weight: 500;
+  border: none;
+  text-transform: uppercase;
+}
+.ui-dialog-buttonset button:hover {
+  color: #ffffff;
+  background-color: #505050;
+}
+.ui-dialog-buttonset button span {
+  width: auto;
+  height: auto !important;
+  padding: 0 !important;
+  font-family: inherit;
+  font-size: inherit;
+  text-transform: inherit;
+  text-decoration: inherit;
+  color: inherit;
+  background-image: none;
+}
+.ui-dialog-buttonset button span span {
+  width: auto;
+  height: auto !important;
+  padding: 0 !important;
+  font-family: inherit;
+  font-size: inherit;
+  text-transform: inherit;
+  text-decoration: inherit;
+  background-image: none;
+  color: inherit;
+}
+.ui-dialog-buttonset button span span:hover {
+  color: #ffffff;
+  text-decoration: none;
+}
+.ui-dialog-buttonset button:first-child {
+  margin-right: 10px;
 }
 
 /*----------------------------------------------------------------------------*/
@@ -8104,22 +8225,6 @@ a {
     </div>
 */
 /*----------------------------------------------------------------------------*/
-/* Button
-/*----------------------------------------------------------------------------*/
-/*----------------------------------------------------------------------------*/
-/* Define project button mixins. Add/subtract/customize as needed by project.
-/*----------------------------------------------------------------------------*/
-/*@mixin button-blink3($width: auto, $height: 44px, $font-size: 14) {
-    @include button-from-link($width, $height, $font-size, $color: #ffffff, $background-color: #bbbbbb, $hover-color: #ffffff, $hover-background: #404041, $border-radius: 0);
-    padding: 0 30px;
-    font-weight: normal;
-    white-space: nowrap;
-    @include font-family('Roboto Bold');
-}*/
-/*----------------------------------------------------------------------------*/
-/* Standard button styles. In general, do not modify these.
-/*----------------------------------------------------------------------------*/
-/*----------------------------------------------------------------------------*/
 /* Tabs
 /*----------------------------------------------------------------------------*/
 /*----------------------------------------------------------------------------*/
@@ -8538,6 +8643,60 @@ body.checkout-cart-index .col-main .cart .cart-table tfoot tr .btn-update span s
 body.checkout-cart-index .col-main .cart .cart-table tfoot tr .btn-update:hover {
   border: 1px solid #505050;
 }
+body.checkout-cart-index .col-main .cart .cart-table tfoot tr .btn-empty2 {
+  width: 100px;
+  height: 30px;
+  font-size: 10px;
+  font-size: 0.625rem;
+  line-height: 1;
+  text-decoration: none;
+  color: #000000;
+  background-color: #ffffff;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  cursor: pointer;
+  transition: background-color .25s ease-in-out;
+  -moz-transition: background-color .25s ease-in-out;
+  -webkit-transition: background-color .25s ease-in-out;
+  font-family: 'Roboto';
+  font-weight: 400;
+  text-transform: uppercase;
+  border: 1px solid #000000;
+}
+body.checkout-cart-index .col-main .cart .cart-table tfoot tr .btn-empty2:hover {
+  color: #505050;
+  background-color: #ffffff;
+}
+body.checkout-cart-index .col-main .cart .cart-table tfoot tr .btn-empty2 span {
+  width: auto;
+  height: auto !important;
+  padding: 0 !important;
+  font-family: inherit;
+  font-size: inherit;
+  text-transform: inherit;
+  text-decoration: inherit;
+  color: inherit;
+  background-image: none;
+}
+body.checkout-cart-index .col-main .cart .cart-table tfoot tr .btn-empty2 span span {
+  width: auto;
+  height: auto !important;
+  padding: 0 !important;
+  font-family: inherit;
+  font-size: inherit;
+  text-transform: inherit;
+  text-decoration: inherit;
+  background-image: none;
+  color: inherit;
+}
+body.checkout-cart-index .col-main .cart .cart-table tfoot tr .btn-empty2 span span:hover {
+  color: #505050;
+  text-decoration: none;
+}
+body.checkout-cart-index .col-main .cart .cart-table tfoot tr .btn-empty2:hover {
+  border: 1px solid #505050;
+}
 body.checkout-cart-index .col-main .cart .cart-table tfoot tr button:first-child {
   display: none;
 }
@@ -8634,6 +8793,7 @@ body.checkout-cart-index .col-main .cart .checkout-types li .btn-proceed-checkou
   -webkit-transition: background-color .25s ease-in-out;
   font-family: 'Roboto';
   font-weight: 500;
+  border: none;
   text-transform: uppercase;
   margin: 0;
   vertical-align: top;
@@ -8725,6 +8885,7 @@ body.checkout-cart-index .col-main .cart .cart-forms #discount-coupon-form .disc
   -webkit-transition: background-color .25s ease-in-out;
   font-family: 'Roboto';
   font-weight: 500;
+  border: none;
   text-transform: uppercase;
 }
 body.checkout-cart-index .col-main .cart .cart-forms #discount-coupon-form .discount button:hover {
@@ -8894,6 +9055,15 @@ body.checkout-cart-index .col-main .cart .crosssell ul .owl-controls .owl-prev {
 body.checkout-cart-index .col-main .cart .crosssell .actions {
   height: 0;
   display: none;
+}
+body.checkout-cart-index .body-overlay.active {
+  z-index: 99;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 /*----------------------------------------------------------------------------*/
@@ -9090,6 +9260,7 @@ body.checkout-onepage-index .col-main .opc .section #checkout-step-login .col-2 
   -webkit-transition: background-color .25s ease-in-out;
   font-family: 'Roboto';
   font-weight: 500;
+  border: none;
   text-transform: uppercase;
 }
 body.checkout-onepage-index .col-main .opc .section #checkout-step-login .col-2 button:hover {
@@ -9215,6 +9386,7 @@ body.checkout-onepage-index .col-main .opc .section #checkout-step-shipping .but
   -webkit-transition: background-color .25s ease-in-out;
   font-family: 'Roboto';
   font-weight: 500;
+  border: none;
   text-transform: uppercase;
 }
 body.checkout-onepage-index .col-main .opc .section #checkout-step-billing .buttons-set button:hover,
@@ -9288,6 +9460,7 @@ body.checkout-onepage-index .col-main .opc .section #checkout-step-shipping_meth
   -webkit-transition: background-color .25s ease-in-out;
   font-family: 'Roboto';
   font-weight: 500;
+  border: none;
   text-transform: uppercase;
 }
 body.checkout-onepage-index .col-main .opc .section #checkout-step-shipping_method .buttons-set button:hover {
@@ -9363,6 +9536,7 @@ body.checkout-onepage-index .col-main .opc .section #checkout-step-payment .butt
   -webkit-transition: background-color .25s ease-in-out;
   font-family: 'Roboto';
   font-weight: 500;
+  border: none;
   text-transform: uppercase;
 }
 body.checkout-onepage-index .col-main .opc .section #checkout-step-payment .buttons-set button:hover {
@@ -9637,6 +9811,7 @@ body.checkout-onepage-index .col-main .opc .section #checkout-step-review #check
   -webkit-transition: background-color .25s ease-in-out;
   font-family: 'Roboto';
   font-weight: 500;
+  border: none;
   text-transform: uppercase;
 }
 body.checkout-onepage-index .col-main .opc .section #checkout-step-review #checkout-review-submit .buttons-set button:hover {
@@ -9950,6 +10125,7 @@ body.checkout-onepage-success .col-main .buttons-set button {
   -webkit-transition: background-color .25s ease-in-out;
   font-family: 'Roboto';
   font-weight: 500;
+  border: none;
   text-transform: uppercase;
 }
 body.checkout-onepage-success .col-main .buttons-set button:hover {
@@ -10096,6 +10272,7 @@ body.customer-account-login .col-main .col2-set .buttons-set button {
   -webkit-transition: background-color .25s ease-in-out;
   font-family: 'Roboto';
   font-weight: 500;
+  border: none;
   text-transform: uppercase;
 }
 body.customer-account-login .col-main .col2-set .buttons-set button:hover {
@@ -10286,6 +10463,7 @@ body.customer-account-confirmation .col-main .buttons-set button {
   -webkit-transition: background-color .25s ease-in-out;
   font-family: 'Roboto';
   font-weight: 500;
+  border: none;
   text-transform: uppercase;
 }
 body.customer-account-forgotpassword .col-main .buttons-set button:hover,
@@ -10383,6 +10561,7 @@ body.customer-account-resetpassword .col-main .buttons-set button {
   -webkit-transition: background-color .25s ease-in-out;
   font-family: 'Roboto';
   font-weight: 500;
+  border: none;
   text-transform: uppercase;
 }
 body.customer-account-resetpassword .col-main .buttons-set button:hover {
@@ -10571,6 +10750,7 @@ body.paypal-express-review .col-main .buttons-set button {
   -webkit-transition: background-color .25s ease-in-out;
   font-family: 'Roboto';
   font-weight: 500;
+  border: none;
   text-transform: uppercase;
 }
 body.paypal-express-review .col-main .buttons-set button:hover {
@@ -10809,6 +10989,7 @@ body.paypal-express-review .col-main .buttons-set button span span:hover {
   -webkit-transition: background-color .25s ease-in-out;
   font-family: 'Roboto';
   font-weight: 500;
+  border: none;
   text-transform: uppercase;
   /*@include breakpoint(mobile) {
       position: static !important;
@@ -10949,6 +11130,7 @@ body.paypal-express-review .col-main .buttons-set button span span:hover {
   -webkit-transition: background-color .25s ease-in-out;
   font-family: 'Roboto';
   font-weight: 500;
+  border: none;
   text-transform: uppercase;
 }
 .customer-account .col-main .buttons-set button:hover {
@@ -11342,6 +11524,7 @@ body.shipping-tracking-popup .col-main .buttons-set button {
   -webkit-transition: background-color .25s ease-in-out;
   font-family: 'Roboto';
   font-weight: 500;
+  border: none;
   text-transform: uppercase;
 }
 body.shipping-tracking-popup .col-main .buttons-set button:hover {
@@ -11571,6 +11754,7 @@ body.wishlist-index-index #wishlist-table tbody .btn-cart {
   -webkit-transition: background-color .25s ease-in-out;
   font-family: 'Roboto';
   font-weight: 500;
+  border: none;
   text-transform: uppercase;
 }
 body.wishlist-index-index #wishlist-table tbody .btn-cart:hover {
@@ -11667,6 +11851,7 @@ body.wishlist-index-index .col-main .buttons-set2 button {
   -webkit-transition: background-color .25s ease-in-out;
   font-family: 'Roboto';
   font-weight: 500;
+  border: none;
   text-transform: uppercase;
 }
 body.wishlist-index-index .col-main .buttons-set2 button:hover {
@@ -11791,6 +11976,7 @@ body.checkout-onepage-index #av-popup-content button.select {
   -webkit-transition: background-color .25s ease-in-out;
   font-family: 'Roboto';
   font-weight: 500;
+  border: none;
   text-transform: uppercase;
 }
 body.checkout-onepage-index #av-popup-content button.select:hover {
@@ -12364,6 +12550,7 @@ body .main-container {
   -webkit-transition: background-color .25s ease-in-out;
   font-family: 'Roboto';
   font-weight: 500;
+  border: none;
   text-transform: uppercase;
   font-family: 'Roboto';
   font-weight: 400;
@@ -15419,6 +15606,7 @@ price, .price-box, .price-box .regular-price .price, .price-box .old-price .pric
   -webkit-transition: background-color .25s ease-in-out;
   font-family: 'Roboto';
   font-weight: 500;
+  border: none;
   text-transform: uppercase;
 }
 .product-view .add-to-cart .add-to-cart-buttons button:hover {
@@ -16314,6 +16502,7 @@ body.checkout-cart-index .col-main .cart .crosssell .product-view .block-viewed 
   -webkit-transition: background-color .25s ease-in-out;
   font-family: 'Roboto';
   font-weight: 500;
+  border: none;
   text-transform: uppercase;
 }
 .product-collateral #customer-reviews .form-add .buttons-set button:hover {
@@ -16410,6 +16599,7 @@ body.checkout-cart-index .col-main .cart .crosssell .product-view .block-viewed 
   -webkit-transition: background-color .25s ease-in-out;
   font-family: 'Roboto';
   font-weight: 500;
+  border: none;
   text-transform: uppercase;
   float: left;
 }
