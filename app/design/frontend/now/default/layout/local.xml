@@ -112,6 +112,10 @@
                 <name>js/jquery.main.js</name>
             </action>
 			
+			<action method="addItem">
+            	<type>skin_js</type>
+            	<name>js/jquery.now.megamenu.js</name>
+            </action>
             <action method="addItem">
             	<type>skin_js</type>
             	<name>js/jquery.now.headersearch.js</name>
@@ -129,17 +133,7 @@
             	<name>js/jquery.now.faq.js</name>
             </action>
             
-            <action method="addItem"><type>skin_js</type><name>js/lib/modernizr.custom.min.js</name></action>
-            <action method="addItem"><type>skin_js</type><name>js/lib/selectivizr.js</name></action>
-            <action method="addItem"><type>skin_js</type><name>js/lib/matchMedia.js</name></action>
-            <action method="addItem"><type>skin_js</type><name>js/lib/matchMedia.addListener.js</name></action>
-            <action method="addItem"><type>skin_js</type><name>js/lib/enquire.js</name></action>
-            <action method="addItem"><type>skin_js</type><name>js/app.js</name></action>
-            <action method="addItem"><type>skin_js</type><name>js/lib/jquery.cycle2.min.js</name></action>
-            <action method="addItem"><type>skin_js</type><name>js/lib/jquery.cycle2.swipe.min.js</name></action>
-            <action method="addItem"><type>skin_js</type><name>js/slideshow.js</name></action>
-            <action method="addItem"><type>skin_js</type><name>js/lib/imagesloaded.js</name></action>
-			<action method="addItem"><type>skin_js</type><name>js/minicart.js</name></action>
+           
 		</reference>
 		
 		<reference name="header">
