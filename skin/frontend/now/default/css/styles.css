@@ -17083,7 +17083,16 @@ body.checkout-cart-index .col-main .cart .crosssell .product-view .block-viewed 
   }
 }
 .header-left .submenu {
+  border-bottom: 2px solid #000000;
+  background-color: #ffffff;
   display: none;
+  left: 0;
+  margin: 5px auto 0 auto;
+  min-height: 200px;
+  padding: 0 20px 20px 20px;
+  position: absolute;
+  right: 0;
+  z-index: 9;
 }
 .header-left .submenu .width-wrapper {
   max-width: 1260px;
@@ -17120,22 +17129,18 @@ body.checkout-cart-index .col-main .cart .crosssell .product-view .block-viewed 
   display: table;
   clear: both;
 }
-.header-left li.level0:hover:hover:not(.nav-1) > a {
+.header-left li.level0.hovered > a.level0 {
   border-bottom: 2px solid #000000;
   padding-bottom: 8px;
 }
-.header-left li.level0:hover .submenu {
-  border-bottom: 2px solid #000000;
-  border-top: 1px solid #000000;
-  background-color: #ffffff;
+.header-left li.level0.hovered .submenu {
   display: block;
-  left: 0;
-  margin: 9px auto 0 auto;
-  min-height: 200px;
-  padding: 20px;
-  position: absolute;
-  right: 0;
-  z-index: 9;
+}
+.header-left li.level0.hovered .submenu:before {
+  border: 1px solid #000000;
+  content: "";
+  display: block;
+  margin: 3px -20px 20px -20px;
 }
 .header-left .leftmenu,
 .header-left .rightmenu {
