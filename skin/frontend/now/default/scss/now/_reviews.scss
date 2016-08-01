@@ -1,6 +1,13 @@
 /*----------------------------------------------------------------------------*/
 /* Product Review
 /*----------------------------------------------------------------------------*/
+
+.no-rating {
+	@include font-family('Roboto Light');
+	@include responsive-font-size(strip-units($f-size-s));
+	color: $c-text-gray;
+	text-transform: none;			
+}
 .product-shop .ratings {
 	
 	.rating-box {

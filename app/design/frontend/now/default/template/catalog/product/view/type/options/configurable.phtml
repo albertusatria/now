@@ -68,15 +68,28 @@ $anchor = '#'.$gender.'-'.$attributeSetName;
         ?>
         <dt><label class="required attribute-<?php echo $_attribute->getAttributeId() ?>"><em>*</em><?php echo $_attribute->getLabel() ?></label></dt>
         <dd<?php if ($_attribute->decoratedIsLast){?> class="last wrapperfor-attr-<?php echo $_attribute->getAttributeId() ?>"<?php }?>>
+        <div class="size-wrapper">
             <div class="input-box">
 				<select name="super_attribute[<?php echo $_attribute->getAttributeId() ?>]" id="attribute<?php echo $_attribute->getAttributeId() ?>" class="required-entry super-attribute-select">
 					<option><?php echo $this->__('Choose an Option...') ?></option>
 				</select>
           </div>
           <?php if ($_attribute->getAttributeId() == "136"): ?>
-	          	<div class="size-guide">
-		          	<a id="<?php echo $gender.'-'.$attributeSetName?>" href="<?php echo $anchor;?>"><?php echo $this->__('Size Guide')?></a>
-		        </div>
+              	<div class="size-guide">
+    	          	<a id="<?php echo $gender.'-'.$attributeSetName?>" href="<?php echo $anchor;?>"><?php echo $this->__('Size Guide')?></a>
+    	        </div>
+        </div> <!-- end class size-wrapper -->
+                <?php if(!$_product->isGrouped()): ?>
+                <div class="qty-wrapper">
+                    <select name="qty" id="qty" class="select qty">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </div>
+                <?php endif; ?>
           <?php endif;?>
         </dd>
         <?php endif; ?>
