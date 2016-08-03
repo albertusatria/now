@@ -332,4 +332,11 @@
             </action>
         </reference>
 	</contacts_index_index>
+	
+	<wishlist_index_configure>
+		<reference name="product.info.options.wrapper.bottom">
+            <remove name="product.info.addto" />
+            <block type="wishlist/item_configure" name="product.info.addtoc" as="addtoc" template="wishlist/item/configure/addto.phtml" after="product.info.addtocart"/>
+        </reference>
+	</wishlist_index_configure>
 </layout>
