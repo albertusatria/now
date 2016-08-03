@@ -13992,14 +13992,65 @@ price, .price-box, .price-box .regular-price .price, .price-box .old-price .pric
 }
 .product-view .add-to-cart-wrapper {
   clear: right;
-  float: right;
-  width: 50%;
+  float: left;
+  margin: 20px 0 0 30px;
   /*@include breakpoint(mobile) {
       clear: both;
       float: none;
       width: auto;
       @include global-page-margin-side;
   }*/
+}
+.product-view .add-to-cart-wrapper .btn-cart-outofstock {
+  width: 250px;
+  height: 42px;
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1;
+  text-decoration: none;
+  color: #ffffff;
+  background-color: #000000;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  cursor: pointer;
+  transition: background-color .25s ease-in-out;
+  -moz-transition: background-color .25s ease-in-out;
+  -webkit-transition: background-color .25s ease-in-out;
+  font-family: 'Roboto';
+  font-weight: 500;
+  border: none;
+  text-transform: uppercase;
+}
+.product-view .add-to-cart-wrapper .btn-cart-outofstock:hover {
+  color: #ffffff;
+  background-color: #505050;
+}
+.product-view .add-to-cart-wrapper .btn-cart-outofstock span {
+  width: auto;
+  height: auto !important;
+  padding: 0 !important;
+  font-family: inherit;
+  font-size: inherit;
+  text-transform: inherit;
+  text-decoration: inherit;
+  color: inherit;
+  background-image: none;
+}
+.product-view .add-to-cart-wrapper .btn-cart-outofstock span span {
+  width: auto;
+  height: auto !important;
+  padding: 0 !important;
+  font-family: inherit;
+  font-size: inherit;
+  text-transform: inherit;
+  text-decoration: inherit;
+  background-image: none;
+  color: inherit;
+}
+.product-view .add-to-cart-wrapper .btn-cart-outofstock span span:hover {
+  color: #ffffff;
+  text-decoration: none;
 }
 .product-view .product-img-box {
   width: 55%;

@@ -103,9 +103,12 @@
 
     .add-to-cart-wrapper {
         clear: right;
-        float: right;
-        width: 50%;
-
+        float: left;
+        margin: 20px 0 0 30px;
+		
+		.btn-cart-outofstock {
+			@include button-b1(250px, 42px);
+		}
         /*@include breakpoint(mobile) {
             clear: both;
             float: none;

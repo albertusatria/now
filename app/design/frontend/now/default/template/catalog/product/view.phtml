@@ -122,6 +122,9 @@
                     </div>
                     <?php echo $this->getChildHtml('extra_buttons') ?>
                 <?php elseif (!$_product->isSaleable()): ?>
+                	<button type="button" title="Out Of Stock" class="button btn-cart-outofstock" disabled>
+                		<span><span><?php echo $this->__('Out of Stock');?></span></span>
+					</button>
                     <div class="add-to-box">
                         <?php echo $this->getChildHtml('addto') ?>
                         <?php echo $this->getChildHtml('sharing') ?>
